@@ -1,0 +1,138 @@
+@import './../../variables';
+
+.tarjetas-promos{
+	margin-top: 30px;
+	font-family: $font3;
+	.credit-card{
+		display: block;
+	}
+	hr{
+		margin-left: -20px;
+		margin-right: -20px;
+		@media(max-width:767px){
+			margin-top: 0;
+			margin-bottom: 5px;
+		}
+	}
+	.form-group{
+		position: relative;
+		.form-control{
+			border-radius: $border-radius;
+			border: 1px solid $color3;
+			background-color: $color3;
+			box-shadow: none;
+			font-size: 16px;
+			padding-bottom: 15px;
+			padding-top: 11px;
+			height: auto;
+			-webkit-appearance: none;
+			-moz-appearance: none;
+			text-indent: 1px;
+			text-overflow: '';
+			&::-ms-expand {
+				display: none;
+			}
+			&:focus{
+				border-color: $color2;
+			}
+			&::placeholder{
+				font-style: italic;
+			}
+		}
+		.fa-angle-down{
+			position: absolute;
+			top:15px;
+			right: 15px;
+			font-size: 22px;
+			color: $color2;
+			pointer-events:none;
+		}
+	}
+	.foot-form{
+		margin-left: -20px;
+		margin-right: -20px;
+		background-color: $color3;
+		padding: 20px 30px;
+		margin-bottom: -20px;
+		font-size: 24px;
+		color: $color5;
+		.form-group{
+			position: relative;
+			display: inline-block;
+			.form-control{
+				background-color: $color4;
+				padding-left: 5px;
+				padding-right: 5px;
+				width: 70px;
+				margin-right: 20px;
+				margin-left: 5px;
+				-webkit-appearance: none;
+				-moz-appearance: none;
+				text-indent: 1px;
+				text-overflow: '';
+				box-shadow: $box-shadow3;
+				&::-ms-expand {
+					display: none;
+				}
+				option{
+					font-family: $font3;
+				}
+				@media(max-width:767px){
+					width: 54px;
+				}
+			}
+			.fa-angle-down{
+				position: absolute;
+				top:15px;
+				right: 30px;
+				font-size: 22px;
+				color: $color2;
+				pointer-events:none;
+			}
+		}
+		.importe{
+			color: $color1;
+			margin-right: 30px;
+			@media(max-width:767px){
+				margin-right: 5px;
+			}
+		}
+		@media(max-width:767px){
+			label{
+				font-size: 12px;
+			}
+		}
+	}
+	.verpromos{
+		color: $color2;
+		margin-top: 28px;
+		display: block;
+		&:hover{
+			opacity: .8;
+			color: $color2;
+		}
+		@media(max-width:767px){
+			display: none;
+		}
+	}
+	@media(max-width:767px){
+		p{
+			text-align: left;
+			margin-bottom: 10px;
+		}
+		.form-group{
+			text-align: left;
+			.radio-inline{
+				text-align: left;
+				margin-left: 0;
+				margin-right: 10px;
+				img{
+					width: 30px;
+					&.fix-rapipago{
+						width: 50px;
+					}
+				}
+			}	
+		}
+	}
+}

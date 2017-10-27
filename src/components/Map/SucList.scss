@@ -1,0 +1,102 @@
+@import './../../variables';
+.cont-sucursales{
+	.form-group{
+		margin-bottom: 0 !important;
+		input{
+			margin-left: 15px;
+		}
+		ul {
+			margin-bottom: 0 !important;
+			padding-right: 8px;
+			li{
+				padding: 15px 0;
+				border-bottom: 2px solid $color3;
+				border-left: 1px solid $color4;
+				border-right: 1px solid $color4;
+				border-top: 1px solid $color3;
+				border-bottom: 1px solid $color3;
+				h4{
+					font-family: $font1;
+					font-weight: normal;
+					font-size: 16px;
+					color: $color8;
+					margin-bottom: 5px;
+					margin-top: 0;
+					display: block;
+					margin-left: 10px;
+				}
+				h5{
+					font-family: $font2;
+					font-weight: normal;
+					font-size: 16px;
+					margin-bottom: 5px;
+					margin-top: 0;
+					color: $color8;
+					display: block;
+					margin-left: 10px;
+				}
+				h6{
+					font-family: $font2;
+					font-weight: normal;
+					margin-bottom: 0;
+					margin-top: 0;
+					font-size: 13px;
+					color: $color5;
+					font-style: italic;
+					display: block;
+					margin-left: 10px;
+				}
+
+				.radio{
+					text-align: center;
+					display: block;
+					margin: 10px 0 0 25px;
+
+				}
+				input[type="radio"]{
+					display: block;
+					text-align: left;
+					float: left;
+					-webkit-appearance:none !important;
+					-moz-appearance:none !important;
+					height:19px;
+					width:19px;
+					cursor:pointer;
+					position:relative;
+					-webkit-transition: .15s;
+					border-radius:50%;
+					background-color:$color4;
+					border: 2px solid $color8;
+					&:checked {
+						background-color: $color8;
+						border: 1px solid $color8;
+					}
+				}
+				input[type="radio"]:before, input[type="radio"]:checked:before {
+					position:absolute;
+					top:0;
+					left:0;
+					width:100%;
+					height:100%;
+					line-height:17px;
+					font-size: 9px;
+					font-weight: normal;
+					text-align:center;
+					color:$color4;
+					content: '';
+				}
+				input[type="radio"]:checked:before {
+					content: "\f111";
+					font-family: 'Fontawesome';
+				}
+
+				input[type="radio"]:hover:before {
+
+				}
+				&.active{
+					border: 1px solid $color2;
+				}
+			}
+		}
+	}
+}

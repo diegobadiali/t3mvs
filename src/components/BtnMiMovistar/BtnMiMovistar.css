@@ -1,0 +1,18 @@
+.navbar-header .btn-info {
+  float: right;
+  margin-top: 13px;
+  background-color: #00a9e0;
+  border: none;
+  border-radius: 4px;
+  font-family: "TelefonicaRegular";
+  font-size: 16px;
+  line-height: 16px;
+  padding: 12px 20px 15px;
+  height: auto; }
+  .navbar-header .btn-info:hover, .navbar-header .btn-info:focus {
+    opacity: .9; }
+  @media (max-width: 767px) {
+    .navbar-header .btn-info {
+      margin-right: -15px;
+      padding: 8px 10px 12px;
+      margin-top: 16px; } }

@@ -1,0 +1,35 @@
+.product-resume {
+  border: 2px solid #EBEBEB;
+  float: right;
+  width: 250px;
+  padding: 20px; }
+  .product-resume img {
+    width: 60px; }
+  .product-resume h4 {
+    font-size: 24px;
+    margin: 0 0 20px 0; }
+  .product-resume .title {
+    text-transform: uppercase;
+    color: #B4B4B4;
+    font-size: 12px;
+    line-height: 12px;
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 0;
+    font-family: "TelefonicaBold"; }
+  .product-resume .info {
+    color: #86888c;
+    font-size: 14px;
+    line-height: 14px;
+    display: block;
+    margin-bottom: 2px; }
+  .product-resume .price {
+    color: #5bc500;
+    font-size: 14px;
+    line-height: 14px;
+    display: block;
+    margin-bottom: 10px; }
+  @media (max-width: 992px) {
+    .product-resume {
+      float: none;
+      width: 100%; } }

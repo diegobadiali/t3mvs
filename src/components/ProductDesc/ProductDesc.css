@@ -1,0 +1,88 @@
+.product-desc {
+  position: relative; }
+  .product-desc h1 {
+    font-size: 35px;
+    color: #50535a;
+    font-family: "TelefonicaExtraLight"; }
+    @media (max-width: 767px) {
+      .product-desc h1 {
+        font-size: 24px; } }
+  .product-desc .bg-prod {
+    padding: 15px 50px;
+    background-color: #fff;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; }
+    .product-desc .bg-prod.bg-line {
+      justify-content: flex-start; }
+      .product-desc .bg-prod.bg-line div {
+        margin-right: 40px; }
+    .product-desc .bg-prod .img {
+      display: block;
+      margin: 0;
+      width: 25px;
+      height: auto; }
+    .product-desc .bg-prod .icon {
+      display: block;
+      margin: 0;
+      width: 40px;
+      height: auto; }
+    .product-desc .bg-prod h2 {
+      font-size: 18px;
+      line-height: 20px;
+      color: #50535a;
+      font-family: "TelefonicaRegular";
+      margin-bottom: 0;
+      margin-top: 0;
+      display: block;
+      font-weight: bold; }
+      @media (max-width: 767px) {
+        .product-desc .bg-prod h2 {
+          font-size: 14px;
+          margin-top: 0; } }
+      .product-desc .bg-prod h2 a {
+        color: #00a9e0; }
+        .product-desc .bg-prod h2 a:hover, .product-desc .bg-prod h2 a:focus {
+          opacity: .7; }
+    .product-desc .bg-prod h3 {
+      font-size: 16px;
+      line-height: 20px;
+      color: #50535a;
+      font-family: "TelefonicaRegular";
+      margin-bottom: 0;
+      margin-top: 0; }
+    .product-desc .bg-prod h4 {
+      font-size: 18px;
+      line-height: 18px;
+      color: #5bc500;
+      font-family: "TelefonicaLight";
+      margin-bottom: 5px;
+      margin-top: 0; }
+    .product-desc .bg-prod h5 {
+      font-size: 14px;
+      line-height: 14px;
+      color: #86888c;
+      font-family: "TelefonicaLight";
+      margin-bottom: 0;
+      margin-top: 0; }
+    .product-desc .bg-prod .btn-outline-dark {
+      position: absolute;
+      bottom: 0;
+      right: 0; }
+    @media (max-width: 991px) {
+      .product-desc .bg-prod {
+        margin-bottom: 20px; } }
+    @media (max-width: 767px) {
+      .product-desc .bg-prod {
+        padding: 0;
+        background-color: transparent;
+        display: block; }
+        .product-desc .bg-prod .img {
+          width: 60px;
+          float: left;
+          margin-right: 20px; }
+        .product-desc .bg-prod h2 {
+          font-size: 18px; }
+        .product-desc .bg-prod h3 {
+          margin-bottom: 10px; } }

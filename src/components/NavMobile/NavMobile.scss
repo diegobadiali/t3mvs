@@ -1,0 +1,93 @@
+@import './../../variables';
+.navmobile{
+  display: none;
+  @media(max-width:767px){
+   display: block;
+ }
+ .bm-burger-button {
+  position: absolute;
+  width: 24px;
+  height: 20px;
+  left: 20px;
+  top: 24px;
+}
+.bm-burger-bars {
+  background: $color4;
+}
+.bm-cross-button {
+  height: 24px;
+  width: 24px;
+}
+.bm-cross {
+  background: #bdc3c7;
+}
+.bm-menu {
+  background: $color4;
+  padding: 0;
+}
+.bm-morph-shape {
+  fill: $color4;
+}
+.bm-item-list {
+  color: #b8b7ad;
+  padding: 0;
+}
+.bm-overlay {
+  background: rgba(0, 0, 0, 0.3);
+}
+.sidebar-head{
+  padding:40px 20px;
+  margin-bottom: 30px;
+  .user-image{
+    background-color: $color1;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    padding: 5px;
+    display: block;
+    float: left;
+    i{
+      text-align: center;
+      font-size: 17px;
+      color: $color4;
+      margin: 3px auto;
+      display: block;
+    }
+  }
+  #btn-right{
+    float: right;
+    .fa-angle-right{
+      margin-top: 2px;
+      color: $color5;
+      font-size: 28px;
+    }
+  }
+  #btn-left{
+    float: left;
+    .fa-angle-left{
+      margin-top: 2px;
+      color: $color5;
+      font-size: 28px;
+      margin-right: 20px
+    }
+  }
+}
+ul li.dropdown{
+  margin-top: 23px;
+  margin-right:10px;
+  a{
+    padding: 5px 10px;
+    + .dropdown-menu{
+      margin-top: 6px;
+      right: 0;
+      left: auto;
+    }
+  }
+}
+}
+.menu-open{
+  .bm-menu {
+    box-shadow: $box-shadow2;
+  }
+}
+

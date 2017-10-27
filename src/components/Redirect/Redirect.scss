@@ -1,0 +1,31 @@
+@import './../../variables';
+.redirect{
+	border: 2px solid $color3;
+	border-radius: $border-radius;
+	font-family: $font3;
+	color: $color8;
+	text-align: center;
+	padding: 50px 20px;
+	img{
+		display: block;
+		margin: 0 auto 30px;
+	}
+	h2{
+		margin-bottom: 20px;
+		@media(max-width: 767px){
+			font-size: 18px;
+		}
+	}
+	@media(max-width: 767px){
+		img{
+
+			margin-bottom: 20px;
+		}
+		.spin{
+			width: 50px;
+		}
+		.logoredirect{
+			width: 140px;
+		}
+	}
+}

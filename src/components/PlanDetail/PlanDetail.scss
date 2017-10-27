@@ -1,0 +1,83 @@
+@import './../../variables';
+
+.plan-detail{
+	border-radius: $border-radius;
+	background-color: $color4;
+	overflow:hidden;
+	padding-bottom: 20px;
+	min-height: 392px;
+	h5{
+		background-color: $color2;
+		margin:0;
+		padding:20px 30px 25px;;
+		color: $color4;
+		font-size: 21px;
+		font-family: $font4;
+		line-height: 20px;
+		i{
+			display: none;
+		}
+	}
+	.name{
+		background-color: $color7;
+		display: block;
+		text-align: center;
+		padding:5px 0 7px;
+		color: $color4;
+		text-transform: uppercase;
+		font-family: $font1;
+		font-size: 14px;
+		&.name-comunidad{
+			background-color: $color7;
+		}
+		&.name-prepago{
+			background-color: $color12;
+		}
+		&.name-one{
+			background-color: $color6;
+		}
+	}
+	.cont{
+		padding: 0;
+
+		ul{
+			margin-bottom: 0;
+			li{
+				border-bottom: 1px dotted $color3;
+				padding:10px 15px;
+				line-height: 14px;
+				font-size: 12px;
+				color: $color5;
+				font-family: $font2;
+				strong{
+					display: block;
+					text-transform: uppercase;
+					color: $color8;
+					font-family: $font1;
+					font-weight: normal;
+				}
+			}
+		}
+	
+	.price{
+		font-size: 30px;
+		color: $color1;
+		margin-left: 20px;
+		line-height: 36px;
+		margin-top: 5px;
+		display: block;
+		font-family: $font3;
+		sub{
+			font-size: 15px;
+			bottom: 0;
+		}
+		& +span{
+			display: block;
+			margin-left: 20px;
+			color: $color5;
+			line-height: 10px;
+			font-family: $font3;
+		}
+	}
+	}
+}

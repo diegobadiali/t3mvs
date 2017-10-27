@@ -1,0 +1,43 @@
+@import './../../variables';
+
+.product-resume{
+	border: 2px solid $color3; 
+	float: right;
+	width: 250px;
+	padding: 20px;
+	img{
+		width: 60px;
+	}
+	h4{
+		font-size: 24px;
+		margin: 0 0 20px 0
+	}
+	.title{
+		text-transform: uppercase;
+		color: $color9;
+		font-size: 12px;
+		line-height: 12px;
+		display: block;
+		margin-top: 10px;
+		margin-bottom: 0;
+		font-family: $font1;
+	}
+	.info{
+		color: $color5;
+		font-size: 14px;
+		line-height: 14px;
+		display: block;
+		margin-bottom: 2px;
+	}
+	.price{
+		color: $color1;
+		font-size: 14px;
+		line-height: 14px;
+		display: block;
+		margin-bottom: 10px;
+	}
+	@media(max-width:992px){
+		float: none;
+		width: 100%;
+	}
+}

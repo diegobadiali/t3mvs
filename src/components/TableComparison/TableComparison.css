@@ -1,0 +1,41 @@
+.product .head {
+  height: 460px; }
+  .product .head .img {
+    display: block;
+    margin: 0 auto;
+    height: 248px; }
+  .product .head h2 {
+    font-size: 18px;
+    color: #86888c;
+    font-family: "TelefonicaLight";
+    margin-bottom: 5px;
+    height: auto; }
+  .product .head h3 {
+    font-size: 24px;
+    color: #5bc500;
+    font-family: "TelefonicaExtraLight";
+    margin-top: 0;
+    text-align: left;
+    margin-bottom: 0; }
+  .product .head h4 {
+    font-size: 14px;
+    color: #86888c;
+    font-family: "TelefonicaLight";
+    margin-top: 0;
+    text-align: left; }
+  .product .head .mas-info {
+    margin-bottom: 5px;
+    display: block;
+    color: #00a9e0;
+    font-family: "TelefonicaRegular"; }
+  .product .head .btn-success {
+    background-color: #5bc500;
+    border: none;
+    border-radius: 10px;
+    padding: 8px 20px 15px;
+    font-size: 16px;
+    display: block;
+    width: 100%;
+    font-family: "TelefonicaRegular"; }
+    .product .head .btn-success:hover, .product .head .btn-success:focus {
+      opacity: .9; }

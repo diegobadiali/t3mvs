@@ -1,0 +1,72 @@
+@import './../../variables';
+#tabsPlanes{
+@media(max-width:767px){
+		display: none;
+	}
+}
+.nav-tabs{
+	margin-top: 0;
+	border-bottom: none !important;
+	margin-right: -15px;
+	margin-left: -15px;
+	li{
+		border-radius: 0;
+		width: 25%;
+		padding-right: 15px;
+		padding-left: 15px;
+		@media (max-width:991px){
+		}
+		a{
+			display: block;
+			text-align: center;
+			background-color: $color15;
+			border: none;
+			border-radius: 0 !important;
+			height: 96px;
+			border-top: 4px solid transparent !important;
+			h4{
+				font-size: 18px;
+				font-family: $font3;
+				color: $color5;
+				margin-bottom: 5px;
+				margin-top: 5px;
+			}
+			p{
+				font-family: $font3;
+				font-size: 14px;
+				color: $color5;
+				height: 45px;
+				line-height: 16px;
+			}
+			&:hover, &:focus{
+				background-color: $color4;
+				border-bottom: none;
+			}
+			@media(max-width:992px){
+				h4{
+					font-size: 16px;
+				}
+				p{
+					font-size: 11px;
+				}
+			}
+		}
+		&.active{
+			background-color: transparent !important;
+			a{
+				border-top: 4px solid $color2 !important;
+				border-left: none !important;
+				border-right: none !important;
+				background-color: $color4;	
+				h4{
+				color: $color8;
+			}	
+			}
+		}
+	}
+	
+}
+.tab-content{
+	border-top: none;
+	margin-top: 0;
+}

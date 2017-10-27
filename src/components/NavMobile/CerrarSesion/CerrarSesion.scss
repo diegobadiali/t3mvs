@@ -1,0 +1,21 @@
+  @import './../../../variables';
+  .navmobile{
+    .btn{
+          background-color: $color4;
+          color:$color8;
+          border: 2px solid $color8;
+          display: block;
+          text-align: center;
+          font-weight: bold;
+          margin: 20px 5% 10px;
+          font-size: 18px;
+          padding: 10px 0 15px;
+          width: 90%;
+          font-family: $font2;
+          &:hover, &:focus{
+            color: $color4;
+            background-color: $color8;
+            border-color: $color8;
+          }
+        }
+  }

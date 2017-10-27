@@ -1,0 +1,21 @@
+@import './../../variables';
+.btn-tooltip{
+  border: none !important;
+  background: none !important;
+  padding: 0 !important;
+  width: auto;
+  .fa{
+    color: $color2;
+    font-size: 22px;
+  }
+}
+
+.popover{
+  background: transparent !important;
+    border: none !important;
+    padding: 0;
+    box-shadow: none !important;
+  .arrow{
+    display: none !important;
+  }
+}

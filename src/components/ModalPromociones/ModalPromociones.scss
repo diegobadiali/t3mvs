@@ -1,0 +1,86 @@
+@import './../../variables';
+.Overlay {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: rgba(0, 0, 0, .5);
+	@media(max-width:767px){
+		background-color: $color4;
+	}
+}
+.btn-modal{
+	background: none;
+	font-family: $font3;
+	border:none;
+	color: $color2;
+	font-size: 14px;
+}
+.ReactModal__Content{
+	border-radius: 0 !important;
+	box-shadow: $box-shadow3;
+	border: none !important;
+	min-width: 700px;
+	.btn-cerrar{
+		float: right;
+		background: transparent;
+		border: none;
+		color: $color5;
+	}
+	h2{
+		font-family: $font3;
+		color: $color5;
+		margin-bottom:5px;
+
+	}
+	@media(max-width:767px){
+		width: 100%;
+		text-align: center;
+		box-shadow: none;
+		min-width: 300px;
+		top: 0 !important;
+		transform: translate(-50%, 0%) !important;
+	}
+}
+
+input[type="radio"]{
+	display: block;
+	text-align: left;
+	float: left;
+	-webkit-appearance:none !important;
+	-moz-appearance:none !important;
+	height:19px;
+	width:19px;
+	cursor:pointer;
+	position:relative;
+	-webkit-transition: .15s;
+	border-radius:50%;
+	background-color:$color4;
+	border: 2px solid $color8;
+	&:checked {
+		background-color: $color8;
+		border: 1px solid $color8;
+	}
+}
+input[type="radio"]:before, input[type="radio"]:checked:before {
+	position:absolute;
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;
+	line-height:16px;
+	font-size: 9px;
+	font-weight: normal;
+	text-align:center;
+	color:$color4;
+	content: '';
+}
+input[type="radio"]:checked:before {
+	content: "\f111";
+	font-family: 'Fontawesome';
+}
+
+input[type="radio"]:hover:before {
+
+}

@@ -1,0 +1,106 @@
+.btn-user {
+  padding-top: 0;
+  margin-top: 3px;
+  float: right;
+  margin-right: -15px; }
+  .btn-user .dropdown {
+    padding-top: 0;
+    margin-top: 0; }
+    .btn-user .dropdown button.dropdown-toggle {
+      border: 1px solid #00a9e0;
+      color: #00a9e0;
+      border-radius: 50%;
+      background-color: transparent;
+      width: 40px;
+      height: 40px;
+      margin: 11px 0 12px 2px;
+      padding: 5px 0;
+      text-align: center; }
+      .btn-user .dropdown button.dropdown-toggle i {
+        font-size: 20px;
+        margin-left: 1px;
+        margin-top: 2px; }
+      .btn-user .dropdown button.dropdown-toggle + .dropdown-menu {
+        background-color: #fff;
+        box-shadow: -7px 7px 20px 0px rgba(12, 5, 13, 0.3);
+        width: 240px;
+        border: none;
+        padding-top: 5px;
+        padding-bottom: 0;
+        border-radius: 4px;
+        margin-top: -10px;
+        border-top: 1px solid #EBEBEB;
+        margin-bottom: 15px;
+        overflow: hidden; }
+        .btn-user .dropdown button.dropdown-toggle + .dropdown-menu .fa-caret-up {
+          position: absolute;
+          top: -11px;
+          right: 15px;
+          color: #fff;
+          font-size: 16px; }
+        .btn-user .dropdown button.dropdown-toggle + .dropdown-menu li {
+          /*border-bottom: 1px solid $color3;*/
+          display: block;
+          padding-top: 0; }
+          .btn-user .dropdown button.dropdown-toggle + .dropdown-menu li .user-name {
+            font-size: 21px;
+            text-align: left;
+            font-family: "TelefonicaLight";
+            display: block;
+            color: #50535a;
+            margin-bottom: 0;
+            line-height: 21px;
+            margin-top: 5px; }
+          .btn-user .dropdown button.dropdown-toggle + .dropdown-menu li .user-status {
+            display: block;
+            text-align: center;
+            font-family: "TelefonicaLight";
+            font-size: 13px;
+            color: #86888c;
+            margin-bottom: 10px; }
+            .btn-user .dropdown button.dropdown-toggle + .dropdown-menu li .user-status strong {
+              color: #5bc500;
+              font-family: "TelefonicaBold";
+              font-weight: normal; }
+          .btn-user .dropdown button.dropdown-toggle + .dropdown-menu li a {
+            display: block;
+            padding: 10px 20px;
+            color: #00a9e0;
+            font-family: "TelefonicaBold";
+            text-transform: uppercase;
+            font-size: 12px;
+            line-height: 18px;
+            border-radius: 0; }
+            .btn-user .dropdown button.dropdown-toggle + .dropdown-menu li a .fa-angle-right {
+              float: right;
+              color: #86888c;
+              font-size: 18px; }
+              .btn-user .dropdown button.dropdown-toggle + .dropdown-menu li a .fa-angle-right + i {
+                font-size: 20px;
+                vertical-align: middle;
+                margin-right: 5px; }
+            .btn-user .dropdown button.dropdown-toggle + .dropdown-menu li a:hover, .btn-user .dropdown button.dropdown-toggle + .dropdown-menu li a:focus {
+              opacity: .7; }
+          .btn-user .dropdown button.dropdown-toggle + .dropdown-menu li .btn {
+            background-color: #5bc500;
+            color: #fff;
+            display: block;
+            text-align: center;
+            border: none;
+            margin: 10px 0;
+            display: block;
+            width: 100%;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            font-family: "TelefonicaRegular"; }
+            .btn-user .dropdown button.dropdown-toggle + .dropdown-menu li .btn:hover, .btn-user .dropdown button.dropdown-toggle + .dropdown-menu li .btn:focus {
+              opacity: .7; }
+      .btn-user .dropdown button.dropdown-toggle:hover, .btn-user .dropdown button.dropdown-toggle:focus {
+        /*border-color: $color2;
+        background-color:$color2;*/
+        background-color: #00a9e0;
+        color: #fff !important; }
+    .btn-user .dropdown.open .dropdown-toggle {
+      background-color: #00a9e0 !important;
+      border-color: #00a9e0 !important;
+      color: #fff !important; }

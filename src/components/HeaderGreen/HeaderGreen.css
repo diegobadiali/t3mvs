@@ -1,0 +1,10 @@
+.header .navbar-custom {
+  background-color: #5bc500;
+  height: 70px;
+  border: none;
+  border-radius: 0; }
+  .header .navbar-custom .App-logo {
+    margin-top: 15px; }
+    @media (max-width: 767px) {
+      .header .navbar-custom .App-logo {
+        display: none; } }

@@ -1,0 +1,16 @@
+.btn-tooltip {
+  border: none !important;
+  background: none !important;
+  padding: 0 !important;
+  width: auto; }
+  .btn-tooltip .fa {
+    color: #00a9e0;
+    font-size: 22px; }
+
+.popover {
+  background: transparent !important;
+  border: none !important;
+  padding: 0;
+  box-shadow: none !important; }
+  .popover .arrow {
+    display: none !important; }

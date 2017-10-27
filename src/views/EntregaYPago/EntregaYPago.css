@@ -1,0 +1,141 @@
+.radios-entrega .form-group .radio label {
+  width: 100%;
+  font-size: 16px;
+  line-height: 21px;
+  padding-left: 25px; }
+  .radios-entrega .form-group .radio label h4 {
+    font-family: "TelefonicaRegular";
+    font-weight: normal;
+    color: #50535a;
+    margin: 0;
+    float: left; }
+    .radios-entrega .form-group .radio label h4 span {
+      color: #5bc500; }
+    @media (max-width: 767px) {
+      .radios-entrega .form-group .radio label h4 {
+        float: none; } }
+  .radios-entrega .form-group .radio label input[type="radio"] {
+    display: block;
+    text-align: left;
+    float: left;
+    margin-left: -25px;
+    margin-right: 10px;
+    -webkit-appearance: none !important;
+    -moz-appearance: none !important;
+    height: 19px;
+    width: 19px;
+    cursor: pointer;
+    position: relative;
+    -webkit-transition: .15s;
+    border-radius: 50%;
+    background-color: #fff;
+    border: 2px solid #50535a; }
+    .radios-entrega .form-group .radio label input[type="radio"]:checked {
+      border: 1px solid #50535a;
+      background-color: #50535a; }
+  .radios-entrega .form-group .radio label input[type="radio"]:before, .radios-entrega .form-group .radio label input[type="radio"]:checked:before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    line-height: 17px;
+    font-size: 9px;
+    font-weight: normal;
+    text-align: center;
+    color: #fff;
+    content: ''; }
+  .radios-entrega .form-group .radio label input[type="radio"]:checked:before {
+    content: "\f111";
+    font-family: 'Fontawesome'; }
+  .radios-entrega .form-group .radio label .icon-envios, .radios-entrega .form-group .radio label .icon-centros-movistar {
+    font-size: 25px;
+    margin-right: 5px;
+    float: left;
+    margin-bottom: 20px;
+    display: block; }
+  .radios-entrega .form-group .radio label .list-inline {
+    float: left;
+    margin-left: 20px; }
+    @media (max-width: 767px) {
+      .radios-entrega .form-group .radio label .list-inline {
+        float: none;
+        padding-left: 0;
+        margin-left: 0;
+        margin-top: 10px; }
+        .radios-entrega .form-group .radio label .list-inline img {
+          height: 25px; } }
+
+.checkbox label {
+  font-size: 16px;
+  line-height: 18px;
+  padding-left: 25px !important;
+  vertical-align: middle; }
+  .checkbox label input[type="checkbox"] {
+    margin-left: -25px;
+    margin-right: 10px;
+    -webkit-appearance: none !important;
+    -moz-appearance: none !important;
+    height: 18px;
+    width: 18px;
+    cursor: pointer;
+    position: relative;
+    -webkit-transition: .15s;
+    border-radius: 4px;
+    background-color: #fff;
+    border: 1px solid #50535a; }
+    .checkbox label input[type="checkbox"]:checked {
+      background-color: #50535a; }
+  .checkbox label input[type="checkbox"]:before, .checkbox label input[type="checkbox"]:checked:before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    line-height: 18px;
+    font-size: 12px;
+    font-weight: normal;
+    text-align: center;
+    color: #fff;
+    content: ''; }
+  .checkbox label input[type="checkbox"]:checked:before {
+    content: "\f00c";
+    font-family: 'Fontawesome'; }
+  .checkbox label button {
+    color: #00a9e0;
+    font-size: 16px;
+    line-height: 18px;
+    padding: 0;
+    background-color: transparent;
+    border: none;
+    height: auto;
+    vertical-align: initial !important; }
+
+.cont-checkboxs {
+  margin-bottom: 30px; }
+
+.cont-buttons .btn-default {
+  background-color: #EBEBEB;
+  border: none;
+  font-size: 18px;
+  padding: 10px 30px 15px; }
+.cont-buttons .btn-success {
+  font-size: 18px;
+  padding: 10px 30px 15px; }
+@media (max-width: 767px) {
+  .cont-buttons {
+    display: flex;
+    -webkit-flex-flow: row wrap;
+    flex-flow: row wrap; }
+    .cont-buttons .pull-left {
+      width: 100%;
+      order: 1;
+      float: none; }
+      .cont-buttons .pull-left .btn-default {
+        margin-bottom: 20px;
+        width: 100%; }
+    .cont-buttons .pull-right {
+      width: 100%;
+      float: none; }
+      .cont-buttons .pull-right .btn-success {
+        margin-bottom: 20px; } }

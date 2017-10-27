@@ -1,0 +1,72 @@
+ul {
+  margin-top: -5px; }
+  ul li.dropdown {
+    padding-top: 9px;
+    display: inline-block;
+    padding-top: 0;
+    margin-top: -5px; }
+    ul li.dropdown > a {
+      border: 1px solid #fff;
+      color: #fff;
+      border-radius: 10px;
+      background-color: transparent;
+      font-family: TelefonicaLight;
+      font-size: 16px;
+      padding-bottom: 10px;
+      margin: 15px 10px;
+      height: 40px; }
+      ul li.dropdown > a + .dropdown-menu {
+        background-color: #fff;
+        box-shadow: -7px 7px 20px 0px rgba(12, 5, 13, 0.3);
+        border: none;
+        padding: 0;
+        border-radius: 4px;
+        margin-top: -14px;
+        overflow: hidden;
+        left: auto;
+        right: 0; }
+        ul li.dropdown > a + .dropdown-menu .fa-caret-up {
+          position: absolute;
+          top: -11px;
+          right: 15px;
+          color: #fff;
+          font-size: 16px; }
+        ul li.dropdown > a + .dropdown-menu li {
+          border-bottom: 1px solid #EBEBEB;
+          display: block;
+          padding-top: 0;
+          overflow: hidden; }
+          ul li.dropdown > a + .dropdown-menu li a {
+            display: block;
+            padding: 10px 20px;
+            color: #86888c;
+            font-family: "TelefonicaRegular";
+            font-size: 14px;
+            line-height: 18px; }
+            ul li.dropdown > a + .dropdown-menu li a .fa-angle-right {
+              float: right;
+              color: #86888c;
+              font-size: 18px; }
+              ul li.dropdown > a + .dropdown-menu li a .fa-angle-right + i {
+                font-size: 20px;
+                vertical-align: middle;
+                margin-right: 5px; }
+            ul li.dropdown > a + .dropdown-menu li a:hover, ul li.dropdown > a + .dropdown-menu li a:focus {
+              opacity: .7;
+              border-radius: 0; }
+          ul li.dropdown > a + .dropdown-menu li:last-child {
+            border-bottom: none; }
+          ul li.dropdown > a + .dropdown-menu li.active a {
+            background-color: #EBEBEB; }
+        ul li.dropdown > a + .dropdown-menu .btn {
+          background-color: #5bc500;
+          color: #fff;
+          display: block;
+          text-align: center;
+          border: none;
+          margin: 0 20px 10px; }
+          ul li.dropdown > a + .dropdown-menu .btn:hover, ul li.dropdown > a + .dropdown-menu .btn:focus {
+            opacity: .7; }
+    ul li.dropdown.open a {
+      background-color: transparent !important;
+      border-color: #fff !important; }

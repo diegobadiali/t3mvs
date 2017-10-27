@@ -1,0 +1,28 @@
+.info-tarjetas p {
+  font-family: "TelefonicaRegular";
+  color: #86888c;
+  font-size: 18px;
+  margin-top: 10px;
+  margin-bottom: 5px; }
+  .info-tarjetas p strong {
+    font-family: "TelefonicaBold";
+    font-weight: normal; }
+  .info-tarjetas p i {
+    color: #5bc500;
+    margin-right: 5px;
+    font-size: 20px; }
+.info-tarjetas .credit-card {
+  margin-left: 10px; }
+  @media (max-width: 767px) {
+    .info-tarjetas .credit-card {
+      margin-left: 0;
+      margin-right: 10px;
+      margin-top: 10px; } }
+.info-tarjetas a {
+  color: #00a9e0;
+  font-size: 14px; }
+  .info-tarjetas a i {
+    font-size: 16px; }
+  .info-tarjetas a:hover {
+    opacity: .8;
+    color: #00a9e0; }

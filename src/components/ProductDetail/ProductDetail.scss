@@ -1,0 +1,148 @@
+@import './../../variables';
+
+.product-detail{
+		background-color: $color4;
+		border-radius: $border-radius;
+		padding: 0;
+		min-height: 392px;
+		article{
+			overflow: hidden;
+			max-height: 76px;
+			-webkit-transition: all .3s; /* Safari */
+			transition: all .3s;
+			&+a{
+				color: $color2;
+				&:hover, &:focus{
+					opacity: .7;
+				}
+			}
+		}
+		.img{
+			display: block;
+			margin: 20px auto;
+			height: 272px;
+			@media (max-width:767px){
+				margin-bottom: 20px;
+				max-width: 100px;
+				height: auto;
+			}
+		}
+		h1{
+			font-size: 35px;
+			color: $color8;
+			font-family: $font4;
+			margin-right: 30px;
+			@media (max-width:767px){
+				font-size: 24px;
+			}
+		}
+		h2{
+			font-size: 16px;
+			line-height: 18px;
+			color: $color8;
+			font-family: $font2;
+			margin-bottom: 10px;
+			margin-right: 30px;
+			display: block;
+			@media (max-width:767px){
+				font-size: 14px;
+				margin-top: 0;
+			}
+			a{
+				color: $color2;
+				&:hover, &:focus{
+					opacity: .7;
+				}
+			}
+		}
+		h3{
+			font-size: 40px;
+			color: $color2;
+			font-family: $font4;
+			margin-top: 10px;
+			margin-right: 30px;
+		}
+		h4{
+			font-size: 14px;
+			color: $color5;
+			font-family: $font3;
+			margin-top: 0;
+			margin-right: 30px;
+		}
+		.btn-success{
+		background-color: $color1;
+		color:$color4;
+		text-align: center;
+		border:none;
+		margin: 0 0 10px;
+		padding: 8px 20px 15px;;
+		font-size: 16px;
+		font-family: $font2;
+		border-radius: $border-radius;
+		&:hover, &:focus{
+			opacity: .7;
+			background-color: $color1;
+		}
+		&:disabled{
+			opacity: 1;
+			background-color: $color9;
+		}
+			i{
+				display: none;
+				@media (max-width:767px){
+				display: block;
+			}
+			}
+			span{
+				@media (max-width:767px){
+				display: none;
+			}
+			}
+		}
+		.foot{
+			border-top: 1px solid $color3;
+			margin-top: 15px;
+			font-family: $font3;
+			a{
+				padding: 18px 20px 25px 30px;
+				border-right: 1px solid $color3;
+				display: block;
+				color: $color2;
+				&.nbr{
+					border-right: none;
+					padding-left: 5px;
+				}
+				&:hover, &:focus{
+					opacity: .7;
+				}
+				@media (max-width:767px){
+				padding-left:10px;
+				padding-right:10px;
+			}
+			}
+			&.nb{
+				border: none;
+			}
+		}
+		&.product-ficha{
+			min-height: 320px;
+			h3{
+				color: $color1;
+				margin-bottom: 0;
+			}
+			.btn-volver{
+				margin-top: 40px;
+				margin-bottom: 20px;
+				display: block;
+				color: $color2;
+				&:hover, &:focus{
+					opacity: .7;
+				}
+			}
+		}
+		@media (max-width:991px){
+				margin-bottom: 20px;
+			}
+
+
+	}

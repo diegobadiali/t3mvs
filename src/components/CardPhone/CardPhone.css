@@ -1,0 +1,35 @@
+.card-phone {
+  background-color: #fff;
+  border-radius: 4px;
+  border: 1px solid #EBEBEB;
+  padding: 20px 20px 80px;
+  align-self: stretch;
+  height: 100%;
+  position: relative; }
+  .card-phone img {
+    max-width: 100%; }
+  .card-phone h2 {
+    font-size: 28px;
+    margin: 0;
+    color: #00a9e0;
+    font-family: "TelefonicaLight";
+    margin-bottom: 5px; }
+  .card-phone h3 {
+    font-size: 26px;
+    margin: 0;
+    color: #5bc500;
+    font-family: "TelefonicaLight";
+    margin-bottom: 20px; }
+  .card-phone span {
+    font-size: 16px;
+    margin: 0;
+    color: #86888c;
+    font-family: "TelefonicaRegular";
+    margin-bottom: 5px; }
+  .card-phone .dropdown {
+    position: absolute;
+    bottom: 20px;
+    right: 20px; }
+  @media (max-width: 767px) {
+    .card-phone {
+      margin-bottom: 20px; } }

@@ -1,0 +1,36 @@
+{
+  "name": "t3",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "bootstrap": "^3.3.7",
+    "font-awesome": "^4.7.0",
+    "google-map-react": "^0.24.0",
+    "moment": "^2.19.0",
+    "prop-types": "^15.6.0",
+    "rc-steps": "^3.0.0",
+    "react": "^15.6.1",
+    "react-accordion-with-header": "0.0.8",
+    "react-burger-menu": "^2.1.6",
+    "react-datepicker": "^0.55.0",
+    "react-dom": "^15.6.1",
+    "react-modal": "^2.3.3",
+    "react-number-format": "^2.0.4",
+    "react-scripts": "0.9.5",
+    "react-scrollbar": "^0.5.1",
+    "react-slick": "^0.15.4",
+    "react-swipe-views": "0.0.12",
+    "react-swipeable-views": "^0.12.8",
+    "slick-carousel": "^1.7.1"
+  },
+  "devDependencies": {
+    "react-bootstrap": "^0.31.3",
+    "simple-react-router": "0.0.14"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  }
+}

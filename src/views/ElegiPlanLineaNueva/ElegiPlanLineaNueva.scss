@@ -1,0 +1,57 @@
+@import './../../variables';
+
+.page-header{
+	h1{
+		color: $color8;
+		font-size: 35px;
+		font-family: $font3;
+		button{
+			float: right;
+			background-color: transparent;
+			color: $color5;
+			border: 2px solid $color5;
+			border-radius: $border-radius;
+			padding: 8px 20px 12px;
+			font-family: $font2;
+		}
+
+	}
+	@media(max-width:767px){
+		margin-top: 0 !important;
+		h1{
+			text-align: center;
+			font-size: 35px !important;
+		}
+		}
+}
+
+.bg-product{
+	background-color: $color13;
+	margin-top: 20px;
+	height: 350px;
+	margin-bottom: -96px;
+	@media (max-width:767px){
+		background-color: $color4;
+		margin-top: 0;
+		height: auto;
+		margin-bottom: 20px;
+			}
+}
+
+.cont{
+	background-color: $color4;
+	border-radius: $border-radius;
+	padding: 40px 20px;
+}
+h3.title{
+    color: $color8;
+    font-family: $color3;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    font-family: $font3;
+}
+.message {
+    font-family: $font5;
+    margin-top: 10px;
+    color: $color5;
+}

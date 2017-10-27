@@ -1,0 +1,134 @@
+@import './../../variables';
+
+	.btn-user{
+		padding-top: 0;
+		margin-top: 3px;
+		float: right;
+		margin-right: -15px;
+		.dropdown{
+			padding-top: 0;
+			margin-top: 0;
+			button.dropdown-toggle{
+				border:1px solid $color2;
+				color: $color2;
+				border-radius: 50%;
+				background-color:transparent;
+				width:40px;
+				height: 40px;
+				margin:11px 0 12px 2px;
+				padding:5px 0; 
+				text-align: center;
+				i{
+					font-size: 20px;
+					margin-left: 1px;
+					margin-top: 2px;
+				}
+				& +.dropdown-menu{
+					background-color: $color4;
+					box-shadow: $box-shadow;
+					width: 240px;
+					border:none;
+					padding-top:5px;
+					padding-bottom:0;
+					border-radius: $border-radius;
+					margin-top: -10px;
+					border-top: 1px solid $color3;
+					margin-bottom: 15px;
+					overflow:hidden;
+					.fa-caret-up{
+						position: absolute;
+						top:-11px;
+						right: 15px;
+						color: $color4;
+						font-size: 16px;
+					}
+					li{
+						/*border-bottom: 1px solid $color3;*/
+						display: block;
+						padding-top: 0;
+						.user-name{
+							font-size: 21px;
+							text-align: left;
+							font-family: $font3;
+							display: block;
+							color: $color8;
+							margin-bottom: 0;
+							line-height: 21px;
+							margin-top: 5px;
+						}
+						.user-status{
+							display: block;
+							text-align: center;
+							font-family: $font3;
+							font-size:13px;
+							color: $color5;
+							margin-bottom: 10px;
+							strong{
+								color:$color1;
+								font-family: $font1;
+								font-weight: normal;
+							}
+						}
+						a{
+							display: block;
+							padding: 10px 20px;
+							color: $color2;
+							font-family: $font1;
+							text-transform: uppercase;
+							font-size: 12px;
+							line-height: 18px;
+							border-radius: 0;
+							.fa-angle-right{
+								float: right;
+								color: $color5;
+								font-size: 18px;
+								&+i{
+									font-size: 20px;
+									vertical-align: middle;
+									margin-right: 5px;
+								}
+							}
+							&:hover, &:focus{
+								opacity: .7;
+							}
+							
+						}
+						.btn{
+							background-color: $color1;
+							color:$color4;
+							display: block;
+							text-align: center;
+							border:none;
+							margin: 10px 0;
+							display: block;
+							width: 100%;
+							padding-top: 10px;
+							padding-bottom: 10px;
+							font-family: $font2;
+							&:hover, &:focus{
+								opacity: .7;
+							}
+						}
+					}
+					
+				}
+				&:hover, &:focus{
+						/*border-color: $color2;
+						background-color:$color2;*/
+						background-color: $color2;
+						color: $color4 !important;
+					}
+				}
+			&.open{
+				.dropdown-toggle{
+					background-color: $color2 !important;
+					border-color: $color2 !important;
+					color: $color4 !important;
+				}
+			}
+		}
+		@media(max-width:767px){
+			
+		}
+	}
+

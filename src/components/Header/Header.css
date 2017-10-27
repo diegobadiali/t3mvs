@@ -1,0 +1,24 @@
+.header .navbar-custom {
+  background-color: #fff;
+  height: 70px;
+  margin-bottom: 0;
+  border: none;
+  border-radius: 0;
+  border-bottom: 1px solid #EBEBEB; }
+  .header .navbar-custom .navbar-header {
+    width: 100%; }
+    .header .navbar-custom .navbar-header .App-logo {
+      margin-top: 15px; }
+      @media (max-width: 767px) {
+        .header .navbar-custom .navbar-header .App-logo {
+          display: none; } }
+    .header .navbar-custom .navbar-header .App-logo-Mobile {
+      display: none; }
+      @media (max-width: 767px) {
+        .header .navbar-custom .navbar-header .App-logo-Mobile {
+          display: block;
+          margin-top: 15px;
+          margin-left: 15px; } }
+  @media (max-width: 767px) {
+    .header .navbar-custom {
+      box-shadow: 0px 0px 25px -4px rgba(0, 0, 0, 0.4); } }

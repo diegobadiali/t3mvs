@@ -1,0 +1,50 @@
+@import './../../variables';
+
+#tabsPlanesMobile{
+	display: none;
+	@media(max-width:767px){
+		display: block;
+		font-family: $font3;
+		.tab-pane{
+			margin-top: 15px;
+		>h4{
+			font-family: $font1;
+			margin-bottom: 5px;
+		}
+		>p{
+			color: $color5;
+		}
+		}
+		.nav-pills{
+			&>li{
+				width: 100%;
+				&>a{
+				color: $color5;
+				background-color: $color3;
+				border: 1px solid $color10;
+				font-size: 16px;
+				line-height: 15px;
+				padding: 15px 20px;
+				.caret{
+					float: right;
+					margin-top: 7px;
+					color: $color2;
+					}
+					&+.dropdown-menu{
+						width: 100%;
+						padding-top: 0;
+						padding-bottom: 0;
+						& >.active > a{
+							background-color: $color2;
+							cursor: pointer;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+.tab-content{
+	border-top: none;
+	margin-top: 0;
+}

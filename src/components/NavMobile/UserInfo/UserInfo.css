@@ -1,0 +1,19 @@
+.navmobile .sidebar-head .user-info {
+  float: left;
+  margin-left: 10px; }
+  .navmobile .sidebar-head .user-info .user-name {
+    font-size: 20px;
+    font-family: "TelefonicaLight";
+    display: block;
+    color: #50535a;
+    margin-bottom: 0;
+    line-height: 18px; }
+  .navmobile .sidebar-head .user-info .user-status {
+    display: block;
+    font-family: "TelefonicaLight";
+    font-size: 12px;
+    color: #86888c; }
+    .navmobile .sidebar-head .user-info .user-status strong {
+      color: #5bc500;
+      font-family: "TelefonicaBold";
+      font-weight: normal; }

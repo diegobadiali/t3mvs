@@ -1,0 +1,27 @@
+.page-header h1 {
+  color: #50535a;
+  font-size: 35px;
+  font-family: "TelefonicaLight"; }
+  .page-header h1 button {
+    float: right;
+    background-color: transparent;
+    color: #86888c;
+    border: 2px solid #86888c;
+    border-radius: 6px;
+    padding: 8px 20px 12px;
+    font-family: "TelefonicaRegular"; }
+  @media (max-width: 767px) {
+    .page-header h1 {
+      font-size: 25px; } }
+
+.cont {
+  background-color: #fff;
+  border-radius: 6px;
+  padding: 40px 20px; }
+
+.show-grid {
+  display: flex;
+  align-items: stretch; }
+  @media (max-width: 767px) {
+    .show-grid {
+      display: block; } }

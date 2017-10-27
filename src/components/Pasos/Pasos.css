@@ -1,0 +1,76 @@
+.bg-pasos {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "TelefonicaLight";
+  position: relative;
+  margin-top: 20px; }
+  .bg-pasos .btn-back {
+    color: #86888c;
+    display: block;
+    position: absolute;
+    left: 0;
+    top: -2px;
+    font-size: 32px;
+    line-height: 28px;
+    color: #86888c; }
+    @media (max-width: 767px) {
+      .bg-pasos .btn-back {
+        left: 20px;
+        top: -4px; } }
+  .bg-pasos ol, .bg-pasos ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 0; }
+    .bg-pasos ol li, .bg-pasos ul li {
+      float: left;
+      padding: 1px 10px 3px;
+      list-style-position: inside;
+      border-top-right-radius: 50px;
+      border-bottom-right-radius: 50px;
+      list-style-type: none;
+      counter-increment: item;
+      cursor: default;
+      color: #86888c;
+      font-size: 13px;
+      margin-left: 0;
+      margin-right: 0; }
+      .bg-pasos ol li:first-child, .bg-pasos ul li:first-child {
+        border-top-left-radius: 50px;
+        border-bottom-left-radius: 50px; }
+      .bg-pasos ol li.active, .bg-pasos ul li.active {
+        background-color: #00a9e0;
+        color: #fff; }
+      .bg-pasos ol li.off, .bg-pasos ul li.off {
+        background-color: #00a9e0;
+        color: rgba(255, 255, 255, 0.5);
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0; }
+      .bg-pasos ol li:before, .bg-pasos ul li:before {
+        font-weight: bold;
+        content: counter(item) ".";
+        margin-right: 5px; }
+      @media (max-width: 767px) {
+        .bg-pasos ol li, .bg-pasos ul li {
+          border-top-right-radius: 50%;
+          border-bottom-right-radius: 50%;
+          width: 26px;
+          height: 26px;
+          padding-top: 2px; }
+          .bg-pasos ol li:first-child, .bg-pasos ul li:first-child {
+            border-top-left-radius: 50%;
+            border-bottom-left-radius: 50%; }
+          .bg-pasos ol li span, .bg-pasos ul li span {
+            display: none; }
+          .bg-pasos ol li:before, .bg-pasos ul li:before {
+            content: counter(item) "";
+            margin-right: 0;
+            font-family: "TelefonicaBold"; } }
+  @media (max-width: 767px) {
+    .bg-pasos {
+      border-bottom: 1px solid #EBEBEB;
+      padding-bottom: 10px;
+      margin-left: -15px;
+      margin-right: -15px; } }

@@ -1,0 +1,22 @@
+.redirect {
+  border: 2px solid #EBEBEB;
+  border-radius: 4px;
+  font-family: "TelefonicaLight";
+  color: #50535a;
+  text-align: center;
+  padding: 50px 20px; }
+  .redirect img {
+    display: block;
+    margin: 0 auto 30px; }
+  .redirect h2 {
+    margin-bottom: 20px; }
+    @media (max-width: 767px) {
+      .redirect h2 {
+        font-size: 18px; } }
+  @media (max-width: 767px) {
+    .redirect img {
+      margin-bottom: 20px; }
+    .redirect .spin {
+      width: 50px; }
+    .redirect .logoredirect {
+      width: 140px; } }

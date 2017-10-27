@@ -1,0 +1,33 @@
+@import './../../../variables';
+.navmobile{
+  .bm-menu{
+  ul{
+    margin-top: 40px;
+    margin-bottom: 40px;
+    border-top: 1px solid $color3;
+    li{
+      border-bottom: 1px solid $color3;
+      a{
+        display: block;
+        padding: 18px 20px;
+        color: $color2;
+        font-family: $font2;
+        font-weight: bold;
+        font-size: 14px;
+        line-height: 18px;
+        text-transform: uppercase;
+        i{
+          color: $color2;
+          font-size: 18px;
+          font-size: 20px;
+          vertical-align: middle;
+          margin-right: 15px;
+        }
+        &:hover, &:focus{
+          opacity: .7;
+        }
+      }
+    }
+  }
+}
+}

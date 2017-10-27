@@ -1,0 +1,61 @@
+.table-resumen .btn-success {
+  float: right; }
+  @media (max-width: 767px) {
+    .table-resumen .btn-success {
+      float: none;
+      display: block;
+      width: 100%;
+      margin-bottom: 20px; } }
+.table-resumen .table {
+  font-family: "TelefonicaLight"; }
+  .table-resumen .table thead tr th {
+    text-transform: uppercase;
+    color: #86888c;
+    font-size: 12px;
+    font-family: "TelefonicaRegular";
+    border-bottom: 1px solid #EBEBEB; }
+  .table-resumen .table tbody tr td {
+    vertical-align: middle;
+    border-bottom: 1px solid #EBEBEB;
+    font-size: 16px;
+    color: #50535a; }
+    .table-resumen .table tbody tr td .img {
+      height: 60px;
+      margin-left: 30px; }
+    .table-resumen .table tbody tr td h2 {
+      margin-top: 0;
+      font-size: 18px;
+      color: #50535a;
+      margin-bottom: 0; }
+    .table-resumen .table tbody tr td a {
+      color: #00a9e0;
+      font-size: 14px; }
+      .table-resumen .table tbody tr td a:hover {
+        opacity: .8;
+        color: #00a9e0; }
+    @media (max-width: 767px) {
+      .table-resumen .table tbody tr td {
+        padding-left: 5px;
+        padding-right: 5px;
+        font-size: 12px; }
+        .table-resumen .table tbody tr td .img {
+          margin-left: 0;
+          height: 40px; }
+        .table-resumen .table tbody tr td h2 {
+          font-size: 14px; }
+        .table-resumen .table tbody tr td a {
+          font-size: 13px; } }
+  .table-resumen .table tfoot {
+    background-color: #EBEBEB; }
+    .table-resumen .table tfoot tr td {
+      vertical-align: middle;
+      border-bottom: 1px solid #EBEBEB;
+      color: #50535a;
+      padding: 20px 8px;
+      font-size: 18px;
+      font-family: "TelefonicaBold"; }
+      @media (max-width: 767px) {
+        .table-resumen .table tfoot tr td {
+          padding-left: 5px;
+          padding-right: 5px;
+          font-size: 12px; } }

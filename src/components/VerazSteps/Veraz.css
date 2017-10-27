@@ -1,0 +1,49 @@
+.preguntas .cont-preguntas {
+  margin-top: 30px;
+  font-family: "TelefonicaRegular"; }
+  .preguntas .cont-preguntas h2 {
+    margin-bottom: 30px; }
+  .preguntas .cont-preguntas p {
+    color: #86888c; }
+    .preguntas .cont-preguntas p strong {
+      font-family: "TelefonicaBold";
+      font-weight: normal;
+      color: #50535a; }
+    .preguntas .cont-preguntas p a {
+      color: #00a9e0; }
+    .preguntas .cont-preguntas p.light {
+      color: #B4B4B4; }
+  .preguntas .cont-preguntas label {
+    color: #86888c; }
+  .preguntas .cont-preguntas.msg-error p {
+    font-size: 18px; }
+  .preguntas .cont-preguntas.msg-error .btn-success {
+    margin: 10px auto;
+    float: none;
+    padding: 12px 30px 15px;
+    font-size: 18px; }
+.preguntas .btn-success {
+  float: right;
+  /*margin-top: -40px;*/ }
+  @media (max-width: 767px) {
+    .preguntas .btn-success {
+      float: none;
+      display: block;
+      width: 100%; } }
+.preguntas .bg-pasos {
+  border-top: 1px solid #EBEBEB;
+  padding-top: 20px;
+  border-bottom: none;
+  margin-right: -20px;
+  margin-left: -20px; }
+  .preguntas .bg-pasos ul li {
+    counter-increment: normal; }
+    .preguntas .bg-pasos ul li:before {
+      font-weight: bold;
+      content: "";
+      margin-right: 0; }
+    .preguntas .bg-pasos ul li span {
+      display: block; }
+.preguntas.text-center .cont-preguntas .btn-success {
+  float: none;
+  margin-top: 20px; }

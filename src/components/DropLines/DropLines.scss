@@ -1,0 +1,92 @@
+@import './../../variables';
+ul{
+	margin-top: -5px;
+	li.dropdown{
+		padding-top:9px;
+		display: inline-block;
+		padding-top: 0;
+		margin-top: -5px;
+		&>a{
+			border: 1px solid $color4;
+			color: $color4;
+			border-radius: 10px;
+			background-color: transparent;
+			font-family: TelefonicaLight;
+			font-size: 16px;
+			padding-bottom: 10px;
+			margin: 15px 10px;
+			height: 40px;
+			&+.dropdown-menu{
+				background-color: $color4;
+				box-shadow: $box-shadow;
+				border:none;
+				padding:0;
+				border-radius: $border-radius;
+				margin-top: -14px;
+				overflow: hidden;
+				left: auto;
+				right: 0;
+				.fa-caret-up{
+					position: absolute;
+					top:-11px;
+					right: 15px;
+					color: $color4;
+					font-size: 16px;
+				}
+				li{
+					border-bottom: 1px solid $color3;
+					display: block;
+					padding-top: 0;
+					overflow: hidden;
+					a{
+						display: block;
+						padding: 10px 20px;
+						color: $color5;
+						font-family: $font2;
+						font-size: 14px;
+						line-height: 18px;
+						.fa-angle-right{
+							float: right;
+							color: $color5;
+							font-size: 18px;
+							&+i{
+								font-size: 20px;
+								vertical-align: middle;
+								margin-right: 5px;
+							}
+						}
+						&:hover, &:focus{
+							opacity: .7;
+							border-radius: 0;
+						}
+					}
+					&:last-child{
+						border-bottom: none;
+					}
+					&.active{
+						a{
+							background-color: $color3;
+						}
+					}
+				}
+				.btn{
+					background-color: $color1;
+					color:$color4;
+					display: block;
+					text-align: center;
+					border:none;
+					margin: 0 20px 10px;
+					&:hover, &:focus{
+						opacity: .7;
+					}
+				}
+			}
+		}
+		&.open{
+			a{
+				background-color: transparent !important;
+				border-color: $color4 !important;
+			}
+		}
+	}
+}

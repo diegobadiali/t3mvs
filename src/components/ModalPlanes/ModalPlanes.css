@@ -1,0 +1,50 @@
+.Overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5); }
+  @media (max-width: 767px) {
+    .Overlay {
+      background-color: #fff; } }
+
+.btn-modal {
+  background: none;
+  font-family: "TelefonicaLight";
+  border: none;
+  color: #00a9e0;
+  font-size: 14px; }
+
+.ReactModal__Content {
+  border-radius: 0 !important;
+  box-shadow: 0px 0px 25px -4px rgba(0, 0, 0, 0.4);
+  border: none !important; }
+  .ReactModal__Content .btn-cerrar {
+    float: right;
+    background: transparent;
+    border: none;
+    color: #86888c; }
+  .ReactModal__Content h2 {
+    font-family: "TelefonicaLight";
+    color: #86888c;
+    margin-bottom: 5px; }
+  .ReactModal__Content iframe {
+    border: none !important; }
+    @media (max-width: 767px) {
+      .ReactModal__Content iframe {
+        width: 100%;
+        height: 520px; } }
+    @media (max-width: 374px) {
+      .ReactModal__Content iframe {
+        height: 490px; } }
+    @media (max-width: 339px) {
+      .ReactModal__Content iframe {
+        height: 360px; } }
+  @media (max-width: 767px) {
+    .ReactModal__Content {
+      width: 100%;
+      text-align: center;
+      box-shadow: none;
+      top: 0 !important;
+      transform: translate(-50%, 0%) !important; } }

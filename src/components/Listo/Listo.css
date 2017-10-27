@@ -1,0 +1,20 @@
+.cont-listo {
+  text-align: center;
+  padding-top: 20px;
+  color: #50535a; }
+  .cont-listo img {
+    margin-bottom: 20px; }
+  .cont-listo h1 {
+    font-family: "TelefonicaHand";
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 32px;
+    font-weight: normal; }
+  .cont-listo h2 {
+    font-family: "TelefonicaLight";
+    margin-bottom: 5px; }
+  .cont-listo h3 {
+    font-family: "TelefonicaRegular";
+    font-size: 17px;
+    margin-top: 0;
+    color: #50535a; }

@@ -1,0 +1,202 @@
+.datos-personales-facturacion {
+  font-family: "TelefonicaLight"; }
+  .datos-personales-facturacion .page-header + .row .col-md-8 > div:first-child > h3 {
+    border-top: 1px solid #e1e1e1; }
+  .datos-personales-facturacion h5 {
+    font-family: "TelefonicaBold";
+    font-size: 18px;
+    color: #50535a;
+    font-weight: normal;
+    letter-spacing: 0;
+    margin-bottom: 20px; }
+  .datos-personales-facturacion #datos-personales.collapsed .panel {
+    margin-bottom: 0; }
+  .datos-personales-facturacion #domicilio-facturacion.collapsed h3 {
+    margin-top: 0; }
+  .datos-personales-facturacion .open h3 {
+    margin-top: 0; }
+    .datos-personales-facturacion .open h3 span {
+      color: #5bc500; }
+    .datos-personales-facturacion .open h3 button {
+      display: none; }
+  .datos-personales-facturacion .open .panel-default {
+    border-bottom: 1px solid #e1e1e1; }
+  .datos-personales-facturacion .collapsed h3 {
+    color: #86888c;
+    margin-bottom: 0;
+    margin-top: 0; }
+    .datos-personales-facturacion .collapsed h3 span {
+      color: #5bc500; }
+    .datos-personales-facturacion .collapsed h3 button {
+      display: block; }
+  .datos-personales-facturacion h3 {
+    color: #00a9e0;
+    padding: 30px 0;
+    border-bottom: 1px solid #e1e1e1; }
+    .datos-personales-facturacion h3 button {
+      color: #86888c;
+      margin-top: -5px; }
+      .datos-personales-facturacion h3 button i {
+        font-size: 26px;
+        pointer-events: none; }
+    @media (max-width: 767px) {
+      .datos-personales-facturacion h3 {
+        position: relative;
+        width: 100%; }
+        .datos-personales-facturacion h3 span {
+          display: block; }
+        .datos-personales-facturacion h3 button {
+          position: absolute;
+          right: 0;
+          top: 35px; } }
+  .datos-personales-facturacion .panel-default {
+    border: none;
+    box-shadow: none;
+    padding: 0;
+    margin-bottom: 0; }
+    .datos-personales-facturacion .panel-default .panel-body {
+      padding: 20px 0; }
+      .datos-personales-facturacion .panel-default .panel-body .form-group {
+        margin-bottom: 20px;
+        position: relative; }
+        .datos-personales-facturacion .panel-default .panel-body .form-group input[type=number].form-control {
+          -moz-appearance: textfield; }
+          .datos-personales-facturacion .panel-default .panel-body .form-group input[type=number].form-control::-webkit-outer-spin-button {
+            -webkit-appearance: none !important;
+            margin: 0 !important;
+            -moz-appearance: textfield !important; }
+          .datos-personales-facturacion .panel-default .panel-body .form-group input[type=number].form-control::-webkit-inner-spin-button {
+            -webkit-appearance: none !important;
+            margin: 0 !important;
+            -moz-appearance: textfield !important; }
+        .datos-personales-facturacion .panel-default .panel-body .form-group select.form-control {
+          height: 50px;
+          border: none;
+          -webkit-appearance: none;
+          -moz-appearance: none;
+          text-indent: 1px;
+          text-overflow: ''; }
+          .datos-personales-facturacion .panel-default .panel-body .form-group select.form-control + .fa-angle-down {
+            position: absolute;
+            right: 15px;
+            top: 16px;
+            color: #00a9e0;
+            display: block;
+            font-size: 18px; }
+        .datos-personales-facturacion .panel-default .panel-body .form-group .form-control {
+          border-radius: 4px;
+          border: 1px solid #EBEBEB;
+          background-color: #EBEBEB;
+          box-shadow: none;
+          font-size: 16px;
+          padding-bottom: 15px;
+          padding-top: 11px;
+          height: auto; }
+          .datos-personales-facturacion .panel-default .panel-body .form-group .form-control:focus {
+            border-color: #00a9e0; }
+          .datos-personales-facturacion .panel-default .panel-body .form-group .form-control::placeholder {
+            font-style: italic; }
+          .datos-personales-facturacion .panel-default .panel-body .form-group .form-control.form-control-icon {
+            padding-left: 40px; }
+            .datos-personales-facturacion .panel-default .panel-body .form-group .form-control.form-control-icon + i {
+              display: block;
+              position: absolute;
+              top: 17px;
+              left: 15px;
+              font-size: 18px;
+              color: #86888c; }
+        .datos-personales-facturacion .panel-default .panel-body .form-group.has-error .form-control {
+          border-color: #ec6839;
+          color: #ec6839;
+          width: 100%; }
+          .datos-personales-facturacion .panel-default .panel-body .form-group.has-error .form-control::placeholder {
+            color: #ec6839; }
+        .datos-personales-facturacion .panel-default .panel-body .form-group.calendar .react-datepicker-wrapper {
+          width: 100%; }
+          .datos-personales-facturacion .panel-default .panel-body .form-group.calendar .react-datepicker-wrapper .react-datepicker__input-container {
+            width: 100%; }
+        .datos-personales-facturacion .panel-default .panel-body .form-group.calendar .form-control {
+          padding-right: 40px; }
+        .datos-personales-facturacion .panel-default .panel-body .form-group.calendar i {
+          display: block;
+          color: #00a9e0;
+          position: absolute;
+          top: 17px;
+          right: 15px;
+          font-size: 18px;
+          pointer-events: none; }
+        .datos-personales-facturacion .panel-default .panel-body .form-group .react-datepicker {
+          font-size: 14px;
+          font-family: "TelefonicaRegular"; }
+          .datos-personales-facturacion .panel-default .panel-body .form-group .react-datepicker .react-datepicker__header div {
+            font-size: 14px; }
+          .datos-personales-facturacion .panel-default .panel-body .form-group .react-datepicker .react-datepicker__header .react-datepicker__day-name {
+            padding: 5px;
+            width: 28px; }
+          .datos-personales-facturacion .panel-default .panel-body .form-group .react-datepicker .react-datepicker__month {
+            width: 230px; }
+            .datos-personales-facturacion .panel-default .panel-body .form-group .react-datepicker .react-datepicker__month div {
+              padding: 5px;
+              width: 28px; }
+        .datos-personales-facturacion .panel-default .panel-body .form-group.active .form-control {
+          background-color: #fff;
+          border: 1px solid #B4B4B4; }
+          .datos-personales-facturacion .panel-default .panel-body .form-group.active .form-control + i {
+            color: #00a9e0; }
+      .datos-personales-facturacion .panel-default .panel-body .btn-success {
+        float: right; }
+        @media (max-width: 767px) {
+          .datos-personales-facturacion .panel-default .panel-body .btn-success {
+            float: none;
+            display: block;
+            width: 100%; } }
+      .datos-personales-facturacion .panel-default .panel-body .datos-cargardos {
+        margin-top: -10px;
+        background-color: #EBEBEB;
+        border-radius: 4px;
+        padding: 15px;
+        margin-bottom: 20px; }
+        .datos-personales-facturacion .panel-default .panel-body .datos-cargardos ul {
+          padding: 0;
+          margin: 0; }
+          .datos-personales-facturacion .panel-default .panel-body .datos-cargardos ul li {
+            font-size: 16px;
+            line-height: 16px;
+            font-family: "TelefonicaRegular";
+            color: #50535a;
+            margin-bottom: 5px; }
+        .datos-personales-facturacion .panel-default .panel-body .datos-cargardos .btn-link {
+          font-size: 18px; }
+    .datos-personales-facturacion .panel-default .help {
+      margin-bottom: 20px;
+      font-style: italic;
+      font-size: 13px;
+      display: block;
+      color: #86888c; }
+    .datos-personales-facturacion .panel-default .msg p {
+      margin-bottom: 0; }
+      .datos-personales-facturacion .panel-default .msg p strong {
+        font-family: "TelefonicaBold";
+        font-weight: normal; }
+    .datos-personales-facturacion .panel-default .btn-link {
+      color: #00a9e0;
+      border: none; }
+    .datos-personales-facturacion .panel-default .cont-border {
+      padding: 20px;
+      border: 2px solid #EBEBEB;
+      border-radius: 4px;
+      margin-top: 10px;
+      margin-bottom: 20px; }
+      .datos-personales-facturacion .panel-default .cont-border h4 {
+        margin-top: 0;
+        color: #50535a;
+        font-family: "TelefonicaBold";
+        font-weight: normal;
+        margin-bottom: 15px; }
+
+.react-datepicker__day--selected, .react-datepicker__day--in-selecting-range, .react-datepicker__day--in-range {
+  background-color: #5bc500 !important;
+  color: #fff !important; }
+
+.has-error .help-block, .has-error .control-label, .has-error .radio, .has-error .checkbox, .has-error .radio-inline, .has-error .checkbox-inline, .has-error.radio label, .has-error.checkbox label, .has-error.radio-inline label, .has-error.checkbox-inline label, .has-error i {
+  color: #ec6839 !important; }

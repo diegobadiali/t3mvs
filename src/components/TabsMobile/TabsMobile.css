@@ -1,0 +1,37 @@
+#tabsPlanesMobile {
+  display: none; }
+  @media (max-width: 767px) {
+    #tabsPlanesMobile {
+      display: block;
+      font-family: "TelefonicaLight"; }
+      #tabsPlanesMobile .tab-pane {
+        margin-top: 15px; }
+        #tabsPlanesMobile .tab-pane > h4 {
+          font-family: "TelefonicaBold";
+          margin-bottom: 5px; }
+        #tabsPlanesMobile .tab-pane > p {
+          color: #86888c; }
+      #tabsPlanesMobile .nav-pills > li {
+        width: 100%; }
+        #tabsPlanesMobile .nav-pills > li > a {
+          color: #86888c;
+          background-color: #EBEBEB;
+          border: 1px solid #d3d4d3;
+          font-size: 16px;
+          line-height: 15px;
+          padding: 15px 20px; }
+          #tabsPlanesMobile .nav-pills > li > a .caret {
+            float: right;
+            margin-top: 7px;
+            color: #00a9e0; }
+          #tabsPlanesMobile .nav-pills > li > a + .dropdown-menu {
+            width: 100%;
+            padding-top: 0;
+            padding-bottom: 0; }
+            #tabsPlanesMobile .nav-pills > li > a + .dropdown-menu > .active > a {
+              background-color: #00a9e0;
+              cursor: pointer; } }
+
+.tab-content {
+  border-top: none;
+  margin-top: 0; }

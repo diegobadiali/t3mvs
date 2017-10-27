@@ -1,0 +1,109 @@
+.detalle-compra {
+  width: 540px;
+  border: 2px solid #EBEBEB;
+  padding: 30px 20px 20px;
+  margin: 20px auto;
+  font-family: "TelefonicaRegular";
+  color: #50535a;
+  text-align: left; }
+  .detalle-compra img {
+    width: 47px; }
+  .detalle-compra h5 {
+    font-size: 24px;
+    margin: 0 0 20px 0;
+    font-family: "TelefonicaLight"; }
+    .detalle-compra h5 + .row > .br {
+      border-right: 1px solid #EBEBEB; }
+      @media (max-width: 767px) {
+        .detalle-compra h5 + .row > .br {
+          border-right: none;
+          border-bottom: 1px solid #EBEBEB;
+          margin-bottom: 20px;
+          padding-bottom: 10px; } }
+    @media (max-width: 767px) {
+      .detalle-compra h5 {
+        text-align: center; } }
+  .detalle-compra span {
+    display: block;
+    text-align: left;
+    padding: 0; }
+    .detalle-compra span.title {
+      color: #B4B4B4;
+      text-transform: uppercase;
+      font-size: 12px;
+      font-family: "TelefonicaBold";
+      font-weight: normal;
+      margin-bottom: 2px; }
+    .detalle-compra span.name {
+      line-height: 18px;
+      font-size: 14px;
+      margin-bottom: 10px; }
+    .detalle-compra span.price {
+      line-height: 18px;
+      font-size: 18px;
+      margin-bottom: 10px;
+      color: #5bc500;
+      font-family: "TelefonicaLight"; }
+  .detalle-compra .bg-entrega {
+    background-color: #EBEBEB;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 4px; }
+    .detalle-compra .bg-entrega i {
+      font-size: 24px;
+      color: #86888c;
+      vertical-align: middle; }
+    .detalle-compra .bg-entrega p {
+      margin-bottom: 5px;
+      padding: 0;
+      line-height: 16px; }
+      .detalle-compra .bg-entrega p strong {
+        font-family: "TelefonicaBold";
+        font-weight: normal; }
+    .detalle-compra .bg-entrega small {
+      margin: 0;
+      font-style: italic;
+      font-size: 13px;
+      line-height: 14px;
+      padding: 0;
+      color: #86888c;
+      display: block; }
+    @media (max-width: 767px) {
+      .detalle-compra .bg-entrega {
+        margin-left: -20px;
+        margin-right: -20px;
+        margin-bottom: 0; } }
+  @media (max-width: 767px) {
+    .detalle-compra {
+      width: 100%;
+      border: none;
+      margin-top: 0;
+      margin-bottom: 0; } }
+
+.cont-orden {
+  width: 540px;
+  margin: 20px auto;
+  font-family: "TelefonicaRegular";
+  color: #50535a; }
+  .cont-orden p {
+    width: 60%;
+    float: left;
+    color: #86888c; }
+    .cont-orden p strong {
+      color: #50535a;
+      font-family: "TelefonicaBold";
+      font-weight: normal; }
+  .cont-orden .btn-success {
+    float: right; }
+  @media (max-width: 767px) {
+    .cont-orden {
+      width: 100%;
+      margin-top: 0; }
+      .cont-orden p {
+        width: 100%;
+        float: none; }
+      .cont-orden .btn-success {
+        float: none;
+        width: 100%;
+        margin-top: 0;
+        margin-bottom: 20px; } }

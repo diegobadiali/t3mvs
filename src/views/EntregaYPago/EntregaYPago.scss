@@ -1,0 +1,183 @@
+@import './../../variables';
+.radios-entrega{
+	.form-group{
+		.radio{
+			label{
+				width: 100%;
+				font-size: 16px;
+				line-height: 21px;
+				padding-left: 25px;
+				h4{
+					font-family: $font2;
+					font-weight: normal;
+					color: $color8;
+					margin: 0;
+					span{
+						color: $color1;
+					}
+					float: left;
+					@media(max-width:767px){
+						float: none;
+					}
+				}
+				input[type="radio"]{
+					display: block;
+					text-align: left;
+					float: left;
+					margin-left: -25px;
+					margin-right: 10px;
+					-webkit-appearance:none !important;
+					-moz-appearance:none !important;
+					height:19px;
+					width:19px;
+					cursor:pointer;
+					position:relative;
+					-webkit-transition: .15s;
+					border-radius:50%;
+					background-color:$color4;
+					border: 2px solid $color8;
+					&:checked {
+						border: 1px solid $color8;
+						background-color: $color8;
+					}
+				}
+				input[type="radio"]:before, input[type="radio"]:checked:before {
+					position:absolute;
+					top:0;
+					left:0;
+					width:100%;
+					height:100%;
+					line-height:17px;
+					font-size: 9px;
+					font-weight: normal;
+					text-align:center;
+					color:$color4;
+					content: '';
+				}
+				input[type="radio"]:checked:before {
+					content: "\f111";
+					font-family: 'Fontawesome';
+				}
+
+				input[type="radio"]:hover:before {
+
+				}
+
+				.icon-envios, .icon-centros-movistar{
+					font-size: 25px;
+					margin-right: 5px;
+					float: left;
+					margin-bottom: 20px;
+					display: block;
+
+				}
+				.list-inline{
+					float: left;
+					margin-left: 20px;
+					@media(max-width:767px){
+						float: none;
+						padding-left: 0;
+						margin-left: 0;
+						margin-top: 10px;
+						img{
+							height: 25px;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+.checkbox{
+	label{
+		font-size: 16px;
+		line-height: 18px;
+		padding-left: 25px !important;
+		vertical-align: middle;
+		input[type="checkbox"]{
+			margin-left: -25px;
+			margin-right: 10px;
+			-webkit-appearance:none !important;
+			-moz-appearance:none !important;
+			height:18px;
+			width:18px;
+			cursor:pointer;
+			position:relative;
+			-webkit-transition: .15s;
+			border-radius:$border-radius;
+			background-color:$color4;
+			border: 1px solid $color8;
+			&:checked {
+				background-color: $color8;
+			}
+		}
+		input[type="checkbox"]:before, input[type="checkbox"]:checked:before {
+			position:absolute;
+			top:0;
+			left:0;
+			width:100%;
+			height:100%;
+			line-height:18px;
+			font-size: 12px;
+			font-weight: normal;
+			text-align:center;
+			color:$color4;
+			content: '';
+		}
+		input[type="checkbox"]:checked:before {
+			content: "\f00c";
+			font-family: 'Fontawesome';
+		}
+
+		input[type="checkbox"]:hover:before {
+
+		}
+		button{
+			color: $color2;
+			font-size: 16px;
+			line-height: 18px;
+			padding: 0;
+			background-color: transparent;
+			border: none;
+			height: auto;
+			vertical-align: initial !important;
+		}
+	}
+}
+.cont-checkboxs{
+	margin-bottom: 30px;
+}
+.cont-buttons{
+	.btn-default{
+		background-color: $color3;
+		border: none;
+		font-size: 18px;
+		padding: 10px 30px 15px;
+	}
+	.btn-success{
+		font-size: 18px;
+		padding: 10px 30px 15px;
+	}
+	@media(max-width:767px){
+		display: flex;
+		-webkit-flex-flow: row wrap;
+  		flex-flow: row wrap;
+		.pull-left{
+			width: 100%;
+			order: 1;
+			float: none;
+			.btn-default{
+				margin-bottom: 20px;
+				width: 100%;
+			}
+		}
+		.pull-right{
+			width: 100%;
+			float: none;
+			.btn-success{
+				margin-bottom: 20px;
+			}
+		}
+	}
+}
+

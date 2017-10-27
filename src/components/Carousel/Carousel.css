@@ -1,0 +1,173 @@
+@import url(~slick-carousel/slick/slick.css);
+@import url(~slick-carousel/slick/slick-theme.css);
+.slick-list {
+  margin-top: 40px; }
+  .slick-list .slick-track {
+    /*margin-left: -20px;
+    margin-right: -20px;*/
+    display: flex;
+    /*align-items: stretch;*/ }
+    .slick-list .slick-track .cont-plan {
+      padding-left: 15px;
+      padding-right: 15px;
+      display: flex;
+      height: auto; }
+      .slick-list .slick-track .cont-plan .plan {
+        border-radius: 4px;
+        background-color: #fff;
+        padding-bottom: 150px;
+        margin-bottom: 20px;
+        font-family: "TelefonicaRegular";
+        position: relative;
+        width: 100%;
+        border-left: 1px solid #d3d4d3;
+        border-right: 1px solid #d3d4d3;
+        border-bottom: 1px solid #d3d4d3;
+        /*max-width: 275px;
+        margin-right: 10px;*/ }
+        @media (max-width: 1199px) {
+          .slick-list .slick-track .cont-plan .plan {
+            /*max-width: 235px;*/ } }
+        @media (max-width: 992px) {
+          .slick-list .slick-track .cont-plan .plan {
+            /*max-width: 350px;*/ } }
+        @media (max-width: 767px) {
+          .slick-list .slick-track .cont-plan .plan {
+            /*max-width: auto;
+            margin-right: 0;
+            width: 100%;*/ } }
+        .slick-list .slick-track .cont-plan .plan .head-plan {
+          border-top-right-radius: 4px;
+          border-top-left-radius: 4px;
+          background-color: #00a9e0;
+          padding: 40px 15px 15px;
+          text-align: center;
+          position: relative; }
+          .slick-list .slick-track .cont-plan .plan .head-plan h4 {
+            margin: 0 0 10px;
+            color: #fff;
+            font-size: 60px;
+            font-family: "TelefonicaExtraLight";
+            line-height: 42px; }
+          .slick-list .slick-track .cont-plan .plan .head-plan h5 {
+            margin: 0;
+            color: #fff;
+            font-size: 16px;
+            font-family: "TelefonicaExtraLight";
+            line-height: 16px; }
+          .slick-list .slick-track .cont-plan .plan .head-plan span {
+            display: none; }
+        .slick-list .slick-track .cont-plan .plan ul {
+          margin-bottom: 0; }
+          .slick-list .slick-track .cont-plan .plan ul li {
+            border-bottom: 1px solid #d3d4d3;
+            padding: 10px 15px;
+            line-height: 14px;
+            font-size: 14px;
+            color: #86888c;
+            font-family: "TelefonicaRegular"; }
+            .slick-list .slick-track .cont-plan .plan ul li strong {
+              display: block;
+              text-transform: uppercase;
+              color: #50535a;
+              font-family: "TelefonicaBold";
+              font-weight: normal;
+              font-size: 12px; }
+            .slick-list .slick-track .cont-plan .plan ul li a {
+              color: #00a9e0; }
+              .slick-list .slick-track .cont-plan .plan ul li a:hover, .slick-list .slick-track .cont-plan .plan ul li a:focus {
+                opacity: .7; }
+        .slick-list .slick-track .cont-plan .plan .price {
+          font-size: 40px;
+          color: #00a9e0;
+          line-height: 40px;
+          margin-top: 0;
+          display: block;
+          text-align: center;
+          font-family: "TelefonicaExtraLight";
+          border-bottom: 1px solid #d3d4d3;
+          padding-bottom: 10px; }
+          .slick-list .slick-track .cont-plan .plan .price sub {
+            font-size: 20px;
+            bottom: 0; }
+        .slick-list .slick-track .cont-plan .plan .text-center {
+          display: block;
+          color: #86888c;
+          line-height: 18px;
+          text-align: center;
+          margin-top: 10px;
+          margin-bottom: 0; }
+        .slick-list .slick-track .cont-plan .plan .foot-plan {
+          position: absolute;
+          bottom: 20px;
+          left: 0;
+          width: 100%;
+          padding-top: 20px;
+          text-align: center; }
+          .slick-list .slick-track .cont-plan .plan .foot-plan .price-cel {
+            text-align: center;
+            display: block;
+            padding: 0 0 10px 0;
+            font-size: 20px;
+            color: #000;
+            font-family: "TelefonicaLight"; }
+          .slick-list .slick-track .cont-plan .plan .foot-plan .btn {
+            display: block;
+            margin: 0 20px 5px;
+            width: auto;
+            background-color: #00a9e0;
+            color: #fff;
+            text-align: center;
+            border: none;
+            padding: 6px 20px 13px;
+            font-size: 16px;
+            font-family: "TelefonicaRegular";
+            border-radius: 4px; }
+            .slick-list .slick-track .cont-plan .plan .foot-plan .btn:hover, .slick-list .slick-track .cont-plan .plan .foot-plan .btn:focus {
+              opacity: .7;
+              background-color: #00a9e0; }
+            .slick-list .slick-track .cont-plan .plan .foot-plan .btn:disabled {
+              opacity: 1;
+              background-color: #B4B4B4; }
+            .slick-list .slick-track .cont-plan .plan .foot-plan .btn i {
+              display: none; }
+            @media (max-width: 1199px) {
+              .slick-list .slick-track .cont-plan .plan .foot-plan .btn {
+                width: 175px; } }
+            .slick-list .slick-track .cont-plan .plan .foot-plan .btn + a {
+              font-size: 14px;
+              color: #00a9e0; }
+      .slick-list .slick-track .cont-plan .recomendado .head-plan {
+        background-color: #5bc500; }
+        .slick-list .slick-track .cont-plan .recomendado .head-plan span {
+          display: block;
+          position: absolute;
+          top: 6px;
+          left: 0;
+          width: 100%;
+          color: #fff;
+          font-family: "TelefonicaRegular";
+          padding-bottom: 4px;
+          border-bottom: 1px solid #50ad00; }
+      .slick-list .slick-track .cont-plan .recomendado .price {
+        color: #5bc500; }
+      .slick-list .slick-track .cont-plan .recomendado .foot-plan .btn {
+        background-color: #5bc500; }
+        .slick-list .slick-track .cont-plan .recomendado .foot-plan .btn:hover, .slick-list .slick-track .cont-plan .recomendado .foot-plan .btn:focus {
+          opacity: .7;
+          background-color: #5bc500; }
+        .slick-list .slick-track .cont-plan .recomendado .foot-plan .btn:disabled {
+          opacity: 1;
+          background-color: #B4B4B4; }
+
+.slick-prev::before, .slick-next::before {
+  color: #86888c;
+  font-size: 32px;
+  font-family: 'FontAwesome' !important;
+  z-index: 99999; }
+
+.slick-prev::before {
+  content: '\f104'; }
+
+.slick-next::before {
+  content: '\f105'; }

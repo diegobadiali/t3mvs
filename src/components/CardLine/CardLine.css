@@ -1,0 +1,32 @@
+.card-line {
+  background-color: #fff;
+  border: 1px solid #EBEBEB;
+  border-radius: 4px;
+  padding: 20px 20px 80px;
+  align-self: stretch;
+  height: 100%;
+  position: relative; }
+  .card-line i {
+    font-size: 60px;
+    margin: 0;
+    line-height: 30px;
+    color: #00a9e0; }
+  .card-line h2 {
+    font-size: 28px;
+    margin: 0;
+    color: #00a9e0;
+    font-family: "TelefonicaLight";
+    margin-bottom: 20px; }
+  .card-line h3 {
+    font-size: 26px;
+    margin: 0;
+    color: #5bc500;
+    font-family: "TelefonicaLight";
+    margin-bottom: 20px; }
+  .card-line button {
+    position: absolute;
+    bottom: 20px;
+    right: 20px; }
+  @media (max-width: 767px) {
+    .card-line {
+      margin-bottom: 20px; } }

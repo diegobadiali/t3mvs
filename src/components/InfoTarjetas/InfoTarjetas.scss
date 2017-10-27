@@ -1,0 +1,38 @@
+@import './../../variables';
+.info-tarjetas{
+	p{
+		font-family: $font2;
+		color: $color5;
+		font-size: 18px;
+		margin-top: 10px;
+		margin-bottom: 5px;
+		strong{
+			font-family: $font1;
+			font-weight: normal;
+		}
+		i{
+			color: $color1;
+			margin-right: 5px;
+			font-size: 20px;
+		}
+	}
+	.credit-card{
+		margin-left: 10px; 
+		@media(max-width:767px){
+		margin-left: 0;
+		margin-right: 10px;
+		margin-top: 10px;
+	}
+	}
+	a{
+		color: $color2;
+		font-size: 14px;
+		i{
+			font-size: 16px;
+		}
+		&:hover{
+			opacity: .8;
+			color: $color2;
+		}
+	}
+}

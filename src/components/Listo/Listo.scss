@@ -1,0 +1,26 @@
+@import './../../variables';
+.cont-listo{
+  text-align: center;
+  padding-top: 20px;
+  color: $color8;
+  img{
+    margin-bottom: 20px;
+  }
+  h1{
+    font-family: $font6;
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 32px;
+    font-weight: normal;
+  }
+  h2{
+    font-family: $font3;
+    margin-bottom: 5px;
+  }
+  h3{
+    font-family: $font2;
+    font-size: 17px;
+    margin-top: 0;
+    color: $color8;
+  }
+} 

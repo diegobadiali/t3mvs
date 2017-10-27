@@ -1,0 +1,46 @@
+@import './../../variables';
+ .navbar-user{
+ 	margin-right: 20px;
+ 	margin-top: 10px;
+ 	float: right;
+ 	ul{
+ 		margin-top: -5px;
+ 		li{
+ 			padding-top:9px;
+ 			display: inline-block;
+ 			a{
+ 				text-transform: uppercase;
+ 				color: $color4;
+ 				padding:10px 20px 25px;
+ 				font-family: 'TelefonicaBold';
+ 				font-size: 12px;
+ 				font-weight: normal;
+ 				text-decoration: none;
+ 				&:hover, &:focus{
+ 					background-color: rgba(0,0,0,.05);
+ 					border-top-right-radius:10px;
+ 					border-top-left-radius:10px;
+ 					text-decoration: none;
+ 				}
+ 			}
+ 			&.active{
+ 				a{
+ 					background-color: $color2;
+ 					border-top-right-radius:10px;
+ 					border-top-left-radius:10px;
+ 					&:hover, &:focus{
+ 						background-color: $color2;
+ 						border-top-right-radius:10px;
+ 						border-top-left-radius:10px;
+ 					}
+ 				}
+ 			}
+ 			@media(min-width:768px) and (max-width:992px){
+ 				a{
+ 					padding-left:8px;
+ 					padding-right:8px;
+ 				}
+ 			}
+ 		}
+ 	}
+ }

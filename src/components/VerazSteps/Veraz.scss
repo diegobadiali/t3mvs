@@ -1,0 +1,76 @@
+@import './../../variables';
+.preguntas{
+	.cont-preguntas{
+		margin-top: 30px;
+		font-family: $font2;
+		h2{
+			margin-bottom: 30px;
+		}
+		p{
+			color: $color5;
+			strong{
+				font-family: $font1;
+				font-weight: normal;
+				color: $color8;
+			}
+			a{
+				color: $color2;
+			}
+			&.light{
+				color: $color9;
+			}
+		}
+		
+		label{
+			color: $color5;
+		}
+		&.msg-error{
+			p{
+				font-size: 18px;
+			}
+			.btn-success{
+				margin: 10px auto;
+				float: none;
+				padding: 12px 30px 15px;
+				font-size: 18px;
+			}
+		}
+	}
+	.btn-success{
+		float: right;
+		/*margin-top: -40px;*/
+		@media(max-width:767px){
+			float: none;
+			display: block;
+			width: 100%;
+		}
+	}
+	.bg-pasos{
+		border-top: 1px solid $color3;
+		padding-top: 20px;
+		border-bottom: none;
+		margin-right: -20px;
+		margin-left: -20px;
+		ul{
+			li{
+				counter-increment:normal;
+				&:before {
+					font-weight:bold;
+					content:"";
+					margin-right: 0;
+				}
+				span{
+					display: block;
+				}
+			}
+		}
+	}
+	&.text-center{
+		.cont-preguntas{
+			.btn-success{
+				float: none;
+				margin-top: 20px;
+			}
+		}
+	}
+}

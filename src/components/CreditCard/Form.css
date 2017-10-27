@@ -1,0 +1,36 @@
+.cont-input-creditcard {
+  position: relative; }
+  .cont-input-creditcard img {
+    position: absolute;
+    top: 10px;
+    right: 10px; }
+
+.btn-tooltip {
+  margin-top: 10px; }
+
+.bg-cuotas {
+  background-color: #f4f4f4;
+  border-radius: 4px;
+  padding: 5px 15px;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: flex-start; }
+  .bg-cuotas .cuotas {
+    border-right: 1px solid #EBEBEB;
+    padding-right: 20px; }
+  .bg-cuotas .total {
+    padding-left: 20px; }
+  .bg-cuotas h4 {
+    font-family: "TelefonicaBold";
+    font-weight: normal;
+    font-size: 13px;
+    color: #86888c;
+    letter-spacing: 0;
+    text-transform: uppercase;
+    margin-bottom: 5px; }
+  .bg-cuotas h5 {
+    font-family: "TelefonicaLight";
+    font-size: 24px;
+    color: #5bc500;
+    letter-spacing: 0;
+    margin-top: 0; }

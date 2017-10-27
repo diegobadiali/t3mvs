@@ -1,0 +1,289 @@
+@import './../../variables';
+.datos-personales-facturacion{
+	font-family: $font3;
+	.page-header+ .row .col-md-8 > div:first-child > h3{
+		border-top: 1px solid $color14;
+	}
+	h5{
+		font-family: $font1;
+		font-size: 18px;
+		color: $color8;
+		font-weight: normal;
+		letter-spacing: 0;
+		margin-bottom: 20px;
+	}
+	#datos-personales{
+		&.collapsed{
+			.panel{
+				margin-bottom: 0;
+			}
+		}
+	}
+	#domicilio-facturacion{
+		&.collapsed{
+			h3{
+				margin-top: 0;
+			}
+		}
+	}
+
+	.open{
+		h3{
+			margin-top: 0;
+			span{
+				color: $color1;
+			}
+			button{
+				display: none;
+			}
+		}
+		.panel-default{
+			border-bottom: 1px solid $color14;
+		}
+	}
+	.collapsed{
+		h3{
+			color: $color5;
+			margin-bottom: 0;
+			margin-top: 0;
+			span{
+				color: $color1;
+			}
+			button{
+				display: block;
+			}
+		}
+
+	}
+	h3{
+		color: $color2;
+		padding: 30px 0;
+		border-bottom: 1px solid $color14;
+
+		button{
+			color: $color5;
+			margin-top: -5px;
+			i{
+				font-size: 26px;
+				pointer-events: none;
+			}
+		}
+		@media(max-width:767px){
+			position: relative;
+			width: 100%;
+			span{
+				display: block;
+			}
+			button{
+				position: absolute;
+				right: 0;
+				top: 35px;
+			}
+		}
+	}
+	.panel-default{
+		border: none;
+		box-shadow: none;
+		padding: 0;
+		margin-bottom: 0;
+
+		.panel-body{
+			padding: 20px 0;
+			.form-group{
+				margin-bottom: 20px;
+				position: relative;
+				input[type=number].form-control{
+					-moz-appearance:textfield;
+					&::-webkit-outer-spin-button{
+						-webkit-appearance: none !important;
+						margin: 0 !important;
+						-moz-appearance:textfield !important;
+					}
+					&::-webkit-inner-spin-button{
+						-webkit-appearance: none !important;
+						margin: 0 !important;
+						-moz-appearance:textfield !important;
+					}
+				}
+				select.form-control{
+					height: 50px;
+					border: none;
+					-webkit-appearance: none;
+					-moz-appearance: none;
+					text-indent: 1px;
+					text-overflow: '';
+					&+.fa-angle-down{
+						position: absolute;
+						right: 15px;
+						top: 16px;
+						color: $color2;
+						display: block;
+						font-size: 18px;
+					}
+				}
+				
+				.form-control{
+					border-radius: $border-radius;
+					border: 1px solid $color3;
+					background-color: $color3;
+					box-shadow: none;
+					font-size: 16px;
+					padding-bottom: 15px;
+					padding-top: 11px;
+					height: auto;
+					&:focus{
+						border-color: $color2;
+					}
+					&::placeholder{
+						font-style: italic;
+					}
+					&.form-control-icon{
+						padding-left: 40px;
+						&+i{
+							display: block;
+							position: absolute;
+							top: 17px;
+							left: 15px;
+							font-size: 18px;
+							color: $color5;
+						}
+					}
+					
+				}
+				&.has-error{
+					.form-control{
+						border-color: $color16;
+						color: $color16;
+						width: 100%;
+						&::placeholder{
+							color: $color16;
+						}
+					}
+				}
+				&.calendar{
+					.react-datepicker-wrapper{
+						width: 100%;
+						.react-datepicker__input-container{
+							width: 100%;
+						}
+					}
+					.form-control{
+						padding-right: 40px;
+					}
+					i{
+						display: block;
+						color: $color2;
+						position: absolute;
+						top: 17px;
+						right: 15px;
+						font-size: 18px;
+						pointer-events: none;
+					}
+				}
+				.react-datepicker{
+					font-size: 14px;
+					font-family: $font2;
+					.react-datepicker__header{
+						div{
+							font-size: 14px;
+						}
+						.react-datepicker__day-name{
+							padding: 5px;
+							width: 28px;
+						}
+						
+					}
+					.react-datepicker__month{
+						width: 230px;
+						div{
+							padding: 5px;
+							width: 28px;
+						}
+					}
+				}
+				&.active{
+					
+					.form-control{
+						background-color: $color4;
+						border: 1px solid $color9;
+						&+i{
+							color: $color2;
+						}
+					}	
+				}
+			}
+			.btn-success{
+				float: right;
+				@media(max-width:767px){
+					float: none;
+					display: block;
+					width: 100%;
+				}
+			}
+			.datos-cargardos{
+				margin-top: -10px;
+				background-color: $color3;
+				border-radius: $border-radius;
+				padding: 15px;
+				margin-bottom: 20px;
+				ul{
+					padding: 0;
+					margin: 0;
+					li{
+						font-size: 16px;
+						line-height: 16px;
+						font-family: $font2;
+						color: $color8;
+						margin-bottom: 5px;
+					}
+				}
+				.btn-link{
+					font-size: 18px;
+				}
+			}
+		}
+		.help{
+			margin-bottom: 20px;
+			font-style: italic;
+			font-size: 13px;
+			display: block;
+			color: $color5;
+		}
+		.msg{
+			p{
+				margin-bottom: 0;
+				strong{
+					font-family: $font1;
+					font-weight: normal;
+				}
+			}
+		}
+		.btn-link{
+			color: $color2;
+			border: none;
+		}
+		.cont-border{
+			padding: 20px;
+			border: 2px solid $color3;
+			border-radius: $border-radius;
+			margin-top: 10px;
+			margin-bottom: 20px;
+			h4{
+				margin-top: 0;
+				color: $color8;
+				font-family: $font1;
+				font-weight: normal;
+				margin-bottom: 15px;
+			}
+		}
+	}
+	
+}
+.react-datepicker__day--selected, .react-datepicker__day--in-selecting-range, .react-datepicker__day--in-range{
+	background-color: $color1 !important;
+	color: $color4 !important;
+}
+
+.has-error .help-block, .has-error .control-label, .has-error .radio, .has-error .checkbox, .has-error .radio-inline, .has-error .checkbox-inline, .has-error.radio label, .has-error.checkbox label, .has-error.radio-inline label, .has-error.checkbox-inline label, .has-error i{
+	color: $color16 !important;
+}

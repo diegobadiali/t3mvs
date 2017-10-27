@@ -1,0 +1,65 @@
+.plan-detail {
+  border-radius: 4px;
+  background-color: #fff;
+  overflow: hidden;
+  padding-bottom: 20px;
+  min-height: 392px; }
+  .plan-detail h5 {
+    background-color: #00a9e0;
+    margin: 0;
+    padding: 20px 30px 25px;
+    color: #fff;
+    font-size: 21px;
+    font-family: "TelefonicaExtraLight";
+    line-height: 20px; }
+    .plan-detail h5 i {
+      display: none; }
+  .plan-detail .name {
+    background-color: #e9426d;
+    display: block;
+    text-align: center;
+    padding: 5px 0 7px;
+    color: #fff;
+    text-transform: uppercase;
+    font-family: "TelefonicaBold";
+    font-size: 14px; }
+    .plan-detail .name.name-comunidad {
+      background-color: #e9426d; }
+    .plan-detail .name.name-prepago {
+      background-color: #f59c00; }
+    .plan-detail .name.name-one {
+      background-color: #954b97; }
+  .plan-detail .cont {
+    padding: 0; }
+    .plan-detail .cont ul {
+      margin-bottom: 0; }
+      .plan-detail .cont ul li {
+        border-bottom: 1px dotted #EBEBEB;
+        padding: 10px 15px;
+        line-height: 14px;
+        font-size: 12px;
+        color: #86888c;
+        font-family: "TelefonicaRegular"; }
+        .plan-detail .cont ul li strong {
+          display: block;
+          text-transform: uppercase;
+          color: #50535a;
+          font-family: "TelefonicaBold";
+          font-weight: normal; }
+    .plan-detail .cont .price {
+      font-size: 30px;
+      color: #5bc500;
+      margin-left: 20px;
+      line-height: 36px;
+      margin-top: 5px;
+      display: block;
+      font-family: "TelefonicaLight"; }
+      .plan-detail .cont .price sub {
+        font-size: 15px;
+        bottom: 0; }
+      .plan-detail .cont .price + span {
+        display: block;
+        margin-left: 20px;
+        color: #86888c;
+        line-height: 10px;
+        font-family: "TelefonicaLight"; }
