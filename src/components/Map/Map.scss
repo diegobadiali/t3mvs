@@ -6,6 +6,7 @@
 		font-size: 18px;
 		margin-bottom: 20px;
 		color: $color8;
+		padding: 0 0 20px;
 		strong{
 			font-family: $font1;
 			font-weight: normal;
@@ -17,7 +18,7 @@
 		.fa-search{
 			position: absolute;
 			right: 15px;
-			top: 12px;
+			top: 14px;
 			font-size: 20px;
 			pointer-events: none;
 			color: $color8;
@@ -64,21 +65,95 @@
 	}
 	@media(max-width:767px){
 		margin-bottom: 20px;
+		margin-top: 0;
+	}
+	.Select-control {
+		border-color: none;
+		border-radius: 0;
+		border: none;
+		outline: none;
+		overflow: hidden;
+	}
+	.Select-arrow, .Select-clear {
+		display: none !important;
+	}
+	.Select-control:hover {
+		box-shadow: none !important;
+	}
+
+	.is-open > .Select-control {
+		border-color: none !important;
+	}
+	.is-open > .Select-control > .Select-arrow {
+		border-color: none;
+		border-width: 0;
+
+	}
+	.is-searchable.is-focused:not(.is-open) > .Select-control {
+		cursor: text;
+	}
+	.is-focused:not(.is-open) > .Select-control {
+		border: none !important;
+		box-shadow: none !important;
+	}
+	.Select-placeholder {
+		bottom: 0;
+		color: $color9;
+		left: 0;
+		line-height: 24px !important;
+		padding-left: 10px;
+		padding-right: 10px;
+		position: absolute;
+		right: 0;
+		top: 0;
+		max-width: 100%;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+	}
+
+	.Select-value {
+		padding: 0 0 0 0 !important;
+	}
+	.Select-menu-outer{
+		z-index: 9999999999;
+	}
+	.Select-control{
+		border: none !important;
+		background-color: transparent;
+	}
+	.Select-placeholder, .Select-input, .Select-input input, .Select-input input:focus{
+		left: 0;
+		line-height: 20px;
+		padding: 0;
+		height: 23px;
+		outline: none !important;
+		-webkit-appearance: none;
+		font-size: 16px;
+		font-family: $font3;
+		box-shadow: none !important;
+	}
+	.Select-input input{
+		max-width: 500px;
+		@media(max-width:767px){
+			max-width: 300px;
+		}
 	}
 }
+
 .marker{
 	position: 'relative'; 
 	color: $color8; 
 	background: url('./marker.png') no-repeat;
-    padding: 0;
-    top: -20px; 
-    left: -30px;
-    width: 50px;
-    height: 60px;
-    text-align: left; 
-    font-family: $font3;
-    line-height: 13px;
-    font-size: 12px;
+	padding: 0;
+	top: -20px; 
+	left: -30px;
+	width: 50px;
+	height: 60px;
+	text-align: left; 
+	font-family: $font3;
+	line-height: 13px;
+	font-size: 12px;
 }
 .cont-map{
 	height: 325px;
@@ -103,3 +178,101 @@
 		margin-bottom: 20px;
 	}
 }
+
+
+
+.Select-menu-outer {
+	border-bottom-right-radius: 4px;
+	border-bottom-left-radius: 4px;
+	background-color: $color4;
+	border: 1px solid $color3;
+	border-top-color: $color3;;
+	box-shadow: $box-shadow3;
+	box-sizing: border-box;
+	margin-top: -1px;
+	max-height: 200px;
+	position: absolute;
+	top: 100%;
+	width: 100%;
+	left: 0;
+	margin-top: 2px;
+	z-index: 1000;
+	-webkit-overflow-scrolling: touch;
+}
+.Select-menu {
+	max-height: 198px;
+	overflow-y: auto;
+}
+.Select-option {
+	box-sizing: border-box;
+	color: $color5;
+	cursor: pointer;
+	display: block;
+	padding: 8px 10px;
+}
+.Select-option:last-child {
+	border-bottom-right-radius: 4px;
+	border-bottom-left-radius: 4px;
+}
+.Select-option.is-focused {
+	background-color: #f2f9fc;
+	color: $color8;
+}
+.Select-option.is-disabled {
+	color: $color3;
+	cursor: not-allowed;
+}
+.Select-noresults,
+.Select-search-prompt,
+.Select-searching {
+	box-sizing: border-box;
+	color: $color5;
+	cursor: default;
+	display: block;
+	padding: 8px 10px;
+}
+.Select--multi .Select-input {
+	vertical-align: middle;
+	margin-left: 10px;
+	padding: 0;
+}
+.Select--multi.has-value .Select-input {
+	margin-left: 5px;
+}
+.Select-item {
+	background-color: #f2f9fc;
+	border-radius: 2px;
+	border: 1px solid #c9e6f2;
+	color: $color2;
+	display: inline-block;
+	font-size: 0.9em;
+	margin-left: 5px;
+	margin-top: 5px;
+	vertical-align: top;
+}
+.Select-item-icon,
+.Select-item-label {
+	display: inline-block;
+	vertical-align: middle;
+}
+.Select-item-label {
+	border-bottom-right-radius: 2px;
+	border-top-right-radius: 2px;
+	cursor: default;
+	padding: 2px 5px;
+}
+.Select-item-label .Select-item-label__a {
+	color: $color2;
+	cursor: pointer;
+}
+.Select-item-icon {
+	cursor: pointer;
+	border-bottom-left-radius: 2px;
+	border-top-left-radius: 2px;
+	border-right: 1px solid #c9e6f2;
+	padding: 1px 5px 3px;
+}
+
+
+
+

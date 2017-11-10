@@ -21,9 +21,24 @@
 	.cuotas{
 		border-right: 1px solid $color3;
 		padding-right: 20px;
+		@media(max-width:767px){
+			padding-right: 8px;
+		}
 	}
 	.total{
 		padding-left: 20px;
+		border-right: 1px solid $color3;
+		padding-right: 20px;
+		@media(max-width:767px){
+			padding-left: 8px;
+			padding-right: 8px;
+		}
+	}
+	.cft{
+		padding-left: 20px;
+		@media(max-width:767px){
+			padding-left: 8px;
+		}
 	}
 	h4{
 		font-family: $font1;
@@ -33,6 +48,10 @@
 		letter-spacing: 0;
 		text-transform: uppercase;
 		margin-bottom: 5px;
+		@media(max-width:767px){
+			font-size: 12px;
+			white-space: nowrap;
+		}
 	}
 	h5{
 		font-family: $font3;
@@ -40,5 +59,82 @@
 		color: $color1;
 		letter-spacing: 0;
 		margin-top: 0;
+		small{
+			color: $color9;
+			font-size: 24px;
+		}
+		@media(max-width:767px){
+			font-size: 18px;
+			small{
+				font-size: 14px;
+				display: block;
+			}
+		}
+	}
+}
+.form-group{
+	label.radio-inline{
+		font-size: 16px;
+		line-height: 21px;
+		padding-left: 25px;
+		h4{
+			font-family: $font2;
+			font-weight: normal;
+			color: $color8;
+			margin: 0;
+			float: left;
+			span{
+				color: $color1;
+			}
+			&.nf{
+				float: none;
+			}
+
+			@media(max-width:767px){
+				float: none;
+			}
+		}
+		input[type="radio"]{
+			display: block;
+			text-align: left;
+			float: left;
+			margin-left: -25px;
+			margin-right: 10px;
+			-webkit-appearance:none !important;
+			-moz-appearance:none !important;
+			height:19px;
+			width:19px;
+			cursor:pointer;
+			position:relative;
+			-webkit-transition: .15s;
+			border-radius:50%;
+			background-color:$color4;
+			border: 2px solid $color8;
+			&:checked {
+				border: 1px solid $color8;
+				background-color: $color8;
+			}
+		}
+		input[type="radio"]:before, input[type="radio"]:checked:before {
+			position:absolute;
+			top:0;
+			left:0;
+			width:100%;
+			height:100%;
+			line-height:17px;
+			font-size: 9px;
+			font-weight: normal;
+			text-align:center;
+			color:$color4;
+			content: '';
+		}
+		input[type="radio"]:checked:before {
+			content: "\f111";
+			font-family: 'Fontawesome';
+		}
+
+		input[type="radio"]:hover:before {
+
+		}
 	}
 }

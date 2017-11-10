@@ -19,6 +19,7 @@ class CardSelectFormRow extends React.Component {
               onChange={this.props.handleChange}
               required
             >
+            <option disabled selected>Seleccioná una tarjeta</option>
               <option value="visa">Visa</option>
               <option value="master">Mastercard</option>
               <option value="amex">Amex</option>
@@ -40,7 +41,7 @@ class CardSelectFormRow extends React.Component {
               name="locality"
               onChange={this.props.handleChange}
               required
-            >
+            ><option disabled selected>Seleccioná un Banco</option>
               <option value="">Banco 1</option>
               <option value="1">Banco 2</option>
             </FormControl>

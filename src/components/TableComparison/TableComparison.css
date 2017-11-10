@@ -31,7 +31,7 @@
   .product .head .btn-success {
     background-color: #5bc500;
     border: none;
-    border-radius: 10px;
+    border-radius: 4px;
     padding: 8px 20px 15px;
     font-size: 16px;
     display: block;
@@ -39,3 +39,5 @@
     font-family: "TelefonicaRegular"; }
     .product .head .btn-success:hover, .product .head .btn-success:focus {
       opacity: .9; }
+
+/*# sourceMappingURL=TableComparison.css.map */

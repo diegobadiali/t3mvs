@@ -20,7 +20,7 @@
   border-radius: 0 !important;
   box-shadow: 0px 0px 25px -4px rgba(0, 0, 0, 0.4);
   border: none !important;
-  min-width: 700px; }
+  width: 750px; }
   .ReactModal__Content .btn-cerrar {
     float: right;
     background: transparent;
@@ -73,3 +73,5 @@ input[type="radio"]:before, input[type="radio"]:checked:before {
 input[type="radio"]:checked:before {
   content: "\f111";
   font-family: 'Fontawesome'; }
+
+/*# sourceMappingURL=ModalPromociones.css.map */

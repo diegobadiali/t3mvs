@@ -40,6 +40,7 @@ class Resume extends React.Component {
         </Col>
         </Row>
         <Row>
+        { !this.props.isLoggedIn ? (
         <Col sm={12} md={6}>
           <FormGroup validationState={this.state.phone.validationState} className={this.props.phone?'active':''}>
             <FormControl
@@ -54,6 +55,8 @@ class Resume extends React.Component {
             <i className="fa fa-phone"></i> 
           </FormGroup>
         </Col>
+        ) : (null)
+      }
         </Row>
         <Row>
         <Col sm={12} md={6}>
@@ -82,7 +85,7 @@ class Resume extends React.Component {
       </Row>
       <Row>
         <Col sm={12}>
-          <Button bsStyle="success">Continuar</Button>
+          <Button bsStyle="success" onClick={this.props.toggleActivePanel}>Continuar</Button>
         </Col>
       </Row>
       </div>

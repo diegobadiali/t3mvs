@@ -1,0 +1,35 @@
+.alert {
+  font-family: "TelefonicaLight";
+  font-size: 16px;
+  padding-bottom: 19px !important;
+  border: none !important;
+  color: #86888c !important; }
+  .alert i {
+    font-size: 19px;
+    margin-right: 5px; }
+  .alert a, .alert a:hover, .alert a:visited, .alert a:link {
+    color: #00a9e0; }
+    .alert a:hover, .alert a:hover:hover, .alert a:visited:hover, .alert a:link:hover {
+      text-decoration: underline; }
+
+.alert-info {
+  background-color: #f4f4f4 !important; }
+  .alert-info i {
+    color: #00a9e0; }
+
+.alert-info-plan {
+  background-color: #e5f6fb !important; }
+  .alert-info-plan i {
+    color: #00a9e0; }
+
+.alert-warning {
+  background-color: #fdefeb !important; }
+  .alert-warning i {
+    color: #ec6839; }
+
+.alert-success {
+  background-color: #eef9e5 !important; }
+  .alert-success i {
+    color: #5bc500; }
+
+/*# sourceMappingURL=Message.css.map */

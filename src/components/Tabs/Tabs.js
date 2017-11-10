@@ -8,6 +8,10 @@ import { NavItem } from 'react-bootstrap';
 import Carousel from '../../components/Carousel/Carousel';
 
 class Tabs extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {};
+  }
  render() {
   return (
    <Tab.Container id="tabsPlanes" defaultActiveKey="Con factura libre">
@@ -35,16 +39,16 @@ class Tabs extends React.Component {
       <Col xs={12}>
         <Tab.Content animation>
           <Tab.Pane eventKey="Con factura libre">
-            <Carousel />
+            <Carousel planes={this.props.planes} tab="facturalibre" />
           </Tab.Pane>
           <Tab.Pane eventKey="Con factura fija">
-            <Carousel />
+            <Carousel planes={this.props.planes} tab="facturafija" />
           </Tab.Pane>
           <Tab.Pane eventKey="Sin factura">
-            <Carousel />
+            <Carousel planes={this.props.planes} tab="sinfactura" />
           </Tab.Pane>
           <Tab.Pane eventKey="Internet Móvil">
-            <Carousel />
+            <Carousel planes={this.props.planes} tab="internetmovil" />
           </Tab.Pane>
         </Tab.Content>
       </Col>

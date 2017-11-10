@@ -48,7 +48,7 @@
             color: #fff;
             font-size: 60px;
             font-family: "TelefonicaExtraLight";
-            line-height: 42px; }
+            line-height: 45px; }
           .slick-list .slick-track .cont-plan .plan .head-plan h5 {
             margin: 0;
             color: #fff;
@@ -57,6 +57,12 @@
             line-height: 16px; }
           .slick-list .slick-track .cont-plan .plan .head-plan span {
             display: none; }
+          .slick-list .slick-track .cont-plan .plan .head-plan.head-plan-prepago h4 {
+            font-size: 32px; }
+            @media (max-width: 1199px) {
+              .slick-list .slick-track .cont-plan .plan .head-plan.head-plan-prepago h4 {
+                font-size: 24px;
+                line-height: 24px; } }
         .slick-list .slick-track .cont-plan .plan ul {
           margin-bottom: 0; }
           .slick-list .slick-track .cont-plan .plan ul li {
@@ -171,3 +177,5 @@
 
 .slick-next::before {
   content: '\f105'; }
+
+/*# sourceMappingURL=Carousel.css.map */

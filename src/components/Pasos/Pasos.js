@@ -6,12 +6,14 @@ function Steps(props) {
     <li key={post.id} className={(props.currentStep == post.id) ? 'active':'' || (props.currentStep > post.id) ? 'off':''  }><span>{post.title}</span></li>
   );
   return (
-  	<Grid>
-  		<div className="bg-pasos">
-  	  		<a href="#" className="btn-back"><i className="fa fa-angle-left"></i></a>
-  		    <ol>{content}</ol>
-  	    </div>
-  	</Grid>
+    <div className="pasos">
+    	<Grid>
+    		<div className="bg-pasos">
+    	  		<a href="#" className="btn-back"><i className="fa fa-angle-left"></i></a>
+    		    <ol>{content}</ol>
+    	    </div>
+    	</Grid>
+    </div>
   );
 }
 const items = [

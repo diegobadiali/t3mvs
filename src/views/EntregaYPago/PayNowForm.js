@@ -3,7 +3,7 @@ import {Col, Row, Button, FormGroup, Radio} from 'react-bootstrap';
 import ListInline from '../../components/CreditCard/ListInline';
 import CreditCardForm from '../../components/CreditCard/Form';
 import {simpleValidation} from '../../utils/validators';
-
+import Message from '../../components/Message/Message';
 
 class PayNowForm extends React.Component {
 
@@ -45,14 +45,7 @@ class PayNowForm extends React.Component {
               <Radio name="paymentMethod" value="creditCard" onClick={this.handleChange}>
                 <h4>Tarjeta de crédito</h4>
                 <ListInline
-                  creditCards="visa,master,amex,diners,cabal"
-                />
-              </Radio>
-
-              <Radio name="paymentMethod" value="mercadoPago" onClick={this.handleChange}>
-                <h4>Mercado Pago</h4>
-                <ListInline
-                  paymentGateways="mercadopago"
+                  creditCards="visa,master,amex,diners,cabal,naranja"
                 />
               </Radio>
 
@@ -74,19 +67,30 @@ class PayNowForm extends React.Component {
                       isLoggedIn={this.props.isLoggedIn}
                       userData={this.props.userData}
                     />
+                    <div className="cont-btns">
+                      <Button bsStyle="success" onClick={this.props.handleNext}>
+                        Continuar
+                      </Button>
+                    </div>
                   </div>
                 ) : (null)
             }
-          </div>
 
-          <div className="pull-right">
-            <Button bsStyle="success" onClick={this.props.handleNext}>
-              Continuar
-            </Button>
-          </div>
+            {
+              this.state.fields.paymentMethod.val == 'cash' ? (
+                  <div>
+                    <Message text={"En el email de confirmación recibirás el cupón para realizar el pago"} class={"info"}/>
+                     <div className="cont-btns">
+                      <Button bsStyle="success" onClick={this.props.handleNext}>
+                        Continuar
+                      </Button>
+                    </div>
+                  </div>
+                ) : (null)
+            }
 
+          </div>
         </Col>
-
       </Row>
     );
   }

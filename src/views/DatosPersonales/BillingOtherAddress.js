@@ -48,7 +48,8 @@ class Resume extends React.Component {
               onChange={this.handleLineSameAsChange}
               checked={this.state.fields.lineSameAsBillingAddress.val}
             >
-              Voy a usar la línea en la misma localidad de mi domicilio de facturación
+              Voy a usar la línea en la misma localidad de está dirección
+
             </Checkbox>
           </Col>
         </Row>
@@ -67,7 +68,7 @@ class Resume extends React.Component {
                   <Radio name="willBeUsedIn" value="gba" onChange={this.handleChange}
                          checked={this.state.fields.willBeUsedIn.val == 'gba'}
                   >
-                    GBA
+                    Gran Buenos Aires
                   </Radio>
                   <Radio name="willBeUsedIn" value="otra" onChange={this.handleChange}
                          checked={this.state.fields.willBeUsedIn.val == 'otra'}

@@ -8,6 +8,7 @@ import visa from '../../assets/img/visa.png';
 import mercadopago from '../../assets/img/mercadopago.png';
 import pagofacil from '../../assets/img/pagofacil.png';
 import rapipago from '../../assets/img/rapipago.png';
+import naranja from '../../assets/img/tarjeta-naranja.png';
 
 export function ResolveImage(itemName) {
   switch (itemName) {
@@ -44,6 +45,10 @@ export function ResolveImage(itemName) {
     case 'rapipago':
       return (
         <img src={rapipago} className="credit-card" alt="Rapipago"/>
+      );
+      case 'naranja':
+      return (
+        <img src={naranja} className="credit-card" alt="Tarjeta Naranja"/>
       );
 
     default:

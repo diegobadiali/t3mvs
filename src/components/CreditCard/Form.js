@@ -14,6 +14,7 @@ class Form extends Component {
     this.state = {
       totalAmount: props.totalAmount,
       instalmentAmount: props.totalAmount,
+      cft: '55%',
       fields: {
         cardName: {val: 'visa', validationState: null},
         cardBank: {val: '', validationState: null},
@@ -22,6 +23,9 @@ class Form extends Component {
         cardDue: {val: '', validationState: null},
         cardCVC: {val: '', validationState: null},
         cardOption: {val: '', validationState: null},
+        cardTitular: {val: '', validationState: null},
+        cardDNI: {val: '', validationState: null},
+        cardSexo: {val: '', validationState: null},
       }
     };
   }
@@ -70,11 +74,10 @@ class Form extends Component {
                     <FormControl
                       componentClass="select"
                       placeholder="*Seleccioná una tarjeta"
-                      value={this.state.fields.cardOption.val}
                       name="cardOption"
                       onChange={this.handleChange}
                     >
-                      <option value="">Seleccioná una tarjeta</option>
+                      <option selected disabled>Seleccioná una tarjeta</option>
                       <option value="other">Otra tarjeta</option>
                       {cardOptions}
                     </FormControl>
@@ -141,7 +144,7 @@ class Form extends Component {
               <div className="bg-cuotas">
                 <div className="cuotas">
 
-                  <h4>{this.state.fields.instalments.val} cuota de:</h4>
+                  <h4>{this.state.fields.instalments.val} cuota{this.state.fields.instalments.val > 1 ? 's' : ''} de:</h4>
                   <h5>
                     <NumberFormat
                       value={this.state.instalmentAmount}
@@ -164,6 +167,8 @@ class Form extends Component {
                     />
                   </h5>
                 </div>
+                <div className="cft"><h4>CFT:</h4> <h5>{this.state.cft} <small>Sin intereses</small></h5>
+                </div>
 
               </div>
             ) : (null)
@@ -175,6 +180,8 @@ class Form extends Component {
                 cardName={this.state.fields.cardName}
                 cardDue={this.state.fields.cardDue}
                 cardCVC={this.state.fields.cardCVC}
+                cardTitular={this.state.fields.cardTitular}
+                cardDNI={this.state.fields.cardDNI}
                 handleChange={this.handleChange}
               />
             ) : (null)

@@ -16,8 +16,11 @@
       font-family: "TelefonicaExtraLight";
       line-height: 46px;
       text-align: left; }
+      .accordionPlanMobile .head-plan h4 sub {
+        font-size: 16px;
+        bottom: 1px; }
     .accordionPlanMobile .head-plan h5 {
-      margin: 0;
+      margin: 5px 0 0;
       color: #50535a;
       font-size: 16px;
       font-family: "TelefonicaExtraLight";
@@ -42,7 +45,7 @@
       font-size: 13px;
       line-height: 15px;
       text-align: left;
-      margin-top: 0;
+      margin-top: 5px;
       margin-bottom: 0; }
     .accordionPlanMobile .head-plan .price-cel {
       display: block;
@@ -214,3 +217,5 @@
 
 .lala {
   border: 1px solid red; }
+
+/*# sourceMappingURL=AccordionPlanMobile.css.map */

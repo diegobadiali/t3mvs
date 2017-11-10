@@ -4,10 +4,14 @@ import './App.css';
 import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
 import SimpleReactRouter from 'simple-react-router'
-import ElegiPlanLineaNueva from './views/ElegiPlanLineaNueva/ElegiPlanLineaNueva';
+import ElegiPlanEquipo from './views/ElegiPlanLineaNueva/ElegiPlanEquipo';
+import ElegiPlanEquipoSinPlanes from './views/ElegiPlanLineaNueva/ElegiPlanEquipoSinPlanes';
+import ElegiPlanLineaSinPlanes from './views/ElegiPlanLineaNueva/ElegiPlanLineaSinPlanes';
+import ElegiPlanEquipoNoPic from './views/ElegiPlanLineaNueva/ElegiPlanEquipoNoPic';
 import ElegiPlanLinea from './views/ElegiPlanLineaNueva/ElegiPlanLinea';
 import ResumenCompra from './views/ResumenCompra/ResumenCompra';
 import ResumenCompraEquipo from './views/ResumenCompra/ResumenCompraEquipo';
+import ResumenCompraLinea from './views/ResumenCompra/ResumenCompraLinea';
 import Indice from './views/Indice/Indice';
 import Home from './views/Home/Home';
 import DatosPersonales from './views/DatosPersonales/DatosPersonales';
@@ -23,10 +27,17 @@ import MercadoPago from './views/MercadoPago/MercadoPago';
 class Router extends SimpleReactRouter {
   routes(map){
     map('/',                             Indice)
-    map('/elegi-plan-con-linea-nueva',   ElegiPlanLineaNueva)
+    map('/elegi-plan-para-tu-equipo',   ElegiPlanEquipo)
+    map('/elegi-plan-para-tu-equipo/:mode',   ElegiPlanEquipo)
+    map('/elegi-plan-para-tu-equipo-sin-planes',   ElegiPlanEquipoSinPlanes)
+    map('/elegi-plan-para-tu-linea-sin-planes',   ElegiPlanLineaSinPlanes)
+    map('/elegi-plan-para-tu-equipo-no-pic',   ElegiPlanEquipoNoPic)
+    map('/elegi-plan-para-tu-equipo-no-pic/:mode',   ElegiPlanEquipoNoPic)
+    map('/elegi-plan-para-tu-linea/:mode',     ElegiPlanLinea)
     map('/elegi-plan-para-tu-linea',     ElegiPlanLinea)
     map('/resumen-de-compra',            ResumenCompra)
     map('/resumen-de-compra-equipo',     ResumenCompraEquipo)
+    map('/resumen-de-compra-linea',      ResumenCompraLinea)
     map('/home',                         Home)
     map('/datos-personales/:mode',       DatosPersonales)
     map('/thank-you-page',               ThankYouPage)
@@ -39,7 +50,6 @@ class Router extends SimpleReactRouter {
 }
 
 class App extends Component {
-
   render() {
     return (
       <div className="App" id="page-wrap">

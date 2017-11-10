@@ -15,6 +15,7 @@ class EntregaYPago extends React.Component {
     this.state = {
       isLoggedIn: false,
       isEditingAddress: true,
+      isSelectedSucursal: false,
       datosPersonales: {
         userData: {
           address: {
@@ -26,6 +27,14 @@ class EntregaYPago extends React.Component {
             city: 'CABA',
           },
           creditCards: [],
+        },
+        sucursalData: {
+          address: {
+            street: 'Av. Corrientes',
+            number: '1134',
+            neighborhood: 'Almagro',
+            horario: 'Lunes a viernes de 9 a 19hs',
+          }
         },
         open: true,
         valid: false,
@@ -41,6 +50,20 @@ class EntregaYPago extends React.Component {
   handleEditAddress = () => {
     this.setState({
       isEditingAddress: true,
+    });
+  };
+
+  selectSucursal = () => {
+    this.setState({
+      isSelectedSucursal: false,
+    });
+  };
+
+  handleSucursal = () => {
+    this.setState({
+      deliveryPanelOpen: false,
+      devicePanelOpen: true,
+      planPanelOpen: false,
     });
   };
 
@@ -133,15 +156,16 @@ class EntregaYPago extends React.Component {
                 <Panel collapsible expanded={this.state.deliveryPanelOpen}>
                   <DeliveryForm
                     userData={this.state.datosPersonales.userData}
+                    sucursalData={this.state.datosPersonales.sucursalData}
                     handleNext={this.handleNextAddress}
+                    handleSucursal={this.handleSucursal}
                   />
                 </Panel>
               </div>
 
               <div className={ !this.state.devicePanelOpen ? 'collapsed' : 'open' }>
                 <h3>
-                  Pago del equipo (Ahora)
-                  <span>{this.state.cart.total}</span>
+                  Pago del equipo (Ahora) <span>{this.state.cart.total}</span>
                   <button
                     id="device-btn"
                     className="btn btn-link pull-right"

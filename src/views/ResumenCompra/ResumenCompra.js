@@ -4,7 +4,37 @@ import { Grid, Row, Col, PageHeader } from 'react-bootstrap';
 import Pasos from '../../components/Pasos/Pasos';
 import TableResumen from '../../components/TableResumen/TableResumen';
 import InfoTarjetas from '../../components/InfoTarjetas/InfoTarjetas';
+const infotabla = {
+  itemList : [{
+      id: 1,
+      name: 'Samsung Galaxy S8 4G LTE',
+      desc: 'Negro - 32GB',
+      price: '$22.000,00',
+      pricemensual: '-',
+      imgURL: 'http://www.movistar.com.ar/documents/10192/14678471/s8.png',
+    },
+    { 
+      id: 2,
+      name: 'Plan One',
+      desc: '10GB',
+      price: '-',
+      pricemensual: '$899,00',
+      imgURL: require('../../assets/img/img-chip2.png'),
+    }
+  ],
+  onetimecharge: '$55,00',  
+  totals: {
+      pricetotal : '$22.000,00',
+      pricemensualtotal : '$899,00'  
+  }
+};
 class ResumenCompra extends Component {  
+  constructor(props) {
+    super(props);
+    this.state = {
+      infotabla: infotabla
+    };
+  }
   render() {
     return (
       <div>
@@ -13,7 +43,7 @@ class ResumenCompra extends Component {
           <Row>
             <Col sm={12} md={9}>
               <PageHeader>Resumen de la compra</PageHeader>
-              <TableResumen />
+              <TableResumen infotabla={this.state.infotabla} />
               <InfoTarjetas />
               <p className="message">Los precios incluyen todos los impuestos. Todos los precios se encuentran expresados en pesos argentinos, con la previa conversión de dólares estadounidenses a pesos argentinos conforme el tipo de cambio del día de la fecha. Al momento de corte de ciclo los mismos se facturarán tomando en cuenta la cotización de dólares estadounidenses del día anterior, según tipo de cambio dispuesto por Banco de la Nación Argentina (BNA).</p>
             </Col>

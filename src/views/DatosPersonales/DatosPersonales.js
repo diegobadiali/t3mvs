@@ -7,7 +7,7 @@ import DatosPersonalesForm from './DatosPersonalesForm';
 import DatosPersonalesVeraz from './DatosPersonalesVeraz';
 import Resume from './Resume';
 import BillingAddressForm from './BillingAddressForm';
-import BillingAddressResume from './BillingAddressResume';
+import BillingAddressList from './BillingAddressList';
 import BillingOtherAddress from './BillingOtherAddress';
 import DataStoreSupport from '../../DataStoreSupport';
 
@@ -18,6 +18,8 @@ class DatosPersonales extends React.Component {
     this.state = {
       isLoggedIn: false,
       isEditingAddress: true,
+      isOtherAddress: false,
+      isSelectedAdress: false,
       datosPersonales: {
         userData: {
           address: {}
@@ -38,6 +40,19 @@ class DatosPersonales extends React.Component {
       isEditingAddress: true,
     });
   };
+  handleOtherAddress = () => {
+    this.setState({
+      isOtherAddress: true,
+      isSelectedAdress: true,
+    });
+  };
+  handleAddress = () => {
+    this.setState({
+      isOtherAddress: false,
+      isSelectedAdress: true,
+    });
+  };
+
 
   componentDidMount() {
 
@@ -131,6 +146,8 @@ class DatosPersonales extends React.Component {
                     this.state.datosPersonales.verifiedData ? (
                         <Resume
                           {...this.state.datosPersonales.userData}
+                          isLoggedIn={this.state.isLoggedIn}
+                          toggleActivePanel={this.toggleActivePanel}
                         />
                       ) : (
                         <div>
@@ -150,7 +167,7 @@ class DatosPersonales extends React.Component {
               </div>
               <div id="domicilio-facturacion" className={ !this.state.billingAddress.open ? 'collapsed' : 'open' }>
                 <h3>
-                  Domicilio de facturación
+                  Domicilio
                   <button
                     className="btn btn-link pull-right"
                     onClick={this.toggleActivePanel}
@@ -163,13 +180,12 @@ class DatosPersonales extends React.Component {
                   {
                     !this.state.isEditingAddress ? (
                         <div>
-                          <BillingAddressResume
+                          <BillingAddressList
                             {...this.state.datosPersonales.userData.address}
-                            handleEditAddress={this.handleEditAddress}
+                            handleOtherAddress={this.handleOtherAddress}
+                            handleAddress={this.handleAddress}
                           />
-                          <BillingOtherAddress
-                            handleUserDataChange={this.handleBillingAddressChange}
-                          />
+                          
                         </div>
                       ) : (
                         <div>
@@ -183,9 +199,29 @@ class DatosPersonales extends React.Component {
                         </div>
                       )
                   }
+                  {
+                    this.state.isOtherAddress ? (
+                      <div>
+                          <BillingAddressForm
+                            handleUserDataChange={this.handleBillingAddressChange}
+                            userData={this.state.datosPersonales.userData.address}
+                          />
+                          
+                        </div>
+                      ) : (null)
+                  }
+
+                  {
+                    !this.state.isEditingAddress ? (
+                      <BillingOtherAddress
+                         handleUserDataChange={this.handleBillingAddressChange}
+                        />
+                      ):( null )
+                  }
+
                   <Row>
                     <Col sm={12}>
-                      <Button bsStyle="success">Continuar</Button>
+                      <Button bsStyle="success" disabled={this.state.isSelectedAdress ? '' : 'disabled' }>Continuar</Button>
                     </Col>
                   </Row>
                 </Panel>

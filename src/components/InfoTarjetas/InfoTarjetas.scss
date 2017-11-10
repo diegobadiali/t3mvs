@@ -18,11 +18,22 @@
 	}
 	.credit-card{
 		margin-left: 10px; 
+		@media(max-width: 1199px){
+			width: 35px;
+			margin-right: 0;
+			margin-left: 5px;
+		}
 		@media(max-width:767px){
 		margin-left: 0;
 		margin-right: 10px;
 		margin-top: 10px;
-	}
+		width: 42px;
+		}
+		@media(max-width: 359px){
+			margin-right: 5px;
+			width: 40px;
+		}
+	
 	}
 	a{
 		color: $color2;

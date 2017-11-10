@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import {Col, Row, FormGroup} from 'react-bootstrap';
+import {Col, Row, FormGroup, FormControl, Radio} from 'react-bootstrap';
 import NumberFormat from 'react-number-format';
 import {ResolveImage} from './ImageResolver';
 import TooltipTarjeta from '../../components/CreditCard/Tooltip';
@@ -47,13 +47,46 @@ class CardNumberFormRow extends React.Component {
               placeholder="*CVC"
               className="form-control"
               name="cardDue"
-              mask="_"
+              type="password"
               onChange={this.props.handleChange}
               required
             />
           </FormGroup>
         </Col>
         <Col xs={2} sm={1}><TooltipTarjeta position={"top"}/></Col>
+        <Col md={6} lg={4}>
+          <FormGroup validationState={this.props.cardTitular.validationState}>
+            <FormControl
+              type="text"
+                placeholder="Titular de la tarjeta"
+                name="titular"
+                onChange={this.handleChange}
+            />
+          </FormGroup>
+          </Col>
+        <Col md={6} lg={4}>
+          <FormGroup validationState={this.props.cardDNI.validationState}>
+            <NumberFormat
+              format="########"
+              placeholder="DNI del titular"
+              className="form-control"
+              name="cardDNI"
+              onChange={this.props.handleChange}
+              required
+            />
+          </FormGroup>
+          </Col>
+          <Col md={6} lg={4}>
+            <FormGroup>
+            <Radio name="gender" inline value="Femenino" onChange={this.handleChange}>
+              Femenino
+            </Radio>
+            {' '}
+            <Radio name="gender" inline value="Masculino" onChange={this.handleChange}>
+              Masculino
+            </Radio>
+          </FormGroup>
+          </Col>
       </Row>
     );
   }
@@ -64,6 +97,8 @@ CardNumberFormRow.propTypes = {
   cardNumber: PropTypes.object,
   cardDue: PropTypes.object,
   cardCVC: PropTypes.object,
+  cardTitular: PropTypes.object,
+  cardDNI: PropTypes.object,
   handleChange: PropTypes.func,
 };
 

@@ -18,9 +18,13 @@
 			font-family: $font4;
 			line-height: 46px;
 			text-align: left;
+			sub{
+				font-size:16px;
+				bottom: 1px;
+			}
 		}
 		h5{
-			margin:0;
+			margin:5px 0 0;
 			color: $color8;
 			font-size: 16px;
 			font-family: $font4;
@@ -49,7 +53,7 @@
 			font-size: 13px;
 			line-height: 15px;
 			text-align: left;
-			margin-top: 0;
+			margin-top: 5px;
 			margin-bottom: 0;
 		}
 		.price-cel{

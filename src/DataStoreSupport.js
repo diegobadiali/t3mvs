@@ -18,6 +18,8 @@ let DataStoreSupport = {
           apartment: 'B',
           locality: 'CABA',
           city: 'CABA',
+          entrecalles: 'Entre Larralde y Manuela Pedraza',
+          zipcode: '2343'
         },
         creditCards: [
           {id: 1, number: '1111222233334444', type: 'visa'},
@@ -42,6 +44,7 @@ let DataStoreSupport = {
         price: '$899,00',
         vencimiento: '10/10/2017',
         imgURL: 'https://i.imgur.com/tShwylR.png',
+        onetimecharge: '$55,00'
       },
       linea: {
         name: 'Linea Movistar',
@@ -51,6 +54,10 @@ let DataStoreSupport = {
       retiro: undefined,
       envio: {
         direccion: 'Ruta 16 Km 1,5 - Esteban Echeverría - Buenos Aires 1425/C1425BUG - Barrio Horizontes al Sur',
+      },
+      addon: {
+        name: 'Auriculares',
+        price: '$0,00'
       },
       orden: '12345678A',
       total: '$22.000,00',

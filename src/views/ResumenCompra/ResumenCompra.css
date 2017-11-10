@@ -7,7 +7,7 @@
     background-color: transparent;
     color: #86888c;
     border: 2px solid #86888c;
-    border-radius: 6px;
+    border-radius: 4px;
     padding: 8px 20px 12px;
     font-family: "TelefonicaRegular"; }
   @media (max-width: 767px) {
@@ -16,7 +16,7 @@
 
 .cont {
   background-color: #fff;
-  border-radius: 6px;
+  border-radius: 4px;
   padding: 40px 20px; }
 
 .show-grid {
@@ -25,3 +25,5 @@
   @media (max-width: 767px) {
     .show-grid {
       display: block; } }
+
+/*# sourceMappingURL=ResumenCompra.css.map */

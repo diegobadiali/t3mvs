@@ -29,7 +29,13 @@
     line-height: 14px;
     display: block;
     margin-bottom: 10px; }
+    .product-resume .price + small {
+      margin-top: -12px;
+      color: #86888c;
+      display: block; }
   @media (max-width: 992px) {
     .product-resume {
       float: none;
       width: 100%; } }
+
+/*# sourceMappingURL=ProductResume.css.map */

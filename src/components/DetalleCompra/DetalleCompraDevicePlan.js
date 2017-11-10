@@ -34,6 +34,9 @@ class DetalleCompraDevicePlan extends React.Component {
                 <span className="name">{this.props.plan.name}</span>
                 <span className="price">{this.props.plan.price}</span>
                 <p><strong>Tu primera factura vencerá el {this.props.plan.vencimiento}</strong></p>
+                {this.props.plan.onetimecharge ? (
+                  <p>Cargo adicional a pagar por única vez en la primer factura: <span className="price1">{this.props.plan.onetimecharge}</span></p>
+                  ) : '' }      
               </Col>
             </Row>
         </Col>

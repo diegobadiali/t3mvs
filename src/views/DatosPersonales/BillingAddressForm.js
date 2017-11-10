@@ -10,15 +10,19 @@ class BillingAddressForm extends React.Component {
       fields: {
         street: {val: props.userData.street, validationState: null},
         number: {val: props.userData.number, validationState: null},
-        floor: {val: '', validationState: null},
-        apartment: {val: '', validationState: null},
-        locality: {val: '', validationState: null},
-        city: {val: '', validationState: null},
-        postalCode: {val: '', validationState: null},
+        floor: {val: props.userData.floor, validationState: null},
+        apartment: {val: props.userData.apartment, validationState: null},
+        locality: {val: props.userData.locality, validationState: null},
+        city: {val: props.userData.city, validationState: null},
+        postalCode: {val: props.userData.zipcode, validationState: null},
         comments: {val: '', validationState: null},
+        entrecalles: {val: props.userData.entrecalles, validationState: null},
         lineSameAsBillingAddress: {val: true},
         willBeUsedIn: {val: 'caba'},
         willBeUsedInLocality: {val: '', validationState: null},
+        nombreautorizado: {val: '', validationState: null},
+        apellidoautorizado: {val: '', validationState: null},
+        dniautorizado: {val: '', validationState: null},
       },
       validForm: false
     };
@@ -38,7 +42,8 @@ class BillingAddressForm extends React.Component {
     this.setState({fields: newFields});
 
     this.props.handleUserDataChange(e.target.name, e.target.value);
-    this.props.handleStatus(isValid);
+    //this.props.handleStatus(isValid);
+
   };
 
   render() {
@@ -145,11 +150,59 @@ class BillingAddressForm extends React.Component {
             <a className="btn btn-link">
               No conozco mi código postal
               {' '}
-              <i className="fa fa-angle-right"/>
+              
             </a>
           </Col>
         </Row>
-
+        <Row>
+          <Col sm={12}>
+            <FormGroup validationState={this.state.fields.entrecalles.validationState}>
+              <FormControl
+                type="text"
+                placeholder="Entre calles, manzana, lote, parcela, barrio cerrado, etc."
+                value={this.state.fields.entrecalles.val}
+                name="calles"
+                onChange={this.handleChange}
+              />
+            </FormGroup>
+          </Col>
+        </Row> 
+        <Row>
+          <Col sm={12}><h4>Datos del autorizado</h4></Col>
+          <Col sm={12} md={6}>
+            <FormGroup>
+              <FormControl
+                type="text"
+                placeholder="Nombre del autorizado"
+                value={this.state.fields.nombreautorizado.val}
+                name="nombreautorizado"
+                onChange={this.handleChange}
+              />
+            </FormGroup>
+          </Col>
+          <Col sm={12} md={6}>
+            <FormGroup>
+              <FormControl
+                type="text"
+                placeholder="Apellido del autorizado"
+                value={this.state.fields.apellidoautorizado.val}
+                name="apellidoautorizado"
+                onChange={this.handleChange}
+              />
+            </FormGroup>
+          </Col>
+          <Col sm={12} md={6}>
+            <FormGroup>
+              <FormControl
+                type="text"
+                placeholder="DNI del autorizado"
+                value={this.state.fields.dniautorizado.val}
+                name="dniautorizado"
+                onChange={this.handleChange}
+              />
+            </FormGroup>
+          </Col>
+        </Row>  
       </div>
     );
   }

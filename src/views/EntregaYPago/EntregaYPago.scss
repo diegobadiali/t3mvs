@@ -12,10 +12,14 @@
 					font-weight: normal;
 					color: $color8;
 					margin: 0;
+					float: left;
 					span{
 						color: $color1;
 					}
-					float: left;
+					&.nf{
+						float: none;
+					}
+					
 					@media(max-width:767px){
 						float: none;
 					}
@@ -161,7 +165,7 @@
 	@media(max-width:767px){
 		display: flex;
 		-webkit-flex-flow: row wrap;
-  		flex-flow: row wrap;
+		flex-flow: row wrap;
 		.pull-left{
 			width: 100%;
 			order: 1;
@@ -180,4 +184,17 @@
 		}
 	}
 }
-
+.radios-entrega .form-group .radio label p{
+	font-style: italic;
+	color: $color5;
+}
+.cont-entrega-pago{
+	h4{
+		font-family: $font2;
+		font-weight: normal;
+		color: $color8;
+		margin: 0 0 20px;
+		font-size: 18px;
+		font-weight: bold;
+	}
+}

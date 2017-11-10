@@ -3,96 +3,86 @@ import './Carousel.css';
 import Slider from 'react-slick';
 import { Button } from 'react-bootstrap';
 import ModalPlanes from '../../components/ModalPlanes/ModalPlanes';
-const planes = [
-  {
-  id: 1,
-  speed: '10GB',
-  name: 'Comunidad 2GB',
-  habla: 'Libre a todos los Movistar y 50 min. a otras compañías',
-  mensajea: '$Libre a cualquier compañía',
-  navega: '2GB incluidos, luego internet x Día Plus (50MBx$7,50) Loren ipsum dolor sit amet',
-  credito: '-',
-  extra: '-',
-  price: '$2900',
-  preciopormes: '$290',
-  link: '#',
-  recomendado: ''
-},
-{ id: 2,
-  speed: '7GB',
-  name: 'Comunidad 2GB',
-  habla: 'Libre a todos los Movistar y 50 min. a otras compañías',
-  mensajea: '$Libre a cualquier compañía',
-  navega: '2GB incluidos, luego internet x Día Plus (50MBx$7,50)',
-  credito: '-',
-  extra: '-',
-  price: '$2900',
-  preciopormes: '$290',
-  link: '#',
-  recomendado: 'recomendado'
-},
-{ id: 3,
-  speed: '7GB',
-  name: 'Comunidad 2GB',
-  habla: 'Libre a todos los Movistar y 50 min. a otras compañías',
-  mensajea: '$Libre a cualquier compañía',
-  navega: '2GB incluidos, luego internet x Día Plus (50MBx$7,50)',
-  credito: '-',
-  extra: '-',
-  price: '$2900',
-  preciopormes: '$290',
-  link: '#',
-  recomendado: ''
-},
-{ id: 4,
-  speed: '7GB',
-  name: 'Comunidad 2GB',
-  habla: 'Libre a todos los Movistar y 50 min. a otras compañías',
-  mensajea: '$Libre a cualquier compañía',
-  navega: '2GB incluidos, luego internet x Día Plus (50MBx$7,50)',
-  credito: '-',
-  extra: '-',
-  price: '$2900',
-  preciopormes: '$290',
-  link: '#',
-  recomendado: ''
-},
-{ id: 5,
-  speed: '7GB',
-  name: 'Comunidad 2GB',
-  habla: 'Libre a todos los Movistar y 50 min. a otras compañías',
-  mensajea: '$Libre a cualquier compañía',
-  navega: '2GB incluidos, luego internet x Día Plus (50MBx$7,50)',
-  credito: '-',
-  extra: '-',
-  price: '$2900',
-  preciopormes: '$290',
-  link: '#',
-  recomendado: ''
-},
-{ id: 6,
-  speed: '7GB',
-  name: 'Comunidad 2GB',
-  habla: 'Libre a todos los Movistar y 50 min. a otras compañías',
-  mensajea: '$Libre a cualquier compañía',
-  navega: '2GB incluidos, luego internet x Día Plus (50MBx$7,50)',
-  credito: '-',
-  extra: '-',
-  price: '$2900',
-  preciopormes: '$290',
-  link: '#',
-  recomendado: ''
-}
-];
+import Item from './Item';
+
 function Plan(props) {
-  const content = props.planes.map((plan) =>
-    <div className="cont-plan" key={plan.id}>
-      <div className={"plan " +plan.recomendado}>
-        <div className="head-plan">
-          <span>RECOMENDADO</span>
-          <h4>{plan.speed}</h4>
-          <h5>{plan.name}</h5>
+  var content = "";
+    switch (props.tab) {
+      case 'facturalibre':
+        content = props.planes.facturalibre.map((plan) =>
+          <div className="cont-plan" key={plan.id}>
+            <div className={plan.recomendado ? 'plan recomendado' : 'plan'}>
+            <div className="head-plan">
+              <span>RECOMENDADO</span>
+              <h4>{plan.planprice}</h4>
+              <h5>{plan.name}</h5>
+            </div>
+            <ul>
+              <li><strong>Hablá</strong>
+              {plan.habla}</li>
+              <li><strong>Mensajeá</strong>
+              {plan.mensajea}</li>
+              <li><strong>Navegá</strong>
+              {plan.navega}</li>
+              <li><strong>Beneficios</strong>
+              {plan.beneficios}</li>
+              <li><strong>Beneficios extra</strong>
+              {plan.extra}</li>
+            </ul>
+            <div className="foot-plan"> 
+            <span className="text-center">Precio del equipo</span>
+            <span className="price-cel">{plan.price}</span>
+            <Button href={plan.link}>
+            Quiero este plan
+            </Button>
+            <ModalPlanes />
+            </div>
+          </div>
         </div>
+        );
+        break;
+      case 'facturafija':
+        content = props.planes.facturafija.map((plan) =>
+        <div className="cont-plan" key={plan.id}>
+          <div className={plan.recomendado ? 'plan recomendado' : 'plan'}>
+            <div className="head-plan">
+              <span>RECOMENDADO</span>
+              <h4>{plan.planprice}</h4>
+              <h5>{plan.name}</h5>
+            </div>
+            <ul>
+              <li><strong>Hablá</strong>
+              {plan.habla}</li>
+              <li><strong>Mensajeá</strong>
+              {plan.mensajea}</li>
+              <li><strong>Navegá</strong>
+              {plan.navega}</li>
+              <li><strong>Beneficios</strong>
+              {plan.beneficios}</li>
+              <li><strong>Beneficios extra</strong>
+              {plan.extra}</li>
+            </ul>
+            <div className="foot-plan"> 
+            <span className="text-center">Precio del equipo</span>
+            <span className="price-cel">{plan.price}</span>
+            <Button href={plan.link}>
+            Quiero este plan
+            </Button>
+            <ModalPlanes />
+            </div>
+          </div>
+        </div>
+        );
+        break;
+      case 'sinfactura':
+        content = props.planes.sinfactura.map((plan) =>
+        <div className="cont-plan" key={plan.id}>
+        <div className={plan.recomendado ? 'plan recomendado' : 'plan'}>
+          <div className="head-plan head-plan-prepago">
+            <span>RECOMENDADO</span>
+            <h4>{plan.planprice}</h4>
+            <h5>{plan.name}</h5>
+          </div>
         <ul>
           <li><strong>Hablá</strong>
           {plan.habla}</li>
@@ -100,11 +90,11 @@ function Plan(props) {
           {plan.mensajea}</li>
           <li><strong>Navegá</strong>
           {plan.navega}</li>
+          <li><strong>Beneficios</strong>
+          {plan.beneficios}</li>
           <li><strong>Beneficios extra</strong>
           {plan.extra}</li>
         </ul>
-        <span className="text-center">Precio del plan</span>
-        <span className="price">{plan.preciopormes}<sub>/mes</sub></span>
         <div className="foot-plan"> 
         <span className="text-center">Precio del equipo</span>
         <span className="price-cel">{plan.price}</span>
@@ -116,6 +106,38 @@ function Plan(props) {
       </div>
     </div>
     );
+    break;
+    case 'internetmovil':
+      content = props.planes.internetmovil.map((plan) =>
+      <div className="cont-plan" key={plan.id}>
+        <div className={plan.recomendado ? 'plan recomendado' : 'plan'}>
+        <div className="head-plan">
+          <span>RECOMENDADO</span>
+          <h4>{plan.planprice}</h4>
+          <h5>{plan.name}</h5>
+        </div>
+        <ul>
+          <li><strong>Navegá</strong>
+          {plan.navega}</li>
+          <li><strong>Recomendados para</strong>
+          {plan.recomendados}</li>
+          <li><strong>Aptos para</strong>
+          {plan.aptos}</li>
+        </ul>
+        <div className="foot-plan"> 
+        <span className="text-center">Precio del equipo</span>
+        <span className="price-cel">{plan.price}</span>
+        <Button href={plan.link}>
+        Quiero este plan
+        </Button>
+        <ModalPlanes />
+        </div>
+      </div>
+    </div>
+    );
+    break;
+    }
+
   var settings = {
     dots: false,
     arrows: true,
@@ -141,13 +163,16 @@ function Plan(props) {
    );
 }
 class Carousel extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+    };
+  }
   render() {
     return (
-      <Plan planes={planes} />
+      <Plan tab={this.props.tab} planes={this.props.planes.data} />
       );
   }
 }
 export default Carousel;
-
-
 

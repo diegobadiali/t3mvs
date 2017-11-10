@@ -67,6 +67,9 @@
 				font-size: 26px;
 				pointer-events: none;
 			}
+			&:disabled{
+				display: none;
+			}
 		}
 		@media(max-width:767px){
 			position: relative;
@@ -128,6 +131,7 @@
 					background-color: $color3;
 					box-shadow: none;
 					font-size: 16px;
+					line-height: 24px;
 					padding-bottom: 15px;
 					padding-top: 11px;
 					height: auto;
@@ -152,8 +156,9 @@
 				}
 				&.has-error{
 					.form-control{
-						border-color: $color16;
+						border: 1px solid $color16 !important;
 						color: $color16;
+						background-color: $color4;
 						width: 100%;
 						&::placeholder{
 							color: $color16;
@@ -211,6 +216,56 @@
 						}
 					}	
 				}
+				&.codarea{
+					padding-left: 18px;
+					padding-right: 0;
+					.form-control{
+						padding-left:10px;
+						padding-right:2px;
+						@media(max-width:1199px){
+							padding-left:2px;
+						}
+						@media(max-width:992px){
+							padding-left:10px;
+						}
+					}
+					.form-control::placeholder{
+						font-size: 16px;
+						letter-spacing: -1px;
+
+					}
+					&:before{
+						content:'(0';
+						position: absolute;
+						left: 0;
+						top: 11px;
+						color: $color5;
+						font-size: 16px;
+					}
+					&:after{
+						content:')';
+						position: absolute;
+						right: -10px;
+						top: 11px;
+						color: $color5;
+						font-size: 16px;
+					}
+					.help-block{
+						margin-left: -18px;
+						margin-right: -8px;
+					}
+				}
+				&.numero{
+					padding-left: 22px;
+					&:before{
+						content:'15';
+						position: absolute;
+						left: 0;
+						top: 11px;
+						color: $color5;
+						font-size: 16px;
+					}
+				}
 			}
 			.btn-success{
 				float: right;
@@ -261,6 +316,10 @@
 		.btn-link{
 			color: $color2;
 			border: none;
+			@media(max-width:767px){
+				padding: 0;
+				margin-bottom: 10px;
+			}
 		}
 		.cont-border{
 			padding: 20px;
@@ -286,4 +345,98 @@
 
 .has-error .help-block, .has-error .control-label, .has-error .radio, .has-error .checkbox, .has-error .radio-inline, .has-error .checkbox-inline, .has-error.radio label, .has-error.checkbox label, .has-error.radio-inline label, .has-error.checkbox-inline label, .has-error i{
 	color: $color16 !important;
+}
+
+.cont-border{
+	.form-group{
+		.radio{
+			label{
+				width: 100%;
+				font-size: 16px;
+				line-height: 21px;
+				padding-left: 25px;
+				h4{
+					font-family: $font2;
+					font-weight: normal;
+					color: $color8;
+					margin: 0;
+					float: left;
+					span{
+						color: $color1;
+					}
+					&.nf{
+						float: none;
+					}
+					
+					@media(max-width:767px){
+						float: none;
+					}
+				}
+				input[type="radio"]{
+					display: block;
+					text-align: left;
+					float: left;
+					margin-left: -25px;
+					margin-right: 10px;
+					-webkit-appearance:none !important;
+					-moz-appearance:none !important;
+					height:19px;
+					width:19px;
+					cursor:pointer;
+					position:relative;
+					-webkit-transition: .15s;
+					border-radius:50%;
+					background-color:$color4;
+					border: 2px solid $color8;
+					&:checked {
+						border: 1px solid $color8;
+						background-color: $color8;
+					}
+				}
+				input[type="radio"]:before, input[type="radio"]:checked:before {
+					position:absolute;
+					top:0;
+					left:0;
+					width:100%;
+					height:100%;
+					line-height:17px;
+					font-size: 9px;
+					font-weight: normal;
+					text-align:center;
+					color:$color4;
+					content: '';
+				}
+				input[type="radio"]:checked:before {
+					content: "\f111";
+					font-family: 'Fontawesome';
+				}
+
+				input[type="radio"]:hover:before {
+
+				}
+
+				.icon-envios, .icon-centros-movistar{
+					font-size: 25px;
+					margin-right: 5px;
+					float: left;
+					margin-bottom: 20px;
+					display: block;
+
+				}
+				.list-inline{
+					float: left;
+					margin-left: 20px;
+					@media(max-width:767px){
+						float: none;
+						padding-left: 0;
+						margin-left: 0;
+						margin-top: 10px;
+						img{
+							height: 25px;
+						}
+					}
+				}
+			}
+		}
+	}
 }

@@ -15,18 +15,24 @@ class Indice extends Component {
           	</div>
           	<div className="cont">
           		<ul>
-                <li><a href="/elegi-plan-con-linea-nueva" target="_blank">Elegí Plan con línea nueva</a></li>
+                <li><a href="/elegi-plan-para-tu-equipo" target="_blank">Elegí Plan para tu equipo</a></li>
+                <li><a href="/elegi-plan-para-tu-equipo/select-location" target="_blank">Elegí Plan para tu equipo (select location)</a></li>
+                <li><a href="/elegi-plan-para-tu-equipo-no-pic" target="_blank">Elegí Plan para tu equipo (sin foto del equipo)</a></li>
+                <li><a href="/elegi-plan-para-tu-equipo-sin-planes" target="_blank">Elegí Plan para tu equipo (sin planes)</a></li>
                 <li><a href="/elegi-plan-para-tu-linea" target="_blank">Elegí Plan para tu línea</a></li>
-                <li><a href="/resumen-de-compra" target="_blank">Resumen de compra (Equipo)</a></li>
-                <li><a href="/resumen-de-compra-equipo" target="_blank">Resumen de compra</a></li>
+                <li><a href="/elegi-plan-para-tu-linea/select-location" target="_blank">Elegí Plan para tu línea (select location)</a></li>
+                <li><a href="/elegi-plan-para-tu-linea-sin-planes" target="_blank">Elegí Plan para tu línea (sin planes)</a></li>
+                <li><a href="/resumen-de-compra" target="_blank">Resumen de compra</a></li>
+                <li><a href="/resumen-de-compra-equipo" target="_blank">Resumen de compra (Equipo)</a></li>
+                <li><a href="/resumen-de-compra-linea" target="_blank">Resumen de compra (Línea)</a></li>
                 <li><a href="/datos-personales/guest" target="_blank">Datos personales y de facturacion (Guest)</a></li>
                 <li><a href="/datos-personales/logged" target="_blank">Datos personales y de facturacion (Logged - Cambiar DataStoreSupport.js isGuest[false] )</a></li>
-                <li><a href="/thank-you-page" target="_blank">Thank you page</a></li>
-                <li><a href="/thank-you-page-plan" target="_blank">Thank you page (Plan)</a></li>
-                <li><a href="/thank-you-page-equipo" target="_blank">Thank you page (Equipo)</a></li>
                 <li><a href="/entrega-y-pago/guest" target="_blank">Entrega y pago (Guest)</a></li>
                 <li><a href="/entrega-y-pago/logged" target="_blank">Entrega y pago (Logged)</a></li>
                 <li><a href="/mercadopago" target="_blank">MercadoPago</a></li>
+                <li><a href="/thank-you-page" target="_blank">Thank you page</a></li>
+                <li><a href="/thank-you-page-plan" target="_blank">Thank you page (Plan)</a></li>
+                <li><a href="/thank-you-page-equipo" target="_blank">Thank you page (Equipo)</a></li>
           		</ul>
               <br />
               <ul>

@@ -180,17 +180,15 @@ footer{
 						border-right: none;
 					}
 					@media(max-width:767px){
-	padding-left: 10px;
-	padding-right: 10px;
-}
+						padding-left: 10px;
+						padding-right: 10px;
+					}
 				}
 			}
 
 		}
 
 	}
-
-
 	.copy{
 		background-color: $color10;
 		height: 50px;
@@ -207,11 +205,17 @@ footer{
 				margin-right: 5px;
 			}
 			@media(max-width:767px){
-							font-size: 9px;
-							img{
-								width: 20px;
-							}
-						}
+				font-size: 12px;
+				img{
+					width: 22px;
+				}
+			}
+			@media(max-width:359px){
+				font-size: 10px;
+				img{
+					width: 20px;
+				}
+			}
 		}
 	}
 

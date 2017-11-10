@@ -4,9 +4,7 @@ import NumberFormat from 'react-number-format';
 import DatePicker from 'react-datepicker';
 import moment from 'moment';
 import {simpleValidation} from '../../utils/validators';
-
 import 'react-datepicker/dist/react-datepicker.css';
-
 
 class DatosPersonalesForm extends React.Component {
 
@@ -52,6 +50,7 @@ class DatosPersonalesForm extends React.Component {
 
     this.props.handleUserDataChange(e.target.name, e.target.value);
     this.props.handleStatus(isValid);
+
   };
 
   handleDateChange = (date) => {
@@ -96,12 +95,27 @@ class DatosPersonalesForm extends React.Component {
         </Col>
 
         <Col sm={12} md={6}>
+          <FormGroup controlId="formControlsSelect">
+            <FormControl componentClass="select" placeholder="Tipo de documento">
+              <option disabled selected>Seleccioná tipo de documento</option>
+              <option value="">DNI</option>
+              <option value="">Libreta Civica</option>
+              <option value="">Libreta de Enrolamiento</option>
+              <option value="">Cédula de Identidad</option>
+              <option value="">Pasaporte</option>
+            </FormControl>
+            <i className="fa fa-angle-down"></i>
+          </FormGroup> 
+        </Col>
+
+        <Col sm={12} md={6}>
           <FormGroup validationState={this.state.fields.dni.validationState}>
             <NumberFormat
               id="dataDni"
               className="form-control"
               name="dni"
               placeholder="DNI"
+              format="########"
               thousandSeparator={'.'}
               decimalSeparator={','}
               onChange={this.handleChange}
@@ -140,24 +154,43 @@ class DatosPersonalesForm extends React.Component {
         </Col>
         </Row>
         <Row>
-        <Col sm={12} md={6}>
-          <FormGroup validationState={this.state.fields.phone.validationState}>
+        
+        <Col xs={5} sm={4} md={2}>
+          <FormGroup className="codarea" validationState={this.state.fields.phone.validationState}>
             <NumberFormat
-              id="dataPhone"
-              className="form-control form-control-icon"
+              id="dataArea"
+              className="form-control form-inline"
               type="tel"
-              format="##########"
-              placeholder="Teléfono"
+              format="####"
+              placeholder="Cód. Área"
               name="phone"
+
               onChange={this.handleChange}
             />
-            <i className="fa fa-phone"></i> 
             <HelpBlock>
-              Ingresá el nº de línea con el código de área sin 0 ni 15.<br/>
-              Ejemplo: 1185713957
+              Ingresá el código de área sin 0.<br/>
+              Ejemplo: 11
             </HelpBlock>
           </FormGroup>
         </Col>
+        <Col xs={7} sm={8} md={4}>
+          <FormGroup className="numero" validationState={this.state.fields.phone.validationState}>
+            <NumberFormat
+              id="dataPhone"
+              className="form-control form-inline"
+              type="tel"
+              format="########"
+              placeholder="Teléfono de contacto"
+              name="phone"
+              onChange={this.handleChange}
+            /> 
+            <HelpBlock>
+              Ingresá el nº de línea sin el 15.<br/>
+              Ejemplo: 85713957
+            </HelpBlock>
+          </FormGroup>
+        </Col>
+        
         </Row>
         <Row>
         <Col sm={12} md={6}>
@@ -183,11 +216,8 @@ class DatosPersonalesForm extends React.Component {
               <li>- Información de tu pedido</li>
               <li>- Factura mensual y notificaciones</li>
             </ul>
-             </Col>
-
-       
-
-      </Row>
+          </Col> 
+        </Row>
       </div>
     );
   }

@@ -13,11 +13,21 @@
     font-size: 20px; }
 .info-tarjetas .credit-card {
   margin-left: 10px; }
+  @media (max-width: 1199px) {
+    .info-tarjetas .credit-card {
+      width: 35px;
+      margin-right: 0;
+      margin-left: 5px; } }
   @media (max-width: 767px) {
     .info-tarjetas .credit-card {
       margin-left: 0;
       margin-right: 10px;
-      margin-top: 10px; } }
+      margin-top: 10px;
+      width: 42px; } }
+  @media (max-width: 359px) {
+    .info-tarjetas .credit-card {
+      margin-right: 5px;
+      width: 40px; } }
 .info-tarjetas a {
   color: #00a9e0;
   font-size: 14px; }
@@ -26,3 +36,5 @@
   .info-tarjetas a:hover {
     opacity: .8;
     color: #00a9e0; }
+
+/*# sourceMappingURL=InfoTarjetas.css.map */

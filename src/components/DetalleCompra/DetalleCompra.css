@@ -44,6 +44,11 @@
       margin-bottom: 10px;
       color: #5bc500;
       font-family: "TelefonicaLight"; }
+  .detalle-compra p .price1 {
+    line-height: 18px;
+    color: #5bc500;
+    font-family: "TelefonicaLight";
+    display: inline; }
   .detalle-compra .bg-entrega {
     background-color: #EBEBEB;
     padding: 20px;
@@ -107,3 +112,5 @@
         width: 100%;
         margin-top: 0;
         margin-bottom: 20px; } }
+
+/*# sourceMappingURL=DetalleCompra.css.map */

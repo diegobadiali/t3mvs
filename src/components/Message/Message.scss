@@ -1,0 +1,42 @@
+@import './../../variables';
+.alert{
+	font-family: $font3;
+	font-size: 16px;
+	padding-bottom: 19px !important;
+	border: none !important;
+	color: $color5 !important;
+	i{
+		font-size: 19px;
+		margin-right: 5px;
+	}
+	a, a:hover, a:visited, a:link{
+		color: $color2;
+		&:hover{
+			text-decoration: underline;
+		}
+	}
+}
+.alert-info{
+	background-color: $color13 !important;
+	i{
+		color: $color2;
+	}
+}
+.alert-info-plan{
+	background-color: $color20 !important;
+	i{
+		color: $color2;
+	}
+}
+.alert-warning{
+	background-color: $color21 !important;
+	i{
+		color: $color16;
+	}
+}
+.alert-success{
+	background-color: $color22 !important;
+	i{
+		color: $color1;
+	}
+}

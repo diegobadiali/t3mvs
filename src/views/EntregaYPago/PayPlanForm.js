@@ -6,6 +6,7 @@ import {simpleValidation} from '../../utils/validators';
 import moment from 'moment';
 import TooltipTarjeta from '../../components/CreditCard/Tooltip';
 import NumberFormat from 'react-number-format';
+import Pay from './Pay';
 
 
 class PayPlanForm extends React.Component {
@@ -21,10 +22,13 @@ class PayPlanForm extends React.Component {
         cardOption: {val: '', validationState: null},
         cardBank: {val: '', validationState: null},
         paymentMethod: {val: '', validationState: null},
+        paymentMethodMensual: {val: '', validationState: null},
         cardName: {val: 'visa', validationState: null},
         cardNumber: {val: '', validationState: null},
         cardDue: {val: '', validationState: null},
         cardCVC: {val: '', validationState: null},
+        cardTitular: {val: '', validationState: null},
+        cardDNI: {val: '', validationState: null},
       },
       validForm: false
     };
@@ -64,6 +68,8 @@ class PayPlanForm extends React.Component {
               cardName={this.state.fields.cardName}
               cardDue={this.state.fields.cardDue}
               cardCVC={this.state.fields.cardCVC}
+              cardTitular={this.state.fields.cardTitular}
+              cardDNI={this.state.fields.cardDNI}
               handleChange={this.handleChange}
             />
           </div>
@@ -89,13 +95,13 @@ class PayPlanForm extends React.Component {
           </h5>
 
           <div className="radios-entrega">
-            <FormGroup validationState={this.state.fields.paymentMethod.validationState}>
+            <FormGroup validationState={this.state.fields.paymentMethodMensual.validationState}>
 
-              <Radio name="paymentMethod" value="creditCard" onClick={this.handleChange}>
+              <Radio name="paymentMethodMensual" value="creditCard" onClick={this.handleChange}>
                 Débito en tarjeta de crédito
               </Radio>
 
-              <Radio name="paymentMethod" value="cash" onClick={this.handleChange}>
+              <Radio name="paymentMethodMensual" value="cash" onClick={this.handleChange}>
                 Efectivo
               </Radio>
             </FormGroup>
@@ -103,75 +109,40 @@ class PayPlanForm extends React.Component {
 
           <div>
             {
-              this.state.fields.paymentMethod.val == 'creditCard' ? (
+              this.state.fields.paymentMethodMensual.val == 'creditCard' ? (
                   <div>
                     <Row>
                       {
                         this.props.isLoggedIn ? (
                             <Col sm={6}>
-                              <FormGroup validationState={this.state.fields.cardOption.validationState}>
+                              <FormGroup className="active" validationState={this.state.fields.cardOption.validationState}>
                                 <FormControl
                                   componentClass="select"
-                                  placeholder="*Seleccioná una tarjeta"
                                   value={this.state.fields.cardOption.val}
                                   name="cardOption"
                                   onChange={this.handleChange}
                                 >
-                                  <option value="">Seleccioná una tarjeta</option>
-                                  <option value="other">Otra tarjeta</option>
                                   {cardOptions}
                                 </FormControl>
-                                <i
-                                  className="fa fa-angle-down"
-                                />
+                                <i className="fa fa-angle-down"></i>
                               </FormGroup>
                             </Col>
                           ) : (null)
                       }
-                      {
-                        (this.state.fields.cardOption.val != 'other' && this.state.fields.cardOption.val.length > 0) ? (
-                            <div>
-                              <Col xs={4} sm={2}>
-                                <FormGroup validationState={this.state.fields.cardCVC.validationState}>
-                                  <NumberFormat
-                                    format="###"
-                                    placeholder="*CVC"
-                                    className="form-control"
-                                    name="cardDue"
-                                    mask="_"
-                                    onChange={this.handleChange}
-                                    required
-                                  />
-                                </FormGroup>
-                              </Col>
-                              <Col xs={2} sm={1}><TooltipTarjeta position={"top"}/></Col>
-                            </div>
-                          ) : (null)
-                      }
                     </Row>
                     {cardData(this.state.fields.cardOption.val)}
+                    <Pay />
                   </div>
                 ) : (null)
             }
-          </div>
-          <hr/>
-          <div className="cont-checkboxs">
-            <Checkbox>
-              Acepto los <Button bsStyle="link">Terminos y condiciones</Button>
-            </Checkbox>
-            <Checkbox>
-              Acepto el contrato de servicio de Movistar. <Button bsStyle="link">Descargar contrato</Button>
-            </Checkbox>
+            {
+              this.state.fields.paymentMethodMensual.val == 'cash' ? (
+                <Pay />
+                ) : (null)
+            }
 
           </div>
-          <div className="cont-buttons">
-            <div className="pull-left">
-              <Button bsStyle="default">Cancelar</Button>
-            </div>
-            <div className="pull-right">
-              <Button bsStyle="success">Pagar y Finalizar</Button>
-            </div>
-          </div>
+          
 
         </Col>
 

@@ -2,7 +2,11 @@
   margin-top: 30px;
   font-family: "TelefonicaLight"; }
   .tarjetas-promos .credit-card {
-    display: block; }
+    display: block;
+    margin-left: 5px; }
+  .tarjetas-promos .logo-efectivo {
+    margin-left: 5px;
+    margin-bottom: 20px; }
   .tarjetas-promos hr {
     margin-left: -20px;
     margin-right: -20px; }
@@ -10,6 +14,10 @@
       .tarjetas-promos hr {
         margin-top: 0;
         margin-bottom: 5px; } }
+  .tarjetas-promos .radio-inline p {
+    margin-left: 5px; }
+    .tarjetas-promos .radio-inline p .logo-efectivo {
+      vertical-align: top; }
   .tarjetas-promos .form-group {
     position: relative; }
     .tarjetas-promos .form-group .form-control {
@@ -44,11 +52,14 @@
     background-color: #EBEBEB;
     padding: 20px 30px;
     margin-bottom: -20px;
-    font-size: 24px;
+    font-size: 22px;
     color: #86888c; }
     .tarjetas-promos .foot-form .form-group {
       position: relative;
       display: inline-block; }
+      @media (max-width: 767px) {
+        .tarjetas-promos .foot-form .form-group {
+          margin-bottom: 0; } }
       .tarjetas-promos .foot-form .form-group .form-control {
         background-color: #fff;
         padding-left: 5px;
@@ -67,7 +78,8 @@
           font-family: "TelefonicaLight"; }
         @media (max-width: 767px) {
           .tarjetas-promos .foot-form .form-group .form-control {
-            width: 54px; } }
+            width: 48px;
+            margin-right: 5px; } }
       .tarjetas-promos .foot-form .form-group .fa-angle-down {
         position: absolute;
         top: 15px;
@@ -75,18 +87,45 @@
         font-size: 22px;
         color: #00a9e0;
         pointer-events: none; }
+        @media (max-width: 767px) {
+          .tarjetas-promos .foot-form .form-group .fa-angle-down {
+            right: 13px; } }
     .tarjetas-promos .foot-form .importe {
       color: #5bc500;
-      margin-right: 30px; }
+      margin-right: 20px; }
       @media (max-width: 767px) {
         .tarjetas-promos .foot-form .importe {
           margin-right: 5px; } }
+      @media (max-width: 359px) {
+        .tarjetas-promos .foot-form .importe {
+          margin-right: 2px; } }
+    .tarjetas-promos .foot-form .total {
+      color: #5bc500;
+      margin-left: 20px; }
+      .tarjetas-promos .foot-form .total b {
+        font-weight: normal;
+        color: #86888c; }
+      .tarjetas-promos .foot-form .total sub {
+        font-size: 12px;
+        color: #86888c;
+        bottom: 4px;
+        left: 2px; }
+      @media (max-width: 767px) {
+        .tarjetas-promos .foot-form .total {
+          margin-left: 5px; } }
     @media (max-width: 767px) {
-      .tarjetas-promos .foot-form label {
-        font-size: 12px; } }
+      .tarjetas-promos .foot-form {
+        padding-left: 10px;
+        padding-right: 10px; }
+        .tarjetas-promos .foot-form label {
+          font-size: 15px; } }
+    @media (max-width: 359px) {
+      .tarjetas-promos .foot-form {
+        padding-left: 0;
+        padding-right: 0; } }
   .tarjetas-promos .verpromos {
     color: #00a9e0;
-    margin-top: 28px;
+    margin-top: 43px;
     display: block; }
     .tarjetas-promos .verpromos:hover {
       opacity: .8;
@@ -94,6 +133,40 @@
     @media (max-width: 767px) {
       .tarjetas-promos .verpromos {
         display: none; } }
+  .tarjetas-promos input[type="radio"] {
+    display: block;
+    text-align: left;
+    float: left;
+    margin-left: -25px;
+    margin-right: 10px;
+    -webkit-appearance: none !important;
+    -moz-appearance: none !important;
+    height: 19px;
+    width: 19px;
+    cursor: pointer;
+    position: relative;
+    -webkit-transition: .15s;
+    border-radius: 50%;
+    background-color: #fff;
+    border: 2px solid #50535a; }
+    .tarjetas-promos input[type="radio"]:checked {
+      border: 1px solid #50535a;
+      background-color: #50535a; }
+  .tarjetas-promos input[type="radio"]:before, .tarjetas-promos input[type="radio"]:checked:before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    line-height: 17px;
+    font-size: 9px;
+    font-weight: normal;
+    text-align: center;
+    color: #fff;
+    content: ''; }
+  .tarjetas-promos input[type="radio"]:checked:before {
+    content: "\f111";
+    font-family: 'Fontawesome'; }
   @media (max-width: 767px) {
     .tarjetas-promos p {
       text-align: left;
@@ -105,6 +178,8 @@
         margin-left: 0;
         margin-right: 10px; }
         .tarjetas-promos .form-group .radio-inline img {
-          width: 30px; }
+          height: 25px; }
           .tarjetas-promos .form-group .radio-inline img.fix-rapipago {
             width: 50px; } }
+
+/*# sourceMappingURL=FormTarjetasPromos.css.map */

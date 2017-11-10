@@ -50,8 +50,20 @@ class ProductResume extends React.Component {
                     <span className="price">{this.props.cart.device.price}</span>
                     <span className="title">Plan</span>
                     <Plan {...this.props.cart}/>
+                    {this.props.cart.plan.onetimecharge ? (
+                      <div>
+                      <span className="title">Cargo adicional</span> 
+                      <span className="price">{this.props.cart.plan.onetimecharge}</span>
+                      <small>A pagar por única vez en la primer factura</small>
+                      </div>
+                    ) : '' } 
+                    {this.props.cart.addon ? (
+                    <div><span className="title">Add-on</span>
+                    <span className="info">{this.props.cart.addon.name}</span>
+                    <span className="price">{this.props.cart.addon.price}</span></div>
+                    ) : ''
+                  }
                   </div>
-
                 </div>
               </div>
             )

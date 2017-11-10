@@ -3,6 +3,7 @@ import {Row, Col, FormGroup, FormControl, Button} from 'react-bootstrap';
 import GoogleMapReact from 'google-map-react';
 import ScrollArea from 'react-scrollbar';
 import SucList from './SucList';
+import SelectAutocomplete from './SelectAutocomplete';
 import './Map.css';
 
 const AnyReactComponent = ({text}) => (
@@ -43,10 +44,7 @@ class Map extends Component {
             <Row>
               <Col xs={9} sm={9} md={8} lg={9}>
                 <div>
-                  <FormGroup bsSize="large">
-                    <FormControl type="text" placeholder="Encontrá el local más cercano a tu ubicación"/>
-                    <i className="fa fa-search"></i>
-                  </FormGroup>
+                  <SelectAutocomplete />
                 </div>
               </Col>
               <Col xs={3} sm={3} md={4} lg={3}>

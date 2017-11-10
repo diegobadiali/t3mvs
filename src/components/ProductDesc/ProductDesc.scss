@@ -16,13 +16,10 @@
 		border-radius: $border-radius;
 		display: flex;
 		align-items: center;
-		justify-content: space-between;
-		&.bg-line{
-			justify-content: flex-start;
-			div{
-				margin-right: 40px;
+		justify-content: flex-start;
+		div{
+			margin-right: 40px;
 			}
-		}
 		.img{
 			display: block;
 			margin: 0;

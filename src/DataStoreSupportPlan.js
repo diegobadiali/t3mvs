@@ -30,6 +30,7 @@ let DataStoreSupport = {
         price: '$899,00',
         vencimiento: '10/10/2017',
         imgURL: 'https://i.imgur.com/tShwylR.png',
+        onetimecharge: '$55,00'
       },
       linea: {
         name: 'Linea Movistar',

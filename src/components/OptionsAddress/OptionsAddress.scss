@@ -1,0 +1,94 @@
+@import './../../variables';
+.cont-options-address{
+	background-color: $color4;
+	border-radius: $border-radius;
+	padding: 10px 20px 20px;
+	margin-top: 20px;
+	margin-bottom: 40px;
+	.form-group{
+		.radio{
+			label{
+				width: 100%;
+				font-size: 16px;
+				line-height: 21px;
+				padding-left: 25px;
+				h4{
+					font-family: $font2;
+					font-weight: normal;
+					color: $color8;
+					margin: 0;
+					float: left;
+					span{
+						color: $color1;
+					}
+					&.nf{
+						float: none;
+					}
+					
+					@media(max-width:767px){
+						float: none;
+					}
+				}
+				input[type="radio"]{
+					display: block;
+					text-align: left;
+					float: left;
+					margin-left: -25px;
+					margin-right: 10px;
+					-webkit-appearance:none !important;
+					-moz-appearance:none !important;
+					height:19px;
+					width:19px;
+					cursor:pointer;
+					position:relative;
+					-webkit-transition: .15s;
+					border-radius:50%;
+					background-color:$color4;
+					border: 2px solid $color8;
+					&:checked {
+						border: 1px solid $color8;
+						background-color: $color8;
+					}
+				}
+				input[type="radio"]:before, input[type="radio"]:checked:before {
+					position:absolute;
+					top:0;
+					left:0;
+					width:100%;
+					height:100%;
+					line-height:17px;
+					font-size: 9px;
+					font-weight: normal;
+					text-align:center;
+					color:$color4;
+					content: '';
+				}
+				input[type="radio"]:checked:before {
+					content: "\f111";
+					font-family: 'Fontawesome';
+				}
+
+				input[type="radio"]:hover:before {
+
+				}
+				.list-inline{
+					float: left;
+					margin-left: 20px;
+					@media(max-width:767px){
+						float: none;
+						padding-left: 0;
+						margin-left: 0;
+						margin-top: 10px;
+						img{
+							height: 25px;
+						}
+					}
+				}
+			}
+		}
+	}
+	.btn-success{
+		float: right;
+
+	}
+}
