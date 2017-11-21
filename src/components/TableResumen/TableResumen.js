@@ -1,5 +1,4 @@
 import React from 'react';
-import './TableResumen.css';
 import { Button, Table, Row, Col } from 'react-bootstrap';
 class TableResumen extends React.Component {
   constructor(props) {
@@ -13,8 +12,8 @@ class TableResumen extends React.Component {
       <thead>
       <tr>
       <th colSpan="2"></th>
-      <th>Ahora</th>
-      <th>Mensual</th>
+      <th>Pago <br className="visible-xs" />Ahora</th>
+      <th>Pago en <br className="visible-xs" />tu factura</th>
       </tr>
       </thead>
       <tbody>
@@ -24,13 +23,14 @@ class TableResumen extends React.Component {
           <td><img className="Foto" src={!item.imgURL ? require('../../assets/img/img-default.png') : item.imgURL} alt={item.name} className="img" /></td>
           <td><h2>{item.name} {item.desc}</h2><a href="#">Cambiar <i className="fa fa-angle-right"></i> </a></td>
           <td>{item.price}</td>
-          <td>{item.pricemensual}</td>
+          <td>{item.pricemensual}{item.pricemensual ? <small>por mes</small> : ''}</td>
           </tr>
           );
       })}
       {this.props.infotabla.onetimecharge ? (
       <tr className="onetimecharge">
-      <td colSpan="2"><h2>Cargo de activación</h2></td>
+      <td></td>
+      <td><h2>Cargo de activación</h2></td>
       <td></td>
       <td>{this.props.infotabla.onetimecharge}<small>por única vez</small></td>
       </tr>

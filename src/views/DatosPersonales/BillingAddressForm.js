@@ -1,5 +1,6 @@
 import React from 'react';
-import {Col, Row, FormControl, FormGroup} from 'react-bootstrap';
+import {Col, Row, FormControl, FormGroup, HelpBlock} from 'react-bootstrap';
+import NumberFormat from 'react-number-format';
 import {simpleValidation} from '../../utils/validators';
 
 class BillingAddressForm extends React.Component {
@@ -8,38 +9,57 @@ class BillingAddressForm extends React.Component {
     super(props);
     this.state = {
       fields: {
-        street: {val: props.userData.street, validationState: null},
-        number: {val: props.userData.number, validationState: null},
-        floor: {val: props.userData.floor, validationState: null},
-        apartment: {val: props.userData.apartment, validationState: null},
-        locality: {val: props.userData.locality, validationState: null},
-        city: {val: props.userData.city, validationState: null},
-        postalCode: {val: props.userData.zipcode, validationState: null},
-        comments: {val: '', validationState: null},
-        entrecalles: {val: props.userData.entrecalles, validationState: null},
+        street: {val: props.userData.street, validationState: null, complete: null},
+        number: {val: props.userData.number, validationState: null, complete: null},
+        floor: {val: props.userData.floor, validationState: null, complete: null},
+        apartment: {val: props.userData.apartment, validationState: null, complete: null},
+        locality: {val: props.userData.locality, validationState: null, complete: null},
+        city: {val: props.userData.city, validationState: null, complete: null},
+        postalCode: {val: props.userData.zipcode, validationState: null, complete: null},
+        comments: {val: '', validationState: null, complete: null},
+        entrecalles: {val: props.userData.entrecalles, validationState: null, complete: null},
         lineSameAsBillingAddress: {val: true},
         willBeUsedIn: {val: 'caba'},
-        willBeUsedInLocality: {val: '', validationState: null},
-        nombreautorizado: {val: '', validationState: null},
-        apellidoautorizado: {val: '', validationState: null},
-        dniautorizado: {val: '', validationState: null},
+        willBeUsedInLocality: {val: '', validationState: null, complete: null},
+        nombreautorizado: {val: '', validationState: null, complete: null},
+        apellidoautorizado: {val: '', validationState: null, complete: null},
+        dniautorizado: {val: '', validationState: null, complete: null},
       },
       validForm: false
     };
   }
 
+  fakeValidation = (props) => {
+    let isValid = true;
+
+    if (props.key == 'street') {
+      isValid = props.val.length > 0;
+    }
+
+    return isValid;
+  };
+
   handleChange = (e) => {
     let newFields = Object.assign({}, this.state.fields);
 
+    /* FIXME: Get Fake Field validation */
     let isValid = simpleValidation(e.target);
 
-    let newField = Object.assign({}, newFields[e.target.name]);
-    newField.val = e.target.value;
-    newField.validationState = isValid ? null : 'error';
+    // let newField = Object.assign({}, newFields[e.target.name]);
+    // newField.val = e.target.value;
+    // newField.validationState = isValid ? null : 'error';
 
-    newFields[e.target.name] = newField;
+    //newFields[e.target.name] = newField;
 
-    this.setState({fields: newFields});
+    newFields[e.target.name] = {
+      //val: e.target.value,
+      validationState: isValid ? null : 'error',
+      complete: true
+    };
+
+    this.setState({
+      fields: newFields
+    });
 
     this.props.handleUserDataChange(e.target.name, e.target.value);
     //this.props.handleStatus(isValid);
@@ -51,61 +71,65 @@ class BillingAddressForm extends React.Component {
       <div>
         <Row>
           <Col sm={12} md={6}>
-            <FormGroup validationState={this.state.fields.street.validationState}>
+            <FormGroup validationState={this.state.fields.street.validationState} className={this.state.fields.street.complete ? 'active' : '' }>
               <FormControl
                 type="text"
                 placeholder="*Calle"
                 value={this.state.fields.street.val}
                 name="street"
-                onChange={this.handleChange }
+                onBlur={this.handleChange}
                 required
               />
+              <HelpBlock className="help-block-error">Debes ingresar la calle</HelpBlock>
             </FormGroup>
           </Col>
           <Col sm={6} md={2}>
-            <FormGroup validationState={this.state.fields.number.validationState}>
-              <FormControl
-                type="number"
-                placeholder="*Número"
-                value={this.state.fields.number.val}
-                name="number"
-                onChange={this.handleChange}
-                required
-              />
+            <FormGroup validationState={this.state.fields.number.validationState} className={this.state.fields.number.complete ? 'active' : '' }>
+              <NumberFormat
+              id="number"
+              className="form-control"
+              name="number"
+              placeholder="*Número"
+              format="######"
+              onBlur={this.handleChange}
+              value={this.state.fields.number.val}
+              required
+            />
+            <HelpBlock className="help-block-error">Debes ingresar el número</HelpBlock>
             </FormGroup>
           </Col>
           <Col sm={6} md={2}>
-            <FormGroup validationState={this.state.fields.floor.validationState}>
+            <FormGroup validationState={this.state.fields.floor.validationState} className={this.state.fields.floor.complete ? 'active' : '' }>
               <FormControl
                 type="text"
                 placeholder="Piso"
                 value={this.state.fields.floor.val}
                 name="floor"
-                onChange={this.handleChange}
+                onBlur={this.handleChange}
               />
             </FormGroup>
           </Col>
           <Col sm={6} md={2}>
-            <FormGroup validationState={this.state.fields.apartment.validationState}>
+            <FormGroup validationState={this.state.fields.apartment.validationState} className={this.state.fields.apartment.complete ? 'active' : '' }>
               <FormControl
                 type="text"
                 placeholder="Depto"
                 value={this.state.fields.apartment.val}
                 name="apartment"
-                onChange={this.handleChange}
+                onBlur={this.handleChange}
               />
             </FormGroup>
           </Col>
         </Row>
         <Row>
           <Col sm={12} md={6}>
-            <FormGroup validationState={this.state.fields.locality.validationState}>
+            <FormGroup validationState={this.state.fields.locality.validationState} className={this.state.fields.locality.complete ? 'active' : '' }>
               <FormControl
                 componentClass="select"
                 placeholder="*Localidad"
                 value={this.state.fields.locality.val}
                 name="locality"
-                onChange={this.handleChange}
+                onBlur={this.handleChange}
                 required
               >
                 <option value="">*Localidad</option>
@@ -117,13 +141,13 @@ class BillingAddressForm extends React.Component {
             </FormGroup>
           </Col>
           <Col sm={12} md={6}>
-            <FormGroup validationState={this.state.fields.city.validationState}>
+            <FormGroup validationState={this.state.fields.city.validationState} className={this.state.fields.city.complete ? 'active' : '' }>
               <FormControl
                 componentClass="select"
                 placeholder="*Provincia/Ciudad"
                 value={this.state.fields.city.val}
                 name="city"
-                onChange={this.handleChange}
+                onBlur={this.handleChange}
               >
                 <option value="">*Provincia/Ciudad</option>
                 <option value="1">Ciudad 1</option>
@@ -136,14 +160,16 @@ class BillingAddressForm extends React.Component {
         </Row>
         <Row>
           <Col sm={12} md={3}>
-            <FormGroup validationState={this.state.fields.postalCode.validationState}>
+            <FormGroup validationState={this.state.fields.postalCode.validationState} className={this.state.fields.postalCode.complete ? 'active' : '' }>
               <FormControl
                 type="text"
                 placeholder="*Código postal"
                 value={this.state.fields.postalCode.val}
                 name="postalCode"
-                onChange={this.handleChange}
+                onBlur={this.handleChange}
+                required
               />
+              <HelpBlock className="help-block-error">Debes ingresar el código postal</HelpBlock>
             </FormGroup>
           </Col>
           <Col sm={12} md={9}>
@@ -156,49 +182,45 @@ class BillingAddressForm extends React.Component {
         </Row>
         <Row>
           <Col sm={12}>
-            <FormGroup validationState={this.state.fields.entrecalles.validationState}>
+            <FormGroup validationState={this.state.fields.entrecalles.validationState} className={this.state.fields.entrecalles.complete ? 'active' : '' }>
               <FormControl
                 type="text"
                 placeholder="Entre calles, manzana, lote, parcela, barrio cerrado, etc."
-                value={this.state.fields.entrecalles.val}
-                name="calles"
-                onChange={this.handleChange}
+                name="entrecalles"
+                onBlur={this.handleChange}
               />
             </FormGroup>
           </Col>
         </Row> 
-        <Row>
+        <Row className={this.props.isOtherAddress ? 'visible' : 'hidden'}>
           <Col sm={12}><h4>Datos del autorizado</h4></Col>
           <Col sm={12} md={6}>
-            <FormGroup>
+            <FormGroup className={this.state.fields.nombreautorizado.complete ? 'active' : '' }>
               <FormControl
                 type="text"
                 placeholder="Nombre del autorizado"
-                value={this.state.fields.nombreautorizado.val}
                 name="nombreautorizado"
-                onChange={this.handleChange}
+                onBlur={this.handleChange}
               />
             </FormGroup>
           </Col>
           <Col sm={12} md={6}>
-            <FormGroup>
+            <FormGroup className={this.state.fields.apellidoautorizado.complete ? 'active' : '' }>
               <FormControl
                 type="text"
                 placeholder="Apellido del autorizado"
-                value={this.state.fields.apellidoautorizado.val}
                 name="apellidoautorizado"
-                onChange={this.handleChange}
+                onBlur={this.handleChange}
               />
             </FormGroup>
           </Col>
           <Col sm={12} md={6}>
-            <FormGroup>
+            <FormGroup className={this.state.fields.dniautorizado.complete ? 'active' : '' }>
               <FormControl
                 type="text"
                 placeholder="DNI del autorizado"
-                value={this.state.fields.dniautorizado.val}
                 name="dniautorizado"
-                onChange={this.handleChange}
+                onBlur={this.handleChange}
               />
             </FormGroup>
           </Col>

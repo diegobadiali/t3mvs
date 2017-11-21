@@ -1,5 +1,4 @@
 import React from 'react';
-import './ProductDesc.css';
 import { PageHeader } from 'react-bootstrap';
   class ProductDetail extends React.Component {
   	render() {

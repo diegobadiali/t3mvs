@@ -1,5 +1,4 @@
 import React from 'react';
-import './Carousel.css';
 import Slider from 'react-slick';
 import { Button } from 'react-bootstrap';
 import ModalPlanes from '../../components/ModalPlanes/ModalPlanes';

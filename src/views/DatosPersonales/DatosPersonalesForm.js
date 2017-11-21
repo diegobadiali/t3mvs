@@ -11,14 +11,18 @@ class DatosPersonalesForm extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
+      tipodoc: false,
+      datepickerror: false,
       fields: {
-        firstname: {val: '', validationState: null},
-        lastname: {val: '', validationState: null},
-        dni: {val: '', validationState: null},
-        birthday: {val: null, validationState: null},
-        phone: {val: '', validationState: null},
-        email: {val: '', validationState: null},
-        gender: {val: '', validationState: null}
+        firstname: {val: '', validationState: null, complete: null},
+        lastname: {val: '', validationState: null, complete: null},
+        tipo: {val: '', validationState: null, complete: null},
+        dni: {val: '', validationState: null, complete: null},
+        birthday: {val: null, validationState: null, complete: null},
+        codarea: {val: '', validationState: null, complete: null},
+        phone: {val: '', validationState: null, complete: null},
+        email: {val: '', validationState: null, complete: null},
+        gender: {val: '', validationState: null, complete: null}
       },
       validForm: false
     };
@@ -43,10 +47,13 @@ class DatosPersonalesForm extends React.Component {
 
     newFields[e.target.name] = {
       val: e.target.value,
-      validationState: isValid ? null : 'error'
+      validationState: isValid ? null : 'error',
+      complete: true
     };
 
-    this.setState({fields: newFields});
+    this.setState({
+      fields: newFields
+    });
 
     this.props.handleUserDataChange(e.target.name, e.target.value);
     this.props.handleStatus(isValid);
@@ -58,45 +65,69 @@ class DatosPersonalesForm extends React.Component {
     let newFields = Object.assign({}, this.state.fields);
     newFields.birthday = {
       val: date,
-      validationState: null
+      validationState: null,
+      complete: true
     };
     this.setState({fields: newFields});
   };
 
-  render() {
+   handleSelectChange = (e) => {
+    this.setState({
+      tipodoc: true
+    })
+   }
+
+   handleOnBlur = (e) => {
+    if (this.state.fields.birthday.val) {
+        this.setState({
+          datepickerror: false,
+        })
+        
+    }
+    else {
+      this.setState({
+          datepickerror: true
+        })
+    }
+}
+render() {
     return (
       <div>
       <Row>
-
         <Col sm={12} md={6}>
-          <FormGroup validationState={this.state.fields.firstname.validationState}>
+          <FormGroup className={this.state.fields.firstname.complete ? 'active' : '' } validationState={this.state.fields.firstname.validationState}>
             <FormControl
               id="dataName"
               name="firstname"
               type="text"
               placeholder="Nombre"
-              onChange={this.handleChange}
+              onBlur={this.handleChange}
               required
             />
+            <HelpBlock className="help-block-error">Debes ingresar tu nombre</HelpBlock>
           </FormGroup>
         </Col>
 
         <Col sm={12} md={6}>
-          <FormGroup validationState={this.state.fields.lastname.validationState}>
+          <FormGroup className={this.state.fields.lastname.complete ? 'active' : '' } validationState={this.state.fields.lastname.validationState}>
             <FormControl
               id="dataLastname"
               name="lastname"
               type="text"
               placeholder="Apellido"
-              onChange={this.handleChange}
+              onBlur={this.handleChange}
               required
             />
+            <HelpBlock className="help-block-error">Debes ingresar tu apellido</HelpBlock>
           </FormGroup>
         </Col>
 
+        </Row>
+        <Row>
+
         <Col sm={12} md={6}>
-          <FormGroup controlId="formControlsSelect">
-            <FormControl componentClass="select" placeholder="Tipo de documento">
+          <FormGroup className={this.state.tipodoc ? 'active' : '' } controlId="formControlsSelect" validationState={this.state.fields.tipo.validationState}>
+            <FormControl componentClass="select" placeholder="Tipo de documento" onChange={this.handleSelectChange}>
               <option disabled selected>Seleccioná tipo de documento</option>
               <option value="">DNI</option>
               <option value="">Libreta Civica</option>
@@ -109,7 +140,7 @@ class DatosPersonalesForm extends React.Component {
         </Col>
 
         <Col sm={12} md={6}>
-          <FormGroup validationState={this.state.fields.dni.validationState}>
+          <FormGroup className={this.state.fields.dni.complete ? 'active' : '' } validationState={this.state.fields.dni.validationState}>
             <NumberFormat
               id="dataDni"
               className="form-control"
@@ -118,26 +149,31 @@ class DatosPersonalesForm extends React.Component {
               format="########"
               thousandSeparator={'.'}
               decimalSeparator={','}
-              onChange={this.handleChange}
+              onBlur={this.handleChange}
               required
             />
+            <HelpBlock className="help-block-error">Debes ingresar tu documento</HelpBlock>
           </FormGroup>
         </Col>
 
         <Col sm={12} md={6}>
-          <FormGroup className="calendar" validationState={this.state.fields.birthday.validationState}>
+          <FormGroup className={this.state.fields.birthday.complete ? 'calendar active' : 'calendar' &&  this.state.datepickerror ? 'calendar has-error' : 'calendar'} validationState={this.state.fields.birthday.validationState}>
             <DatePicker
               selected={this.state.fields.birthday.val}
               name="birthday"
               onChange={this.handleDateChange}
+              onBlur={this.handleOnBlur}
               showYearDropdown
               dateFormat="DD/MM/YYYY"
               scrollableYearDropdown
               yearDropdownItemNumber={15}
               className="form-control"
               placeholderText="Fecha de nacimiento"
+              maxDate={moment().add(-18, "years")}
+              locale="es-ES"
             />
             <i className="fa fa-calendar"></i>
+            <HelpBlock className="help-block-error">Debes ingresar la fecha de nacimiento</HelpBlock>
           </FormGroup>
         </Col>
 
@@ -156,37 +192,42 @@ class DatosPersonalesForm extends React.Component {
         <Row>
         
         <Col xs={5} sm={4} md={2}>
-          <FormGroup className="codarea" validationState={this.state.fields.phone.validationState}>
+          <FormGroup className={this.state.fields.codarea.complete ? 'codarea active' : 'codarea' } validationState={this.state.fields.codarea.validationState}>
             <NumberFormat
               id="dataArea"
               className="form-control form-inline"
-              type="tel"
               format="####"
               placeholder="Cód. Área"
-              name="phone"
-
-              onChange={this.handleChange}
+              name="codarea"
+              onBlur={this.handleChange}
+              required
             />
             <HelpBlock>
               Ingresá el código de área sin 0.<br/>
               Ejemplo: 11
             </HelpBlock>
+            <HelpBlock className="help-block-error">
+              Debes ingresar el código de área
+            </HelpBlock>
           </FormGroup>
         </Col>
         <Col xs={7} sm={8} md={4}>
-          <FormGroup className="numero" validationState={this.state.fields.phone.validationState}>
+          <FormGroup className={this.state.fields.phone.complete ? 'numero active' : 'numero' } validationState={this.state.fields.phone.validationState}>
             <NumberFormat
               id="dataPhone"
               className="form-control form-inline"
-              type="tel"
               format="########"
               placeholder="Teléfono de contacto"
               name="phone"
-              onChange={this.handleChange}
+              onBlur={this.handleChange}
+              required
             /> 
             <HelpBlock>
               Ingresá el nº de línea sin el 15.<br/>
               Ejemplo: 85713957
+            </HelpBlock>
+            <HelpBlock className="help-block-error">
+              Debes ingresar el número
             </HelpBlock>
           </FormGroup>
         </Col>
@@ -194,19 +235,20 @@ class DatosPersonalesForm extends React.Component {
         </Row>
         <Row>
         <Col sm={12} md={6}>
-          <FormGroup validationState={this.state.fields.email.validationState}>
+          <FormGroup className={this.state.fields.email.complete ? 'active' : '' } validationState={this.state.fields.email.validationState}>
             <FormControl
               id="dataEmail"
               type="email"
               placeholder="E-mail"
               name="email"
               className="form-control-icon"
-              onChange={this.handleChange}
+              onBlur={this.handleChange}
             />
             <i className="fa fa-at"></i>
             <HelpBlock>
               Ejemplo: usuario@gmail.com
             </HelpBlock>
+            <HelpBlock className="help-block-error">El email ingresado es incorrecto</HelpBlock>
             </FormGroup>
             </Col>
             <Col sm={12} md={6}>

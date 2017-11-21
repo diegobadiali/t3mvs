@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-import '../Pasos/Pasos.css';
 class VerazStepMarkers extends Component {
   render() {
     const markerItems = this.props.stepData.map((step) => {

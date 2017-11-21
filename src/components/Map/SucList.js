@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {FormGroup, Row, Col } from 'react-bootstrap';
-import './SucList.css';
+
 const list = [
   {id: 1, sucursal: 'Almagro', direccion: 'Av. Corrientes 2973', horario: 'Lunes a viernes de 9 a 19hs'},
   {id: 2, sucursal: 'Almagro', direccion: 'Av. Corrientes 2973', horario: 'Lunes a viernes de 9 a 19hs'},

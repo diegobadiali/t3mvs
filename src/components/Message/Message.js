@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
 import {Alert} from 'react-bootstrap';
-import './Message.css';
 class Message extends Component {
   constructor(props) {
     super(props);

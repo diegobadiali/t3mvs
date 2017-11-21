@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import './PlanDetail.css';
 import { Row } from 'react-bootstrap';
 import { Col } from 'react-bootstrap';
 const prod = {

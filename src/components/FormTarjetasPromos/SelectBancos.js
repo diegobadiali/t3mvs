@@ -5,10 +5,15 @@ class SelectBancos extends React.Component {
     super(props);
     this.state = {};
   }
+  handleChange (){
+    this.setState({
+      selected: true
+    })
+  }
   render() {
     return (
-      <FormGroup controlId="formControlsSelect">
-        <FormControl componentClass="select" placeholder="Tarjeta" disabled={!this.props.pagotarjeta == true ? 'disabled': ''}>
+      <FormGroup controlId="formControlsSelectBancos" className={this.state.selected ? 'active' : ''}>
+        <FormControl componentClass="select" placeholder="Tarjeta" disabled={!this.props.pagotarjeta == true ? 'disabled': ''} onChange={this.handleChange.bind(this)}>
           <option disabled selected>Banco</option>
             <optgroup label="Hasta 12 cuotas sin interés">
               {this.props.bancos.cuotas12.map((item, i) => {

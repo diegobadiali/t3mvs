@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import './Redirect.css';
 import spin from './spin.gif';
 import logo from './mercadopago.png';
 class Redirect extends Component {

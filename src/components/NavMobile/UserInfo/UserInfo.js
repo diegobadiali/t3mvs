@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import './UserInfo.css';
 var name = 'Luna Kaiser';
 var status = 'Activa';
 var date = '(desde 01/01/2013)';

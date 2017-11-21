@@ -1,7 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Modal from 'react-modal';
-import './ModalPlanes.css';
 import IframeInfoPlan from '../../components/IframeInfoPlan/IframeInfoPlan';
 var title = "Conocé el detalle de tus tarifas";
 const customStyles = {

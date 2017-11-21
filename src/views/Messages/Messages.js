@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-import './Messages.css';
 import {Grid} from 'react-bootstrap';
 import {Row} from 'react-bootstrap';
 import {Col} from 'react-bootstrap';
@@ -12,7 +11,7 @@ import VerazUnverified4 from '../../components/VerazSteps/VerazUnverified4';
 import VerazUnverified5 from '../../components/VerazSteps/VerazUnverified5';
 import VerazUnverified6 from '../../components/VerazSteps/VerazUnverified6';
 import VerazUnverified7 from '../../components/VerazSteps/VerazUnverified7';
-import '../../components/VerazSteps/Veraz.css';
+import VerazUnverified8 from '../../components/VerazSteps/VerazUnverified8';
 const customStyles = {
   content : {
     top                   : '50%',
@@ -53,6 +52,7 @@ class Home extends Component {
       modalIsOpen5: false,
       modalIsOpen6: false,
       modalIsOpen7: false,
+      modalIsOpen8: false,
     };
     this.openModal = this.openModal.bind(this);
     this.closeModal = this.closeModal.bind(this);
@@ -68,6 +68,8 @@ class Home extends Component {
     this.closeModal6 = this.closeModal6.bind(this);
     this.openModal7 = this.openModal7.bind(this);
     this.closeModal7 = this.closeModal7.bind(this);
+    this.openModal8 = this.openModal8.bind(this);
+    this.closeModal8 = this.closeModal8.bind(this);
   }
   openModal() {
     this.setState({modalIsOpen: true});
@@ -111,6 +113,12 @@ class Home extends Component {
   closeModal7() {
     this.setState({modalIsOpen7: false});
   }
+  openModal8() {
+    this.setState({modalIsOpen8: true});
+  }
+  closeModal8() {
+    this.setState({modalIsOpen8: false});
+  }
   render() {
     return (
       <Grid>
@@ -124,6 +132,7 @@ class Home extends Component {
              <button className="btn-modal" onClick={this.openModal5}>Ver modal 5 <i className="fa fa-angle-right"></i> </button>
              <button className="btn-modal" onClick={this.openModal6}>Ver modal 6 <i className="fa fa-angle-right"></i> </button>
              <button className="btn-modal" onClick={this.openModal7}>Ver modal 7 <i className="fa fa-angle-right"></i> </button>
+             <button className="btn-modal" onClick={this.openModal8}>Ver modal 8 <i className="fa fa-angle-right"></i> </button>
             <Modal
               isOpen={this.state.modalIsOpen}
               onRequestClose={this.closeModal}
@@ -204,6 +213,18 @@ class Home extends Component {
               <button className="btn-cerrar" onClick={this.closeModal7}><i className="fa fa-close"></i> </button>
               <div className="preguntas">
                 <VerazUnverified7 infotabla={infotabla}/>
+              </div>
+            </Modal>
+
+            <Modal
+              isOpen={this.state.modalIsOpen8}
+              onRequestClose={this.closeModal8}
+              style={customStyles}
+              overlayClassName="Overlay"
+            >
+              <button className="btn-cerrar" onClick={this.closeModal8}><i className="fa fa-close"></i> </button>
+              <div className="preguntas">
+                <VerazUnverified8 infotabla={infotabla}/>
               </div>
             </Modal>
 

@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import logo from '../../assets/img/logo-white.svg';
-import './HeaderGreen.css';
 import { Button } from 'react-bootstrap';
 import Nav from '../Nav/Nav';
 import NavMobile from '../NavMobile/NavMobile';

@@ -22,10 +22,10 @@ class Pay extends React.Component {
         <hr/>
         <div className="cont-checkboxs">
         <Checkbox onChange={this.handleCheckedTerminos}>
-        Acepto los <Button bsStyle="link">Terminos y condiciones</Button>
+        Acepto los <a className="btn-link" href="http://www.movistar.com.ar/avisos-legales/terminos-y-condiciones/" target="_blank">Terminos y condiciones</a>
         </Checkbox>
         <Checkbox onChange={this.handleCheckedContrato}>
-        Acepto el contrato de servicio de Movistar. <Button bsStyle="link">Descargar contrato</Button>
+        Acepto el contrato de servicio de Movistar. <a className="btn-link" href="#">Descargar contrato</a>
         </Checkbox>
 
         </div>

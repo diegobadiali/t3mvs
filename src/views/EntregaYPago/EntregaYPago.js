@@ -6,7 +6,6 @@ import DeliveryForm from './DeliveryForm';
 import PayNowForm from './PayNowForm';
 import PayPlanForm from './PayPlanForm';
 import DataStoreSupport from '../../DataStoreSupport';
-import './EntregaYPago.css';
 
 class EntregaYPago extends React.Component {
 
@@ -16,6 +15,8 @@ class EntregaYPago extends React.Component {
       isLoggedIn: false,
       isEditingAddress: true,
       isSelectedSucursal: false,
+      deliveryComplete: false,
+      formComplete: false,
       datosPersonales: {
         userData: {
           address: {
@@ -44,6 +45,7 @@ class EntregaYPago extends React.Component {
       deliveryPanelOpen: true,
       devicePanelOpen: false,
       planPanelOpen: false,
+      planInnerPanelOpen: false,
     };
   }
 
@@ -70,16 +72,37 @@ class EntregaYPago extends React.Component {
   handleNextAddress = () => {
     this.setState({
       deliveryPanelOpen: false,
-      devicePanelOpen: true,
-      planPanelOpen: false,
+      devicePanelOpen: false,
+      planPanelOpen: true,
+      planInnerPanelOpen: true,
+      isEditingAddress: false,
+      deliveryComplete: true
     });
   };
-
-  handleNextDevice = () => {
+  handleNextComplete = () => {
     this.setState({
       deliveryPanelOpen: false,
       devicePanelOpen: false,
       planPanelOpen: true,
+      planInnerPanelOpen: true,
+      isEditingAddress: true,
+      deliveryComplete: true
+    });
+  };
+
+  handleNextPlan = () => {
+    this.setState({
+      deliveryPanelOpen: false,
+      devicePanelOpen: true,
+      planPanelOpen: false,
+      planInnerPanelOpen: true,
+      formComplete: true
+    });
+  };
+
+  handleEditCard = () => {
+    this.setState({
+      formComplete: false,
     });
   };
 
@@ -105,33 +128,6 @@ class EntregaYPago extends React.Component {
     });
   }
 
-  toggleActivePanel = (e) => {
-    switch (e.target.id) {
-      case 'delivery-btn':
-        this.setState({
-          deliveryPanelOpen: !this.state.deliveryPanelOpen,
-          devicePanelOpen: false,
-          planPanelOpen: false,
-        });
-        break;
-      case 'device-btn':
-        this.setState({
-          deliveryPanelOpen: false,
-          devicePanelOpen: !this.state.devicePanelOpen,
-          planPanelOpen: false,
-        });
-        break;
-      case 'plan-btn':
-        this.setState({
-          deliveryPanelOpen: false,
-          devicePanelOpen: false,
-          planPanelOpen: !this.state.planPanelOpen,
-        });
-        break;
-
-    }
-  };
-
 
   render() {
     return (
@@ -141,68 +137,41 @@ class EntregaYPago extends React.Component {
           <PageHeader>Entrega y pago</PageHeader>
           <Row>
             <Col md={8}>
-
               <div className={ !this.state.deliveryPanelOpen ? 'collapsed' : 'open' }>
-                <h3>
-                  Entrega
-                  <button
-                    className="btn btn-link pull-right"
-                    id="delivery-btn"
-                    onClick={this.toggleActivePanel}
-                  >
-                    <i className={this.state.deliveryPanelOpen ? 'fa fa-angle-up' : 'fa fa-angle-down'}/>
-                  </button>
-                </h3>
-                <Panel collapsible expanded={this.state.deliveryPanelOpen}>
+                <h3>Entrega</h3>
+                <Panel collapsible expanded={true}>
                   <DeliveryForm
                     userData={this.state.datosPersonales.userData}
                     sucursalData={this.state.datosPersonales.sucursalData}
                     handleNext={this.handleNextAddress}
+                    handleNextComplete={this.handleNextComplete}
                     handleSucursal={this.handleSucursal}
+                    deliveryComplete={this.state.deliveryComplete}
+                  />
+                </Panel>
+              </div>         
+              <div className={ !this.state.planPanelOpen ? 'collapsed' : 'open' }>
+                <h3>Pago del plan (Mensual) <span>{this.state.cart.plan.price}/mes</span></h3>
+                <Panel collapsible expanded={this.state.planInnerPanelOpen}>
+                  <PayPlanForm
+                    isLoggedIn={this.state.isLoggedIn}
+                    userData={this.state.datosPersonales.userData}
+                    handleNext={this.handleNextPlan}
+                    devicePanelOpen={this.state.devicePanelOpen}
+                    formComplete={this.state.formComplete}
+                    handleEditCard={this.handleEditCard}
                   />
                 </Panel>
               </div>
-
               <div className={ !this.state.devicePanelOpen ? 'collapsed' : 'open' }>
-                <h3>
-                  Pago del equipo (Ahora) <span>{this.state.cart.total}</span>
-                  <button
-                    id="device-btn"
-                    className="btn btn-link pull-right"
-                    onClick={this.toggleActivePanel}
-                  >
-                    <i className={this.state.devicePanelOpen ? 'fa fa-angle-up' : 'fa fa-angle-down'}/>
-                  </button>
-                </h3>
+                <h3>Pago del equipo (Ahora) <span>{this.state.cart.total}</span></h3>
                 <Panel collapsible expanded={this.state.devicePanelOpen}>
                   <PayNowForm
                     isLoggedIn={this.state.isLoggedIn}
                     userData={this.state.datosPersonales.userData}
-                    handleNext={this.handleNextDevice}
                   />
                 </Panel>
               </div>
-
-
-              <div className={ !this.state.planPanelOpen ? 'collapsed' : 'open' }>
-                <h3>
-                  Pago del plan (Mensual) <span>{this.state.cart.plan.price}/mes</span>
-                  <button
-                    id="plan-btn"
-                    className="btn btn-link pull-right"
-                    onClick={this.toggleActivePanel}
-                  >
-                    <i className={this.state.planPanelOpen ? 'fa fa-angle-up' : 'fa fa-angle-down'}/>
-                  </button>
-                </h3>
-                <Panel collapsible expanded={this.state.planPanelOpen}>
-                  <PayPlanForm
-                    isLoggedIn={this.state.isLoggedIn}
-                    userData={this.state.datosPersonales.userData}
-                  />
-                </Panel>
-              </div>
-
             </Col>
             <Col md={4}>
               <ProductResume cart={this.state.cart}/>

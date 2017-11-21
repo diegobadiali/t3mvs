@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { DropdownButton } from 'react-bootstrap';
 import { MenuItem } from 'react-bootstrap';
 import { Button } from 'react-bootstrap';
-import './DropUser.css';
 class DropUser extends Component {
   render() {
   	return (

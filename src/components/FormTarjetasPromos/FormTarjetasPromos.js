@@ -1,6 +1,5 @@
 import React from 'react';
 import { Row, Col, Radio, FormControl, FormGroup } from 'react-bootstrap';
-import './FormTarjetasPromos.css';
 import SelectTarjetas from './SelectTarjetas';
 import SelectBancos from './SelectBancos';
 import Totales from './Totales';

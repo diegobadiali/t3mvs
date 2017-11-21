@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
 //import logo from './assets/img/logo.svg';
-import './App.css';
 import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
 import SimpleReactRouter from 'simple-react-router'

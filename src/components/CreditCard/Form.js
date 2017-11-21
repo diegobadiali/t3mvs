@@ -5,38 +5,45 @@ import {simpleValidation} from '../../utils/validators';
 import CardSelectFormRow from './CardSelectFormRow';
 import CardNumberFormRow from './CardNumberFormRow';
 import TooltipTarjeta from '../../components/CreditCard/Tooltip';
-import './Form.css';
 
 class Form extends Component {
 
   constructor(props) {
     super(props);
     this.state = {
-      totalAmount: props.totalAmount,
-      instalmentAmount: props.totalAmount,
-      cft: '55%',
+      totalAmount: props.totalAmount, // FAKE
+      instalmentAmount: props.totalAmount, // FAKE
+      cft: 0,
+      cuotas: null,
       fields: {
-        cardName: {val: 'visa', validationState: null},
-        cardBank: {val: '', validationState: null},
-        instalments: {val: 1, validationState: null},
-        cardNumber: {val: '', validationState: null},
-        cardDue: {val: '', validationState: null},
-        cardCVC: {val: '', validationState: null},
-        cardOption: {val: '', validationState: null},
-        cardTitular: {val: '', validationState: null},
-        cardDNI: {val: '', validationState: null},
-        cardSexo: {val: '', validationState: null},
+        cardName: {val: 'visa', validationState: null, complete: null},
+        cardBank: {val: '', validationState: null, complete: null},
+        instalments: {val: '', validationState: null, complete: null},
+        cardNumber: {val: '', validationState: null, complete: null},
+        cardDue: {val: '', validationState: null, complete: null},
+        cardCVC: {val: '', validationState: null, complete: null},
+        cardOption: {val: '', validationState: null, complete: null},
+        cardTitular: {val: '', validationState: null, complete: null},
+        cardDNI: {val: '', validationState: null, complete: null},
+        cardSexo: {val: '', validationState: null, complete: null},
       }
     };
   }
 
   handleInstalmentChange = (e) => {
     let newFields = Object.assign({}, this.state.fields);
-    newFields.instalments.val = e.target.value;
+   // newFields.instalments.val = e.target.value;
+
+    newFields[e.target.name] = {
+      val: e.target.value,
+      complete: true
+    };
 
     this.setState({
       fields: newFields,
-      instalmentAmount: this.state.totalAmount / newFields.instalments.val
+      instalmentAmount: this.state.totalAmount / newFields.instalments.val,
+      cuotas: newFields.instalments.val,
+      cft: newFields.instalments.val * 100000 / this.state.totalAmount // -----FAKE-----!
     });
   };
 
@@ -45,11 +52,16 @@ class Form extends Component {
 
     let isValid = simpleValidation(e.target);
 
-    let newField = Object.assign({}, newFields[e.target.name]);
-    newField.val = e.target.value;
-    newField.validationState = isValid ? null : 'error';
+     // let newField = Object.assign({}, newFields[e.target.name]);
+     // newField.val = e.target.value;
+     // newField.validationState = isValid ? null : 'error';
 
-    newFields[e.target.name] = newField;
+     // newFields[e.target.name] = newField;
+    newFields[e.target.name] = {
+      val: e.target.value,
+      validationState: isValid ? null : 'error',
+      complete: true
+    };
 
     this.setState({fields: newFields});
   };
@@ -139,8 +151,8 @@ class Form extends Component {
             ) : (null)
         }
 
-        {
-          (this.state.fields.cardOption.val.length > 0) ? (
+       {
+          (this.state.cuotas) ? (
               <div className="bg-cuotas">
                 <div className="cuotas">
 
@@ -167,11 +179,15 @@ class Form extends Component {
                     />
                   </h5>
                 </div>
-                <div className="cft"><h4>CFT:</h4> <h5>{this.state.cft} <small>Sin intereses</small></h5>
+                <div className="cft">
+                {this.state.cuotas != 1 ? (
+                  <div><h4>CFT:</h4> <h5>{this.state.cft}%</h5></div>) : (<div><h4>&nbsp;</h4><h5>Sin intereses</h5></div>)
+                }
+
                 </div>
 
               </div>
-            ) : (null)
+           ) : (null)
         }
         {
           (this.state.fields.cardOption.val == 'other' || !this.props.isLoggedIn) ? (

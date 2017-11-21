@@ -1,7 +1,6 @@
 import React from 'react';
 import {Col, Row, FormControl, FormGroup, Radio, Button} from 'react-bootstrap';
 import {simpleValidation} from '../../utils/validators';
-import './OptionsAddress.css';
 
 class OptionsAddress extends React.Component {
 

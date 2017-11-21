@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { Button } from 'react-bootstrap';
-import './CerrarSesion.css';
 class CerrarSesion extends Component {
   render() {
     return (

@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import './CardPhone.css';
 import { Image } from 'react-bootstrap';
 import { DropdownButton } from 'react-bootstrap';
 import { MenuItem } from 'react-bootstrap';

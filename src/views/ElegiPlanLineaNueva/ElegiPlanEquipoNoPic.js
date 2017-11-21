@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import './ElegiPlanLineaNueva.css';
 import { Grid, Row, Col, FormControl, FormGroup, Radio, Button } from 'react-bootstrap';
 import Pasos from '../../components/Pasos/Pasos';
 import ProductDesc from '../../components/ProductDesc/ProductDesc';

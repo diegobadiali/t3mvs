@@ -1,12 +1,12 @@
 import React from 'react';
-import {Col, Row, FormControl, FormGroup, HelpBlock, Button} from 'react-bootstrap';
+import {Col, Row, FormControl, FormGroup} from 'react-bootstrap';
 import moment from 'moment';
-
 class Resume extends React.Component {
 
   constructor(props) {
     super(props);
     this.state = {
+      codarea: {val: props.codarea, validationState: null},
       phone: {val: props.phone, validationState: null},
       email: {val: props.email, validationState: null},
       validForm: false
@@ -29,6 +29,9 @@ class Resume extends React.Component {
       <Row>
         <Col sm={12}>
           <div className="datos-cargardos">
+            <a className="btn btn-link pull-right" onClick={this.props.handleData}>
+                <i className="fa fa-pencil"></i>
+            </a>
             <ul>
               <li>{this.props.firstname + ' ' + this.props.lastname}</li>
               <li>DNI: {this.props.dni}</li>
@@ -36,28 +39,35 @@ class Resume extends React.Component {
               <li>{this.props.gender}</li>
             </ul>
           </div>
-          <span className="help">*Todos los campos son obligatorios</span>
         </Col>
         </Row>
-        <Row>
+        
         { !this.props.isLoggedIn ? (
-        <Col sm={12} md={6}>
-          <FormGroup validationState={this.state.phone.validationState} className={this.props.phone?'active':''}>
+        <Row>
+        <Col xs={5} sm={4} md={2}>
+          <FormGroup className={this.props.codarea ? 'codarea active' : 'codarea' } validationState={this.state.codarea.validationState}>
             <FormControl
-              id="dataPhone"
-              type="text"
-              placeholder="Teléfono"
-              value={this.props.phone}
-              name="phone"
-              onChange={this.handleChange }
-              className="form-control-icon"
+              id="dataArea"
+              placeholder="Cód. Área"
+              name="codarea"
+              value={this.props.codarea}
             />
-            <i className="fa fa-phone"></i> 
           </FormGroup>
         </Col>
+        <Col xs={7} sm={8} md={4}>
+          <FormGroup className={this.props.phone ? 'numero active' : 'numero' } validationState={this.state.phone.validationState}>
+            <FormControl
+              id="dataPhone"
+              placeholder="Teléfono de contacto"
+              name="phone"
+              value={this.props.phone}
+            /> 
+          </FormGroup>
+        </Col>
+        </Row>
         ) : (null)
       }
-        </Row>
+        
         <Row>
         <Col sm={12} md={6}>
           <FormGroup validationState={this.state.email.validationState} className={this.props.phone?'active':''}>
@@ -83,11 +93,7 @@ class Resume extends React.Component {
           </div>
         </Col>
       </Row>
-      <Row>
-        <Col sm={12}>
-          <Button bsStyle="success" onClick={this.props.toggleActivePanel}>Continuar</Button>
-        </Col>
-      </Row>
+
       </div>
     );
   }

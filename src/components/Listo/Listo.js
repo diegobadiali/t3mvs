@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import iconty from '../../assets/img/icon-ty.png';
-import './Listo.css';
 class Listo extends Component {
   render() {
     return (

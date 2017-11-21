@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import './ResumenCompra.css';
 import { Grid, Row, Col, PageHeader } from 'react-bootstrap';
 import Pasos from '../../components/Pasos/Pasos';
 import TableResumen from '../../components/TableResumen/TableResumen';
@@ -9,7 +8,7 @@ const infotabla = {
       id: 2,
       name: 'Plan One',
       desc: '10GB',
-      price: '-',
+      price: '',
       pricemensual: '$899,00',
       imgURL: require('../../assets/img/img-chip2.png'),
     }

@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import './NumeroLinea.css';
 class NumeroLinea extends Component {
 	constructor(props) {
     super(props);

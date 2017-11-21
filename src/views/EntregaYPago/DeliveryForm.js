@@ -31,14 +31,26 @@ class DeliveryForm extends React.Component {
 
     newFields[e.target.name] = newField;
 
-    this.setState({fields: newFields});
-
+    this.setState({
+      fields: newFields,
+      selectedOption: this.state.fields.deliverTo.val,
+      
+    });
+    
   };
 
   handleEditAddress = () => {
     this.setState({
       isEditingAddress: true,
+      deliveryComplete: false
     });
+  };
+
+  handleNext = () => {
+    this.setState({
+      isEditingAddress: false,
+    });
+    this.props.handleNext()
   };
   handleSucursal = () => {
     this.setState({
@@ -83,23 +95,33 @@ class DeliveryForm extends React.Component {
                 this.state.fields.deliverTo.val == 'home' ? (
                     <div className="cont-entrega-pago">
                     <h4>Envío a domicilio</h4>
-                      {!this.state.isEditingAddress ? (
-                          <BillingAddressResume
-                            {...this.props.userData.address}
-                            handleEditAddress={this.handleEditAddress}
-                          />
-                        ) : (
-                          <BillingAddressForm
-                            handleUserDataChange={this.handleBillingAddressChange}
-                            userData={this.props.userData.address}
-                          />
-                        )
-                      }
-                      <div className="cont-btns">
-                        <Button bsStyle="success" onClick={this.props.handleNext}>
+                    {!this.state.isEditingAddress ? (
+                      <div>
+                        <BillingAddressResume
+                        {...this.props.userData.address}
+                        handleEditAddress={this.handleEditAddress}
+                        />
+                        <div className={this.props.deliveryComplete ? 'hide' : 'cont-btns'}>
+                          <Button bsStyle="success" onClick={this.props.handleNextComplete}>
                           Continuar
-                        </Button>
+                          </Button>
+                        </div>
                       </div>
+                      ) : (
+                      <div>
+                        <BillingAddressForm
+                        handleUserDataChange={this.handleBillingAddressChange}
+                        userData={this.props.userData.address}
+                        />
+                        <div className="cont-btns">
+                          <Button bsStyle="success" onClick={this.handleNext}>
+                          Continuar
+                          </Button>
+                        </div>
+                      </div>
+                      )
+                    }
+                      
                     </div>
                   ) : (
                     <div className="cont-entrega-pago">
@@ -107,20 +129,16 @@ class DeliveryForm extends React.Component {
                     <h4>Retiro en sucursal</h4>
 
                     {!this.state.isSelectedSucursal ? (
-                      <Map />
+                      <Map handleSucursal={this.handleSucursal}/>
                       ) : (
                       <RetiroAddressResume
                             {...this.props.sucursalData.address}
                             selectSucursal={this.selectSucursal}
+                            handleSucursal={this.handleSucursal}
                           />
                        )
                       }
-    
-                      <div className="cont-btns">
-                        <Button bsStyle="success" onClick={this.handleSucursal}>
-                          Continuar
-                        </Button>
-                      </div>
+                      
                     </div>
                   )
               ) : (null)

@@ -1,7 +1,6 @@
 import React, {Component} from 'react';
 import logo from '../../assets/img/logo.png';
 import logoMobile from '../../assets/img/logo-mobile.png';
-import './Header.css';
 import DropUser from '../DropUser/DropUser';
 import BtnMiMovistar from '../BtnMiMovistar/BtnMiMovistar';
 class Header extends Component {

@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {FormGroup, FormControl} from 'react-bootstrap';
+import {FormGroup} from 'react-bootstrap';
 import Select from 'react-select';
 import 'react-select/dist/react-select.css';
 var options = [
@@ -101,10 +101,16 @@ var options = [
     }
 ];
 
-function logChange(val) {
-  console.log('Selected: ', val);
-}
+
+
 class SelectAutocomplete extends Component {
+    constructor(props) {
+        super(props);
+  }
+  handleChange = () => {
+    this.props.parentMethod();
+  }
+
   render() {
     return (
       <FormGroup bsSize="large">
@@ -114,7 +120,7 @@ class SelectAutocomplete extends Component {
         className="form-control"
         placeholder="Encontrá el local más cercano a tu ubicación"
         options={options}
-        onChange={logChange}
+        onChange={this.handleChange}
         Clearable="false"
         noResultsText="No se encontraron resultados"
       />

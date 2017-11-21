@@ -30,7 +30,10 @@ class Totales extends React.Component {
           </FormControl>
           <i className="fa fa-angle-down"></i> 
           </FormGroup>
-          x <span className="importe">{ this.state.importe }</span><br className="visible-xs" /><span className="cft">CFT: { this.state.cft }</span> <span className="total"><b>Total:</b> { this.state.total }<sub>(con intereses)</sub></span></label>
+          x <span className="importe">{ this.state.importe }</span><br className="visible-xs" />
+          { this.state.cft==="0%" ? <span className="cft">Sin interés</span> : <span className="cft">CFT: { this.state.cft }</span> }
+          
+          <span className="total"><b>Total:</b> { this.state.total }{ this.state.cft==="0%" ? '' : <sub> (con intereses)</sub>}</span></label>
         </div>
 		);
 	}

@@ -4,7 +4,6 @@ import Steps from './Steps';
 import VerazStepMarkers from './VerazStepMarkers';
 import VerazUnverified from './VerazUnverified';
 import verazVerificationSteps from './VerazStepsSampleData';
-import './Veraz.css';
 const verificationStatus = {
   UNVERIFIED: "unverified",
   PENDING: "pending",

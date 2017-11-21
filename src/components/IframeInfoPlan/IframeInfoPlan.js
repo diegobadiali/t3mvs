@@ -4,7 +4,7 @@ class IframeInfoPlan extends React.Component {
   render() {
     return (
       <div>
-        <iframe src={link} width="650" height="520"></iframe>
+        <iframe src={link} width="100%" height="520"></iframe>
       </div>
     );
   }

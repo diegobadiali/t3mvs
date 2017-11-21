@@ -4,7 +4,7 @@ import ListInline from '../../components/CreditCard/ListInline';
 import CreditCardForm from '../../components/CreditCard/Form';
 import {simpleValidation} from '../../utils/validators';
 import Message from '../../components/Message/Message';
-
+import Pay from './Pay';
 class PayNowForm extends React.Component {
 
   constructor(props) {
@@ -31,6 +31,7 @@ class PayNowForm extends React.Component {
     newFields[e.target.name] = newField;
 
     this.setState({fields: newFields});
+
 
   };
 
@@ -62,16 +63,11 @@ class PayNowForm extends React.Component {
             {
               this.state.fields.paymentMethod.val == 'creditCard' ? (
                   <div>
-
                     <CreditCardForm
-                      isLoggedIn={this.props.isLoggedIn}
                       userData={this.props.userData}
                     />
-                    <div className="cont-btns">
-                      <Button bsStyle="success" onClick={this.props.handleNext}>
-                        Continuar
-                      </Button>
-                    </div>
+                    
+                    <Pay />
                   </div>
                 ) : (null)
             }
@@ -80,11 +76,7 @@ class PayNowForm extends React.Component {
               this.state.fields.paymentMethod.val == 'cash' ? (
                   <div>
                     <Message text={"En el email de confirmación recibirás el cupón para realizar el pago"} class={"info"}/>
-                     <div className="cont-btns">
-                      <Button bsStyle="success" onClick={this.props.handleNext}>
-                        Continuar
-                      </Button>
-                    </div>
+                     <Pay />
                   </div>
                 ) : (null)
             }

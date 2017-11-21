@@ -1,4 +1,6 @@
 /*  Telefonica fonts */
+@import url(~slick-carousel/slick/slick.css);
+@import url(~slick-carousel/slick/slick-theme.css);
 @font-face {
   font-family: 'TelefonicaItalic';
   src: url("./assets/fonts/telefonica/telefonica-regularitalic-webfont.eot");
@@ -944,4 +946,3888 @@ body {
     .btn-outline-dark span {
       display: none; } }
 
-/*# sourceMappingURL=index.css.map */
+/* InfoTarjetas */
+.info-tarjetas p {
+  font-family: "TelefonicaRegular";
+  color: #86888c;
+  font-size: 18px;
+  margin-top: 10px;
+  margin-bottom: 5px; }
+  .info-tarjetas p strong {
+    font-family: "TelefonicaBold";
+    font-weight: normal; }
+  .info-tarjetas p i {
+    color: #5bc500;
+    margin-right: 5px;
+    font-size: 20px; }
+.info-tarjetas .credit-card {
+  margin-left: 10px; }
+  @media (max-width: 1199px) {
+    .info-tarjetas .credit-card {
+      width: 35px;
+      margin-right: 0;
+      margin-left: 5px; } }
+  @media (max-width: 767px) {
+    .info-tarjetas .credit-card {
+      margin-left: 0;
+      margin-right: 10px;
+      margin-top: 10px;
+      width: 42px; } }
+  @media (max-width: 359px) {
+    .info-tarjetas .credit-card {
+      margin-right: 5px;
+      width: 40px; } }
+.info-tarjetas a {
+  color: #00a9e0;
+  font-size: 14px; }
+  .info-tarjetas a i {
+    font-size: 16px; }
+  .info-tarjetas a:hover {
+    opacity: .8;
+    color: #00a9e0; }
+
+/* InfoTarjetas */
+/* Listo */
+.cont-listo {
+  text-align: center;
+  padding-top: 20px;
+  color: #50535a; }
+  .cont-listo img {
+    margin-bottom: 20px; }
+  .cont-listo h1 {
+    font-family: "TelefonicaHand";
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 32px;
+    font-weight: normal; }
+  .cont-listo h2 {
+    font-family: "TelefonicaLight";
+    margin-bottom: 5px; }
+  .cont-listo h3 {
+    font-family: "TelefonicaRegular";
+    font-size: 17px;
+    margin-top: 0;
+    color: #50535a; }
+
+/* Listo */
+/* Main */
+.page-header h1 {
+  color: #50535a;
+  font-size: 35px;
+  font-family: "TelefonicaLight"; }
+  .page-header h1 button {
+    float: right;
+    background-color: transparent;
+    color: #86888c;
+    border: 2px solid #86888c;
+    border-radius: 4px;
+    padding: 8px 20px 12px;
+    font-family: "TelefonicaRegular"; }
+  @media (max-width: 767px) {
+    .page-header h1 {
+      font-size: 25px; } }
+
+.cont {
+  background-color: #fff;
+  border-radius: 4px;
+  padding: 40px 20px; }
+
+/* Main */
+/* Map */
+.cont-search {
+  margin-top: 20px; }
+  .cont-search h3 {
+    font-family: "TelefonicaRegular";
+    font-size: 18px;
+    margin-bottom: 20px;
+    color: #50535a;
+    padding: 0 0 20px;
+    border-top: none !important;
+    border-bottom: none !important; }
+    .cont-search h3 strong {
+      font-family: "TelefonicaBold";
+      font-weight: normal;
+      color: #5bc500; }
+  .cont-search .form-group {
+    position: relative; }
+    .cont-search .form-group .fa-search {
+      position: absolute;
+      right: 15px;
+      top: 14px;
+      font-size: 20px;
+      pointer-events: none;
+      color: #50535a; }
+    .cont-search .form-group .form-control {
+      border-radius: 4px;
+      border: 1px solid #EBEBEB !important;
+      box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2) !important;
+      background-color: #fff !important;
+      font-size: 16px;
+      line-height: 16px;
+      font-family: "TelefonicaLight";
+      height: 48px !important;
+      padding-right: 50px; }
+      .cont-search .form-group .form-control::placeholder {
+        font-style: italic; }
+  .cont-search .btn-default {
+    height: 48px;
+    font-family: "TelefonicaRegular";
+    font-size: 18px;
+    background-color: #EBEBEB;
+    border: none;
+    color: #50535a;
+    float: right; }
+    .cont-search .btn-default span {
+      display: block; }
+    .cont-search .btn-default .fa-crosshairs {
+      display: none; }
+    @media (max-width: 767px) {
+      .cont-search .btn-default {
+        float: none;
+        width: 100%; }
+        .cont-search .btn-default span {
+          display: none; }
+        .cont-search .btn-default .fa-crosshairs {
+          display: block; } }
+  @media (max-width: 767px) {
+    .cont-search {
+      margin-bottom: 20px;
+      margin-top: 0; } }
+  .cont-search .Select-control {
+    border-color: none;
+    border-radius: 0;
+    border: none;
+    outline: none;
+    overflow: hidden; }
+  .cont-search .Select-arrow, .cont-search .Select-clear {
+    display: none !important; }
+  .cont-search .Select-control:hover {
+    box-shadow: none !important; }
+  .cont-search .is-open > .Select-control {
+    border-color: none !important; }
+  .cont-search .is-open > .Select-control > .Select-arrow {
+    border-color: none;
+    border-width: 0; }
+  .cont-search .is-searchable.is-focused:not(.is-open) > .Select-control {
+    cursor: text; }
+  .cont-search .is-focused:not(.is-open) > .Select-control {
+    border: none !important;
+    box-shadow: none !important; }
+  .cont-search .Select-placeholder {
+    bottom: 0;
+    color: #B4B4B4;
+    left: 0;
+    line-height: 24px !important;
+    padding-left: 10px;
+    padding-right: 10px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap; }
+  .cont-search .Select-value {
+    padding: 0 0 0 0 !important; }
+  .cont-search .Select-menu-outer {
+    z-index: 9999999999; }
+  .cont-search .Select-control {
+    border: none !important;
+    background-color: transparent; }
+  .cont-search .Select-placeholder, .cont-search .Select-input, .cont-search .Select-input input, .cont-search .Select-input input:focus {
+    left: 0;
+    line-height: 20px;
+    padding: 0;
+    height: 23px;
+    outline: none !important;
+    -webkit-appearance: none;
+    font-size: 16px;
+    font-family: "TelefonicaLight";
+    box-shadow: none !important; }
+  .cont-search .Select-input input {
+    max-width: 500px; }
+    @media (max-width: 767px) {
+      .cont-search .Select-input input {
+        max-width: 300px; } }
+
+.marker {
+  position: 'relative';
+  color: #50535a;
+  background: url("./assets/img/marker.png") no-repeat;
+  padding: 0;
+  top: -20px;
+  left: -30px;
+  width: 50px;
+  height: 60px;
+  text-align: left;
+  font-family: "TelefonicaLight";
+  line-height: 13px;
+  font-size: 12px; }
+
+.cont-map {
+  height: 325px;
+  margin-bottom: 20px; }
+
+.cont-sucursales {
+  height: 325px;
+  border: 2px solid #EBEBEB; }
+  .cont-sucursales .scrollbar-container.vertical {
+    background-color: #EBEBEB;
+    width: 8px;
+    opacity: 1; }
+    .cont-sucursales .scrollbar-container.vertical .scrollbar {
+      background-color: #50535a;
+      opacity: 1;
+      width: 6px;
+      border-radius: 10px;
+      margin-left: 2px; }
+  @media (max-width: 767px) {
+    .cont-sucursales {
+      margin-bottom: 20px; } }
+
+.Select-menu-outer {
+  border-bottom-right-radius: 4px;
+  border-bottom-left-radius: 4px;
+  background-color: #fff;
+  border: 1px solid #EBEBEB;
+  border-top-color: #EBEBEB;
+  box-shadow: 0px 0px 25px -4px rgba(0, 0, 0, 0.4);
+  box-sizing: border-box;
+  margin-top: -1px;
+  max-height: 200px;
+  position: absolute;
+  top: 100%;
+  width: 100%;
+  left: 0;
+  margin-top: 2px;
+  z-index: 1000;
+  -webkit-overflow-scrolling: touch; }
+
+.Select-menu {
+  max-height: 198px;
+  overflow-y: auto; }
+
+.Select-option {
+  box-sizing: border-box;
+  color: #86888c;
+  cursor: pointer;
+  display: block;
+  padding: 8px 10px; }
+
+.Select-option:last-child {
+  border-bottom-right-radius: 4px;
+  border-bottom-left-radius: 4px; }
+
+.Select-option.is-focused {
+  background-color: #f2f9fc;
+  color: #50535a; }
+
+.Select-option.is-disabled {
+  color: #EBEBEB;
+  cursor: not-allowed; }
+
+.Select-noresults,
+.Select-search-prompt,
+.Select-searching {
+  box-sizing: border-box;
+  color: #86888c;
+  cursor: default;
+  display: block;
+  padding: 8px 10px; }
+
+.Select--multi .Select-input {
+  vertical-align: middle;
+  margin-left: 10px;
+  padding: 0; }
+
+.Select--multi.has-value .Select-input {
+  margin-left: 5px; }
+
+.Select-item {
+  background-color: #f2f9fc;
+  border-radius: 2px;
+  border: 1px solid #c9e6f2;
+  color: #00a9e0;
+  display: inline-block;
+  font-size: 0.9em;
+  margin-left: 5px;
+  margin-top: 5px;
+  vertical-align: top; }
+
+.Select-item-icon,
+.Select-item-label {
+  display: inline-block;
+  vertical-align: middle; }
+
+.Select-item-label {
+  border-bottom-right-radius: 2px;
+  border-top-right-radius: 2px;
+  cursor: default;
+  padding: 2px 5px; }
+
+.Select-item-label .Select-item-label__a {
+  color: #00a9e0;
+  cursor: pointer; }
+
+.Select-item-icon {
+  cursor: pointer;
+  border-bottom-left-radius: 2px;
+  border-top-left-radius: 2px;
+  border-right: 1px solid #c9e6f2;
+  padding: 1px 5px 3px; }
+
+.cont-entrega-pago .cont-btns {
+  margin-top: 20px; }
+
+/* Map */
+/* MercadoPago */
+.page-header h1 {
+  color: #50535a;
+  font-size: 35px;
+  font-family: "TelefonicaLight"; }
+  .page-header h1 button {
+    float: right;
+    background-color: transparent;
+    color: #86888c;
+    border: 2px solid #86888c;
+    border-radius: 4px;
+    padding: 8px 20px 12px;
+    font-family: "TelefonicaRegular"; }
+  @media (max-width: 767px) {
+    .page-header h1 {
+      font-size: 25px; } }
+
+.cont {
+  background-color: #fff;
+  border-radius: 4px;
+  padding: 40px 20px; }
+
+.show-grid {
+  display: flex;
+  align-items: stretch; }
+  @media (max-width: 767px) {
+    .show-grid {
+      display: block; } }
+
+/* MercadoPago */
+/* Message */
+.alert {
+  font-family: "TelefonicaLight";
+  font-size: 16px;
+  padding-bottom: 19px !important;
+  border: none !important;
+  color: #86888c !important; }
+  .alert i {
+    font-size: 19px;
+    margin-right: 5px; }
+  .alert a, .alert a:hover, .alert a:visited, .alert a:link {
+    color: #00a9e0; }
+    .alert a:hover, .alert a:hover:hover, .alert a:visited:hover, .alert a:link:hover {
+      text-decoration: underline; }
+
+.alert-info {
+  background-color: #f4f4f4 !important; }
+  .alert-info i {
+    color: #00a9e0; }
+
+.alert-info-plan {
+  background-color: #e5f6fb !important; }
+  .alert-info-plan i {
+    color: #00a9e0; }
+
+.alert-warning {
+  background-color: #fdefeb !important; }
+  .alert-warning i {
+    color: #ec6839; }
+
+.alert-success {
+  background-color: #eef9e5 !important; }
+  .alert-success i {
+    color: #5bc500; }
+
+/* Message */
+/* Messages */
+.page-header h1 {
+  color: #50535a;
+  font-size: 35px;
+  font-family: "TelefonicaLight"; }
+  .page-header h1 button {
+    float: right;
+    background-color: transparent;
+    color: #86888c;
+    border: 2px solid #86888c;
+    border-radius: 4px;
+    padding: 8px 20px 12px;
+    font-family: "TelefonicaRegular"; }
+  @media (max-width: 767px) {
+    .page-header h1 {
+      font-size: 25px; } }
+
+.cont {
+  background-color: #fff;
+  border-radius: 4px;
+  padding: 40px 20px; }
+
+.show-grid {
+  display: flex;
+  align-items: stretch; }
+  @media (max-width: 767px) {
+    .show-grid {
+      display: block; } }
+
+/* Messages */
+/* ModalPlanes */
+.Overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5); }
+  @media (max-width: 767px) {
+    .Overlay {
+      background-color: #fff; } }
+
+.btn-modal {
+  background: none;
+  font-family: "TelefonicaLight";
+  border: none;
+  color: #00a9e0;
+  font-size: 14px; }
+
+.ReactModal__Content {
+  border-radius: 0 !important;
+  box-shadow: 0px 0px 25px -4px rgba(0, 0, 0, 0.4);
+  border: none !important; }
+  .ReactModal__Content .btn-cerrar {
+    float: right;
+    background: transparent;
+    border: none;
+    color: #86888c; }
+  .ReactModal__Content h2 {
+    font-family: "TelefonicaLight";
+    color: #86888c;
+    margin-bottom: 5px; }
+  .ReactModal__Content iframe {
+    border: none !important; }
+    @media (max-width: 767px) {
+      .ReactModal__Content iframe {
+        width: 100%;
+        height: 520px; } }
+    @media (max-width: 374px) {
+      .ReactModal__Content iframe {
+        height: 490px; } }
+    @media (max-width: 339px) {
+      .ReactModal__Content iframe {
+        height: 360px; } }
+  @media (max-width: 767px) {
+    .ReactModal__Content {
+      width: 100%;
+      text-align: center;
+      box-shadow: none;
+      top: 0 !important;
+      transform: translate(-50%, 0%) !important; } }
+
+/* ModalPlanes */
+/* ModalPromociones */
+.Overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5); }
+  @media (max-width: 767px) {
+    .Overlay {
+      background-color: #fff; } }
+
+.btn-modal {
+  background: none;
+  font-family: "TelefonicaLight";
+  border: none;
+  color: #00a9e0;
+  font-size: 14px; }
+
+.ReactModal__Content {
+  border-radius: 0 !important;
+  box-shadow: 0px 0px 25px -4px rgba(0, 0, 0, 0.4);
+  border: none !important;
+  width: 750px; }
+  .ReactModal__Content .btn-cerrar {
+    float: right;
+    background: transparent;
+    border: none;
+    color: #86888c; }
+  .ReactModal__Content h2 {
+    font-family: "TelefonicaLight";
+    color: #86888c;
+    margin-bottom: 5px; }
+  @media (max-width: 767px) {
+    .ReactModal__Content {
+      width: 100%;
+      text-align: center;
+      box-shadow: none;
+      min-width: 300px;
+      top: 0 !important;
+      transform: translate(-50%, 0%) !important; } }
+
+input[type="radio"] {
+  display: block;
+  text-align: left;
+  float: left;
+  -webkit-appearance: none !important;
+  -moz-appearance: none !important;
+  height: 19px;
+  width: 19px;
+  cursor: pointer;
+  position: relative;
+  -webkit-transition: .15s;
+  border-radius: 50%;
+  background-color: #fff;
+  border: 2px solid #50535a; }
+  input[type="radio"]:checked {
+    background-color: #50535a;
+    border: 1px solid #50535a; }
+
+input[type="radio"]:before, input[type="radio"]:checked:before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  line-height: 16px;
+  font-size: 9px;
+  font-weight: normal;
+  text-align: center;
+  color: #fff;
+  content: ''; }
+
+input[type="radio"]:checked:before {
+  content: "\f111";
+  font-family: 'Fontawesome'; }
+
+/* ModalPromociones */
+/* Nav */
+.navbar-user {
+  margin-right: 20px;
+  margin-top: 10px;
+  float: right; }
+  .navbar-user ul {
+    margin-top: -5px; }
+    .navbar-user ul li {
+      padding-top: 9px;
+      display: inline-block; }
+      .navbar-user ul li a {
+        text-transform: uppercase;
+        color: #fff;
+        padding: 10px 20px 25px;
+        font-family: 'TelefonicaBold';
+        font-size: 12px;
+        font-weight: normal;
+        text-decoration: none; }
+        .navbar-user ul li a:hover, .navbar-user ul li a:focus {
+          background-color: rgba(0, 0, 0, 0.05);
+          border-top-right-radius: 10px;
+          border-top-left-radius: 10px;
+          text-decoration: none; }
+      .navbar-user ul li.active a {
+        background-color: #00a9e0;
+        border-top-right-radius: 10px;
+        border-top-left-radius: 10px; }
+        .navbar-user ul li.active a:hover, .navbar-user ul li.active a:focus {
+          background-color: #00a9e0;
+          border-top-right-radius: 10px;
+          border-top-left-radius: 10px; }
+      @media (min-width: 768px) and (max-width: 992px) {
+        .navbar-user ul li a {
+          padding-left: 8px;
+          padding-right: 8px; } }
+
+/* Nav */
+/* NavMobile */
+.navmobile {
+  display: none; }
+  @media (max-width: 767px) {
+    .navmobile {
+      display: block; } }
+  .navmobile .bm-burger-button {
+    position: absolute;
+    width: 24px;
+    height: 20px;
+    left: 20px;
+    top: 24px; }
+  .navmobile .bm-burger-bars {
+    background: #fff; }
+  .navmobile .bm-cross-button {
+    height: 24px;
+    width: 24px; }
+  .navmobile .bm-cross {
+    background: #bdc3c7; }
+  .navmobile .bm-menu {
+    background: #fff;
+    padding: 0; }
+  .navmobile .bm-morph-shape {
+    fill: #fff; }
+  .navmobile .bm-item-list {
+    color: #b8b7ad;
+    padding: 0; }
+  .navmobile .bm-overlay {
+    background: rgba(0, 0, 0, 0.3); }
+  .navmobile .sidebar-head {
+    padding: 40px 20px;
+    margin-bottom: 30px; }
+    .navmobile .sidebar-head .user-image {
+      background-color: #5bc500;
+      width: 35px;
+      height: 35px;
+      border-radius: 50%;
+      padding: 5px;
+      display: block;
+      float: left; }
+      .navmobile .sidebar-head .user-image i {
+        text-align: center;
+        font-size: 17px;
+        color: #fff;
+        margin: 3px auto;
+        display: block; }
+    .navmobile .sidebar-head #btn-right {
+      float: right; }
+      .navmobile .sidebar-head #btn-right .fa-angle-right {
+        margin-top: 2px;
+        color: #86888c;
+        font-size: 28px; }
+    .navmobile .sidebar-head #btn-left {
+      float: left; }
+      .navmobile .sidebar-head #btn-left .fa-angle-left {
+        margin-top: 2px;
+        color: #86888c;
+        font-size: 28px;
+        margin-right: 20px; }
+  .navmobile ul li.dropdown {
+    margin-top: 23px;
+    margin-right: 10px; }
+    .navmobile ul li.dropdown a {
+      padding: 5px 10px; }
+      .navmobile ul li.dropdown a + .dropdown-menu {
+        margin-top: 6px;
+        right: 0;
+        left: auto; }
+
+.menu-open .bm-menu {
+  box-shadow: 20px 0px 40px 0px rgba(0, 0, 0, 0.3); }
+
+/* NavMobile */
+/* NumeroLinea */
+.numero-linea {
+  text-align: center;
+  margin-top: 30px; }
+  .numero-linea span {
+    color: #B4B4B4;
+    font-size: 13px;
+    font-weight: bold;
+    font-family: "TelefonicaRegular"; }
+  .numero-linea h4 {
+    font-size: 32px;
+    color: #50535a;
+    font-weight: normal;
+    font-family: "TelefonicaLight"; }
+  @media (max-width: 767px) {
+    .numero-linea {
+      margin-top: 5px;
+      border-bottom: 1px solid #EBEBEB;
+      margin-left: -15px;
+      margin-right: -15px;
+      padding-bottom: 20px; } }
+
+/* NumeroLinea */
+/* OptionAddress */
+.cont-options-address {
+  background-color: #fff;
+  border-radius: 4px;
+  padding: 10px 20px 20px;
+  margin-top: 20px;
+  margin-bottom: 40px; }
+  .cont-options-address .form-group .radio label {
+    width: 100%;
+    font-size: 16px;
+    line-height: 21px;
+    padding-left: 25px; }
+    .cont-options-address .form-group .radio label h4 {
+      font-family: "TelefonicaRegular";
+      font-weight: normal;
+      color: #50535a;
+      margin: 0;
+      float: left; }
+      .cont-options-address .form-group .radio label h4 span {
+        color: #5bc500; }
+      .cont-options-address .form-group .radio label h4.nf {
+        float: none; }
+      @media (max-width: 767px) {
+        .cont-options-address .form-group .radio label h4 {
+          float: none; } }
+    .cont-options-address .form-group .radio label input[type="radio"] {
+      display: block;
+      text-align: left;
+      float: left;
+      margin-left: -25px;
+      margin-right: 10px;
+      -webkit-appearance: none !important;
+      -moz-appearance: none !important;
+      height: 19px;
+      width: 19px;
+      cursor: pointer;
+      position: relative;
+      -webkit-transition: .15s;
+      border-radius: 50%;
+      background-color: #fff;
+      border: 2px solid #50535a; }
+      .cont-options-address .form-group .radio label input[type="radio"]:checked {
+        border: 1px solid #50535a;
+        background-color: #50535a; }
+    .cont-options-address .form-group .radio label input[type="radio"]:before, .cont-options-address .form-group .radio label input[type="radio"]:checked:before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      line-height: 17px;
+      font-size: 9px;
+      font-weight: normal;
+      text-align: center;
+      color: #fff;
+      content: ''; }
+    .cont-options-address .form-group .radio label input[type="radio"]:checked:before {
+      content: "\f111";
+      font-family: 'Fontawesome'; }
+    .cont-options-address .form-group .radio label .list-inline {
+      float: left;
+      margin-left: 20px; }
+      @media (max-width: 767px) {
+        .cont-options-address .form-group .radio label .list-inline {
+          float: none;
+          padding-left: 0;
+          margin-left: 0;
+          margin-top: 10px; }
+          .cont-options-address .form-group .radio label .list-inline img {
+            height: 25px; } }
+  .cont-options-address .btn-success {
+    float: right; }
+
+/* OptionAddress */
+/* Pasos */
+.pasos {
+  border-bottom: 1px solid #EBEBEB;
+  padding-bottom: 10px; }
+  .pasos .bg-pasos {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "TelefonicaLight";
+    position: relative;
+    margin-top: 20px; }
+    .pasos .bg-pasos .btn-back {
+      color: #86888c;
+      display: block;
+      position: absolute;
+      left: 0;
+      top: -4px;
+      font-size: 32px;
+      line-height: 28px;
+      color: #86888c; }
+      @media (max-width: 767px) {
+        .pasos .bg-pasos .btn-back {
+          left: 20px;
+          top: -4px; } }
+    .pasos .bg-pasos ol, .pasos .bg-pasos ul {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding-left: 0; }
+      .pasos .bg-pasos ol li, .pasos .bg-pasos ul li {
+        float: left;
+        padding: 1px 10px 3px;
+        list-style-position: inside;
+        /*border-top-right-radius: 50px;
+        border-bottom-right-radius: 50px;*/
+        list-style-type: none;
+        counter-increment: item;
+        cursor: default;
+        color: #B4B4B4;
+        font-size: 15px;
+        margin-left: 10px;
+        margin-right: 10px; }
+        @media (max-width: 767px) {
+          .pasos .bg-pasos ol li, .pasos .bg-pasos ul li {
+            margin-left: 5px;
+            margin-right: 5px; } }
+        .pasos .bg-pasos ol li:first-child, .pasos .bg-pasos ul li:first-child {
+          /*border-top-left-radius: 50px;
+          border-bottom-left-radius: 50px;*/ }
+        .pasos .bg-pasos ol li:before, .pasos .bg-pasos ul li:before {
+          font-weight: bold;
+          content: counter(item) ".";
+          margin-right: 5px; }
+          @media (max-width: 767px) {
+            .pasos .bg-pasos ol li:before, .pasos .bg-pasos ul li:before {
+              margin-right: 0;
+              margin-left: 0; } }
+        .pasos .bg-pasos ol li.active, .pasos .bg-pasos ul li.active {
+          background-color: #00a9e0;
+          color: #fff;
+          border-radius: 50px; }
+          @media (max-width: 767px) {
+            .pasos .bg-pasos ol li.active + li, .pasos .bg-pasos ul li.active + li {
+              margin-left: -1px; } }
+        .pasos .bg-pasos ol li.off, .pasos .bg-pasos ul li.off {
+          /*background-color: $color2;
+          color: rgba(255, 255, 255, .5);*/
+          color: #5bc500;
+          /*border-top-right-radius: 0;
+          border-bottom-right-radius: 0;*/ }
+          @media (max-width: 767px) {
+            .pasos .bg-pasos ol li.off, .pasos .bg-pasos ul li.off {
+              padding-left: 0;
+              padding-right: 0; } }
+          .pasos .bg-pasos ol li.off:before, .pasos .bg-pasos ul li.off:before {
+            font-family: 'Fontawesome';
+            content: "\f058";
+            margin-right: 5px;
+            font-size: 18px; }
+            @media (max-width: 767px) {
+              .pasos .bg-pasos ol li.off:before, .pasos .bg-pasos ul li.off:before {
+                font-size: 29px;
+                line-height: 23px; } }
+        @media (max-width: 767px) {
+          .pasos .bg-pasos ol li, .pasos .bg-pasos ul li {
+            width: 26px;
+            height: 26px;
+            padding-top: 2px; }
+            .pasos .bg-pasos ol li span, .pasos .bg-pasos ul li span {
+              display: none; }
+            .pasos .bg-pasos ol li:before, .pasos .bg-pasos ul li:before {
+              content: counter(item) "";
+              margin-right: 0;
+              font-family: "TelefonicaBold"; } }
+    @media (max-width: 767px) {
+      .pasos .bg-pasos {
+        /*border-bottom: 1px solid $color3;
+        padding-bottom: 10px;*/
+        margin-left: -15px;
+        margin-right: -15px; } }
+
+.preguntas .bg-pasos {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "TelefonicaLight";
+  position: relative;
+  margin-top: 20px; }
+  .preguntas .bg-pasos .btn-back {
+    color: #86888c;
+    display: block;
+    position: absolute;
+    left: 0;
+    top: -2px;
+    font-size: 32px;
+    line-height: 28px;
+    color: #86888c; }
+    @media (max-width: 767px) {
+      .preguntas .bg-pasos .btn-back {
+        left: 20px;
+        top: -4px; } }
+  .preguntas .bg-pasos ol, .preguntas .bg-pasos ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 0; }
+    .preguntas .bg-pasos ol li, .preguntas .bg-pasos ul li {
+      float: left;
+      padding: 1px 10px 3px;
+      list-style-position: inside;
+      border-top-right-radius: 50px;
+      border-bottom-right-radius: 50px;
+      list-style-type: none;
+      counter-increment: item;
+      cursor: default;
+      color: #86888c;
+      font-size: 13px;
+      margin-left: 0;
+      margin-right: 0; }
+      .preguntas .bg-pasos ol li:first-child, .preguntas .bg-pasos ul li:first-child {
+        border-top-left-radius: 50px;
+        border-bottom-left-radius: 50px; }
+      .preguntas .bg-pasos ol li.active, .preguntas .bg-pasos ul li.active {
+        background-color: #00a9e0;
+        color: #fff; }
+      .preguntas .bg-pasos ol li.off, .preguntas .bg-pasos ul li.off {
+        background-color: #00a9e0;
+        color: rgba(255, 255, 255, 0.5);
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0; }
+      .preguntas .bg-pasos ol li:before, .preguntas .bg-pasos ul li:before {
+        font-weight: bold;
+        content: counter(item) ".";
+        margin-right: 5px; }
+      @media (max-width: 767px) {
+        .preguntas .bg-pasos ol li, .preguntas .bg-pasos ul li {
+          border-top-right-radius: 50%;
+          border-bottom-right-radius: 50%;
+          width: 26px;
+          height: 26px;
+          padding-top: 2px; }
+          .preguntas .bg-pasos ol li:first-child, .preguntas .bg-pasos ul li:first-child {
+            border-top-left-radius: 50%;
+            border-bottom-left-radius: 50%; }
+          .preguntas .bg-pasos ol li span, .preguntas .bg-pasos ul li span {
+            display: none; }
+          .preguntas .bg-pasos ol li:before, .preguntas .bg-pasos ul li:before {
+            content: counter(item) "";
+            margin-right: 0;
+            font-family: "TelefonicaBold"; } }
+  @media (max-width: 767px) {
+    .preguntas .bg-pasos {
+      border-bottom: 1px solid #EBEBEB;
+      padding-bottom: 10px;
+      margin-left: -15px;
+      margin-right: -15px; } }
+
+/* Pasos */
+/* PlanDetail */
+.plan-detail {
+  border-radius: 4px;
+  background-color: #fff;
+  overflow: hidden;
+  padding-bottom: 20px;
+  min-height: 392px; }
+  .plan-detail h5 {
+    background-color: #00a9e0;
+    margin: 0;
+    padding: 20px 30px 25px;
+    color: #fff;
+    font-size: 21px;
+    font-family: "TelefonicaExtraLight";
+    line-height: 20px; }
+    .plan-detail h5 i {
+      display: none; }
+  .plan-detail .name {
+    background-color: #e9426d;
+    display: block;
+    text-align: center;
+    padding: 5px 0 7px;
+    color: #fff;
+    text-transform: uppercase;
+    font-family: "TelefonicaBold";
+    font-size: 14px; }
+    .plan-detail .name.name-comunidad {
+      background-color: #e9426d; }
+    .plan-detail .name.name-prepago {
+      background-color: #f59c00; }
+    .plan-detail .name.name-one {
+      background-color: #954b97; }
+  .plan-detail .cont {
+    padding: 0; }
+    .plan-detail .cont ul {
+      margin-bottom: 0; }
+      .plan-detail .cont ul li {
+        border-bottom: 1px dotted #EBEBEB;
+        padding: 10px 15px;
+        line-height: 14px;
+        font-size: 12px;
+        color: #86888c;
+        font-family: "TelefonicaRegular"; }
+        .plan-detail .cont ul li strong {
+          display: block;
+          text-transform: uppercase;
+          color: #50535a;
+          font-family: "TelefonicaBold";
+          font-weight: normal; }
+    .plan-detail .cont .price {
+      font-size: 30px;
+      color: #5bc500;
+      margin-left: 20px;
+      line-height: 36px;
+      margin-top: 5px;
+      display: block;
+      font-family: "TelefonicaLight"; }
+      .plan-detail .cont .price sub {
+        font-size: 15px;
+        bottom: 0; }
+      .plan-detail .cont .price + span {
+        display: block;
+        margin-left: 20px;
+        color: #86888c;
+        line-height: 10px;
+        font-family: "TelefonicaLight"; }
+
+/* PlanDetail */
+/* ProductDesc */
+.product-desc {
+  position: relative; }
+  .product-desc h1 {
+    font-size: 35px;
+    color: #50535a;
+    font-family: "TelefonicaExtraLight"; }
+    @media (max-width: 767px) {
+      .product-desc h1 {
+        font-size: 24px; } }
+  .product-desc .bg-prod {
+    padding: 15px 50px;
+    background-color: #fff;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; }
+    .product-desc .bg-prod div {
+      margin-right: 40px; }
+    .product-desc .bg-prod .img {
+      display: block;
+      margin: 0;
+      width: 25px;
+      height: auto; }
+    .product-desc .bg-prod .icon {
+      display: block;
+      margin: 0;
+      width: 40px;
+      height: auto; }
+    .product-desc .bg-prod h2 {
+      font-size: 18px;
+      line-height: 20px;
+      color: #50535a;
+      font-family: "TelefonicaRegular";
+      margin-bottom: 0;
+      margin-top: 0;
+      display: block;
+      font-weight: bold; }
+      @media (max-width: 767px) {
+        .product-desc .bg-prod h2 {
+          font-size: 14px;
+          margin-top: 0; } }
+      .product-desc .bg-prod h2 a {
+        color: #00a9e0; }
+        .product-desc .bg-prod h2 a:hover, .product-desc .bg-prod h2 a:focus {
+          opacity: .7; }
+    .product-desc .bg-prod h3 {
+      font-size: 16px;
+      line-height: 20px;
+      color: #50535a;
+      font-family: "TelefonicaRegular";
+      margin-bottom: 0;
+      margin-top: 0; }
+    .product-desc .bg-prod h4 {
+      font-size: 18px;
+      line-height: 18px;
+      color: #5bc500;
+      font-family: "TelefonicaLight";
+      margin-bottom: 5px;
+      margin-top: 0; }
+    .product-desc .bg-prod h5 {
+      font-size: 14px;
+      line-height: 14px;
+      color: #86888c;
+      font-family: "TelefonicaLight";
+      margin-bottom: 0;
+      margin-top: 0; }
+    .product-desc .bg-prod .btn-outline-dark {
+      position: absolute;
+      bottom: 0;
+      right: 0; }
+    @media (max-width: 991px) {
+      .product-desc .bg-prod {
+        margin-bottom: 20px; } }
+    @media (max-width: 767px) {
+      .product-desc .bg-prod {
+        padding: 0;
+        background-color: transparent;
+        display: block; }
+        .product-desc .bg-prod .img {
+          width: 60px;
+          float: left;
+          margin-right: 20px; }
+        .product-desc .bg-prod h2 {
+          font-size: 18px; }
+        .product-desc .bg-prod h3 {
+          margin-bottom: 10px; } }
+
+/* ProductDesc */
+/* ProductDetail */
+.product-detail {
+  background-color: #fff;
+  border-radius: 4px;
+  padding: 0;
+  min-height: 392px; }
+  .product-detail article {
+    overflow: hidden;
+    max-height: 76px;
+    -webkit-transition: all .3s;
+    /* Safari */
+    transition: all .3s; }
+    .product-detail article + a {
+      color: #00a9e0; }
+      .product-detail article + a:hover, .product-detail article + a:focus {
+        opacity: .7; }
+  .product-detail .img {
+    display: block;
+    margin: 20px auto;
+    height: 272px; }
+    @media (max-width: 767px) {
+      .product-detail .img {
+        margin-bottom: 20px;
+        max-width: 100px;
+        height: auto; } }
+  .product-detail h1 {
+    font-size: 35px;
+    color: #50535a;
+    font-family: "TelefonicaExtraLight";
+    margin-right: 30px; }
+    @media (max-width: 767px) {
+      .product-detail h1 {
+        font-size: 24px; } }
+  .product-detail h2 {
+    font-size: 16px;
+    line-height: 18px;
+    color: #50535a;
+    font-family: "TelefonicaRegular";
+    margin-bottom: 10px;
+    margin-right: 30px;
+    display: block; }
+    @media (max-width: 767px) {
+      .product-detail h2 {
+        font-size: 14px;
+        margin-top: 0; } }
+    .product-detail h2 a {
+      color: #00a9e0; }
+      .product-detail h2 a:hover, .product-detail h2 a:focus {
+        opacity: .7; }
+  .product-detail h3 {
+    font-size: 40px;
+    color: #00a9e0;
+    font-family: "TelefonicaExtraLight";
+    margin-top: 10px;
+    margin-right: 30px; }
+  .product-detail h4 {
+    font-size: 14px;
+    color: #86888c;
+    font-family: "TelefonicaLight";
+    margin-top: 0;
+    margin-right: 30px; }
+  .product-detail .btn-success {
+    background-color: #5bc500;
+    color: #fff;
+    text-align: center;
+    border: none;
+    margin: 0 0 10px;
+    padding: 8px 20px 15px;
+    font-size: 16px;
+    font-family: "TelefonicaRegular";
+    border-radius: 4px; }
+    .product-detail .btn-success:hover, .product-detail .btn-success:focus {
+      opacity: .7;
+      background-color: #5bc500; }
+    .product-detail .btn-success:disabled {
+      opacity: 1;
+      background-color: #B4B4B4; }
+    .product-detail .btn-success i {
+      display: none; }
+      @media (max-width: 767px) {
+        .product-detail .btn-success i {
+          display: block; } }
+    @media (max-width: 767px) {
+      .product-detail .btn-success span {
+        display: none; } }
+  .product-detail .foot {
+    border-top: 1px solid #EBEBEB;
+    margin-top: 15px;
+    font-family: "TelefonicaLight"; }
+    .product-detail .foot a {
+      padding: 18px 20px 25px 30px;
+      border-right: 1px solid #EBEBEB;
+      display: block;
+      color: #00a9e0; }
+      .product-detail .foot a.nbr {
+        border-right: none;
+        padding-left: 5px; }
+      .product-detail .foot a:hover, .product-detail .foot a:focus {
+        opacity: .7; }
+      @media (max-width: 767px) {
+        .product-detail .foot a {
+          padding-left: 10px;
+          padding-right: 10px; } }
+    .product-detail .foot.nb {
+      border: none; }
+  .product-detail.product-ficha {
+    min-height: 320px; }
+    .product-detail.product-ficha h3 {
+      color: #5bc500;
+      margin-bottom: 0; }
+    .product-detail.product-ficha .btn-volver {
+      margin-top: 40px;
+      margin-bottom: 20px;
+      display: block;
+      color: #00a9e0; }
+      .product-detail.product-ficha .btn-volver:hover, .product-detail.product-ficha .btn-volver:focus {
+        opacity: .7; }
+  @media (max-width: 991px) {
+    .product-detail {
+      margin-bottom: 20px; } }
+
+/* ProductDetail */
+/* ProductResume */
+.product-resume {
+  border: 2px solid #EBEBEB;
+  float: right;
+  width: 250px;
+  padding: 20px; }
+  .product-resume img {
+    width: 60px; }
+  .product-resume h4 {
+    font-size: 24px;
+    margin: 0 0 20px 0; }
+  .product-resume .title {
+    text-transform: uppercase;
+    color: #B4B4B4;
+    font-size: 12px;
+    line-height: 12px;
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 0;
+    font-family: "TelefonicaBold"; }
+  .product-resume .info {
+    color: #86888c;
+    font-size: 14px;
+    line-height: 14px;
+    display: block;
+    margin-bottom: 2px; }
+  .product-resume .price {
+    color: #5bc500;
+    font-size: 14px;
+    line-height: 14px;
+    display: block;
+    margin-bottom: 10px; }
+    .product-resume .price + small {
+      margin-top: -12px;
+      color: #86888c;
+      display: block; }
+  @media (max-width: 992px) {
+    .product-resume {
+      float: none;
+      width: 100%; } }
+
+/* ProductResume */
+/* Redirect */
+.redirect {
+  border: 2px solid #EBEBEB;
+  border-radius: 4px;
+  font-family: "TelefonicaLight";
+  color: #50535a;
+  text-align: center;
+  padding: 50px 20px; }
+  .redirect img {
+    display: block;
+    margin: 0 auto 30px; }
+  .redirect h2 {
+    margin-bottom: 20px; }
+    @media (max-width: 767px) {
+      .redirect h2 {
+        font-size: 18px; } }
+  @media (max-width: 767px) {
+    .redirect img {
+      margin-bottom: 20px; }
+    .redirect .spin {
+      width: 50px; }
+    .redirect .logoredirect {
+      width: 140px; } }
+
+/* Redirect */
+/* ResumenCompra */
+.page-header h1 {
+  color: #50535a;
+  font-size: 35px;
+  font-family: "TelefonicaLight"; }
+  .page-header h1 button {
+    float: right;
+    background-color: transparent;
+    color: #86888c;
+    border: 2px solid #86888c;
+    border-radius: 4px;
+    padding: 8px 20px 12px;
+    font-family: "TelefonicaRegular"; }
+  @media (max-width: 767px) {
+    .page-header h1 {
+      font-size: 25px; } }
+
+.cont {
+  background-color: #fff;
+  border-radius: 4px;
+  padding: 40px 20px; }
+
+.show-grid {
+  display: flex;
+  align-items: stretch; }
+  @media (max-width: 767px) {
+    .show-grid {
+      display: block; } }
+
+/* ResumenCompra */
+/* SucList */
+.cont-sucursales .form-group {
+  margin-bottom: 0 !important; }
+  .cont-sucursales .form-group input {
+    margin-left: 15px; }
+  .cont-sucursales .form-group ul {
+    margin-bottom: 0 !important;
+    padding-right: 8px; }
+    .cont-sucursales .form-group ul li {
+      padding: 15px 0;
+      border-bottom: 2px solid #EBEBEB;
+      border-left: 1px solid #fff;
+      border-right: 1px solid #fff;
+      border-top: 1px solid #EBEBEB;
+      border-bottom: 1px solid #EBEBEB; }
+      .cont-sucursales .form-group ul li h4 {
+        font-family: "TelefonicaBold";
+        font-weight: normal;
+        font-size: 16px;
+        color: #50535a;
+        margin-bottom: 5px;
+        margin-top: 0;
+        display: block;
+        margin-left: 10px; }
+      .cont-sucursales .form-group ul li h5 {
+        font-family: "TelefonicaRegular";
+        font-weight: normal;
+        font-size: 16px;
+        margin-bottom: 5px;
+        margin-top: 0;
+        color: #50535a;
+        display: block;
+        margin-left: 10px; }
+      .cont-sucursales .form-group ul li h6 {
+        font-family: "TelefonicaRegular";
+        font-weight: normal;
+        margin-bottom: 0;
+        margin-top: 0;
+        font-size: 13px;
+        color: #86888c;
+        font-style: italic;
+        display: block;
+        margin-left: 10px; }
+      .cont-sucursales .form-group ul li .radio {
+        text-align: center;
+        display: block;
+        margin: 10px 0 0 25px; }
+      .cont-sucursales .form-group ul li input[type="radio"] {
+        display: block;
+        text-align: left;
+        float: left;
+        -webkit-appearance: none !important;
+        -moz-appearance: none !important;
+        height: 19px;
+        width: 19px;
+        cursor: pointer;
+        position: relative;
+        -webkit-transition: .15s;
+        border-radius: 50%;
+        background-color: #fff;
+        border: 2px solid #50535a; }
+        .cont-sucursales .form-group ul li input[type="radio"]:checked {
+          background-color: #50535a;
+          border: 1px solid #50535a; }
+      .cont-sucursales .form-group ul li input[type="radio"]:before, .cont-sucursales .form-group ul li input[type="radio"]:checked:before {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        line-height: 17px;
+        font-size: 9px;
+        font-weight: normal;
+        text-align: center;
+        color: #fff;
+        content: ''; }
+      .cont-sucursales .form-group ul li input[type="radio"]:checked:before {
+        content: "\f111";
+        font-family: 'Fontawesome'; }
+      .cont-sucursales .form-group ul li.active {
+        border: 1px solid #00a9e0; }
+
+/* SucList */
+/* TabletComparison */
+.product .head {
+  height: 460px; }
+  .product .head .img {
+    display: block;
+    margin: 0 auto;
+    height: 248px; }
+  .product .head h2 {
+    font-size: 18px;
+    color: #86888c;
+    font-family: "TelefonicaLight";
+    margin-bottom: 5px;
+    height: auto; }
+  .product .head h3 {
+    font-size: 24px;
+    color: #5bc500;
+    font-family: "TelefonicaExtraLight";
+    margin-top: 0;
+    text-align: left;
+    margin-bottom: 0; }
+  .product .head h4 {
+    font-size: 14px;
+    color: #86888c;
+    font-family: "TelefonicaLight";
+    margin-top: 0;
+    text-align: left; }
+  .product .head .mas-info {
+    margin-bottom: 5px;
+    display: block;
+    color: #00a9e0;
+    font-family: "TelefonicaRegular"; }
+  .product .head .btn-success {
+    background-color: #5bc500;
+    border: none;
+    border-radius: 4px;
+    padding: 8px 20px 15px;
+    font-size: 16px;
+    display: block;
+    width: 100%;
+    font-family: "TelefonicaRegular"; }
+    .product .head .btn-success:hover, .product .head .btn-success:focus {
+      opacity: .9; }
+
+/* TabletComparison */
+/* TableResumen */
+.table-resumen .btn-success {
+  float: right; }
+  @media (max-width: 767px) {
+    .table-resumen .btn-success {
+      float: none;
+      display: block;
+      width: 100%;
+      margin-bottom: 20px; } }
+.table-resumen .table {
+  font-family: "TelefonicaLight"; }
+  .table-resumen .table thead tr th {
+    text-transform: uppercase;
+    color: #86888c;
+    font-size: 12px;
+    font-family: "TelefonicaRegular";
+    border-bottom: 1px solid #EBEBEB; }
+    @media (max-width: 767px) {
+      .table-resumen .table thead tr th {
+        white-space: nowrap;
+        font-size: 10px; } }
+  .table-resumen .table tbody tr td {
+    vertical-align: middle;
+    border-bottom: 1px solid #EBEBEB;
+    font-size: 16px;
+    color: #50535a; }
+    .table-resumen .table tbody tr td .img {
+      height: 60px;
+      margin-left: 30px; }
+    .table-resumen .table tbody tr td h2 {
+      margin-top: 0;
+      font-size: 18px;
+      color: #50535a;
+      margin-bottom: 0; }
+    .table-resumen .table tbody tr td a {
+      color: #00a9e0;
+      font-size: 14px; }
+      .table-resumen .table tbody tr td a:hover {
+        opacity: .8;
+        color: #00a9e0; }
+    .table-resumen .table tbody tr td small {
+      display: block;
+      font-size: 14px;
+      font-family: "TelefonicaLight";
+      color: #B4B4B4; }
+    @media (max-width: 767px) {
+      .table-resumen .table tbody tr td {
+        padding-left: 5px;
+        padding-right: 5px;
+        font-size: 12px; }
+        .table-resumen .table tbody tr td .img {
+          margin-left: 0;
+          height: 40px; }
+        .table-resumen .table tbody tr td h2 {
+          font-size: 12px; }
+        .table-resumen .table tbody tr td a {
+          font-size: 11px; }
+        .table-resumen .table tbody tr td small {
+          font-size: 9px; } }
+  .table-resumen .table tbody tr.onetimecharge td {
+    padding-top: 20px;
+    padding-bottom: 20px; }
+    @media (max-width: 767px) {
+      .table-resumen .table tbody tr.onetimecharge td {
+        padding-top: 10px;
+        padding-bottom: 10px; } }
+  .table-resumen .table tfoot {
+    background-color: #EBEBEB; }
+    .table-resumen .table tfoot tr td {
+      vertical-align: middle;
+      border-bottom: 1px solid #EBEBEB;
+      color: #50535a;
+      padding: 20px 8px;
+      font-size: 18px;
+      font-family: "TelefonicaBold"; }
+      @media (max-width: 767px) {
+        .table-resumen .table tfoot tr td {
+          padding-left: 5px;
+          padding-right: 5px;
+          font-size: 12px; } }
+
+/* TableResumen */
+/* Tabs */
+@media (max-width: 767px) {
+  #tabsPlanes {
+    display: none; } }
+
+.nav-tabs {
+  margin-top: 0;
+  border-bottom: none !important;
+  margin-right: -15px;
+  margin-left: -15px; }
+  .nav-tabs li {
+    border-radius: 0;
+    width: 25%;
+    padding-right: 15px;
+    padding-left: 15px; }
+    .nav-tabs li a {
+      display: block;
+      text-align: center;
+      background-color: #e9eae8;
+      border: none;
+      border-radius: 0 !important;
+      height: 96px;
+      border-top: 4px solid transparent !important; }
+      .nav-tabs li a h4 {
+        font-size: 18px;
+        font-family: "TelefonicaLight";
+        color: #86888c;
+        margin-bottom: 5px;
+        margin-top: 5px; }
+      .nav-tabs li a p {
+        font-family: "TelefonicaLight";
+        font-size: 14px;
+        color: #86888c;
+        height: 45px;
+        line-height: 16px; }
+      .nav-tabs li a:hover, .nav-tabs li a:focus {
+        background-color: #fff;
+        border-bottom: none; }
+      @media (max-width: 992px) {
+        .nav-tabs li a h4 {
+          font-size: 16px; }
+        .nav-tabs li a p {
+          font-size: 11px; } }
+    .nav-tabs li.active {
+      background-color: transparent !important; }
+      .nav-tabs li.active a {
+        border-top: 4px solid #00a9e0 !important;
+        border-left: none !important;
+        border-right: none !important;
+        background-color: #fff; }
+        .nav-tabs li.active a h4 {
+          color: #50535a; }
+
+.tab-content {
+  border-top: none;
+  margin-top: 0; }
+
+/* Tabs */
+/* TabsMobile */
+#tabsPlanesMobile {
+  display: none; }
+  @media (max-width: 767px) {
+    #tabsPlanesMobile {
+      display: block;
+      font-family: "TelefonicaLight"; }
+      #tabsPlanesMobile .tab-pane {
+        margin-top: 15px; }
+        #tabsPlanesMobile .tab-pane > h4 {
+          font-family: "TelefonicaBold";
+          margin-bottom: 5px; }
+        #tabsPlanesMobile .tab-pane > p {
+          color: #86888c; }
+      #tabsPlanesMobile .nav-pills > li {
+        width: 100%; }
+        #tabsPlanesMobile .nav-pills > li > a {
+          color: #86888c;
+          background-color: #EBEBEB;
+          border: 1px solid #d3d4d3;
+          font-size: 16px;
+          line-height: 15px;
+          padding: 15px 20px; }
+          #tabsPlanesMobile .nav-pills > li > a .caret {
+            float: right;
+            margin-top: 7px;
+            color: #00a9e0; }
+          #tabsPlanesMobile .nav-pills > li > a + .dropdown-menu {
+            width: 100%;
+            padding-top: 0;
+            padding-bottom: 0; }
+            #tabsPlanesMobile .nav-pills > li > a + .dropdown-menu > .active > a {
+              background-color: #00a9e0;
+              cursor: pointer; } }
+
+.tab-content {
+  border-top: none;
+  margin-top: 0; }
+
+/* TabsMobile */
+/* Tooltip */
+.btn-tooltip {
+  border: none !important;
+  background: none !important;
+  padding: 0 !important;
+  width: auto; }
+  .btn-tooltip .fa {
+    color: #00a9e0;
+    font-size: 22px; }
+
+.popover {
+  background: transparent !important;
+  border: none !important;
+  padding: 0;
+  box-shadow: none !important; }
+  .popover .arrow {
+    display: none !important; }
+
+/* Tooltip */
+/* UserInfo */
+.navmobile .sidebar-head .user-info {
+  float: left;
+  margin-left: 10px; }
+  .navmobile .sidebar-head .user-info .user-name {
+    font-size: 20px;
+    font-family: "TelefonicaLight";
+    display: block;
+    color: #50535a;
+    margin-bottom: 0;
+    line-height: 18px; }
+  .navmobile .sidebar-head .user-info .user-status {
+    display: block;
+    font-family: "TelefonicaLight";
+    font-size: 12px;
+    color: #86888c; }
+    .navmobile .sidebar-head .user-info .user-status strong {
+      color: #5bc500;
+      font-family: "TelefonicaBold";
+      font-weight: normal; }
+
+/* UserInfo */
+/* UserNavMobile */
+.navmobile .bm-menu ul {
+  margin-top: 40px;
+  margin-bottom: 40px;
+  border-top: 1px solid #EBEBEB; }
+  .navmobile .bm-menu ul li {
+    border-bottom: 1px solid #EBEBEB; }
+    .navmobile .bm-menu ul li a {
+      display: block;
+      padding: 18px 20px;
+      color: #00a9e0;
+      font-family: "TelefonicaRegular";
+      font-weight: bold;
+      font-size: 14px;
+      line-height: 18px;
+      text-transform: uppercase; }
+      .navmobile .bm-menu ul li a i {
+        color: #00a9e0;
+        font-size: 18px;
+        font-size: 20px;
+        vertical-align: middle;
+        margin-right: 15px; }
+      .navmobile .bm-menu ul li a:hover, .navmobile .bm-menu ul li a:focus {
+        opacity: .7; }
+
+/* UserNavMobile */
+/* Veraz */
+.preguntas .cont-preguntas {
+  margin-top: 30px;
+  font-family: "TelefonicaRegular"; }
+  .preguntas .cont-preguntas h2 {
+    margin-bottom: 30px; }
+  .preguntas .cont-preguntas p {
+    color: #86888c; }
+    .preguntas .cont-preguntas p strong {
+      font-family: "TelefonicaBold";
+      font-weight: normal;
+      color: #50535a; }
+    .preguntas .cont-preguntas p a {
+      color: #00a9e0; }
+    .preguntas .cont-preguntas p.light {
+      color: #B4B4B4; }
+  .preguntas .cont-preguntas label {
+    color: #86888c; }
+  .preguntas .cont-preguntas.msg-error p {
+    font-size: 18px; }
+  .preguntas .cont-preguntas.msg-error .btn-success {
+    margin: 10px auto;
+    float: none;
+    padding: 12px 30px 15px;
+    font-size: 18px; }
+  .preguntas .cont-preguntas .form-group .radio label {
+    width: 100%;
+    font-size: 16px;
+    line-height: 21px;
+    padding-left: 25px; }
+    .preguntas .cont-preguntas .form-group .radio label h4 {
+      font-family: "TelefonicaRegular";
+      font-weight: normal;
+      color: #50535a;
+      margin: 0;
+      float: left; }
+      .preguntas .cont-preguntas .form-group .radio label h4 span {
+        color: #5bc500; }
+      .preguntas .cont-preguntas .form-group .radio label h4.nf {
+        float: none; }
+      @media (max-width: 767px) {
+        .preguntas .cont-preguntas .form-group .radio label h4 {
+          float: none; } }
+    .preguntas .cont-preguntas .form-group .radio label input[type="radio"] {
+      display: block;
+      text-align: left;
+      float: left;
+      margin-left: -25px;
+      margin-right: 10px;
+      -webkit-appearance: none !important;
+      -moz-appearance: none !important;
+      height: 19px;
+      width: 19px;
+      cursor: pointer;
+      position: relative;
+      -webkit-transition: .15s;
+      border-radius: 50%;
+      background-color: #fff;
+      border: 2px solid #50535a; }
+      .preguntas .cont-preguntas .form-group .radio label input[type="radio"]:checked {
+        border: 1px solid #50535a;
+        background-color: #50535a; }
+    .preguntas .cont-preguntas .form-group .radio label input[type="radio"]:before, .preguntas .cont-preguntas .form-group .radio label input[type="radio"]:checked:before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      line-height: 17px;
+      font-size: 9px;
+      font-weight: normal;
+      text-align: center;
+      color: #fff;
+      content: ''; }
+    .preguntas .cont-preguntas .form-group .radio label input[type="radio"]:checked:before {
+      content: "\f111";
+      font-family: 'Fontawesome'; }
+  .preguntas .cont-preguntas .table-list tr td .form-group {
+    margin-bottom: 3px; }
+  .preguntas .cont-preguntas .table-list tr td:first-child {
+    white-space: nowrap; }
+  .preguntas .cont-preguntas .table-list tr td p {
+    font-size: 14px;
+    margin-bottom: 0; }
+  .preguntas .cont-preguntas .table-list .btn-success {
+    float: right; }
+.preguntas .btn-success {
+  float: right;
+  /*margin-top: -40px;*/ }
+  @media (max-width: 767px) {
+    .preguntas .btn-success {
+      float: none;
+      display: block;
+      width: 100%; } }
+.preguntas .bg-pasos {
+  border-top: 1px solid #EBEBEB;
+  padding-top: 20px;
+  border-bottom: none;
+  margin-right: -20px;
+  margin-left: -20px; }
+  .preguntas .bg-pasos ul li {
+    counter-increment: normal; }
+    .preguntas .bg-pasos ul li:before {
+      font-weight: bold;
+      content: "";
+      margin-right: 0; }
+    .preguntas .bg-pasos ul li span {
+      display: block; }
+.preguntas.text-center .cont-preguntas .btn-success {
+  float: none;
+  margin-top: 20px; }
+
+/* Veraz */
+/* AccordionPlanMobile */
+.accordionPlanMobile {
+  margin-left: -15px;
+  margin-right: -15px; }
+  .accordionPlanMobile .is-expanded {
+    background-color: #EBEBEB;
+    max-height: inherit !important; }
+  .accordionPlanMobile .head-plan {
+    padding: 20px 15px !important;
+    position: relative;
+    display: block;
+    border-bottom: 1px solid #EBEBEB; }
+    .accordionPlanMobile .head-plan h4 {
+      margin: 0;
+      color: #50535a;
+      font-size: 50px;
+      font-family: "TelefonicaExtraLight";
+      line-height: 46px;
+      text-align: left; }
+      .accordionPlanMobile .head-plan h4 sub {
+        font-size: 16px;
+        bottom: 1px; }
+    .accordionPlanMobile .head-plan h5 {
+      margin: 5px 0 0;
+      color: #50535a;
+      font-size: 16px;
+      font-family: "TelefonicaExtraLight";
+      line-height: 16px;
+      margin-bottom: 10px; }
+    .accordionPlanMobile .head-plan .label-recomendado {
+      display: none; }
+    .accordionPlanMobile .head-plan .price {
+      font-size: 24px;
+      color: #5bc500;
+      line-height: 24px;
+      margin-top: 0;
+      display: block;
+      text-align: left;
+      font-family: "TelefonicaExtraLight"; }
+      .accordionPlanMobile .head-plan .price sub {
+        font-size: 14px;
+        bottom: 0; }
+    .accordionPlanMobile .head-plan span {
+      display: block;
+      color: #86888c;
+      font-size: 13px;
+      line-height: 15px;
+      text-align: left;
+      margin-top: 5px;
+      margin-bottom: 0; }
+    .accordionPlanMobile .head-plan .price-cel {
+      display: block;
+      padding: 0 0;
+      font-size: 13px;
+      color: #86888c;
+      font-family: "TelefonicaLight";
+      font-weight: bold; }
+    .accordionPlanMobile .head-plan.recomendado .label-recomendado {
+      display: inline-block;
+      padding: 2px 5px 5px;
+      font-size: 12px;
+      line-height: 12px;
+      color: #fff;
+      background-color: #5bc500;
+      border-radius: 4px; }
+    .accordionPlanMobile .head-plan .fa-angle-down, .accordionPlanMobile .head-plan .fa-angle-up {
+      float: right;
+      font-size: 32px;
+      color: #50535a; }
+    .accordionPlanMobile .head-plan .fa-angle-down {
+      display: block; }
+    .accordionPlanMobile .head-plan .fa-angle-up {
+      display: none; }
+    .accordionPlanMobile .head-plan.is-expanded {
+      background-color: #EBEBEB;
+      border-bottom: none; }
+      .accordionPlanMobile .head-plan.is-expanded .fa-angle-down {
+        display: none; }
+      .accordionPlanMobile .head-plan.is-expanded .fa-angle-up {
+        display: block; }
+  .accordionPlanMobile .cont-plan {
+    padding: 15px;
+    height: auto; }
+    .accordionPlanMobile .cont-plan .plan {
+      border-radius: 4px;
+      background-color: #fff;
+      padding-bottom: 20px;
+      margin-bottom: 20px;
+      font-family: "TelefonicaRegular";
+      position: relative;
+      width: 100%;
+      border-left: 1px solid #d3d4d3;
+      border-right: 1px solid #d3d4d3;
+      border-bottom: 1px solid #d3d4d3;
+      box-shadow: 0px 0px 25px -4px rgba(0, 0, 0, 0.4); }
+      .accordionPlanMobile .cont-plan .plan ul {
+        margin-bottom: 0; }
+        .accordionPlanMobile .cont-plan .plan ul li {
+          border-bottom: 1px solid #d3d4d3;
+          padding: 10px 15px;
+          line-height: 14px;
+          font-size: 14px;
+          color: #86888c;
+          font-family: "TelefonicaRegular";
+          text-align: center; }
+          .accordionPlanMobile .cont-plan .plan ul li strong {
+            display: block;
+            text-transform: uppercase;
+            color: #50535a;
+            font-family: "TelefonicaBold";
+            font-weight: normal;
+            font-size: 12px; }
+          .accordionPlanMobile .cont-plan .plan ul li a {
+            color: #00a9e0; }
+            .accordionPlanMobile .cont-plan .plan ul li a:hover, .accordionPlanMobile .cont-plan .plan ul li a:focus {
+              opacity: .7; }
+          .accordionPlanMobile .cont-plan .plan ul li .price-cel {
+            text-align: center;
+            display: block;
+            font-size: 22px;
+            color: #000;
+            font-family: "TelefonicaLight";
+            margin-bottom: 20px; }
+          .accordionPlanMobile .cont-plan .plan ul li .price {
+            font-size: 26px;
+            color: #5bc500;
+            line-height: 26px;
+            font-family: "TelefonicaExtraLight"; }
+            .accordionPlanMobile .cont-plan .plan ul li .price sub {
+              font-size: 14px;
+              bottom: 0; }
+          .accordionPlanMobile .cont-plan .plan ul li .text {
+            display: block;
+            margin-bottom: 5px; }
+          .accordionPlanMobile .cont-plan .plan ul li .btn {
+            display: block;
+            margin: 0 auto 5px;
+            width: auto;
+            background-color: #5bc500;
+            color: #fff;
+            text-align: center;
+            border: none;
+            padding: 6px 20px 13px;
+            font-size: 16px;
+            font-family: "TelefonicaRegular";
+            border-radius: 4px; }
+            .accordionPlanMobile .cont-plan .plan ul li .btn:hover, .accordionPlanMobile .cont-plan .plan ul li .btn:focus {
+              opacity: .7;
+              background-color: #00a9e0; }
+            .accordionPlanMobile .cont-plan .plan ul li .btn:disabled {
+              opacity: 1;
+              background-color: #B4B4B4; }
+            .accordionPlanMobile .cont-plan .plan ul li .btn i {
+              display: none; }
+            @media (max-width: 1199px) {
+              .accordionPlanMobile .cont-plan .plan ul li .btn {
+                width: 175px; } }
+            .accordionPlanMobile .cont-plan .plan ul li .btn + a {
+              font-size: 14px;
+              color: #00a9e0; }
+          .accordionPlanMobile .cont-plan .plan ul li:last-child {
+            border-bottom: none; }
+      .accordionPlanMobile .cont-plan .plan .foot-plan {
+        position: absolute;
+        bottom: 20px;
+        left: 0;
+        width: 100%;
+        padding-top: 20px;
+        text-align: center; }
+        .accordionPlanMobile .cont-plan .plan .foot-plan .btn {
+          display: block;
+          margin: 0 20px 5px;
+          width: auto;
+          background-color: #00a9e0;
+          color: #fff;
+          text-align: center;
+          border: none;
+          padding: 6px 20px 13px;
+          font-size: 16px;
+          font-family: "TelefonicaRegular";
+          border-radius: 4px; }
+          .accordionPlanMobile .cont-plan .plan .foot-plan .btn:hover, .accordionPlanMobile .cont-plan .plan .foot-plan .btn:focus {
+            opacity: .7;
+            background-color: #00a9e0; }
+          .accordionPlanMobile .cont-plan .plan .foot-plan .btn:disabled {
+            opacity: 1;
+            background-color: #B4B4B4; }
+          .accordionPlanMobile .cont-plan .plan .foot-plan .btn i {
+            display: none; }
+          @media (max-width: 1199px) {
+            .accordionPlanMobile .cont-plan .plan .foot-plan .btn {
+              width: 175px; } }
+          .accordionPlanMobile .cont-plan .plan .foot-plan .btn + a {
+            font-size: 14px;
+            color: #00a9e0; }
+    .accordionPlanMobile .cont-plan .recomendado .head-plan {
+      background-color: #5bc500; }
+      .accordionPlanMobile .cont-plan .recomendado .head-plan span {
+        display: block;
+        position: absolute;
+        top: 6px;
+        left: 0;
+        width: 100%;
+        color: #fff;
+        font-family: "TelefonicaRegular";
+        padding-bottom: 4px;
+        border-bottom: 1px solid #50ad00; }
+    .accordionPlanMobile .cont-plan .recomendado .price {
+      color: #5bc500; }
+    .accordionPlanMobile .cont-plan .recomendado .foot-plan .btn {
+      background-color: #5bc500; }
+      .accordionPlanMobile .cont-plan .recomendado .foot-plan .btn:hover, .accordionPlanMobile .cont-plan .recomendado .foot-plan .btn:focus {
+        opacity: .7;
+        background-color: #5bc500; }
+      .accordionPlanMobile .cont-plan .recomendado .foot-plan .btn:disabled {
+        opacity: 1;
+        background-color: #B4B4B4; }
+
+.lala {
+  border: 1px solid red; }
+
+/* AccordionPlanMobile */
+/* BtnMiMovistar */
+.navbar-header .btn-info {
+  float: right;
+  margin-top: 13px;
+  background-color: #00a9e0;
+  border: none;
+  border-radius: 4px;
+  font-family: "TelefonicaRegular";
+  font-size: 16px;
+  line-height: 16px;
+  padding: 12px 20px 15px;
+  height: auto; }
+  .navbar-header .btn-info:hover, .navbar-header .btn-info:focus {
+    opacity: .9; }
+  @media (max-width: 767px) {
+    .navbar-header .btn-info {
+      margin-right: -15px;
+      padding: 8px 10px 12px;
+      margin-top: 16px; } }
+
+/* BtnMiMovistar */
+/* CardLine */
+.card-line {
+  background-color: #fff;
+  border: 1px solid #EBEBEB;
+  border-radius: 4px;
+  padding: 20px 20px 80px;
+  align-self: stretch;
+  height: 100%;
+  position: relative; }
+  .card-line i {
+    font-size: 60px;
+    margin: 0;
+    line-height: 30px;
+    color: #00a9e0; }
+  .card-line h2 {
+    font-size: 28px;
+    margin: 0;
+    color: #00a9e0;
+    font-family: "TelefonicaLight";
+    margin-bottom: 20px; }
+  .card-line h3 {
+    font-size: 26px;
+    margin: 0;
+    color: #5bc500;
+    font-family: "TelefonicaLight";
+    margin-bottom: 20px; }
+  .card-line button {
+    position: absolute;
+    bottom: 20px;
+    right: 20px; }
+  @media (max-width: 767px) {
+    .card-line {
+      margin-bottom: 20px; } }
+
+/* CardLine */
+/* CardPhone */
+.card-phone {
+  background-color: #fff;
+  border-radius: 4px;
+  border: 1px solid #EBEBEB;
+  padding: 20px 20px 80px;
+  align-self: stretch;
+  height: 100%;
+  position: relative; }
+  .card-phone img {
+    max-width: 100%; }
+  .card-phone h2 {
+    font-size: 28px;
+    margin: 0;
+    color: #00a9e0;
+    font-family: "TelefonicaLight";
+    margin-bottom: 5px; }
+  .card-phone h3 {
+    font-size: 26px;
+    margin: 0;
+    color: #5bc500;
+    font-family: "TelefonicaLight";
+    margin-bottom: 20px; }
+  .card-phone span {
+    font-size: 16px;
+    margin: 0;
+    color: #86888c;
+    font-family: "TelefonicaRegular";
+    margin-bottom: 5px; }
+  .card-phone .dropdown {
+    position: absolute;
+    bottom: 20px;
+    right: 20px; }
+  @media (max-width: 767px) {
+    .card-phone {
+      margin-bottom: 20px; } }
+
+/* CardPhone */
+/* CerrarSesion */
+/* CerrarSesion */
+.navmobile .btn {
+  background-color: #fff;
+  color: #50535a;
+  border: 2px solid #50535a;
+  display: block;
+  text-align: center;
+  font-weight: bold;
+  margin: 20px 5% 10px;
+  font-size: 18px;
+  padding: 10px 0 15px;
+  width: 90%;
+  font-family: "TelefonicaRegular"; }
+  .navmobile .btn:hover, .navmobile .btn:focus {
+    color: #fff;
+    background-color: #50535a;
+    border-color: #50535a; }
+
+/* CerrarSesion */
+/* DatosPersonales */
+.datos-personales-facturacion {
+  font-family: "TelefonicaLight"; }
+  .datos-personales-facturacion .page-header + .row .col-md-8 > div:first-child > h3 {
+    border-top: 1px solid #e1e1e1; }
+  .datos-personales-facturacion h5 {
+    font-family: "TelefonicaBold";
+    font-size: 18px;
+    color: #50535a;
+    font-weight: normal;
+    letter-spacing: 0;
+    margin-bottom: 40px; }
+  .datos-personales-facturacion #datos-personales.collapsed .panel {
+    margin-bottom: 0; }
+  .datos-personales-facturacion #domicilio-facturacion.collapsed h3 {
+    margin-top: 0; }
+  .datos-personales-facturacion .open h3 {
+    margin-top: 0;
+    border-top: 1px solid #e1e1e1; }
+    .datos-personales-facturacion .open h3 span {
+      color: #5bc500; }
+    .datos-personales-facturacion .open h3 button {
+      display: none; }
+  .datos-personales-facturacion .collapsed {
+    /*.panel-collapse{
+    	opacity: .6;
+    	}*/ }
+    .datos-personales-facturacion .collapsed h3 {
+      color: #B4B4B4;
+      margin-bottom: 0;
+      margin-top: 0;
+      border-top: 1px solid #e1e1e1;
+      border-bottom: 1px solid #e1e1e1; }
+      .datos-personales-facturacion .collapsed h3 span {
+        color: #B4B4B4; }
+      .datos-personales-facturacion .collapsed h3 button {
+        display: block; }
+    .datos-personales-facturacion .collapsed + .collapsed h3 {
+      border-top: none; }
+  .datos-personales-facturacion h3 {
+    color: #00a9e0;
+    padding: 30px 0;
+    border-bottom: 1px solid #e1e1e1; }
+    .datos-personales-facturacion h3 button {
+      color: #86888c;
+      margin-top: -5px; }
+      .datos-personales-facturacion h3 button i {
+        font-size: 26px;
+        pointer-events: none; }
+      .datos-personales-facturacion h3 button:disabled {
+        display: none; }
+    @media (max-width: 767px) {
+      .datos-personales-facturacion h3 {
+        position: relative;
+        width: 100%; }
+        .datos-personales-facturacion h3 span {
+          display: block; }
+        .datos-personales-facturacion h3 button {
+          position: absolute;
+          right: 0;
+          top: 35px; } }
+  .datos-personales-facturacion .panel-default {
+    border: none;
+    box-shadow: none;
+    padding: 0;
+    margin-bottom: 0; }
+    .datos-personales-facturacion .panel-default .panel-body {
+      padding: 20px 0; }
+      .datos-personales-facturacion .panel-default .panel-body .form-group {
+        margin-bottom: 20px;
+        position: relative; }
+        .datos-personales-facturacion .panel-default .panel-body .form-group input[type=number].form-control {
+          -moz-appearance: textfield; }
+          .datos-personales-facturacion .panel-default .panel-body .form-group input[type=number].form-control::-webkit-outer-spin-button {
+            -webkit-appearance: none !important;
+            margin: 0 !important;
+            -moz-appearance: textfield !important; }
+          .datos-personales-facturacion .panel-default .panel-body .form-group input[type=number].form-control::-webkit-inner-spin-button {
+            -webkit-appearance: none !important;
+            margin: 0 !important;
+            -moz-appearance: textfield !important; }
+        @media (max-width: 1199px) {
+          .datos-personales-facturacion .panel-default .panel-body .form-group .help-block {
+            font-size: 12px; } }
+        .datos-personales-facturacion .panel-default .panel-body .form-group .help-block-error {
+          display: none; }
+        .datos-personales-facturacion .panel-default .panel-body .form-group select.form-control {
+          height: 50px;
+          border: none;
+          -webkit-appearance: none;
+          -moz-appearance: none;
+          text-indent: 1px;
+          text-overflow: ''; }
+          .datos-personales-facturacion .panel-default .panel-body .form-group select.form-control + .fa-angle-down {
+            position: absolute;
+            right: 15px;
+            top: 16px;
+            color: #00a9e0;
+            display: block;
+            font-size: 18px;
+            pointer-events: none; }
+        .datos-personales-facturacion .panel-default .panel-body .form-group .form-control {
+          border-radius: 4px;
+          border: 1px solid #EBEBEB;
+          background-color: #EBEBEB;
+          box-shadow: none;
+          font-size: 16px;
+          line-height: 24px;
+          padding-bottom: 15px;
+          padding-top: 11px;
+          height: auto; }
+          .datos-personales-facturacion .panel-default .panel-body .form-group .form-control:focus {
+            border-color: #00a9e0; }
+          .datos-personales-facturacion .panel-default .panel-body .form-group .form-control::placeholder {
+            font-style: italic; }
+          .datos-personales-facturacion .panel-default .panel-body .form-group .form-control.form-control-icon {
+            padding-left: 40px; }
+            .datos-personales-facturacion .panel-default .panel-body .form-group .form-control.form-control-icon + i {
+              display: block;
+              position: absolute;
+              top: 17px;
+              left: 15px;
+              font-size: 18px;
+              color: #86888c; }
+        .datos-personales-facturacion .panel-default .panel-body .form-group.has-error .form-control {
+          border: 1px solid #ec6839 !important;
+          color: #ec6839;
+          background-color: #fff;
+          width: 100%; }
+          .datos-personales-facturacion .panel-default .panel-body .form-group.has-error .form-control::placeholder {
+            color: #ec6839; }
+        .datos-personales-facturacion .panel-default .panel-body .form-group.has-error .help-block-error {
+          display: block; }
+        .datos-personales-facturacion .panel-default .panel-body .form-group.has-error .help-block:not(.help-block-error) {
+          display: none; }
+        .datos-personales-facturacion .panel-default .panel-body .form-group.calendar .react-datepicker-wrapper {
+          width: 100%; }
+          .datos-personales-facturacion .panel-default .panel-body .form-group.calendar .react-datepicker-wrapper .react-datepicker__input-container {
+            width: 100%; }
+        .datos-personales-facturacion .panel-default .panel-body .form-group.calendar .form-control {
+          padding-right: 40px; }
+        .datos-personales-facturacion .panel-default .panel-body .form-group.calendar i {
+          display: block;
+          color: #00a9e0;
+          position: absolute;
+          top: 17px;
+          right: 15px;
+          font-size: 18px;
+          pointer-events: none; }
+        .datos-personales-facturacion .panel-default .panel-body .form-group .react-datepicker {
+          font-size: 14px;
+          font-family: "TelefonicaRegular"; }
+          .datos-personales-facturacion .panel-default .panel-body .form-group .react-datepicker .react-datepicker__header div {
+            font-size: 14px; }
+          .datos-personales-facturacion .panel-default .panel-body .form-group .react-datepicker .react-datepicker__header .react-datepicker__day-name {
+            padding: 5px;
+            width: 28px; }
+          .datos-personales-facturacion .panel-default .panel-body .form-group .react-datepicker .react-datepicker__month {
+            width: 230px; }
+            .datos-personales-facturacion .panel-default .panel-body .form-group .react-datepicker .react-datepicker__month div {
+              padding: 5px;
+              width: 28px; }
+        .datos-personales-facturacion .panel-default .panel-body .form-group.active .form-control {
+          background-color: #fff;
+          border: 1px solid #B4B4B4; }
+          .datos-personales-facturacion .panel-default .panel-body .form-group.active .form-control + i {
+            color: #00a9e0; }
+        .datos-personales-facturacion .panel-default .panel-body .form-group.codarea {
+          padding-left: 18px;
+          padding-right: 0; }
+          .datos-personales-facturacion .panel-default .panel-body .form-group.codarea .form-control {
+            padding-left: 10px;
+            padding-right: 2px; }
+            @media (max-width: 1199px) {
+              .datos-personales-facturacion .panel-default .panel-body .form-group.codarea .form-control {
+                padding-left: 2px; } }
+            @media (max-width: 992px) {
+              .datos-personales-facturacion .panel-default .panel-body .form-group.codarea .form-control {
+                padding-left: 10px; } }
+          .datos-personales-facturacion .panel-default .panel-body .form-group.codarea .form-control::placeholder {
+            font-size: 16px;
+            letter-spacing: -1px; }
+          .datos-personales-facturacion .panel-default .panel-body .form-group.codarea:before {
+            content: '(0';
+            position: absolute;
+            left: 0;
+            top: 13px;
+            color: #86888c;
+            font-size: 16px; }
+          .datos-personales-facturacion .panel-default .panel-body .form-group.codarea:after {
+            content: ')';
+            position: absolute;
+            right: -10px;
+            top: 13px;
+            color: #86888c;
+            font-size: 16px; }
+          .datos-personales-facturacion .panel-default .panel-body .form-group.codarea .help-block {
+            margin-left: -18px;
+            margin-right: -8px; }
+        .datos-personales-facturacion .panel-default .panel-body .form-group.numero {
+          padding-left: 22px; }
+          .datos-personales-facturacion .panel-default .panel-body .form-group.numero:before {
+            content: '15';
+            position: absolute;
+            left: 0;
+            top: 13px;
+            color: #86888c;
+            font-size: 16px; }
+      .datos-personales-facturacion .panel-default .panel-body .btn-success {
+        float: right; }
+        @media (max-width: 767px) {
+          .datos-personales-facturacion .panel-default .panel-body .btn-success {
+            float: none;
+            display: block;
+            width: 100%; } }
+      .datos-personales-facturacion .panel-default .panel-body .datos-cargardos {
+        margin-top: -10px;
+        background-color: #EBEBEB;
+        border-radius: 4px;
+        padding: 15px;
+        margin-bottom: 20px; }
+        .datos-personales-facturacion .panel-default .panel-body .datos-cargardos ul {
+          padding: 0;
+          margin: 0; }
+          .datos-personales-facturacion .panel-default .panel-body .datos-cargardos ul li {
+            font-size: 16px;
+            line-height: 16px;
+            font-family: "TelefonicaRegular";
+            color: #50535a;
+            margin-bottom: 5px; }
+        .datos-personales-facturacion .panel-default .panel-body .datos-cargardos .btn-link {
+          font-size: 18px; }
+    .datos-personales-facturacion .panel-default .help {
+      margin-bottom: 20px;
+      font-style: italic;
+      font-size: 13px;
+      display: block;
+      color: #86888c; }
+    .datos-personales-facturacion .panel-default .msg p {
+      margin-bottom: 0; }
+      .datos-personales-facturacion .panel-default .msg p strong {
+        font-family: "TelefonicaBold";
+        font-weight: normal; }
+    .datos-personales-facturacion .panel-default .btn-link {
+      color: #00a9e0;
+      border: none; }
+      @media (max-width: 767px) {
+        .datos-personales-facturacion .panel-default .btn-link {
+          padding: 0;
+          margin-bottom: 10px; } }
+    .datos-personales-facturacion .panel-default .cont-border {
+      padding: 20px;
+      border: 2px solid #EBEBEB;
+      border-radius: 4px;
+      margin-top: 10px;
+      margin-bottom: 20px; }
+      .datos-personales-facturacion .panel-default .cont-border h4 {
+        margin-top: 0;
+        color: #50535a;
+        font-family: "TelefonicaBold";
+        font-weight: normal;
+        margin-bottom: 15px; }
+
+.react-datepicker__day--selected, .react-datepicker__day--in-selecting-range, .react-datepicker__day--in-range {
+  background-color: #5bc500 !important;
+  color: #fff !important; }
+
+.has-error .help-block, .has-error .control-label, .has-error .radio, .has-error .checkbox, .has-error .radio-inline, .has-error .checkbox-inline, .has-error.radio label, .has-error.checkbox label, .has-error.radio-inline label, .has-error.checkbox-inline label, .has-error i {
+  color: #ec6839 !important; }
+
+.cont-border .form-group .radio label {
+  width: 100%;
+  font-size: 16px;
+  line-height: 21px;
+  padding-left: 25px; }
+  .cont-border .form-group .radio label h4 {
+    font-family: "TelefonicaRegular";
+    font-weight: normal;
+    color: #50535a;
+    margin: 0;
+    float: left; }
+    .cont-border .form-group .radio label h4 span {
+      color: #5bc500; }
+    .cont-border .form-group .radio label h4.nf {
+      float: none; }
+    @media (max-width: 767px) {
+      .cont-border .form-group .radio label h4 {
+        float: none; } }
+  .cont-border .form-group .radio label input[type="radio"] {
+    display: block;
+    text-align: left;
+    float: left;
+    margin-left: -25px;
+    margin-right: 10px;
+    -webkit-appearance: none !important;
+    -moz-appearance: none !important;
+    height: 19px;
+    width: 19px;
+    cursor: pointer;
+    position: relative;
+    -webkit-transition: .15s;
+    border-radius: 50%;
+    background-color: #fff;
+    border: 2px solid #50535a; }
+    .cont-border .form-group .radio label input[type="radio"]:checked {
+      border: 1px solid #50535a;
+      background-color: #50535a; }
+  .cont-border .form-group .radio label input[type="radio"]:before, .cont-border .form-group .radio label input[type="radio"]:checked:before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    line-height: 17px;
+    font-size: 9px;
+    font-weight: normal;
+    text-align: center;
+    color: #fff;
+    content: ''; }
+  .cont-border .form-group .radio label input[type="radio"]:checked:before {
+    content: "\f111";
+    font-family: 'Fontawesome'; }
+  .cont-border .form-group .radio label .icon-envios, .cont-border .form-group .radio label .icon-centros-movistar {
+    font-size: 25px;
+    margin-right: 5px;
+    float: left;
+    margin-bottom: 20px;
+    display: block; }
+  .cont-border .form-group .radio label .list-inline {
+    float: left;
+    margin-left: 20px; }
+    @media (max-width: 767px) {
+      .cont-border .form-group .radio label .list-inline {
+        float: none;
+        padding-left: 0;
+        margin-left: 0;
+        margin-top: 10px; }
+        .cont-border .form-group .radio label .list-inline img {
+          height: 25px; } }
+
+.mb20 {
+  margin-bottom: 20px; }
+
+/* DatosPersonales */
+/* DetalleCompra */
+.detalle-compra {
+  width: 540px;
+  border: 2px solid #EBEBEB;
+  padding: 30px 20px 20px;
+  margin: 20px auto;
+  font-family: "TelefonicaRegular";
+  color: #50535a;
+  text-align: left; }
+  .detalle-compra img {
+    width: 47px; }
+  .detalle-compra h5 {
+    font-size: 24px;
+    margin: 0 0 20px 0;
+    font-family: "TelefonicaLight"; }
+    .detalle-compra h5 + .row > .br {
+      border-right: 1px solid #EBEBEB; }
+      @media (max-width: 767px) {
+        .detalle-compra h5 + .row > .br {
+          border-right: none;
+          border-bottom: 1px solid #EBEBEB;
+          margin-bottom: 20px;
+          padding-bottom: 10px; } }
+    @media (max-width: 767px) {
+      .detalle-compra h5 {
+        text-align: center; } }
+  .detalle-compra span {
+    display: block;
+    text-align: left;
+    padding: 0; }
+    .detalle-compra span.title {
+      color: #B4B4B4;
+      text-transform: uppercase;
+      font-size: 12px;
+      font-family: "TelefonicaBold";
+      font-weight: normal;
+      margin-bottom: 2px; }
+    .detalle-compra span.name {
+      line-height: 18px;
+      font-size: 14px;
+      margin-bottom: 10px; }
+    .detalle-compra span.price {
+      line-height: 18px;
+      font-size: 18px;
+      margin-bottom: 10px;
+      color: #5bc500;
+      font-family: "TelefonicaLight"; }
+  .detalle-compra p .price1 {
+    line-height: 18px;
+    color: #5bc500;
+    font-family: "TelefonicaLight";
+    display: inline; }
+  .detalle-compra .bg-entrega {
+    background-color: #EBEBEB;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 4px; }
+    .detalle-compra .bg-entrega i {
+      font-size: 24px;
+      color: #86888c;
+      vertical-align: middle; }
+    .detalle-compra .bg-entrega p {
+      margin-bottom: 5px;
+      padding: 0;
+      line-height: 16px; }
+      .detalle-compra .bg-entrega p strong {
+        font-family: "TelefonicaBold";
+        font-weight: normal; }
+    .detalle-compra .bg-entrega small {
+      margin: 0;
+      font-style: italic;
+      font-size: 13px;
+      line-height: 14px;
+      padding: 0;
+      color: #86888c;
+      display: block; }
+    @media (max-width: 767px) {
+      .detalle-compra .bg-entrega {
+        margin-left: -20px;
+        margin-right: -20px;
+        margin-bottom: 0; } }
+  @media (max-width: 767px) {
+    .detalle-compra {
+      width: 100%;
+      border: none;
+      margin-top: 0;
+      margin-bottom: 0; } }
+
+.cont-orden {
+  width: 540px;
+  margin: 20px auto;
+  font-family: "TelefonicaRegular";
+  color: #50535a; }
+  .cont-orden p {
+    width: 60%;
+    float: left;
+    color: #86888c; }
+    .cont-orden p strong {
+      color: #50535a;
+      font-family: "TelefonicaBold";
+      font-weight: normal; }
+  .cont-orden .btn-success {
+    float: right; }
+  @media (max-width: 767px) {
+    .cont-orden {
+      width: 100%;
+      margin-top: 0; }
+      .cont-orden p {
+        width: 100%;
+        float: none; }
+      .cont-orden .btn-success {
+        float: none;
+        width: 100%;
+        margin-top: 0;
+        margin-bottom: 20px; } }
+
+/* DetalleCompra */
+/* DropLines */
+ul {
+  margin-top: -5px; }
+  ul li.dropdown {
+    padding-top: 9px;
+    display: inline-block;
+    padding-top: 0;
+    margin-top: -5px; }
+    ul li.dropdown > a {
+      border: 1px solid #fff;
+      color: #fff;
+      border-radius: 10px;
+      background-color: transparent;
+      font-family: TelefonicaLight;
+      font-size: 16px;
+      padding-bottom: 10px;
+      margin: 15px 10px;
+      height: 40px; }
+      ul li.dropdown > a + .dropdown-menu {
+        background-color: #fff;
+        box-shadow: -7px 7px 20px 0px rgba(12, 5, 13, 0.3);
+        border: none;
+        padding: 0;
+        border-radius: 4px;
+        margin-top: -14px;
+        overflow: hidden;
+        left: auto;
+        right: 0; }
+        ul li.dropdown > a + .dropdown-menu .fa-caret-up {
+          position: absolute;
+          top: -11px;
+          right: 15px;
+          color: #fff;
+          font-size: 16px; }
+        ul li.dropdown > a + .dropdown-menu li {
+          border-bottom: 1px solid #EBEBEB;
+          display: block;
+          padding-top: 0;
+          overflow: hidden; }
+          ul li.dropdown > a + .dropdown-menu li a {
+            display: block;
+            padding: 10px 20px;
+            color: #86888c;
+            font-family: "TelefonicaRegular";
+            font-size: 14px;
+            line-height: 18px; }
+            ul li.dropdown > a + .dropdown-menu li a .fa-angle-right {
+              float: right;
+              color: #86888c;
+              font-size: 18px; }
+              ul li.dropdown > a + .dropdown-menu li a .fa-angle-right + i {
+                font-size: 20px;
+                vertical-align: middle;
+                margin-right: 5px; }
+            ul li.dropdown > a + .dropdown-menu li a:hover, ul li.dropdown > a + .dropdown-menu li a:focus {
+              opacity: .7;
+              border-radius: 0; }
+          ul li.dropdown > a + .dropdown-menu li:last-child {
+            border-bottom: none; }
+          ul li.dropdown > a + .dropdown-menu li.active a {
+            background-color: #EBEBEB; }
+        ul li.dropdown > a + .dropdown-menu .btn {
+          background-color: #5bc500;
+          color: #fff;
+          display: block;
+          text-align: center;
+          border: none;
+          margin: 0 20px 10px; }
+          ul li.dropdown > a + .dropdown-menu .btn:hover, ul li.dropdown > a + .dropdown-menu .btn:focus {
+            opacity: .7; }
+    ul li.dropdown.open a {
+      background-color: transparent !important;
+      border-color: #fff !important; }
+
+/* DropLines */
+/* DropUser */
+.btn-user {
+  padding-top: 0;
+  margin-top: 3px;
+  float: right;
+  margin-right: -15px; }
+  .btn-user .dropdown {
+    padding-top: 0;
+    margin-top: 0; }
+    .btn-user .dropdown button.dropdown-toggle {
+      border: 1px solid #00a9e0;
+      color: #00a9e0;
+      border-radius: 50%;
+      background-color: transparent;
+      width: 40px;
+      height: 40px;
+      margin: 11px 0 12px 2px;
+      padding: 5px 0;
+      text-align: center; }
+      .btn-user .dropdown button.dropdown-toggle i {
+        font-size: 20px;
+        margin-left: 1px;
+        margin-top: 2px; }
+      .btn-user .dropdown button.dropdown-toggle + .dropdown-menu {
+        background-color: #fff;
+        box-shadow: -7px 7px 20px 0px rgba(12, 5, 13, 0.3);
+        width: 240px;
+        border: none;
+        padding-top: 5px;
+        padding-bottom: 0;
+        border-radius: 4px;
+        margin-top: -10px;
+        border-top: 1px solid #EBEBEB;
+        margin-bottom: 15px;
+        overflow: hidden; }
+        .btn-user .dropdown button.dropdown-toggle + .dropdown-menu .fa-caret-up {
+          position: absolute;
+          top: -11px;
+          right: 15px;
+          color: #fff;
+          font-size: 16px; }
+        .btn-user .dropdown button.dropdown-toggle + .dropdown-menu li {
+          /*border-bottom: 1px solid $color3;*/
+          display: block;
+          padding-top: 0; }
+          .btn-user .dropdown button.dropdown-toggle + .dropdown-menu li .user-name {
+            font-size: 21px;
+            text-align: left;
+            font-family: "TelefonicaLight";
+            display: block;
+            color: #50535a;
+            margin-bottom: 0;
+            line-height: 21px;
+            margin-top: 5px; }
+          .btn-user .dropdown button.dropdown-toggle + .dropdown-menu li .user-status {
+            display: block;
+            text-align: center;
+            font-family: "TelefonicaLight";
+            font-size: 13px;
+            color: #86888c;
+            margin-bottom: 10px; }
+            .btn-user .dropdown button.dropdown-toggle + .dropdown-menu li .user-status strong {
+              color: #5bc500;
+              font-family: "TelefonicaBold";
+              font-weight: normal; }
+          .btn-user .dropdown button.dropdown-toggle + .dropdown-menu li a {
+            display: block;
+            padding: 10px 20px;
+            color: #00a9e0;
+            font-family: "TelefonicaBold";
+            text-transform: uppercase;
+            font-size: 12px;
+            line-height: 18px;
+            border-radius: 0; }
+            .btn-user .dropdown button.dropdown-toggle + .dropdown-menu li a .fa-angle-right {
+              float: right;
+              color: #86888c;
+              font-size: 18px; }
+              .btn-user .dropdown button.dropdown-toggle + .dropdown-menu li a .fa-angle-right + i {
+                font-size: 20px;
+                vertical-align: middle;
+                margin-right: 5px; }
+            .btn-user .dropdown button.dropdown-toggle + .dropdown-menu li a:hover, .btn-user .dropdown button.dropdown-toggle + .dropdown-menu li a:focus {
+              opacity: .7; }
+          .btn-user .dropdown button.dropdown-toggle + .dropdown-menu li .btn {
+            background-color: #5bc500;
+            color: #fff;
+            display: block;
+            text-align: center;
+            border: none;
+            margin: 10px 0;
+            display: block;
+            width: 100%;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            font-family: "TelefonicaRegular"; }
+            .btn-user .dropdown button.dropdown-toggle + .dropdown-menu li .btn:hover, .btn-user .dropdown button.dropdown-toggle + .dropdown-menu li .btn:focus {
+              opacity: .7; }
+      .btn-user .dropdown button.dropdown-toggle:hover, .btn-user .dropdown button.dropdown-toggle:focus {
+        /*border-color: $color2;
+        background-color:$color2;*/
+        background-color: #00a9e0;
+        color: #fff !important; }
+    .btn-user .dropdown.open .dropdown-toggle {
+      background-color: #00a9e0 !important;
+      border-color: #00a9e0 !important;
+      color: #fff !important; }
+
+/* DropUser */
+/* ElegiPlanLineaNueva */
+.page-header h1 {
+  color: #50535a;
+  font-size: 35px;
+  font-family: "TelefonicaLight"; }
+  .page-header h1 button {
+    float: right;
+    background-color: transparent;
+    color: #86888c;
+    border: 2px solid #86888c;
+    border-radius: 4px;
+    padding: 8px 20px 12px;
+    font-family: "TelefonicaRegular"; }
+@media (max-width: 767px) {
+  .page-header {
+    margin-top: 0 !important; }
+    .page-header h1 {
+      text-align: center;
+      font-size: 35px !important; } }
+
+.bg-product {
+  background-color: #f4f4f4;
+  margin-top: 0;
+  height: auto;
+  margin-bottom: -96px;
+  padding-bottom: 140px; }
+  @media (max-width: 767px) {
+    .bg-product {
+      background-color: #fff;
+      margin-top: 0;
+      height: auto;
+      margin-bottom: 20px;
+      padding-bottom: 0; } }
+  .bg-product .cont-btn .btn-success {
+    float: right; }
+    @media (max-width: 767px) {
+      .bg-product .cont-btn .btn-success {
+        float: none;
+        display: block;
+        width: 100%; } }
+
+.cont {
+  background-color: #fff;
+  border-radius: 4px;
+  padding: 40px 20px; }
+
+h3.title {
+  color: #50535a;
+  font-family: #EBEBEB;
+  margin-top: 30px;
+  margin-bottom: 20px;
+  font-family: "TelefonicaLight"; }
+
+.message {
+  font-family: "TelefonicaItalic";
+  margin-top: 10px;
+  color: #86888c; }
+
+.cont-options-address {
+  background-color: #fff;
+  border-radius: 4px;
+  padding: 15px 40px;
+  margin-top: 20px; }
+  @media (max-width: 767px) {
+    .cont-options-address {
+      padding: 0;
+      margin-top: 30px;
+      margin-bottom: 20px; } }
+  .cont-options-address h4 {
+    font-size: 28px;
+    font-family: "TelefonicaLight";
+    color: #50535a;
+    margin-top: 0; }
+    @media (max-width: 767px) {
+      .cont-options-address h4 {
+        font-size: 22px;
+        text-align: center;
+        width: 70%;
+        display: block;
+        margin: 0 auto 10px; } }
+  .cont-options-address a {
+    color: #00a9e0;
+    font-family: "TelefonicaRegular"; }
+    @media (max-width: 767px) {
+      .cont-options-address a {
+        display: block;
+        margin: 0 auto;
+        text-align: center; } }
+  .cont-options-address h5 {
+    font-size: 16px;
+    margin-top: 5px;
+    margin-bottom: 20px;
+    font-family: "TelefonicaRegular";
+    color: #50535a; }
+    @media (max-width: 767px) {
+      .cont-options-address h5 {
+        font-size: 14px;
+        text-align: center; } }
+  .cont-options-address .form-group .radio label {
+    width: 100%;
+    font-size: 16px;
+    font-family: "TelefonicaRegular";
+    line-height: 21px;
+    padding-left: 25px; }
+    .cont-options-address .form-group .radio label h4 {
+      font-family: "TelefonicaRegular";
+      font-weight: normal;
+      color: #50535a;
+      margin: 0;
+      float: left; }
+      .cont-options-address .form-group .radio label h4 span {
+        color: #5bc500; }
+      .cont-options-address .form-group .radio label h4.nf {
+        float: none; }
+      @media (max-width: 767px) {
+        .cont-options-address .form-group .radio label h4 {
+          float: none; } }
+    .cont-options-address .form-group .radio label input[type="radio"] {
+      display: block;
+      text-align: left;
+      float: left;
+      margin-left: -25px;
+      margin-right: 10px;
+      -webkit-appearance: none !important;
+      -moz-appearance: none !important;
+      height: 19px;
+      width: 19px;
+      cursor: pointer;
+      position: relative;
+      -webkit-transition: .15s;
+      border-radius: 50%;
+      background-color: #fff;
+      border: 2px solid #50535a; }
+      .cont-options-address .form-group .radio label input[type="radio"]:checked {
+        border: 1px solid #50535a;
+        background-color: #50535a; }
+    .cont-options-address .form-group .radio label input[type="radio"]:before, .cont-options-address .form-group .radio label input[type="radio"]:checked:before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      line-height: 17px;
+      font-size: 9px;
+      font-weight: normal;
+      text-align: center;
+      color: #fff;
+      content: ''; }
+    .cont-options-address .form-group .radio label input[type="radio"]:checked:before {
+      content: "\f111";
+      font-family: 'Fontawesome'; }
+    .cont-options-address .form-group .radio label .list-inline {
+      float: left;
+      margin-left: 20px; }
+      @media (max-width: 767px) {
+        .cont-options-address .form-group .radio label .list-inline {
+          float: none;
+          padding-left: 0;
+          margin-left: 0;
+          margin-top: 10px; }
+          .cont-options-address .form-group .radio label .list-inline img {
+            height: 25px; } }
+  .cont-options-address .btn-success {
+    float: right; }
+  .cont-options-address .form-control {
+    border-radius: 4px;
+    border: 1px solid #EBEBEB;
+    background-color: #EBEBEB;
+    box-shadow: none;
+    font-size: 16px;
+    padding-bottom: 15px;
+    padding-top: 12px;
+    height: auto;
+    outline: none !important;
+    font-family: "TelefonicaRegular"; }
+    .cont-options-address .form-control:focus {
+      border-color: #00a9e0;
+      outline: none !important;
+      box-shadow: none !important; }
+    .cont-options-address .form-control::placeholder {
+      font-style: italic; }
+  .cont-options-address.has-error .form-control {
+    border-color: #ec6839;
+    color: #ec6839;
+    width: 100%; }
+    .cont-options-address.has-error .form-control::placeholder {
+      color: #ec6839; }
+
+.alert {
+  margin-top: 20px; }
+
+/* ElegiPlanLineaNueva */
+/* Carousel */
+.slick-list {
+  margin-top: 40px; }
+  .slick-list .slick-track {
+    /*margin-left: -20px;
+    margin-right: -20px;*/
+    display: flex;
+    /*align-items: stretch;*/ }
+    .slick-list .slick-track .cont-plan {
+      padding-left: 15px;
+      padding-right: 15px;
+      display: flex;
+      height: auto; }
+      .slick-list .slick-track .cont-plan .plan {
+        border-radius: 4px;
+        background-color: #fff;
+        padding-bottom: 150px;
+        margin-bottom: 20px;
+        font-family: "TelefonicaRegular";
+        position: relative;
+        width: 100%;
+        border-left: 1px solid #d3d4d3;
+        border-right: 1px solid #d3d4d3;
+        border-bottom: 1px solid #d3d4d3;
+        /*max-width: 275px;
+        margin-right: 10px;*/ }
+        @media (max-width: 1199px) {
+          .slick-list .slick-track .cont-plan .plan {
+            /*max-width: 235px;*/ } }
+        @media (max-width: 992px) {
+          .slick-list .slick-track .cont-plan .plan {
+            /*max-width: 350px;*/ } }
+        @media (max-width: 767px) {
+          .slick-list .slick-track .cont-plan .plan {
+            /*max-width: auto;
+            margin-right: 0;
+            width: 100%;*/ } }
+        .slick-list .slick-track .cont-plan .plan .head-plan {
+          border-top-right-radius: 4px;
+          border-top-left-radius: 4px;
+          background-color: #00a9e0;
+          padding: 40px 15px 15px;
+          text-align: center;
+          position: relative; }
+          .slick-list .slick-track .cont-plan .plan .head-plan h4 {
+            margin: 0 0 10px;
+            color: #fff;
+            font-size: 60px;
+            font-family: "TelefonicaExtraLight";
+            line-height: 45px; }
+          .slick-list .slick-track .cont-plan .plan .head-plan h5 {
+            margin: 0;
+            color: #fff;
+            font-size: 16px;
+            font-family: "TelefonicaExtraLight";
+            line-height: 16px; }
+          .slick-list .slick-track .cont-plan .plan .head-plan span {
+            display: none; }
+          .slick-list .slick-track .cont-plan .plan .head-plan.head-plan-prepago h4 {
+            font-size: 32px; }
+            @media (max-width: 1199px) {
+              .slick-list .slick-track .cont-plan .plan .head-plan.head-plan-prepago h4 {
+                font-size: 24px;
+                line-height: 24px; } }
+        .slick-list .slick-track .cont-plan .plan ul {
+          margin-bottom: 0; }
+          .slick-list .slick-track .cont-plan .plan ul li {
+            border-bottom: 1px solid #d3d4d3;
+            padding: 10px 15px;
+            line-height: 14px;
+            font-size: 14px;
+            color: #86888c;
+            font-family: "TelefonicaRegular"; }
+            .slick-list .slick-track .cont-plan .plan ul li strong {
+              display: block;
+              text-transform: uppercase;
+              color: #50535a;
+              font-family: "TelefonicaBold";
+              font-weight: normal;
+              font-size: 12px; }
+            .slick-list .slick-track .cont-plan .plan ul li a {
+              color: #00a9e0; }
+              .slick-list .slick-track .cont-plan .plan ul li a:hover, .slick-list .slick-track .cont-plan .plan ul li a:focus {
+                opacity: .7; }
+        .slick-list .slick-track .cont-plan .plan .price {
+          font-size: 40px;
+          color: #00a9e0;
+          line-height: 40px;
+          margin-top: 0;
+          display: block;
+          text-align: center;
+          font-family: "TelefonicaExtraLight";
+          border-bottom: 1px solid #d3d4d3;
+          padding-bottom: 10px; }
+          .slick-list .slick-track .cont-plan .plan .price sub {
+            font-size: 20px;
+            bottom: 0; }
+        .slick-list .slick-track .cont-plan .plan .text-center {
+          display: block;
+          color: #86888c;
+          line-height: 18px;
+          text-align: center;
+          margin-top: 10px;
+          margin-bottom: 0; }
+        .slick-list .slick-track .cont-plan .plan .foot-plan {
+          position: absolute;
+          bottom: 20px;
+          left: 0;
+          width: 100%;
+          padding-top: 20px;
+          text-align: center; }
+          .slick-list .slick-track .cont-plan .plan .foot-plan .price-cel {
+            text-align: center;
+            display: block;
+            padding: 0 0 10px 0;
+            font-size: 20px;
+            color: #000;
+            font-family: "TelefonicaLight"; }
+          .slick-list .slick-track .cont-plan .plan .foot-plan .btn {
+            display: block;
+            margin: 0 20px 5px;
+            width: auto;
+            background-color: #00a9e0;
+            color: #fff;
+            text-align: center;
+            border: none;
+            padding: 6px 20px 13px;
+            font-size: 16px;
+            font-family: "TelefonicaRegular";
+            border-radius: 4px; }
+            .slick-list .slick-track .cont-plan .plan .foot-plan .btn:hover, .slick-list .slick-track .cont-plan .plan .foot-plan .btn:focus {
+              opacity: .7;
+              background-color: #00a9e0; }
+            .slick-list .slick-track .cont-plan .plan .foot-plan .btn:disabled {
+              opacity: 1;
+              background-color: #B4B4B4; }
+            .slick-list .slick-track .cont-plan .plan .foot-plan .btn i {
+              display: none; }
+            @media (max-width: 1199px) {
+              .slick-list .slick-track .cont-plan .plan .foot-plan .btn {
+                width: 175px; } }
+            .slick-list .slick-track .cont-plan .plan .foot-plan .btn + a {
+              font-size: 14px;
+              color: #00a9e0; }
+      .slick-list .slick-track .cont-plan .recomendado .head-plan {
+        background-color: #5bc500; }
+        .slick-list .slick-track .cont-plan .recomendado .head-plan span {
+          display: block;
+          position: absolute;
+          top: 6px;
+          left: 0;
+          width: 100%;
+          color: #fff;
+          font-family: "TelefonicaRegular";
+          padding-bottom: 4px;
+          border-bottom: 1px solid #50ad00; }
+      .slick-list .slick-track .cont-plan .recomendado .price {
+        color: #5bc500; }
+      .slick-list .slick-track .cont-plan .recomendado .foot-plan .btn {
+        background-color: #5bc500; }
+        .slick-list .slick-track .cont-plan .recomendado .foot-plan .btn:hover, .slick-list .slick-track .cont-plan .recomendado .foot-plan .btn:focus {
+          opacity: .7;
+          background-color: #5bc500; }
+        .slick-list .slick-track .cont-plan .recomendado .foot-plan .btn:disabled {
+          opacity: 1;
+          background-color: #B4B4B4; }
+
+.slick-prev::before, .slick-next::before {
+  color: #86888c;
+  font-size: 32px;
+  font-family: 'FontAwesome' !important;
+  z-index: 99999; }
+
+.slick-prev::before {
+  content: '\f104'; }
+
+.slick-next::before {
+  content: '\f105'; }
+
+/* Carousel */
+/* EntregaYPago */
+.radios-entrega .form-group .radio label {
+  width: 100%;
+  font-size: 16px;
+  line-height: 21px;
+  padding-left: 25px; }
+  .radios-entrega .form-group .radio label h4 {
+    font-family: "TelefonicaRegular";
+    font-weight: normal;
+    color: #50535a;
+    margin: 0;
+    float: left; }
+    .radios-entrega .form-group .radio label h4 span {
+      color: #5bc500; }
+    .radios-entrega .form-group .radio label h4.nf {
+      float: none; }
+    @media (max-width: 767px) {
+      .radios-entrega .form-group .radio label h4 {
+        float: none; } }
+  .radios-entrega .form-group .radio label input[type="radio"] {
+    display: block;
+    text-align: left;
+    float: left;
+    margin-left: -25px;
+    margin-right: 10px;
+    -webkit-appearance: none !important;
+    -moz-appearance: none !important;
+    height: 19px;
+    width: 19px;
+    cursor: pointer;
+    position: relative;
+    -webkit-transition: .15s;
+    border-radius: 50%;
+    background-color: #fff;
+    border: 2px solid #50535a; }
+    .radios-entrega .form-group .radio label input[type="radio"]:checked {
+      border: 1px solid #50535a;
+      background-color: #50535a; }
+  .radios-entrega .form-group .radio label input[type="radio"]:before, .radios-entrega .form-group .radio label input[type="radio"]:checked:before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    line-height: 17px;
+    font-size: 9px;
+    font-weight: normal;
+    text-align: center;
+    color: #fff;
+    content: ''; }
+  .radios-entrega .form-group .radio label input[type="radio"]:checked:before {
+    content: "\f111";
+    font-family: 'Fontawesome'; }
+  .radios-entrega .form-group .radio label .icon-envios, .radios-entrega .form-group .radio label .icon-centros-movistar {
+    font-size: 25px;
+    margin-right: 5px;
+    float: left;
+    margin-bottom: 20px;
+    display: block; }
+  .radios-entrega .form-group .radio label .list-inline {
+    float: left;
+    margin-left: 20px; }
+    @media (max-width: 767px) {
+      .radios-entrega .form-group .radio label .list-inline {
+        float: none;
+        padding-left: 0;
+        margin-left: 0;
+        margin-top: 10px; }
+        .radios-entrega .form-group .radio label .list-inline img {
+          height: 25px; } }
+
+.checkbox label {
+  font-size: 16px;
+  line-height: 18px;
+  padding-left: 25px !important;
+  vertical-align: middle; }
+  .checkbox label input[type="checkbox"] {
+    margin-left: -25px;
+    margin-right: 10px;
+    -webkit-appearance: none !important;
+    -moz-appearance: none !important;
+    height: 18px;
+    width: 18px;
+    cursor: pointer;
+    position: relative;
+    -webkit-transition: .15s;
+    border-radius: 4px;
+    background-color: #fff;
+    border: 1px solid #50535a; }
+    .checkbox label input[type="checkbox"]:checked {
+      background-color: #50535a; }
+  .checkbox label input[type="checkbox"]:before, .checkbox label input[type="checkbox"]:checked:before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    line-height: 18px;
+    font-size: 12px;
+    font-weight: normal;
+    text-align: center;
+    color: #fff;
+    content: ''; }
+  .checkbox label input[type="checkbox"]:checked:before {
+    content: "\f00c";
+    font-family: 'Fontawesome'; }
+  .checkbox label button {
+    color: #00a9e0;
+    font-size: 16px;
+    line-height: 18px;
+    padding: 0;
+    background-color: transparent;
+    border: none;
+    height: auto;
+    vertical-align: initial !important; }
+
+.cont-checkboxs {
+  margin-bottom: 30px; }
+
+.cont-buttons .btn-default {
+  background-color: #EBEBEB;
+  border: none;
+  font-size: 18px;
+  padding: 10px 30px 15px; }
+.cont-buttons .btn-success {
+  font-size: 18px;
+  padding: 10px 30px 15px; }
+@media (max-width: 767px) {
+  .cont-buttons {
+    display: flex;
+    -webkit-flex-flow: row wrap;
+    flex-flow: row wrap; }
+    .cont-buttons .pull-left {
+      width: 100%;
+      order: 1;
+      float: none; }
+      .cont-buttons .pull-left .btn-default {
+        margin-bottom: 20px;
+        width: 100%; }
+    .cont-buttons .pull-right {
+      width: 100%;
+      float: none; }
+      .cont-buttons .pull-right .btn-success {
+        margin-bottom: 20px; } }
+
+.radios-entrega .form-group .radio label p {
+  font-style: italic;
+  color: #86888c; }
+
+.cont-entrega-pago h4 {
+  font-family: "TelefonicaRegular";
+  font-weight: normal;
+  color: #50535a;
+  margin: 0 0 20px;
+  font-size: 18px;
+  font-weight: bold; }
+
+/* EntregaYPago */
+/* Footer */
+footer {
+  margin-top: 60px;
+  width: 100%;
+  position: static; }
+  footer.fixed {
+    position: fixed;
+    bottom: 0;
+    left: 0; }
+  footer .container {
+    padding: 25px 65px; }
+    @media (max-width: 767px) {
+      footer .container {
+        padding-left: 20px;
+        padding-right: 20px; } }
+  footer .bg {
+    background-color: #fff; }
+    footer .bg .btn-icon {
+      color: #00a9e0;
+      height: 40px;
+      display: block;
+      overflow: hidden; }
+      footer .bg .btn-icon span {
+        margin-top: 10px;
+        display: block;
+        font-family: "TelefonicaBold";
+        text-transform: uppercase;
+        font-size: 14px; }
+      footer .bg .btn-icon .fa {
+        width: 40px;
+        height: 40px;
+        border: 1px solid #00a9e0;
+        color: #00a9e0;
+        font-size: 16px;
+        padding: 12px 0 0 13px;
+        border-radius: 50%;
+        float: left;
+        margin-right: 10px;
+        margin-top: 0; }
+      footer .bg .btn-icon .fa-plus {
+        display: none; }
+      footer .bg .btn-icon .fa-minus {
+        display: block; }
+      footer .bg .btn-icon.collapsed .fa-plus {
+        display: block; }
+      footer .bg .btn-icon.collapsed .fa-minus {
+        display: none; }
+      footer .bg .btn-icon:hover .fa {
+        background-color: #00a9e0;
+        color: #fff; }
+    footer .bg .panel-collapse {
+      padding-top: 0;
+      border-top: 1px solid #EBEBEB; }
+      footer .bg .panel-collapse .container {
+        padding-bottom: 0; }
+      footer .bg .panel-collapse h4 {
+        font-family: "TelefonicaBold";
+        text-transform: uppercase;
+        font-size: 14px; }
+        footer .bg .panel-collapse h4 a {
+          color: #B4B4B4; }
+          footer .bg .panel-collapse h4 a:hover, footer .bg .panel-collapse h4 a:focus {
+            text-decoration: underline; }
+      footer .bg .panel-collapse ul {
+        margin-bottom: 30px; }
+        footer .bg .panel-collapse ul li {
+          font-size: 14px;
+          margin-bottom: 5px; }
+          footer .bg .panel-collapse ul li a {
+            color: #00a9e0;
+            font-weight: normal; }
+            footer .bg .panel-collapse ul li a .fa {
+              font-size: 11px;
+              margin-right: 2px; }
+            footer .bg .panel-collapse ul li a:hover, footer .bg .panel-collapse ul li a:focus {
+              opacity: .7; }
+    footer .bg .redes {
+      float: right;
+      margin-top: 0; }
+      @media (max-width: 767px) {
+        footer .bg .redes {
+          float: none;
+          margin-top: 20px;
+          text-align: center;
+          margin-left: auto;
+          margin-right: auto; } }
+      footer .bg .redes span {
+        font-family: "TelefonicaBold";
+        text-transform: uppercase;
+        font-size: 14px;
+        margin-right: 5px;
+        color: #B4B4B4;
+        float: left;
+        margin-top: 4px; }
+      footer .bg .redes a {
+        width: 30px;
+        height: 30px;
+        display: block;
+        border-radius: 50%;
+        margin-left: 5px;
+        float: left;
+        border: 1px solid #00a9e0;
+        color: #00a9e0;
+        vertical-align: middle;
+        text-align: center; }
+        footer .bg .redes a i {
+          font-size: 16px;
+          margin: 6px 4px; }
+        footer .bg .redes a .icon-comunidad {
+          padding-top: 2px;
+          vertical-align: middle; }
+        footer .bg .redes a:hover, footer .bg .redes a:focus {
+          background-color: #00a9e0;
+          color: #fff; }
+    footer .bg .links-footer {
+      padding: 0;
+      margin: 0;
+      height: auto; }
+      footer .bg .links-footer ul {
+        margin: 0;
+        padding: 0; }
+        footer .bg .links-footer ul li {
+          float: left;
+          padding: 5px 20px;
+          border-right: 1px solid #EBEBEB;
+          text-transform: uppercase;
+          vertical-align: middle; }
+          footer .bg .links-footer ul li a {
+            color: #B4B4B4;
+            font-size: 14px;
+            font-family: "TelefonicaBold"; }
+            @media (max-width: 767px) {
+              footer .bg .links-footer ul li a {
+                font-size: 12px; } }
+            footer .bg .links-footer ul li a:hover, footer .bg .links-footer ul li a:focus {
+              opacity: .7; }
+          footer .bg .links-footer ul li:first-child {
+            padding-left: 0; }
+          footer .bg .links-footer ul li:last-child {
+            border-right: none; }
+          @media (max-width: 767px) {
+            footer .bg .links-footer ul li {
+              padding-left: 10px;
+              padding-right: 10px; } }
+  footer .copy {
+    background-color: #d3d4d3;
+    height: 50px;
+    padding-top: 15px 0; }
+    footer .copy .container {
+      padding-top: 0;
+      padding-bottom: 0; }
+    footer .copy p {
+      color: #86888c;
+      margin-top: 13px;
+      font-family: "TelefonicaLight"; }
+      footer .copy p img {
+        margin-right: 5px; }
+      @media (max-width: 767px) {
+        footer .copy p {
+          font-size: 12px; }
+          footer .copy p img {
+            width: 22px; } }
+      @media (max-width: 359px) {
+        footer .copy p {
+          font-size: 10px; }
+          footer .copy p img {
+            width: 20px; } }
+
+/* Footer */
+/* Form */
+.cont-input-creditcard {
+  position: relative; }
+  .cont-input-creditcard img {
+    position: absolute;
+    top: 10px;
+    right: 10px; }
+
+.btn-tooltip {
+  margin-top: 10px; }
+
+.bg-cuotas {
+  background-color: #f4f4f4;
+  border-radius: 4px;
+  padding: 5px 15px;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: flex-start; }
+  .bg-cuotas .cuotas {
+    border-right: 1px solid #EBEBEB;
+    padding-right: 20px; }
+    @media (max-width: 767px) {
+      .bg-cuotas .cuotas {
+        padding-right: 8px; } }
+  .bg-cuotas .total {
+    padding-left: 20px;
+    border-right: 1px solid #EBEBEB;
+    padding-right: 20px; }
+    @media (max-width: 767px) {
+      .bg-cuotas .total {
+        padding-left: 8px;
+        padding-right: 8px; } }
+  .bg-cuotas .cft {
+    padding-left: 20px; }
+    @media (max-width: 767px) {
+      .bg-cuotas .cft {
+        padding-left: 8px; } }
+  .bg-cuotas h4 {
+    font-family: "TelefonicaBold";
+    font-weight: normal;
+    font-size: 13px;
+    color: #86888c;
+    letter-spacing: 0;
+    text-transform: uppercase;
+    margin-bottom: 5px; }
+    @media (max-width: 767px) {
+      .bg-cuotas h4 {
+        font-size: 12px;
+        white-space: nowrap; } }
+  .bg-cuotas h5 {
+    font-family: "TelefonicaLight";
+    font-size: 24px;
+    color: #5bc500;
+    letter-spacing: 0;
+    margin-top: 0; }
+    .bg-cuotas h5 small {
+      color: #B4B4B4;
+      font-size: 24px; }
+    @media (max-width: 767px) {
+      .bg-cuotas h5 {
+        font-size: 18px; }
+        .bg-cuotas h5 small {
+          font-size: 14px;
+          display: block; } }
+
+.form-group label.radio-inline {
+  font-size: 16px;
+  line-height: 21px;
+  padding-left: 25px; }
+  .form-group label.radio-inline h4 {
+    font-family: "TelefonicaRegular";
+    font-weight: normal;
+    color: #50535a;
+    margin: 0;
+    float: left; }
+    .form-group label.radio-inline h4 span {
+      color: #5bc500; }
+    .form-group label.radio-inline h4.nf {
+      float: none; }
+    @media (max-width: 767px) {
+      .form-group label.radio-inline h4 {
+        float: none; } }
+  .form-group label.radio-inline input[type="radio"] {
+    display: block;
+    text-align: left;
+    float: left;
+    margin-left: -25px;
+    margin-right: 10px;
+    -webkit-appearance: none !important;
+    -moz-appearance: none !important;
+    height: 19px;
+    width: 19px;
+    cursor: pointer;
+    position: relative;
+    -webkit-transition: .15s;
+    border-radius: 50%;
+    background-color: #fff;
+    border: 2px solid #50535a; }
+    .form-group label.radio-inline input[type="radio"]:checked {
+      border: 1px solid #50535a;
+      background-color: #50535a; }
+  .form-group label.radio-inline input[type="radio"]:before, .form-group label.radio-inline input[type="radio"]:checked:before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    line-height: 17px;
+    font-size: 9px;
+    font-weight: normal;
+    text-align: center;
+    color: #fff;
+    content: ''; }
+  .form-group label.radio-inline input[type="radio"]:checked:before {
+    content: "\f111";
+    font-family: 'Fontawesome'; }
+
+/* Form */
+/* FormTarjetasPagos */
+.tarjetas-promos {
+  margin-top: 30px;
+  font-family: "TelefonicaLight"; }
+  .tarjetas-promos .credit-card {
+    display: block;
+    margin-left: 5px; }
+  .tarjetas-promos .logo-efectivo {
+    margin-left: 5px;
+    margin-bottom: 20px; }
+  .tarjetas-promos hr {
+    margin-left: -20px;
+    margin-right: -20px; }
+    @media (max-width: 767px) {
+      .tarjetas-promos hr {
+        margin-top: 0;
+        margin-bottom: 5px; } }
+  .tarjetas-promos .radio-inline p {
+    margin-left: 5px; }
+    .tarjetas-promos .radio-inline p .logo-efectivo {
+      vertical-align: top; }
+  .tarjetas-promos .form-group {
+    position: relative; }
+    .tarjetas-promos .form-group .form-control {
+      border-radius: 4px;
+      border: 1px solid #EBEBEB;
+      background-color: #EBEBEB;
+      box-shadow: none;
+      font-size: 16px;
+      padding-bottom: 15px;
+      padding-top: 11px;
+      height: auto;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      text-indent: 1px;
+      text-overflow: ''; }
+      .tarjetas-promos .form-group .form-control::-ms-expand {
+        display: none; }
+      .tarjetas-promos .form-group .form-control:focus {
+        border-color: #00a9e0; }
+      .tarjetas-promos .form-group .form-control::placeholder {
+        font-style: italic; }
+    .tarjetas-promos .form-group .fa-angle-down {
+      position: absolute;
+      top: 15px;
+      right: 15px;
+      font-size: 22px;
+      color: #00a9e0;
+      pointer-events: none; }
+    .tarjetas-promos .form-group.active .form-control {
+      background-color: #fff;
+      border: 1px solid #B4B4B4; }
+      .tarjetas-promos .form-group.active .form-control + i {
+        color: #00a9e0; }
+  .tarjetas-promos .foot-form {
+    margin-left: -20px;
+    margin-right: -20px;
+    background-color: #EBEBEB;
+    padding: 20px 30px;
+    margin-bottom: -20px;
+    font-size: 22px;
+    color: #86888c; }
+    .tarjetas-promos .foot-form .form-group {
+      position: relative;
+      display: inline-block; }
+      @media (max-width: 767px) {
+        .tarjetas-promos .foot-form .form-group {
+          margin-bottom: 0; } }
+      .tarjetas-promos .foot-form .form-group .form-control {
+        background-color: #fff;
+        padding-left: 5px;
+        padding-right: 5px;
+        width: 70px;
+        margin-right: 20px;
+        margin-left: 5px;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        text-indent: 1px;
+        text-overflow: '';
+        box-shadow: 0px 0px 25px -4px rgba(0, 0, 0, 0.4); }
+        .tarjetas-promos .foot-form .form-group .form-control::-ms-expand {
+          display: none; }
+        .tarjetas-promos .foot-form .form-group .form-control option {
+          font-family: "TelefonicaLight"; }
+        @media (max-width: 767px) {
+          .tarjetas-promos .foot-form .form-group .form-control {
+            width: 48px;
+            margin-right: 5px; } }
+      .tarjetas-promos .foot-form .form-group .fa-angle-down {
+        position: absolute;
+        top: 15px;
+        right: 30px;
+        font-size: 22px;
+        color: #00a9e0;
+        pointer-events: none; }
+        @media (max-width: 767px) {
+          .tarjetas-promos .foot-form .form-group .fa-angle-down {
+            right: 13px; } }
+    .tarjetas-promos .foot-form .importe {
+      color: #5bc500;
+      margin-right: 20px; }
+      @media (max-width: 767px) {
+        .tarjetas-promos .foot-form .importe {
+          margin-right: 5px; } }
+      @media (max-width: 359px) {
+        .tarjetas-promos .foot-form .importe {
+          margin-right: 2px; } }
+    .tarjetas-promos .foot-form .total {
+      color: #5bc500;
+      margin-left: 20px; }
+      .tarjetas-promos .foot-form .total b {
+        font-weight: normal;
+        color: #86888c; }
+      .tarjetas-promos .foot-form .total sub {
+        font-size: 12px;
+        color: #86888c;
+        bottom: 4px;
+        left: 2px; }
+      @media (max-width: 767px) {
+        .tarjetas-promos .foot-form .total {
+          margin-left: 5px; } }
+    @media (max-width: 767px) {
+      .tarjetas-promos .foot-form {
+        padding-left: 10px;
+        padding-right: 10px; }
+        .tarjetas-promos .foot-form label {
+          font-size: 15px; } }
+    @media (max-width: 359px) {
+      .tarjetas-promos .foot-form {
+        padding-left: 0;
+        padding-right: 0; } }
+  .tarjetas-promos .verpromos {
+    color: #00a9e0;
+    margin-top: 43px;
+    display: block; }
+    .tarjetas-promos .verpromos:hover {
+      opacity: .8;
+      color: #00a9e0; }
+    @media (max-width: 767px) {
+      .tarjetas-promos .verpromos {
+        display: none; } }
+  .tarjetas-promos input[type="radio"] {
+    display: block;
+    text-align: left;
+    float: left;
+    margin-left: -25px;
+    margin-right: 10px;
+    -webkit-appearance: none !important;
+    -moz-appearance: none !important;
+    height: 19px;
+    width: 19px;
+    cursor: pointer;
+    position: relative;
+    -webkit-transition: .15s;
+    border-radius: 50%;
+    background-color: #fff;
+    border: 2px solid #50535a; }
+    .tarjetas-promos input[type="radio"]:checked {
+      border: 1px solid #50535a;
+      background-color: #50535a; }
+  .tarjetas-promos input[type="radio"]:before, .tarjetas-promos input[type="radio"]:checked:before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    line-height: 17px;
+    font-size: 9px;
+    font-weight: normal;
+    text-align: center;
+    color: #fff;
+    content: ''; }
+  .tarjetas-promos input[type="radio"]:checked:before {
+    content: "\f111";
+    font-family: 'Fontawesome'; }
+  @media (max-width: 767px) {
+    .tarjetas-promos p {
+      text-align: left;
+      margin-bottom: 10px; }
+    .tarjetas-promos .form-group {
+      text-align: left; }
+      .tarjetas-promos .form-group .radio-inline {
+        text-align: left;
+        margin-left: 0;
+        margin-right: 10px; }
+        .tarjetas-promos .form-group .radio-inline img {
+          height: 25px; }
+          .tarjetas-promos .form-group .radio-inline img.fix-rapipago {
+            width: 50px; } }
+
+/* FormTarjetasPagos */
+/* Header */
+.header .navbar-custom {
+  background-color: #fff;
+  height: 70px;
+  margin-bottom: 0;
+  border: none;
+  border-radius: 0;
+  border-bottom: 1px solid #EBEBEB; }
+  .header .navbar-custom .navbar-header {
+    width: 100%; }
+    .header .navbar-custom .navbar-header .App-logo {
+      margin-top: 15px; }
+      @media (max-width: 767px) {
+        .header .navbar-custom .navbar-header .App-logo {
+          display: none; } }
+    .header .navbar-custom .navbar-header .App-logo-Mobile {
+      display: none; }
+      @media (max-width: 767px) {
+        .header .navbar-custom .navbar-header .App-logo-Mobile {
+          display: block;
+          margin-top: 15px;
+          margin-left: 15px; } }
+  @media (max-width: 767px) {
+    .header .navbar-custom {
+      box-shadow: 0px 0px 25px -4px rgba(0, 0, 0, 0.4); } }
+
+/* Header */
+/* HeaderGreen */
+.header-green .navbar-custom {
+  background-color: #5bc500;
+  height: 70px;
+  border: none;
+  border-radius: 0; }
+  .header-green .navbar-custom .App-logo {
+    margin-top: 15px; }
+    @media (max-width: 767px) {
+      .header-green .navbar-custom .App-logo {
+        display: none; } }
+
+/* HeaderGreen */
+/* Home */
+.page-header h1 {
+  color: #50535a;
+  font-size: 35px;
+  font-family: "TelefonicaLight"; }
+  .page-header h1 button {
+    float: right;
+    background-color: transparent;
+    color: #86888c;
+    border: 2px solid #86888c;
+    border-radius: 4px;
+    padding: 8px 20px 12px;
+    font-family: "TelefonicaRegular"; }
+  @media (max-width: 767px) {
+    .page-header h1 {
+      font-size: 25px; } }
+
+.cont {
+  background-color: #fff;
+  border-radius: 4px;
+  padding: 40px 20px; }
+
+.show-grid {
+  display: flex;
+  align-items: stretch; }
+  @media (max-width: 767px) {
+    .show-grid {
+      display: block; } }
+
+/* Home */
+@media (max-width: 767px) {
+  #tabsPlanesMobile .nav-pills > li.dropdown > a {
+    padding-top: 10px;
+    margin-left: 0;
+    margin-right: 0; }
+
+  #tabsPlanesMobile .nav-pills > li.dropdown.open > a {
+    background-color: #f4f4f4 !important;
+    border: 1px solid #EBEBEB !important; }
+
+  .tarjetas-promos {
+    text-align: left; }
+
+  .tarjetas-promos hr {
+    padding-top: 20px; } }

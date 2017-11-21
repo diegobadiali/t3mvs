@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import './CardLine.css';
 import { Button } from 'react-bootstrap';
 import { Row } from 'react-bootstrap';
 import { Col } from 'react-bootstrap';

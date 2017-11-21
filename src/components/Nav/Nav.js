@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import './Nav.css';
 import DropUser from '../DropUser/DropUser';
 import { Button } from 'react-bootstrap';
 class Nav extends Component {

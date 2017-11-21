@@ -1,5 +1,4 @@
 import React from 'react';
-import './ProductDesc.css';
 import { PageHeader } from 'react-bootstrap';
 import icon from '../../assets/img/img-chip2.png';
 const prod = {

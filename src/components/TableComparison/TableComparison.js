@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import './TableComparison.css';
 import { Table } from 'react-bootstrap';
 
 

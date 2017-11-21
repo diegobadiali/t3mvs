@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-import './DatosPersonales.css';
 import {Grid, Row, Col, FormControl, Panel, PageHeader, Button} from 'react-bootstrap';
 import Pasos from '../../components/Pasos/Pasos';
 import ProductResume from '../../components/ProductResume/ProductResume';
@@ -52,6 +51,16 @@ class DatosPersonales extends React.Component {
       isSelectedAdress: true,
     });
   };
+  handleData = () => {
+    this.setState({
+      datosPersonales:{
+        userData: {
+          address: {}
+        },
+        verifiedData: false
+      }
+    });
+  };
 
 
   componentDidMount() {
@@ -67,6 +76,11 @@ class DatosPersonales extends React.Component {
       newDatosPersonales.userData = DataStoreSupport.getUserData().data;
       newDatosPersonales.verifiedData = true;
       loggedIn = true;
+      this.setState({
+        billingAddress:{
+          open: true
+        }
+      })
     }
 
     this.setState({
@@ -131,23 +145,16 @@ class DatosPersonales extends React.Component {
           <PageHeader>Datos personales y de facturación</PageHeader>
           <Row>
             <Col md={8}>
-              <div id="datos-personales" className={ !this.state.datosPersonales.open ? 'collapsed' : 'open' }>
-                <h3>Datos personales
-                  <button
-                    className="btn btn-link pull-right"
-                    onClick={this.toggleActivePanel}
-
-                  >
-                    <i className={this.state.datosPersonales.open ? 'fa fa-angle-up' : 'fa fa-angle-down'}/>
-                  </button>
-                </h3>
-                <Panel collapsible expanded={this.state.datosPersonales.open}>
+              <div id="datos-personales" className='open'>
+                <h3>Datos personales</h3>
+                <Panel collapsible expanded={true}>
                   {
                     this.state.datosPersonales.verifiedData ? (
                         <Resume
                           {...this.state.datosPersonales.userData}
                           isLoggedIn={this.state.isLoggedIn}
                           toggleActivePanel={this.toggleActivePanel}
+                          handleData={this.handleData}
                         />
                       ) : (
                         <div>
@@ -166,20 +173,13 @@ class DatosPersonales extends React.Component {
                 </Panel>
               </div>
               <div id="domicilio-facturacion" className={ !this.state.billingAddress.open ? 'collapsed' : 'open' }>
-                <h3>
-                  Domicilio
-                  <button
-                    className="btn btn-link pull-right"
-                    onClick={this.toggleActivePanel}
-                    disabled={!this.state.datosPersonales.verifiedData}
-                  >
-                    <i className={this.state.billingAddress.open ? 'fa fa-angle-up' : 'fa fa-angle-down'}/>
-                  </button>
-                </h3>
+                <h3>Domicilio</h3>
                 <Panel collapsible expanded={this.state.billingAddress.open}>
                   {
                     !this.state.isEditingAddress ? (
-                        <div>
+                      <div>
+                        <p className="mb20">Si elegís envío a este domicilio, podrá recibir cualquier persona mayor de edad con DNI. Si elegís otro domicilio de entrega, podrá recibir el titular o autorizado.</p>
+
                           <BillingAddressList
                             {...this.state.datosPersonales.userData.address}
                             handleOtherAddress={this.handleOtherAddress}
@@ -205,6 +205,7 @@ class DatosPersonales extends React.Component {
                           <BillingAddressForm
                             handleUserDataChange={this.handleBillingAddressChange}
                             userData={this.state.datosPersonales.userData.address}
+                            isOtherAddress={this.state.isOtherAddress}
                           />
                           
                         </div>

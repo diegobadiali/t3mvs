@@ -5,6 +5,9 @@ class BillingAddressResume extends React.Component {
     super(props);
     this.state = {};
   }
+  handleSucursalParent = () => {
+    this.props.handleSucursal();
+  }
   render() {
     return (
       <div>
@@ -24,6 +27,7 @@ class BillingAddressResume extends React.Component {
             </div>
           </Col>
         </Row>
+        <div className="clearfix"></div>
       </div>
     );
   }

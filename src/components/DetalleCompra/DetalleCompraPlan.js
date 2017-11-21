@@ -1,5 +1,4 @@
 import React from 'react';
-import './DetalleCompra.css';
 import { Row, Col } from 'react-bootstrap';
 class DetalleCompraPlan extends React.Component {
   constructor(props) {

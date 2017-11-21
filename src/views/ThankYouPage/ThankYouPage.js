@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import './ThankYouPage.css';
 import { Grid } from 'react-bootstrap';
 import Listo from '../../components/Listo/Listo';
 import NumeroLinea from '../../components/NumeroLinea/NumeroLinea';

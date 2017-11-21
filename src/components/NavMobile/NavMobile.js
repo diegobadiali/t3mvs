@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import './NavMobile.css';
 import SwipeableViews from 'react-swipeable-views';
 import { slide as Menu } from 'react-burger-menu';
 import UserInfo from './UserInfo/UserInfo';

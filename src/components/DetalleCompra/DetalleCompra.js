@@ -1,5 +1,4 @@
 import React from 'react';
-import './DetalleCompra.css';
 import { Row, Col, Button } from 'react-bootstrap';
 import DetalleCompraDevicePlan from './DetalleCompraDevicePlan';
 import DetalleCompraDevice from './DetalleCompraDevice';

@@ -1,7 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Modal from 'react-modal';
-import './ModalPromociones.css';
 import FormTarjetasPromos from '../../components/FormTarjetasPromos/FormTarjetasPromos';
 var title = "Tarjetas y promociones";
 const customStyles = {

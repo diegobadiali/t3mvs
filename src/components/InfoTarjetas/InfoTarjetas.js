@@ -1,5 +1,4 @@
 import React from 'react';
-import './InfoTarjetas.css';
 import { Button, Table, Row, Col } from 'react-bootstrap';
 import ModalPromociones from '../../components/ModalPromociones/ModalPromociones';
 const list = [

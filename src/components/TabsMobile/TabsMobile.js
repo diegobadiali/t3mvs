@@ -1,5 +1,4 @@
 import React from 'react';
-import './TabsMobile.css';
 import { Row } from 'react-bootstrap';
 import { Col } from 'react-bootstrap';
 import { Tab } from 'react-bootstrap';

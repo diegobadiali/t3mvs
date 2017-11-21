@@ -4,7 +4,6 @@ import Pasos from '../../components/Pasos/Pasos';
 import ProductResume from '../../components/ProductResume/ProductResume';
 import DataStoreSupport from '../../DataStoreSupport';
 import Redirect from '../../components/Redirect/RedirectMercadoPago';
-import '../EntregaYPago/EntregaYPago.css';
 class DatosPersonales extends React.Component {
   constructor() {
     super();

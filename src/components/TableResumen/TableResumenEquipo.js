@@ -1,5 +1,4 @@
 import React from 'react';
-import './TableResumen.css';
 import { Button, Table, Row, Col } from 'react-bootstrap';
 const infotabla = {
   itemList : [{
