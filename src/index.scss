@@ -944,6 +944,11 @@
 			background-color: $color1;
 			opacity: .9;
 		}
+		&:disabled{
+			background-color: $color9 !important;
+			opacity: 1 !important;
+			cursor: default;
+		}
 		.caret{
 			color: $color4;
 			margin-left: 10px;
@@ -1102,8 +1107,7 @@
 	/* Main */
 	/* Map */
 
-	.cont-search{
-		margin-top: 20px;
+	.cont-result{
 		h3{
 			font-family: $font2;
 			font-size: 18px;
@@ -1118,6 +1122,19 @@
 				color: $color1;
 			}
 		}
+		.no-disponible{
+			h3{
+				color: $color5;
+				strong{
+					color: $color12;
+				}
+			}
+		}
+	}
+
+	.cont-search{
+		margin-top: 0;
+		
 		.form-group{
 			position: relative;
 			.fa-search{
@@ -1128,16 +1145,16 @@
 				pointer-events: none;
 				color: $color8;
 			}
-			.form-control{
+			.form-control.select-prov{
 				border-radius: $border-radius;
-				border: 1px solid $color3 !important;
+				/*border: 1px solid $color3 !important;
 				box-shadow: $box-shadow4 !important;
-				background-color: $color4 !important;
+				background-color: $color4 !important;*/
 				font-size: 16px;
-				line-height: 16px;
+				line-height: 33px !important;
 				font-family: $font3;
-				height: 48px !important;
 				padding-right: 50px;
+				padding-top: 6px !important;
 				&::placeholder{
 					font-style: italic;
 				}
@@ -3153,6 +3170,15 @@
 			}
 		}
 		.table-list{
+			thead{
+				tr{
+					th{
+						&:first-child{
+							padding-left: 36px;
+						}
+					}
+				}
+			}
 			tr{
 				td{
 					.form-group{
@@ -3665,7 +3691,7 @@
 			margin-bottom: 0;
 			margin-top: 0;
 			border-top: 1px solid $color14;
-			border-bottom: 1px solid $color14;
+			border-bottom: none;
 			span{
 				color: $color9;
 			}
@@ -3678,14 +3704,14 @@
 			}*/
 			&+.collapsed{
 				h3{
-					border-top: none;
+					/*border-top: none;*/
 				}
 			}
 		}
 		h3{
 			color: $color2;
 			padding: 30px 0;
-			border-bottom: 1px solid $color14;
+			/*border-bottom: 1px solid $color14;*/
 
 			button{
 				color: $color5;
@@ -3718,7 +3744,7 @@
 			margin-bottom: 0;
 
 			.panel-body{
-				padding: 20px 0;
+				padding: 0 0 20px;
 				.form-group{
 					margin-bottom: 20px;
 					position: relative;
@@ -3897,17 +3923,7 @@
 							margin-right: -8px;
 						}
 					}
-					&.numero{
-						padding-left: 22px;
-						&:before{
-							content:'15';
-							position: absolute;
-							left: 0;
-							top: 13px;
-							color: $color5;
-							font-size: 16px;
-						}
-					}
+					
 				}
 				.btn-success{
 					float: right;
@@ -4203,6 +4219,10 @@
 				color: $color8;
 				font-family: $font1;
 				font-weight: normal;
+			}
+			a{
+				color: $color2;
+				font-weight: bold;
 			}
 		}
 		.btn-success{
@@ -4742,6 +4762,10 @@
 					font-size: 60px;
 					font-family: $font4;
 					line-height: 45px;
+					sub{
+						font-size: 22px;
+						bottom: 0;
+					}
 				}
 				h5{
 					margin:0;
@@ -5639,7 +5663,7 @@ footer{
 	}
 	.verpromos{
 		color: $color2;
-		margin-top: 43px;
+		margin-top: 13px;
 		display: block;
 		&:hover{
 			opacity: .8;
@@ -5810,5 +5834,12 @@ footer{
 	}
 	.tarjetas-promos hr{
 		padding-top: 20px;
+	}
+}
+.entrega-pago{
+	.collapsed{
+		/*.radios-entrega{
+			display: none;
+		}*/
 	}
 }
