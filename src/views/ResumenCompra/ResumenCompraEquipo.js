@@ -6,8 +6,7 @@ import InfoTarjetas from '../../components/InfoTarjetas/InfoTarjetas';
 const infotabla = {
   itemList : [{
       id: 1,
-      name: 'Samsung Galaxy S8 4G LTE',
-      desc: 'Negro - 32GB',
+      name: 'Samsung Galaxy S8 4G LTE Negro - 32GB',
       price: '$22.000,00',
       pricemensual: '',
       imgURL: 'http://www.movistar.com.ar/documents/10192/14678471/s8.png',

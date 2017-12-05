@@ -58,34 +58,16 @@ class FormTarjetasPromos extends React.Component {
     super(props);
     this.state = {
       tarjetas: list,
-      bancos: listbancos,
-      pagotarjeta: false
+      bancos: listbancos
     };
   }
-  handleChange = (e) => {
-    switch (e.target.id) {
-      case 'opt-tarjeta':
-        this.setState({
-          pagotarjeta: true,
-        });
-      break;
-      case 'opt-efectivo':
-        this.setState({
-          pagotarjeta: false
-        });
-      break;
-    }
-  };
   render() {
     return (
       <div className="tarjetas-promos">
         <form>
           <Row>
             <Col sm={6}>
-              <Radio name="radioGroup" title="Tarjeta de crédito" id="opt-tarjeta" onClick={this.handleChange} inline>
-                <p>Tarjeta de crédito</p>
-              </Radio>
-              <SelectTarjetas pagotarjeta={this.state.pagotarjeta} tarjetas={this.state.tarjetas} />
+              <SelectTarjetas tarjetas={this.state.tarjetas} />
             </Col>
             <Col sm={6}>
               <a href="#" className="verpromos">Ver promociones sin interés <i className="fa fa-angle-right"></i></a>
@@ -93,20 +75,10 @@ class FormTarjetasPromos extends React.Component {
           </Row>
           <Row>
             <Col sm={6}>
-              <SelectBancos pagotarjeta={this.state.pagotarjeta} bancos={this.state.bancos}/>
+              <SelectBancos bancos={this.state.bancos}/>
             </Col>
           </Row>
           <hr />
-          <Row>
-            <Col sm={6}>
-              <Radio name="radioGroup" title="Efectivo" id="opt-efectivo" onClick={this.handleChange} inline>
-                <p>Efectivo
-                <img src={pagofacil} className="logo-efectivo" alt="Pagofacil" />
-                <img src={rapipago} className="logo-efectivo" alt="Rapipago" />
-                </p>
-              </Radio>
-            </Col>
-            </Row>
           <Totales />
         </form>
       </div>

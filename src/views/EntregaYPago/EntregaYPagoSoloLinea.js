@@ -5,7 +5,7 @@ import ProductResume from '../../components/ProductResume/ProductResume';
 import DeliveryForm from './DeliveryForm';
 import PayNowForm from './PayNowForm';
 import PayPlanForm from './PayPlanForm';
-import DataStoreSupport from '../../DataStoreSupport';
+import DataStoreSupport from '../../DataStoreSupportPlan';
 
 class EntregaYPago extends React.Component {
 

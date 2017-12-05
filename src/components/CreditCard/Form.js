@@ -41,10 +41,22 @@ class Form extends Component {
 
     this.setState({
       fields: newFields,
-      instalmentAmount: this.state.totalAmount / newFields.instalments.val,
+      //instalmentAmount: this.state.totalAmount / newFields.instalments.val,
       cuotas: newFields.instalments.val,
-      cft: newFields.instalments.val * 100000 / this.state.totalAmount // -----FAKE-----!
     });
+    /* SIMULATE */
+    switch (newFields.instalments.val) {
+      case '1':
+      this.setState({ instalmentAmount:'22000', totalAmount: '22000'});
+      break;
+      case '2':
+      this.setState({cft: '5,34', instalmentAmount:'11500', totalAmount: '23000'});
+      break;
+      case '3':
+      this.setState({cft: '9,02', instalmentAmount: '8000', totalAmount: '24000'});
+      break;
+    };
+
   };
 
   handleChange = (e) => {

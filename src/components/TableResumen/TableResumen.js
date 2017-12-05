@@ -20,8 +20,21 @@ class TableResumen extends React.Component {
       {this.props.infotabla.itemList.map((item, i) => {
         return (
           <tr id={i}>
-          <td><img className="Foto" src={!item.imgURL ? require('../../assets/img/img-default.png') : item.imgURL} alt={item.name} className="img" /></td>
-          <td><h2>{item.name} {item.desc}</h2><a href="#">Cambiar <i className="fa fa-angle-right"></i> </a></td>
+          <td>
+          {item.imgURL=== null ? (
+            <img className="Foto" src={require('../../assets/img/img-default.png')} alt={item.name} className="img" />
+            ):(
+            ''
+            )
+          }
+          {item.imgURL ? (
+            <img className="Foto" src={item.imgURL} alt={item.name} className="img" />
+            ):(
+            ''
+            )
+          }
+          </td>
+          <td><h2>{item.name}</h2><a href="#">Cambiar <i className="fa fa-angle-right"></i> </a></td>
           <td>{item.price}</td>
           <td>{item.pricemensual}{item.pricemensual ? <small>por mes</small> : ''}</td>
           </tr>

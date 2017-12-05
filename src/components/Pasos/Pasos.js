@@ -8,8 +8,7 @@ function Steps(props) {
     <div className="pasos">
     	<Grid>
     		<div className="bg-pasos">
-    	  		<a href="#" className="btn-back"><i className="fa fa-angle-left"></i></a>
-    		    <ol>{content}</ol>
+    	  		<ol>{content}</ol>
     	    </div>
     	</Grid>
     </div>

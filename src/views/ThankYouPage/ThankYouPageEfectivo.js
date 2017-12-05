@@ -3,7 +3,7 @@ import { Grid } from 'react-bootstrap';
 import Listo from '../../components/Listo/Listo';
 import NumeroLinea from '../../components/NumeroLinea/NumeroLinea';
 import DetalleCompra from '../../components/DetalleCompra/DetalleCompra';
-import DataStoreSupport from '../../DataStoreSupportPlan';
+import DataStoreSupport from '../../DataStoreSupport';
 class ThankYouPage extends Component { 
   constructor(props) {
     super(props);
@@ -35,7 +35,7 @@ class ThankYouPage extends Component {
         <Grid>
           <Listo />
           {this.state.cart.plan.name==null ? (''):(<NumeroLinea {...this.state.datosPersonales.userData.phone}/>)}
-          <DetalleCompra cart={this.state.cart}/>
+          <DetalleCompra cart={this.state.cart} efectivo={true}/>
         </Grid>
       </div>
       );

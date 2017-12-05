@@ -6,8 +6,7 @@ import InfoTarjetas from '../../components/InfoTarjetas/InfoTarjetas';
 const infotabla = {
   itemList : [{
       id: 2,
-      name: 'Plan One',
-      desc: '10GB',
+      name: 'Plan One 10GB',
       price: '',
       pricemensual: '$899,00',
       imgURL: require('../../assets/img/img-chip2.png'),

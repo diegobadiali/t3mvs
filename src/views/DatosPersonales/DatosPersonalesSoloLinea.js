@@ -9,7 +9,7 @@ import BillingAddressForm from './BillingAddressForm';
 import BillingOtherAddressForm from './BillingOtherAddressForm';
 import BillingAddressList from './BillingAddressList';
 import BillingOtherAddress from './BillingOtherAddress';
-import DataStoreSupport from '../../DataStoreSupport';
+import DataStoreSupport from '../../DataStoreSupportPlan';
 
 class DatosPersonales extends React.Component {
 
@@ -40,13 +40,6 @@ class DatosPersonales extends React.Component {
       isEditingAddress: true,
     });
   };
-
-  isSelectedAdress = () => {
-    this.setState({
-      isSelectedAdress: true,
-    });
-  };
-
   handleOtherAddress = () => {
     this.setState({
       isOtherAddress: true,
@@ -200,7 +193,6 @@ class DatosPersonales extends React.Component {
                           <BillingAddressForm
                             handleUserDataChange={this.handleBillingAddressChange}
                             userData={this.state.datosPersonales.userData.address}
-                            isSelectedAdress={this.isSelectedAdress}
                           />
                           <BillingOtherAddress
                             handleUserDataChange={this.handleBillingAddressChange}

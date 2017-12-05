@@ -25,7 +25,15 @@ let DataStoreSupport = {
   },
   getCart: () => {
     return ({
-      plan: {
+      device: {
+        name: null,
+        desc: null,
+        description: null,
+        price: null,
+        cuotas: null,
+        imgURL: null
+      },
+        plan: {
         name: 'One 10GB',
         price: '$899,00',
         vencimiento: '10/10/2017',

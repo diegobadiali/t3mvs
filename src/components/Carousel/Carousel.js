@@ -13,7 +13,7 @@ function Plan(props) {
             <div className={plan.recomendado ? 'plan recomendado' : 'plan'}>
             <div className="head-plan">
               <span>RECOMENDADO</span>
-              <h4>{plan.planprice}</h4>
+              <h4>{plan.planprice}<sub>/mes</sub></h4>
               <h5>{plan.name}</h5>
             </div>
             <ul>
@@ -46,7 +46,7 @@ function Plan(props) {
           <div className={plan.recomendado ? 'plan recomendado' : 'plan'}>
             <div className="head-plan">
               <span>RECOMENDADO</span>
-              <h4>{plan.planprice}</h4>
+              <h4>{plan.planprice}<sub>/mes</sub></h4>
               <h5>{plan.name}</h5>
             </div>
             <ul>
@@ -79,8 +79,8 @@ function Plan(props) {
         <div className={plan.recomendado ? 'plan recomendado' : 'plan'}>
           <div className="head-plan head-plan-prepago">
             <span>RECOMENDADO</span>
-            <h4>{plan.planprice}</h4>
-            <h5>{plan.name}</h5>
+            <h4></h4>
+            <h5>{plan.planprice}</h5>
           </div>
         <ul>
           <li><strong>Hablá</strong>
@@ -112,7 +112,7 @@ function Plan(props) {
         <div className={plan.recomendado ? 'plan recomendado' : 'plan'}>
         <div className="head-plan">
           <span>RECOMENDADO</span>
-          <h4>{plan.planprice}</h4>
+          <h4>{plan.planprice}<sub>/mes</sub></h4>
           <h5>{plan.name}</h5>
         </div>
         <ul>

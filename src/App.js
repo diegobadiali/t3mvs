@@ -14,12 +14,15 @@ import ResumenCompraLinea from './views/ResumenCompra/ResumenCompraLinea';
 import Indice from './views/Indice/Indice';
 import Home from './views/Home/Home';
 import DatosPersonales from './views/DatosPersonales/DatosPersonales';
+import DatosPersonalesSoloLinea from './views/DatosPersonales/DatosPersonalesSoloLinea';
 import ThankYouPage from './views/ThankYouPage/ThankYouPage';
 import ThankYouPagePlan from './views/ThankYouPage/ThankYouPagePlan';
 import ThankYouPageEquipo from './views/ThankYouPage/ThankYouPageEquipo';
+import ThankYouPageEfectivo from './views/ThankYouPage/ThankYouPageEfectivo';
 import DataStoreSupport from './DataStoreSupport';
 import Messages from './views/Messages/Messages';
 import EntregaYPago from './views/EntregaYPago/EntregaYPago';
+import EntregaYPagoSoloLinea from './views/EntregaYPago/EntregaYPagoSoloLinea';
 import MercadoPago from './views/MercadoPago/MercadoPago';
 
 
@@ -39,11 +42,14 @@ class Router extends SimpleReactRouter {
     map('/resumen-de-compra-linea',      ResumenCompraLinea)
     map('/home',                         Home)
     map('/datos-personales/:mode',       DatosPersonales)
+    map('/datos-personales-solo-linea/:mode',       DatosPersonalesSoloLinea)
     map('/thank-you-page',               ThankYouPage)
     map('/thank-you-page-plan',          ThankYouPagePlan)
     map('/thank-you-page-equipo',        ThankYouPageEquipo)
+    map('/thank-you-page-efectivo',        ThankYouPageEfectivo)
     map('/messages',                     Messages)
     map('/entrega-y-pago/:mode',         EntregaYPago)
+    map('/entrega-y-pago-solo-linea/:mode', EntregaYPagoSoloLinea)
     map('/mercadopago',                  MercadoPago)
   }
 }

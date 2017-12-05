@@ -123,9 +123,9 @@ class PayPlanForm extends React.Component {
     return (
       <Row>
         <Col sm={12}>
-          <h5>El primer vencimiento de tu factura será el {this.state.firstOverdue.format('DD/MM/YYYY')} por un importe de $1039,00 luego $889,00/mes</h5>
+          <h5 className={this.props.planPanelOpen ? '' : 'hidden' }>El primer vencimiento de tu factura será el {this.state.firstOverdue.format('DD/MM/YYYY')} por un importe de $1039,00 luego $889,00/mes</h5>
 
-          <div className="radios-entrega">
+          <div className={this.props.planPanelOpen ? 'radios-entrega' : 'radios-entrega hidden' }>
             <FormGroup validationState={this.state.fields.paymentMethodMensual.validationState}>
 
               <Radio name="paymentMethodMensual" value="creditCard" onClick={this.handleChange}>
@@ -153,14 +153,14 @@ class PayPlanForm extends React.Component {
                         this.props.isLoggedIn ? (
                           !this.props.formComplete ? (
                              <Row>
-                      <Col sm={6}>
-                              <FormGroup validationState={this.state.fields.cardOption.validationState} className={this.state.fields.cardOption.complete ? 'active' : ''}>
-                                <FormControl
-                                  componentClass="select"
-                                  placeholder="*Seleccioná una tarjeta"
-                                  name="cardOption"
-                                  onChange={this.handleChangeCard}
-                                >
+                              <Col sm={6}>
+                                <FormGroup validationState={this.state.fields.cardOption.validationState} className={this.state.fields.cardOption.complete ? 'active' : ''}>
+                                 <FormControl
+                                    componentClass="select"
+                                    placeholder="*Seleccioná una tarjeta"
+                                    name="cardOption"
+                                    onChange={this.handleChangeCard}
+                                  >
                                   <option selected disabled>Seleccioná una tarjeta</option>
                                   <option value="other">Otra tarjeta</option>
                                   {cardOptions}
@@ -172,21 +172,22 @@ class PayPlanForm extends React.Component {
                             ):(
                             this.state.fields.cardOption.val != "other" ? (
                             <Row>
-                            <Col sm={12}>
-                            <div className="datos-cargardos">
-                              <a className="btn btn-link pull-right" onClick={this.props.handleEditCard}>
-                                <i className="fa fa-pencil"></i>
-                              </a>
-                              <ul>
-                                <li><strong>Pago con tarjeta de crédito:</strong> </li>
-                                <li>xxxx xxxx xxxx 5654</li>
-                              </ul>
-                            </div>
-                            </Col>
-                    </Row>
-                    ):(null)
+                              <Col sm={12}>
+                                <div className="datos-cargardos">
+                                  <a className="btn btn-link pull-right" onClick={this.props.handleEditCard}>
+                                    <i className="fa fa-pencil"></i>
+                                  </a>
+                                  <ul>
+                                    <li><strong>Forma de pago</strong></li>
+                                    <li>Débito en tarjeta de crédito:</li>
+                                    <li>xxxx xxxx xxxx 5654</li>
+                                  </ul>
+                                </div>
+                              </Col>
+                            </Row>
+                          ):(null)
                             )
-                          ) : (null)
+                        ) : (null)
                       }
                       
                     {cardData(this.state.fields.cardOption.val)}
@@ -201,12 +202,25 @@ class PayPlanForm extends React.Component {
             }
             {
               this.state.fields.paymentMethodMensual.val == 'cash' ? (
-                
-                <div className={this.props.formComplete ? 'hide' : 'cont-btns'}>
-                      <Button bsStyle="success" onClick={this.props.handleNext}>
-                        Continuar
-                      </Button>
+                <div>
+                  <div className={this.props.planPanelOpen ? 'hidden' : '' }>
+                    <div className="datos-cargardos">
+                        <a className="btn btn-link pull-right" onClick={this.props.handleEditCard}>
+                          <i className="fa fa-pencil"></i>
+                        </a>
+                        <ul>
+                          <li><strong>Forma de pago</strong></li>
+                          <li>Pago en efectivo</li>
+                        </ul>
+                      </div>
                     </div>
+                  <div className={this.props.formComplete ? 'hide' : 'cont-btns'}>
+                    <Button bsStyle="success" onClick={this.props.handleNext}>
+                    Continuar
+                    </Button>
+                  </div>
+                </div>
+                
                 ) : (null)
             }
 

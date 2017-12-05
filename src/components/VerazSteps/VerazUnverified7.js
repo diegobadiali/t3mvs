@@ -1,6 +1,17 @@
 import React, {Component} from 'react';
 import { Button, Table, Radio } from 'react-bootstrap';
 class VerazUnverified7 extends Component {
+  constructor(props){
+    super(props)
+    this.state={
+      radioSelected: false
+    }
+  }
+  handleChange = (e) => {
+      this.setState({
+        radioSelected: true
+      })
+  }
   render() {
     return (
       <div className="cont-preguntas msg-error">
@@ -21,7 +32,7 @@ class VerazUnverified7 extends Component {
              {this.props.infotabla.itemList.map((item, i) => {
               return(
               <tr>
-                <td><div className="form-group"><Radio name="radioLocations" title={item.street} id={i} inline><p>{item.street}</p></Radio></div></td>
+                <td><div className="form-group"><Radio name="radioLocations" title={item.street} id={i} inline onClick={this.handleChange}><p>{item.street}</p></Radio></div></td>
                 <td><p>{item.number}</p></td>
                 <td><p>{item.locality}</p></td>
                 <td><p>{item.city}</p></td>
@@ -31,7 +42,7 @@ class VerazUnverified7 extends Component {
               })}
             </tbody>
           </Table>
-          <Button bsStyle="success">Seleccionar</Button>
+          <Button bsStyle="success" disabled={this.state.radioSelected ? '' : 'disabled'}>Seleccionar</Button>
         </div>    
       </div>
     );

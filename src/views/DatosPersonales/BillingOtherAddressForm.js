@@ -9,15 +9,15 @@ class BillingAddressForm extends React.Component {
     super(props);
     this.state = {
       fields: {
-        street: {val: props.userData.street, validationState: null, complete: null},
-        number: {val: props.userData.number, validationState: null, complete: null},
-        floor: {val: props.userData.floor, validationState: null, complete: null},
-        apartment: {val: props.userData.apartment, validationState: null, complete: null},
-        locality: {val: props.userData.locality, validationState: null, complete: null},
-        city: {val: props.userData.city, validationState: null, complete: null},
-        postalCode: {val: props.userData.zipcode, validationState: null, complete: null},
+        street: {val: '', validationState: null, complete: null},
+        number: {val: '', validationState: null, complete: null},
+        floor: {val: '', validationState: null, complete: null},
+        apartment: {val: '', validationState: null, complete: null},
+        locality: {val: '', validationState: null, complete: null},
+        city: {val: '', validationState: null, complete: null},
+        postalCode: {val: '', validationState: null, complete: null},
         comments: {val: '', validationState: null, complete: null},
-        entrecalles: {val: props.userData.entrecalles, validationState: null, complete: null},
+        entrecalles: {val: '', validationState: null, complete: null},
         lineSameAsBillingAddress: {val: true},
         willBeUsedIn: {val: 'caba'},
         willBeUsedInLocality: {val: '', validationState: null, complete: null},
@@ -51,10 +51,8 @@ class BillingAddressForm extends React.Component {
 
     //newFields[e.target.name] = newField;
 
-    this.props.isSelectedAdress();
-
     newFields[e.target.name] = {
-      //val: e.target.value,
+      val: e.target.value,
       validationState: isValid ? null : 'error',
       complete: true
     };
@@ -63,7 +61,7 @@ class BillingAddressForm extends React.Component {
       fields: newFields
     });
 
-    this.props.handleUserDataChange(e.target.name, e.target.value);
+    //this.props.handleUserDataChange(e.target.name, e.target.value);
     //this.props.handleStatus(isValid);
 
   };
@@ -77,7 +75,6 @@ class BillingAddressForm extends React.Component {
               <FormControl
                 type="text"
                 placeholder="*Calle"
-                value={this.state.fields.street.val}
                 name="street"
                 onBlur={this.handleChange}
                 required
@@ -94,7 +91,6 @@ class BillingAddressForm extends React.Component {
               placeholder="*Número"
               format="######"
               onBlur={this.handleChange}
-              value={this.state.fields.number.val}
               required
             />
             <HelpBlock className="help-block-error">Ingresá el número</HelpBlock>
@@ -105,7 +101,6 @@ class BillingAddressForm extends React.Component {
               <FormControl
                 type="text"
                 placeholder="Piso"
-                value={this.state.fields.floor.val}
                 name="floor"
                 onBlur={this.handleChange}
               />
@@ -116,7 +111,6 @@ class BillingAddressForm extends React.Component {
               <FormControl
                 type="text"
                 placeholder="Depto"
-                value={this.state.fields.apartment.val}
                 name="apartment"
                 onBlur={this.handleChange}
               />
@@ -124,13 +118,11 @@ class BillingAddressForm extends React.Component {
           </Col>
         </Row>
         <Row>
-          
           <Col sm={12} md={6}>
             <FormGroup validationState={this.state.fields.city.validationState} className={this.state.fields.city.complete ? 'active' : '' }>
               <FormControl
                 componentClass="select"
-                placeholder="*Provincia/Ciudad"
-                value={this.state.fields.city.val}
+                placeholder="*Provincia"
                 name="city"
                 onBlur={this.handleChange}
               >
@@ -168,14 +160,14 @@ class BillingAddressForm extends React.Component {
               <FormControl
                 type="text"
                 placeholder="*Ciudad/Localidad"
-                value={this.state.fields.locality.val}
                 name="locality"
                 onBlur={this.handleChange}
                 required
-              />
-                <HelpBlock className="help-block-error">Ingresá la ciudad/localidad</HelpBlock>
+               />
+              <HelpBlock className="help-block-error">Ingresá la ciudad/localidad</HelpBlock>
             </FormGroup>
           </Col>
+          
         </Row>
         <Row>
           <Col sm={12} md={3}>
@@ -183,7 +175,6 @@ class BillingAddressForm extends React.Component {
               <FormControl
                 type="text"
                 placeholder="*Código postal"
-                value={this.state.fields.postalCode.val}
                 name="postalCode"
                 onBlur={this.handleChange}
                 required
@@ -211,8 +202,7 @@ class BillingAddressForm extends React.Component {
             </FormGroup>
           </Col>
         </Row> 
-        {this.props.isOtherAddress ? (
-          <Row>
+        <Row className={this.props.isOtherAddress ? 'visible' : 'hidden'}>
           <Col sm={12}><h4>Datos del autorizado</h4></Col>
           <Col sm={12} md={6}>
             <FormGroup className={this.state.fields.nombreautorizado.complete ? 'active' : '' }>
@@ -245,10 +235,6 @@ class BillingAddressForm extends React.Component {
             </FormGroup>
           </Col>
         </Row>  
-          ) : (
-          '')
-        }
-        
       </div>
     );
   }

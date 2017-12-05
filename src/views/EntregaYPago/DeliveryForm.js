@@ -1,7 +1,7 @@
 import React from 'react';
 import {Col, Row, Button, FormGroup, Radio} from 'react-bootstrap';
 import {simpleValidation} from '../../utils/validators';
-import BillingAddressForm from '../DatosPersonales/BillingAddressForm';
+import BillingAddressForm from '../DatosPersonales/BillingOtherAddressForm';
 import BillingAddressResume from '../DatosPersonales/BillingAddressResume';
 import RetiroAddressResume from '../DatosPersonales/RetiroAddressResume';
 import Map from '../../components/Map/Map';
@@ -42,8 +42,9 @@ class DeliveryForm extends React.Component {
   handleEditAddress = () => {
     this.setState({
       isEditingAddress: true,
-      deliveryComplete: false
+      deliveryComplete: false,
     });
+    this.props.deliveryPanelFunction()
   };
 
   handleNext = () => {
@@ -62,6 +63,7 @@ class DeliveryForm extends React.Component {
     this.setState({
       isSelectedSucursal: false,
     });
+    this.props.deliveryPanelFunction()
   };
 
   handleBillingAddressChange = (key, val) => {
@@ -75,7 +77,7 @@ class DeliveryForm extends React.Component {
       <form>
         <Row>
           <Col sm={12}>
-            <div className="radios-entrega">
+            <div className={this.props.deliveryPanelOpen ? 'radios-entrega' : 'radios-entrega hidden' }>
               <FormGroup validationState={this.state.fields.deliverTo.validationState}>
 
                 <Radio name="deliverTo" value="home" onClick={this.handleChange}>
@@ -95,6 +97,11 @@ class DeliveryForm extends React.Component {
                 this.state.fields.deliverTo.val == 'home' ? (
                     <div className="cont-entrega-pago">
                     <h4>Envío a domicilio</h4>
+                    {!this.props.deliveryComplete & !this.state.isEditingAddress ? (
+                      <p>Si elegís envío a este domicilio, podrá recibir cualquier persona mayor de edad con DNI. Si elegís otro domicilio de entrega, podrá recibir el titular o autorizado.</p>
+                      ):('')
+                    }
+
                     {!this.state.isEditingAddress ? (
                       <div>
                         <BillingAddressResume
@@ -112,6 +119,7 @@ class DeliveryForm extends React.Component {
                         <BillingAddressForm
                         handleUserDataChange={this.handleBillingAddressChange}
                         userData={this.props.userData.address}
+                        isOtherAddress={true}
                         />
                         <div className="cont-btns">
                           <Button bsStyle="success" onClick={this.handleNext}>

@@ -6,25 +6,30 @@ import InfoTarjetas from '../../components/InfoTarjetas/InfoTarjetas';
 const infotabla = {
   itemList : [{
       id: 1,
-      name: 'Samsung Galaxy S8 4G LTE',
-      desc: 'Negro - 32GB',
+      name: 'Samsung Galaxy S8 4G LTE Negro - 32GB',
       price: '$22.000,00',
       pricemensual: '',
       imgURL: 'http://www.movistar.com.ar/documents/10192/14678471/s8.png',
     },
     { 
       id: 2,
-      name: 'Plan One',
-      desc: '10GB',
+      name: 'Chip Generico (apto para todos los equipos)',
+      price: '$0,00',
+      pricemensual: '',
+      imgURL: require('../../assets/img/img-chip2.png'),
+    },
+    { 
+      id: 3,
+      name: 'Plan One 10GB',
       price: '',
       pricemensual: '$899,00',
-      imgURL: require('../../assets/img/img-chip2.png'),
+      
     }
   ],
   onetimecharge: '$55,00',  
   totals: {
       pricetotal : '$22.000,00',
-      pricemensualtotal : '$899,00'  
+      pricemensualtotal : '$954,00'  
   }
 };
 class ResumenCompra extends Component {  

@@ -33,6 +33,13 @@ let DataStoreSupport = {
         cuotas: '$250,00/mes',
         imgURL: 'http://www.movistar.com.ar/documents/10192/14678471/s8.png'
       },
+      plan: {
+        name: null,
+        price: null,
+        vencimiento: null,
+        imgURL: null,
+        onetimecharge: null
+      },
       retiro: {
         direccion: 'Almagro - Av. Corrientes 2973',
         horario: 'Lunes a viernes de 9 a 19hs'

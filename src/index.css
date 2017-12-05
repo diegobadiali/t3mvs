@@ -1073,7 +1073,7 @@ body {
       box-shadow: $box-shadow4 !important;
       background-color: $color4 !important;*/
       font-size: 16px;
-      line-height: 33px !important;
+      line-height: 31px !important;
       font-family: "TelefonicaLight";
       padding-right: 50px;
       padding-top: 6px !important; }
@@ -1487,8 +1487,8 @@ input[type="radio"] {
   float: left;
   -webkit-appearance: none !important;
   -moz-appearance: none !important;
-  height: 19px;
-  width: 19px;
+  height: 20px;
+  width: 20px;
   cursor: pointer;
   position: relative;
   -webkit-transition: .15s;
@@ -1683,8 +1683,8 @@ input[type="radio"]:checked:before {
       margin-right: 10px;
       -webkit-appearance: none !important;
       -moz-appearance: none !important;
-      height: 19px;
-      width: 19px;
+      height: 20px;
+      width: 20px;
       cursor: pointer;
       position: relative;
       -webkit-transition: .15s;
@@ -2333,8 +2333,8 @@ input[type="radio"]:checked:before {
         float: left;
         -webkit-appearance: none !important;
         -moz-appearance: none !important;
-        height: 19px;
-        width: 19px;
+        height: 20px;
+        width: 20px;
         cursor: pointer;
         position: relative;
         -webkit-transition: .15s;
@@ -2705,8 +2705,8 @@ input[type="radio"]:checked:before {
       margin-right: 10px;
       -webkit-appearance: none !important;
       -moz-appearance: none !important;
-      height: 19px;
-      width: 19px;
+      height: 20px;
+      width: 20px;
       cursor: pointer;
       position: relative;
       -webkit-transition: .15s;
@@ -3392,8 +3392,8 @@ input[type="radio"]:checked:before {
     margin-right: 10px;
     -webkit-appearance: none !important;
     -moz-appearance: none !important;
-    height: 19px;
-    width: 19px;
+    height: 20px;
+    width: 20px;
     cursor: pointer;
     position: relative;
     -webkit-transition: .15s;
@@ -3869,8 +3869,8 @@ h3.title {
       margin-right: 10px;
       -webkit-appearance: none !important;
       -moz-appearance: none !important;
-      height: 19px;
-      width: 19px;
+      height: 20px;
+      width: 20px;
       cursor: pointer;
       position: relative;
       -webkit-transition: .15s;
@@ -4146,8 +4146,8 @@ h3.title {
     margin-right: 10px;
     -webkit-appearance: none !important;
     -moz-appearance: none !important;
-    height: 19px;
-    width: 19px;
+    height: 20px;
+    width: 20px;
     cursor: pointer;
     position: relative;
     -webkit-transition: .15s;
@@ -4275,6 +4275,10 @@ h3.title {
   margin: 0 0 20px;
   font-size: 18px;
   font-weight: bold; }
+  .cont-entrega-pago h4 + p {
+    margin-bottom: 20px;
+    font-style: italic;
+    color: #86888c; }
 
 /* EntregaYPago */
 /* Footer */
@@ -4444,6 +4448,62 @@ footer {
           font-size: 10px; }
           footer .copy p img {
             width: 20px; } }
+    footer .copy .links-footer {
+      padding: 0;
+      margin: 0;
+      height: auto;
+      float: right; }
+      footer .copy .links-footer ul {
+        margin: 10px 0 0;
+        padding: 0; }
+        footer .copy .links-footer ul li {
+          float: left;
+          padding: 5px 20px;
+          border-right: 1px solid #B4B4B4;
+          text-transform: uppercase;
+          vertical-align: middle; }
+          footer .copy .links-footer ul li a {
+            color: #86888c;
+            font-size: 14px;
+            font-family: "TelefonicaBold"; }
+            @media (max-width: 992px) {
+              footer .copy .links-footer ul li a {
+                font-size: 12px; } }
+            footer .copy .links-footer ul li a:hover, footer .copy .links-footer ul li a:focus {
+              opacity: .7; }
+          footer .copy .links-footer ul li:first-child {
+            padding-left: 0; }
+          footer .copy .links-footer ul li:last-child {
+            border-right: none; }
+          @media (max-width: 767px) {
+            footer .copy .links-footer ul li {
+              padding-left: 10px;
+              padding-right: 10px; } }
+      @media (max-width: 992px) {
+        footer .copy .links-footer {
+          display: none; }
+          footer .copy .links-footer .links-footer {
+            display: none; } }
+      footer .copy .links-footer.links-footer-xs {
+        display: none; }
+        @media (max-width: 992px) {
+          footer .copy .links-footer.links-footer-xs {
+            display: block;
+            float: none;
+            width: 100%;
+            border-bottom: 1px solid #B4B4B4;
+            height: 38px;
+            margin-bottom: 10px; }
+            footer .copy .links-footer.links-footer-xs ul li {
+              width: 33%;
+              text-align: center; } }
+    @media (max-width: 992px) and (max-width: 359px) {
+      footer .copy .links-footer.links-footer-xs ul li a {
+        font-size: 10px; } }
+
+    @media (max-width: 992px) {
+      footer .copy {
+        height: auto; } }
 
 /* Footer */
 /* Form */
@@ -4536,8 +4596,8 @@ footer {
     margin-right: 10px;
     -webkit-appearance: none !important;
     -moz-appearance: none !important;
-    height: 19px;
-    width: 19px;
+    height: 20px;
+    width: 20px;
     cursor: pointer;
     position: relative;
     -webkit-transition: .15s;
@@ -4713,8 +4773,8 @@ footer {
     margin-right: 10px;
     -webkit-appearance: none !important;
     -moz-appearance: none !important;
-    height: 19px;
-    width: 19px;
+    height: 20px;
+    width: 20px;
     cursor: pointer;
     position: relative;
     -webkit-transition: .15s;

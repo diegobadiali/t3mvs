@@ -6,7 +6,7 @@ function Plan(props) {
     planInfo = (
       <div>
         <span className="info">{props.plan.name}</span>
-        <span className="price">{props.plan.price}</span>
+        <span className="price">{props.plan.price} /mes</span>
       </div>
     );
   } else {
@@ -37,18 +37,41 @@ class ProductResume extends React.Component {
               <div className="product-resume">
                 <h4>Resumen de compra</h4>
                 <div className="text-center">
+                {this.props.cart.device.name==null ? (
                   <img
+                    src={this.props.cart.plan.imgURL}
+                    className="Foto" alt={this.props.cart.plan.name}
+                  />
+                  ):(
+                    <img
                     src={this.props.cart.device.imgURL}
                     className="Foto" alt={this.props.cart.device.name}
                   />
+                  )
+                }
+                  
                 </div>
                 <div>
                   <div>
-                    <span className="title">Equipo</span>
-                    <span className="info">{this.props.cart.device.name}</span>
-                    <span className="price">{this.props.cart.device.price}</span>
-                    <span className="title">Plan</span>
-                    <Plan {...this.props.cart}/>
+                  {this.props.cart.device.name==null ? (
+                    ''
+                    ):(
+                    <div>
+                      <span className="title">Equipo</span>
+                      <span className="info">{this.props.cart.device.name}</span>
+                      <span className="price">{this.props.cart.device.price}</span>
+                    </div>
+                    )
+                }
+                    {this.props.cart.plan.name==null ? (
+                      '' ):(
+                      <div>
+                        <span className="title">Plan</span>
+                        <Plan {...this.props.cart}/>
+                      </div>
+                      )
+                    }
+                    
                     {this.props.cart.plan.onetimecharge ? (
                       <div>
                       <span className="title">Cargo adicional</span> 

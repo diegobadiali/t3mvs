@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import Modal from 'react-modal';
 import FormTarjetasPromos from '../../components/FormTarjetasPromos/FormTarjetasPromos';
-var title = "Tarjetas y promociones";
+var title = "Promociones con Tarjeta de Crédito";
 const customStyles = {
   content : {
     top                   : '50%',

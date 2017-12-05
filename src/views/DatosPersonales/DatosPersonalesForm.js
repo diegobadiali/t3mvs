@@ -11,12 +11,10 @@ class DatosPersonalesForm extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      tipodoc: false,
       datepickerror: false,
       fields: {
         firstname: {val: '', validationState: null, complete: null},
         lastname: {val: '', validationState: null, complete: null},
-        tipo: {val: '', validationState: null, complete: null},
         dni: {val: '', validationState: null, complete: null},
         birthday: {val: null, validationState: null, complete: null},
         codarea: {val: '', validationState: null, complete: null},
@@ -71,12 +69,6 @@ class DatosPersonalesForm extends React.Component {
     this.setState({fields: newFields});
   };
 
-   handleSelectChange = (e) => {
-    this.setState({
-      tipodoc: true
-    })
-   }
-
    handleOnBlur = (e) => {
     if (this.state.fields.birthday.val) {
         this.setState({
@@ -104,7 +96,7 @@ render() {
               onBlur={this.handleChange}
               required
             />
-            <HelpBlock className="help-block-error">Debes ingresar tu nombre</HelpBlock>
+            <HelpBlock className="help-block-error">Ingresá tu nombre</HelpBlock>
           </FormGroup>
         </Col>
 
@@ -118,26 +110,12 @@ render() {
               onBlur={this.handleChange}
               required
             />
-            <HelpBlock className="help-block-error">Debes ingresar tu apellido</HelpBlock>
+            <HelpBlock className="help-block-error">Ingresá tu apellido</HelpBlock>
           </FormGroup>
         </Col>
 
         </Row>
         <Row>
-
-        <Col sm={12} md={6}>
-          <FormGroup className={this.state.tipodoc ? 'active' : '' } controlId="formControlsSelect" validationState={this.state.fields.tipo.validationState}>
-            <FormControl componentClass="select" placeholder="Tipo de documento" onChange={this.handleSelectChange}>
-              <option disabled selected>Seleccioná tipo de documento</option>
-              <option value="">DNI</option>
-              <option value="">Libreta Civica</option>
-              <option value="">Libreta de Enrolamiento</option>
-              <option value="">Cédula de Identidad</option>
-              <option value="">Pasaporte</option>
-            </FormControl>
-            <i className="fa fa-angle-down"></i>
-          </FormGroup> 
-        </Col>
 
         <Col sm={12} md={6}>
           <FormGroup className={this.state.fields.dni.complete ? 'active' : '' } validationState={this.state.fields.dni.validationState}>
@@ -152,7 +130,7 @@ render() {
               onBlur={this.handleChange}
               required
             />
-            <HelpBlock className="help-block-error">Debes ingresar tu documento</HelpBlock>
+            <HelpBlock className="help-block-error">Ingresá tu documento</HelpBlock>
           </FormGroup>
         </Col>
 
@@ -173,7 +151,7 @@ render() {
               locale="es-ES"
             />
             <i className="fa fa-calendar"></i>
-            <HelpBlock className="help-block-error">Debes ingresar la fecha de nacimiento</HelpBlock>
+            <HelpBlock className="help-block-error">Ingresá la fecha de nacimiento</HelpBlock>
           </FormGroup>
         </Col>
 
@@ -207,7 +185,7 @@ render() {
               Ejemplo: 11
             </HelpBlock>
             <HelpBlock className="help-block-error">
-              Debes ingresar el código de área
+              Ingresá el código de área
             </HelpBlock>
           </FormGroup>
         </Col>
@@ -223,11 +201,10 @@ render() {
               required
             /> 
             <HelpBlock>
-              Ingresá el nº de línea sin el 15.<br/>
-              Ejemplo: 85713957
+              Para números móviles sin el 15
             </HelpBlock>
             <HelpBlock className="help-block-error">
-              Debes ingresar el número
+              Ingresá el número
             </HelpBlock>
           </FormGroup>
         </Col>
