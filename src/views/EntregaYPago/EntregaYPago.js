@@ -100,6 +100,17 @@ class EntregaYPago extends React.Component {
     });
   };
 
+  handleNextPlanCash = () => {
+    this.setState({
+      deliveryPanelOpen: false,
+      devicePanelOpen: true,
+      planPanelOpen: false,
+      planInnerPanelOpen: true,
+      formComplete: false,
+      efectivoComplete: true,
+    });
+  };
+
 
 
   deliveryPanelFunction = () => {
@@ -119,6 +130,7 @@ class EntregaYPago extends React.Component {
       planPanelOpen: true
     });
   };
+
 
   componentDidMount() {
 
@@ -163,6 +175,7 @@ class EntregaYPago extends React.Component {
                     deliveryComplete={this.state.deliveryComplete}
                     deliveryPanelOpen={this.state.deliveryPanelOpen}
                     deliveryPanelFunction={this.deliveryPanelFunction}
+                    device={this.state.cart.device.name}
                   />
                 </Panel>
               </div>         
@@ -173,8 +186,10 @@ class EntregaYPago extends React.Component {
                     isLoggedIn={this.state.isLoggedIn}
                     userData={this.state.datosPersonales.userData}
                     handleNext={this.handleNextPlan}
+                    handleNextCash={this.handleNextPlanCash}
                     devicePanelOpen={this.state.devicePanelOpen}
                     formComplete={this.state.formComplete}
+                    efectivoComplete={this.state.efectivoComplete}
                     handleEditCard={this.handleEditCard}
                     planPanelOpen={this.state.planPanelOpen}
                     planPanelFunction={this.planPanelFunction}

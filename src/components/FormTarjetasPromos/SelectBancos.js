@@ -9,12 +9,13 @@ class SelectBancos extends React.Component {
     this.setState({
       selected: true
     })
+    this.props.tarjetaActive()
   }
   render() {
     return (
       <FormGroup controlId="formControlsSelectBancos" className={this.state.selected ? 'active' : ''}>
         <FormControl componentClass="select" placeholder="Tarjeta" onChange={this.handleChange.bind(this)}>
-          <option disabled selected>Banco</option>
+          <option disabled selected>Seleccioná un Banco</option>
             <optgroup label="Hasta 12 cuotas sin interés">
               {this.props.bancos.cuotas12.map((item, i) => {
                 return(

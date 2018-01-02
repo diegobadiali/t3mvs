@@ -9,7 +9,7 @@ import {simpleValidation} from '../../utils/validators';
 //import OptionsAddress from '../../components/OptionsAddress/OptionsAddress';
 const prod = {
     product: {
-      name: 'Línea Movistar',
+      name: 'Chip Movistar',
       price: '$0,00',
       imgURL: require('../../assets/img/img-chip2.png'),
     }

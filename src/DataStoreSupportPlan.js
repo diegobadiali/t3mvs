@@ -8,7 +8,8 @@ let DataStoreSupport = {
         lastname: 'Pérez',
         dni: '45432123',
         birthday: '1984-01-01',
-        phone: '1155667788',
+        codarea: '11',
+        phone: '55667788',
         email: 'juan@example.com',
         gender: 'Masculino',
         address: {
@@ -19,6 +20,10 @@ let DataStoreSupport = {
           locality: 'CABA',
           city: 'CABA',
         },
+        creditCards: [
+          {id: 1, number: '1111222233334444', type: 'visa'},
+          {id: 2, number: '5555666677778888', type: 'mastercard'},
+        ],
         currentPlan: null,
       }
     });

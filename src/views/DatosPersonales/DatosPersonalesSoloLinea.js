@@ -7,7 +7,7 @@ import DatosPersonalesVeraz from './DatosPersonalesVeraz';
 import Resume from './Resume';
 import BillingAddressForm from './BillingAddressForm';
 import BillingOtherAddressForm from './BillingOtherAddressForm';
-import BillingAddressList from './BillingAddressList';
+import BillingAddressList from './BillingAddressResumeReadOnly';
 import BillingOtherAddress from './BillingOtherAddress';
 import DataStoreSupport from '../../DataStoreSupportPlan';
 
@@ -40,6 +40,13 @@ class DatosPersonales extends React.Component {
       isEditingAddress: true,
     });
   };
+
+  isSelectedAdress = () => {
+    this.setState({
+      isSelectedAdress: true,
+    });
+  };
+
   handleOtherAddress = () => {
     this.setState({
       isOtherAddress: true,
@@ -55,10 +62,25 @@ class DatosPersonales extends React.Component {
   handleData = () => {
     this.setState({
       datosPersonales:{
+        open: true,
         userData: {
-          address: {}
+          address: DataStoreSupport.getUserData().data.address,
         },
         verifiedData: false
+      }
+    });
+  };
+  handleNext = () => {
+    this.setState({
+      isSelectedAdress: true,
+      datosPersonales:{
+        open: false,
+        userData: {
+          address: DataStoreSupport.getUserData().data.address,
+        },
+      },
+      billingAddress: {
+        open: true,
       }
     });
   };
@@ -79,8 +101,20 @@ class DatosPersonales extends React.Component {
       loggedIn = true;
       this.setState({
         billingAddress:{
-          open: true
+          open: false
         }
+      })
+    }
+
+     if (this.props.location.params.mode == 'prepago') {
+      newDatosPersonales.userData = DataStoreSupport.getUserData().data;
+      newDatosPersonales.verifiedData = false;
+      loggedIn = false;
+      this.setState({
+        billingAddress:{
+          open: false
+        },
+        prepago: true
       })
     }
 
@@ -138,6 +172,21 @@ class DatosPersonales extends React.Component {
     });
   };
 
+  toggleActivePanelDatosPersonales = () => {
+    let newBillingAddress = Object.assign({}, this.state.billingAddress);
+    let newDatosPersonales = Object.assign({}, this.state.datosPersonales);
+    newDatosPersonales.open = !this.state.datosPersonales.open;
+    newBillingAddress.open = !this.state.billingAddress.open;
+    newDatosPersonales.userData = DataStoreSupport.getUserData().data;
+    newDatosPersonales.verifiedData = true;
+    this.setState({
+      billingAddress: newBillingAddress,
+      datosPersonales: newDatosPersonales,
+    });
+
+  };
+
+
   render() {
     return (
       <div className="datos-personales-facturacion">
@@ -146,9 +195,16 @@ class DatosPersonales extends React.Component {
           <PageHeader>Datos personales y de facturación</PageHeader>
           <Row>
             <Col md={8}>
-              <div id="datos-personales" className='open'>
-                <h3>Datos personales</h3>
-                <Panel collapsible expanded={true}>
+              <div id="datos-personales" className={ !this.state.datosPersonales.open ? 'collapsed' : 'open' }>
+                <h3>Datos personales
+                  <button
+                    className="btn btn-link pull-right"
+                    onClick={this.toggleActivePanelDatosPersonales}
+                  >
+                    <i className={this.state.datosPersonales.open ? 'hidden' : 'fa fa-angle-down'}/>
+                  </button>
+                </h3>
+                <Panel collapsible expanded={this.state.datosPersonales.open}>
                   {
                     this.state.datosPersonales.verifiedData ? (
                         <Resume
@@ -156,6 +212,7 @@ class DatosPersonales extends React.Component {
                           isLoggedIn={this.state.isLoggedIn}
                           toggleActivePanel={this.toggleActivePanel}
                           handleData={this.handleData}
+                          handleNext={this.handleNext}
                         />
                       ) : (
                         <div>
@@ -163,6 +220,7 @@ class DatosPersonales extends React.Component {
                             handleStatus={this.handleDatosPersonalesStatus}
                             handleUserDataChange={this.handleUserDataChange}
                             firstname={this.state.datosPersonales.userData.name}
+                            prepago={this.state.prepago}
                           />
                           <DatosPersonalesVeraz
                             disabled={!this.state.datosPersonales.valid}
@@ -174,13 +232,13 @@ class DatosPersonales extends React.Component {
                 </Panel>
               </div>
               <div id="domicilio-facturacion" className={ !this.state.billingAddress.open ? 'collapsed' : 'open' }>
-                <h3>Domicilio</h3>
+                <h3>Domicilio
+                
+                </h3>
                 <Panel collapsible expanded={this.state.billingAddress.open}>
                   {
                     !this.state.isEditingAddress ? (
                       <div>
-                        <p className="mb20">Si elegís envío a este domicilio, podrá recibir cualquier persona mayor de edad con DNI. Si elegís otro domicilio de entrega, podrá recibir el titular o autorizado.</p>
-
                           <BillingAddressList
                             {...this.state.datosPersonales.userData.address}
                             handleOtherAddress={this.handleOtherAddress}
@@ -193,6 +251,7 @@ class DatosPersonales extends React.Component {
                           <BillingAddressForm
                             handleUserDataChange={this.handleBillingAddressChange}
                             userData={this.state.datosPersonales.userData.address}
+                            isSelectedAdress={this.isSelectedAdress}
                           />
                           <BillingOtherAddress
                             handleUserDataChange={this.handleBillingAddressChange}
@@ -229,7 +288,7 @@ class DatosPersonales extends React.Component {
               </div>
             </Col>
             <Col md={4}>
-              <ProductResume cart={this.state.cart}/>
+              <ProductResume cart={this.state.cart} prepago={this.state.prepago}/>
             </Col>
           </Row>
         </Grid>

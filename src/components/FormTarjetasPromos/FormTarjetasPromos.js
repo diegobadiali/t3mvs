@@ -58,16 +58,40 @@ class FormTarjetasPromos extends React.Component {
     super(props);
     this.state = {
       tarjetas: list,
-      bancos: listbancos
+      bancos: listbancos,
+      pagotarjeta: false
     };
   }
+  handleChange = (e) => {
+    switch (e.target.id) {
+      case 'opt-tarjeta':
+        this.setState({
+          pagotarjeta: true,
+        });
+      break;
+      case 'opt-efectivo':
+        this.setState({
+          pagotarjeta: false
+        });
+      break;
+    }
+  };
+  tarjetaActive = (e) => {
+    this.setState({
+       pagotarjeta: true
+    });
+  };
+
   render() {
     return (
       <div className="tarjetas-promos">
         <form>
           <Row>
             <Col sm={6}>
-              <SelectTarjetas tarjetas={this.state.tarjetas} />
+              <Radio name="radioGroup" title="Tarjeta de crédito" id="opt-tarjeta" onClick={this.handleChange} checked={this.state.pagotarjeta} inline>
+                <p>Tarjeta de crédito</p>
+              </Radio>
+              <SelectTarjetas pagotarjeta={this.state.pagotarjeta} tarjetas={this.state.tarjetas} tarjetaActive={this.tarjetaActive} />
             </Col>
             <Col sm={6}>
               <a href="#" className="verpromos">Ver promociones sin interés <i className="fa fa-angle-right"></i></a>
@@ -75,9 +99,20 @@ class FormTarjetasPromos extends React.Component {
           </Row>
           <Row>
             <Col sm={6}>
-              <SelectBancos bancos={this.state.bancos}/>
+              <SelectBancos pagotarjeta={this.state.pagotarjeta} bancos={this.state.bancos} tarjetaActive={this.tarjetaActive}/>
             </Col>
           </Row>
+          <hr />
+          <Row>
+            <Col sm={6}>
+              <Radio name="radioGroup" title="Efectivo" id="opt-efectivo" onClick={this.handleChange} inline>
+                <p>Efectivo
+                <img src={pagofacil} className="logo-efectivo" alt="Pagofacil" />
+                <img src={rapipago} className="logo-efectivo" alt="Rapipago" />
+                </p>
+              </Radio>
+            </Col>
+            </Row>
           <hr />
           <Totales />
         </form>

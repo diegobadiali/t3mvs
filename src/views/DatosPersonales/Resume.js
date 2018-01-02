@@ -1,5 +1,5 @@
 import React from 'react';
-import {Col, Row, FormControl, FormGroup} from 'react-bootstrap';
+import {Col, Row, FormControl, FormGroup, Button} from 'react-bootstrap';
 import moment from 'moment';
 class Resume extends React.Component {
 
@@ -44,6 +44,7 @@ class Resume extends React.Component {
               <li>Email: {this.props.email}</li>
             </ul>
           </div>
+          <Button bsStyle="success" onClick={this.props.handleNext}>Continuar</Button>
         </Col>
         </Row>
       </div>

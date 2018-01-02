@@ -147,7 +147,7 @@ render() {
               yearDropdownItemNumber={15}
               className="form-control"
               placeholderText="Fecha de nacimiento"
-              maxDate={moment().add(-18, "years")}
+              maxDate={this.props.prepago ? moment().add(-16, "years") : moment().add(-18, "years")}
               locale="es-ES"
             />
             <i className="fa fa-calendar"></i>

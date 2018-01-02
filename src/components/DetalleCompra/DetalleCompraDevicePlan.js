@@ -16,8 +16,15 @@ class DetalleCompraDevicePlan extends React.Component {
               <Col xs={9}>
                 <span className="title">Equipo</span>
                 <span className="name">{this.props.device.name}<br />{this.props.device.desc}</span>
-                <span className="title">en 18 cuotas de</span>
-                <span className="price">{this.props.device.cuotas}</span>
+                {this.props.efectivo ? (
+                  ''
+                  ):(
+                  <div>
+                    <span className="title">en 18 cuotas de</span>
+                    <span className="price">{this.props.device.cuotas}</span>
+                  </div>
+                  )
+                }
                 <span className="title">TOTAL</span>
                 <span className="price">{this.props.device.price}</span>
               </Col>

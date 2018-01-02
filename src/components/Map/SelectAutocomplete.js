@@ -104,12 +104,16 @@ var options = [
 
 
 class SelectAutocomplete extends Component {
+    state = {
+        selectedOption: '',
+     }
     constructor(props) {
         super(props);
-  }
-  handleChange = () => {
-    this.props.parentMethod();
-  }
+        
+    }
+    handleChange = (selectedOption) => {
+        this.props.parentMethod(selectedOption);
+    }
 
   render() {
     return (
@@ -117,14 +121,14 @@ class SelectAutocomplete extends Component {
       <Select
         name="provincias"
         value=""
-        className="form-control"
+        className="form-control select-autocomplete"
         placeholder="Encontrá el local más cercano a tu ubicación"
         options={options}
         onChange={this.handleChange}
         Clearable="false"
         noResultsText="No se encontraron resultados"
       />
-      <i className="fa fa-search"></i>
+      <i className="fa fa-angle-down"></i>
       </FormGroup>
       );
   }

@@ -35,7 +35,7 @@ class ThankYouPage extends Component {
         <Grid>
           <Listo />
           {this.state.cart.plan.name==null ? (''):(<NumeroLinea {...this.state.datosPersonales.userData.phone}/>)}
-          <DetalleCompra cart={this.state.cart}/>
+          <DetalleCompra cart={this.state.cart} efectivo={false}/>
         </Grid>
       </div>
       );

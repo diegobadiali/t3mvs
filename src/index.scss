@@ -1111,7 +1111,7 @@
 		h3{
 			font-family: $font2;
 			font-size: 18px;
-			margin-bottom: 20px;
+			margin-bottom: 0;
 			color: $color8;
 			padding: 0 0 20px;
 			border-top: none !important;
@@ -1121,7 +1121,17 @@
 				font-weight: normal;
 				color: $color1;
 			}
+			&+p{
+			display: block;
+			margin-bottom: 20px;
+			a{
+				color: $color2;
+			}
 		}
+		}
+
+		
+
 		.no-disponible{
 			h3{
 				color: $color5;
@@ -1145,6 +1155,14 @@
 				pointer-events: none;
 				color: $color8;
 			}
+			.fa-angle-down{
+				position: absolute;
+				right: 15px;
+				top: 16px;
+				font-size: 20px;
+				pointer-events: none;
+				color: $color8;
+			}
 			.form-control.select-prov{
 				border-radius: $border-radius;
 				/*border: 1px solid $color3 !important;
@@ -1158,6 +1176,23 @@
 				&::placeholder{
 					font-style: italic;
 				}
+			}
+			.form-control.select-autocomplete{
+				border-radius: $border-radius;
+				/*border: 1px solid $color3 !important;
+				box-shadow: $box-shadow4 !important;
+				background-color: $color4 !important;*/
+				font-size: 16px;
+				line-height: 31px !important;
+				font-family: $font3;
+				padding-right: 50px;
+				padding-top: 6px !important;
+				&::placeholder{
+					font-style: italic;
+				}
+			}
+			.Select-placeholder{
+				top: 7px;
 			}
 		}
 		.btn-default{
@@ -2775,8 +2810,10 @@
 					font-size: 16px;
 					color: $color8;
 					.img{
-						height: 60px;
-						margin-left: 30px;
+						max-height: 60px;
+						display: block;
+							margin: 0 auto;
+							max-width: 40px;
 					}
 					h2{
 						margin-top: 0;
@@ -2803,8 +2840,7 @@
 						padding-right: 5px;
 						font-size: 12px;
 						.img{
-							margin-left: 0;
-							height: 40px;
+							max-height: 40px;
 						}
 						h2{
 							font-size: 12px;
@@ -2816,7 +2852,7 @@
 							font-size: 9px;
 						}
 					}
-
+					
 				}
 				&.onetimecharge{
 					td{
@@ -3680,9 +3716,9 @@
 			span{
 				color: $color1;
 			}
-			button{
+			/*button{
 				display: none;
-			}
+			}*/
 		}
 	}
 	.collapsed{
@@ -3934,7 +3970,7 @@
 					}
 				}
 				.datos-cargardos{
-					margin-top: -10px;
+					margin-top: 0;
 					background-color: $color3;
 					border-radius: $border-radius;
 					padding: 15px;
@@ -4714,7 +4750,7 @@
 			.slick-track{
 		/*margin-left: -20px;
 		margin-right: -20px;*/
-
+		margin-top: 30px;
 		display: flex;
 		/*align-items: stretch;*/
 		.cont-plan{
@@ -4790,6 +4826,7 @@
 
 			ul{
 				margin-bottom: 0;
+				margin-top: 0;
 				li{
 					border-bottom: 1px solid $color10;
 					padding:10px 15px;
@@ -4797,6 +4834,7 @@
 					font-size: 14px;
 					color: $color5;
 					font-family: $font2;
+					height: 65px;
 					strong{
 						display: block;
 						text-transform: uppercase;
@@ -4804,6 +4842,9 @@
 						font-family: $font1;
 						font-weight: normal;
 						font-size: 12px;
+					}
+					@media(max-width:1199px) and (min-width:992px){
+						height: 75px;
 					}
 					a{
 						color: $color2;
@@ -5598,6 +5639,7 @@ footer{
 	}
 	.radio-inline{
 		p{
+			font-size: 16px;
 			margin-left: 5px;
 			.logo-efectivo{
 				vertical-align: top;
@@ -5738,7 +5780,7 @@ footer{
 	}
 	.verpromos{
 		color: $color2;
-		margin-top: 13px;
+		margin-top: 46px;
 		display: block;
 		&:hover{
 			opacity: .8;

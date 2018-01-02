@@ -9,6 +9,7 @@ class SelectTarjetas extends React.Component {
     this.setState({
       selected: true
     })
+    this.props.tarjetaActive()
   }
 	render() {
 		return (

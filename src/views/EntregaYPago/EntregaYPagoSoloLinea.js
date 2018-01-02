@@ -6,7 +6,7 @@ import DeliveryForm from './DeliveryForm';
 import PayNowForm from './PayNowForm';
 import PayPlanForm from './PayPlanForm';
 import DataStoreSupport from '../../DataStoreSupportPlan';
-
+import Pay from './Pay';
 class EntregaYPago extends React.Component {
 
   constructor() {
@@ -96,7 +96,18 @@ class EntregaYPago extends React.Component {
       devicePanelOpen: true,
       planPanelOpen: false,
       planInnerPanelOpen: true,
-      formComplete: true
+      formComplete: true,
+    });
+  };
+
+  handleNextPlanCash = () => {
+    this.setState({
+      deliveryPanelOpen: false,
+      devicePanelOpen: true,
+      planPanelOpen: false,
+      planInnerPanelOpen: true,
+      formComplete: false,
+      efectivoComplete: true,
     });
   };
 
@@ -119,6 +130,7 @@ class EntregaYPago extends React.Component {
       planPanelOpen: true
     });
   };
+
 
   componentDidMount() {
 
@@ -150,44 +162,23 @@ class EntregaYPago extends React.Component {
         <Grid>
           <PageHeader>Entrega y pago</PageHeader>
           <Row>
-            <Col md={8}>
-              <div className={ !this.state.deliveryPanelOpen ? 'collapsed' : 'open' }>
-                <h3>Entrega</h3>
-                <Panel collapsible expanded={true}>
-                  <DeliveryForm
-                    userData={this.state.datosPersonales.userData}
-                    sucursalData={this.state.datosPersonales.sucursalData}
-                    handleNext={this.handleNextAddress}
-                    handleNextComplete={this.handleNextComplete}
-                    handleSucursal={this.handleSucursal}
-                    deliveryComplete={this.state.deliveryComplete}
-                    deliveryPanelOpen={this.state.deliveryPanelOpen}
-                    deliveryPanelFunction={this.deliveryPanelFunction}
-                  />
-                </Panel>
-              </div>         
-              <div className={ !this.state.planPanelOpen ? 'collapsed' : 'open' }>
+            <Col md={8}>        
+              <div className="open">
                 <h3>Pago del plan (Mensual) <span>{this.state.cart.plan.price}/mes</span></h3>
-                <Panel collapsible expanded={this.state.planInnerPanelOpen}>
+                <Panel collapsible expanded={true}>
                   <PayPlanForm
                     isLoggedIn={this.state.isLoggedIn}
                     userData={this.state.datosPersonales.userData}
                     handleNext={this.handleNextPlan}
+                    handleNextCash={this.handleNextPlanCash}
                     devicePanelOpen={this.state.devicePanelOpen}
                     formComplete={this.state.formComplete}
+                    efectivoComplete={this.state.efectivoComplete}
                     handleEditCard={this.handleEditCard}
                     planPanelOpen={this.state.planPanelOpen}
                     planPanelFunction={this.planPanelFunction}
                   />
-                </Panel>
-              </div>
-              <div className={ !this.state.devicePanelOpen ? 'collapsed' : 'open' }>
-                <h3>Pago del equipo (Ahora) <span>{this.state.cart.total}</span></h3>
-                <Panel collapsible expanded={this.state.devicePanelOpen}>
-                  <PayNowForm
-                    isLoggedIn={this.state.isLoggedIn}
-                    userData={this.state.datosPersonales.userData}
-                  />
+                  {this.state.formComplete || this.state.efectivoComplete ? <Pay /> : '' }
                 </Panel>
               </div>
             </Col>

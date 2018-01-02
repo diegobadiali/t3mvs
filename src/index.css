@@ -1042,7 +1042,7 @@ body {
 .cont-result h3 {
   font-family: "TelefonicaRegular";
   font-size: 18px;
-  margin-bottom: 20px;
+  margin-bottom: 0;
   color: #50535a;
   padding: 0 0 20px;
   border-top: none !important;
@@ -1051,6 +1051,11 @@ body {
     font-family: "TelefonicaBold";
     font-weight: normal;
     color: #5bc500; }
+  .cont-result h3 + p {
+    display: block;
+    margin-bottom: 20px; }
+    .cont-result h3 + p a {
+      color: #00a9e0; }
 .cont-result .no-disponible h3 {
   color: #86888c; }
   .cont-result .no-disponible h3 strong {
@@ -1067,6 +1072,13 @@ body {
       font-size: 20px;
       pointer-events: none;
       color: #50535a; }
+    .cont-search .form-group .fa-angle-down {
+      position: absolute;
+      right: 15px;
+      top: 16px;
+      font-size: 20px;
+      pointer-events: none;
+      color: #50535a; }
     .cont-search .form-group .form-control.select-prov {
       border-radius: 4px;
       /*border: 1px solid $color3 !important;
@@ -1079,6 +1091,20 @@ body {
       padding-top: 6px !important; }
       .cont-search .form-group .form-control.select-prov::placeholder {
         font-style: italic; }
+    .cont-search .form-group .form-control.select-autocomplete {
+      border-radius: 4px;
+      /*border: 1px solid $color3 !important;
+      box-shadow: $box-shadow4 !important;
+      background-color: $color4 !important;*/
+      font-size: 16px;
+      line-height: 31px !important;
+      font-family: "TelefonicaLight";
+      padding-right: 50px;
+      padding-top: 6px !important; }
+      .cont-search .form-group .form-control.select-autocomplete::placeholder {
+        font-style: italic; }
+    .cont-search .form-group .Select-placeholder {
+      top: 7px; }
   .cont-search .btn-default {
     height: 48px;
     font-family: "TelefonicaRegular";
@@ -2434,8 +2460,10 @@ input[type="radio"]:checked:before {
     font-size: 16px;
     color: #50535a; }
     .table-resumen .table tbody tr td .img {
-      height: 60px;
-      margin-left: 30px; }
+      max-height: 60px;
+      display: block;
+      margin: 0 auto;
+      max-width: 40px; }
     .table-resumen .table tbody tr td h2 {
       margin-top: 0;
       font-size: 18px;
@@ -2458,8 +2486,7 @@ input[type="radio"]:checked:before {
         padding-right: 5px;
         font-size: 12px; }
         .table-resumen .table tbody tr td .img {
-          margin-left: 0;
-          height: 40px; }
+          max-height: 40px; }
         .table-resumen .table tbody tr td h2 {
           font-size: 12px; }
         .table-resumen .table tbody tr td a {
@@ -3123,11 +3150,12 @@ input[type="radio"]:checked:before {
     margin-top: 0; }
   .datos-personales-facturacion .open h3 {
     margin-top: 0;
-    border-top: 1px solid #e1e1e1; }
+    border-top: 1px solid #e1e1e1;
+    /*button{
+    	display: none;
+    }*/ }
     .datos-personales-facturacion .open h3 span {
       color: #5bc500; }
-    .datos-personales-facturacion .open h3 button {
-      display: none; }
   .datos-personales-facturacion .collapsed {
     /*.panel-collapse{
     	opacity: .6;
@@ -3312,7 +3340,7 @@ input[type="radio"]:checked:before {
             display: block;
             width: 100%; } }
       .datos-personales-facturacion .panel-default .panel-body .datos-cargardos {
-        margin-top: -10px;
+        margin-top: 0;
         background-color: #EBEBEB;
         border-radius: 4px;
         padding: 15px;
@@ -3942,6 +3970,7 @@ h3.title {
   .slick-list .slick-track {
     /*margin-left: -20px;
     margin-right: -20px;*/
+    margin-top: 30px;
     display: flex;
     /*align-items: stretch;*/ }
     .slick-list .slick-track .cont-plan {
@@ -4004,14 +4033,16 @@ h3.title {
                 font-size: 24px;
                 line-height: 24px; } }
         .slick-list .slick-track .cont-plan .plan ul {
-          margin-bottom: 0; }
+          margin-bottom: 0;
+          margin-top: 0; }
           .slick-list .slick-track .cont-plan .plan ul li {
             border-bottom: 1px solid #d3d4d3;
             padding: 10px 15px;
             line-height: 14px;
             font-size: 14px;
             color: #86888c;
-            font-family: "TelefonicaRegular"; }
+            font-family: "TelefonicaRegular";
+            height: 65px; }
             .slick-list .slick-track .cont-plan .plan ul li strong {
               display: block;
               text-transform: uppercase;
@@ -4019,6 +4050,9 @@ h3.title {
               font-family: "TelefonicaBold";
               font-weight: normal;
               font-size: 12px; }
+            @media (max-width: 1199px) and (min-width: 992px) {
+              .slick-list .slick-track .cont-plan .plan ul li {
+                height: 75px; } }
             .slick-list .slick-track .cont-plan .plan ul li a {
               color: #00a9e0; }
               .slick-list .slick-track .cont-plan .plan ul li a:hover, .slick-list .slick-track .cont-plan .plan ul li a:focus {
@@ -4642,6 +4676,7 @@ footer {
         margin-top: 0;
         margin-bottom: 5px; } }
   .tarjetas-promos .radio-inline p {
+    font-size: 16px;
     margin-left: 5px; }
     .tarjetas-promos .radio-inline p .logo-efectivo {
       vertical-align: top; }
@@ -4757,7 +4792,7 @@ footer {
         padding-right: 0; } }
   .tarjetas-promos .verpromos {
     color: #00a9e0;
-    margin-top: 13px;
+    margin-top: 46px;
     display: block; }
     .tarjetas-promos .verpromos:hover {
       opacity: .8;
@@ -4904,5 +4939,3 @@ footer {
   /*.radios-entrega{
   	display: none;
   }*/ }
-
-/*# sourceMappingURL=index.css.map */

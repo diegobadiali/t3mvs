@@ -51,10 +51,9 @@ class PayPlanForm extends React.Component {
 
     this.setState({
       fields: newFields,
-      cardSelected: true      
+      cardSelected: true,
     });
-
-
+    
   };
 
     handleChangeCard = (e) => {
@@ -123,9 +122,9 @@ class PayPlanForm extends React.Component {
     return (
       <Row>
         <Col sm={12}>
-          <h5 className={this.props.planPanelOpen ? '' : 'hidden' }>El primer vencimiento de tu factura será el {this.state.firstOverdue.format('DD/MM/YYYY')} por un importe de $1039,00 luego $889,00/mes</h5>
+          <h5>El primer vencimiento de tu factura será el {this.state.firstOverdue.format('DD/MM/YYYY')} por un importe de $1039,00 luego $889,00/mes</h5>
 
-          <div className={this.props.planPanelOpen ? 'radios-entrega' : 'radios-entrega hidden' }>
+          <div className="radios-entrega">
             <FormGroup validationState={this.state.fields.paymentMethodMensual.validationState}>
 
               <Radio name="paymentMethodMensual" value="creditCard" onClick={this.handleChange}>
@@ -205,17 +204,14 @@ class PayPlanForm extends React.Component {
                 <div>
                   <div className={this.props.planPanelOpen ? 'hidden' : '' }>
                     <div className="datos-cargardos">
-                        <a className="btn btn-link pull-right" onClick={this.props.handleEditCard}>
-                          <i className="fa fa-pencil"></i>
-                        </a>
                         <ul>
                           <li><strong>Forma de pago</strong></li>
                           <li>Pago en efectivo</li>
                         </ul>
                       </div>
                     </div>
-                  <div className={this.props.formComplete ? 'hide' : 'cont-btns'}>
-                    <Button bsStyle="success" onClick={this.props.handleNext}>
+                  <div className={this.props.efectivoComplete ? 'hide' : 'cont-btns'}>
+                    <Button bsStyle="success" onClick={this.props.handleNextCash}>
                     Continuar
                     </Button>
                   </div>

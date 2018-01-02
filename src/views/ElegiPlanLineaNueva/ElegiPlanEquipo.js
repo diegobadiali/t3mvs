@@ -28,7 +28,7 @@ class FichaPlan extends Component {
       },
       isSelectedAddress: false,
       optionSelected: true, // true not select location
-      noselect: true  // true not select location
+      noselect: true,  // true not select location
     };
     validForm: false
   }
@@ -59,12 +59,14 @@ class FichaPlan extends Component {
      });
     
   };   
+  
   componentDidMount() {
 
     if (this.props.location.params.mode == 'select-location') {
       this.setState({
         optionSelected: false, 
-        noselect: false 
+        noselect: false,
+        isGuest: false
       })
       
     }

@@ -77,7 +77,7 @@ class DeliveryForm extends React.Component {
       <form>
         <Row>
           <Col sm={12}>
-            <div className={this.props.deliveryPanelOpen ? 'radios-entrega' : 'radios-entrega hidden' }>
+            <div className="radios-entrega">
               <FormGroup validationState={this.state.fields.deliverTo.validationState}>
 
                 <Radio name="deliverTo" value="home" onClick={this.handleChange}>
@@ -137,7 +137,7 @@ class DeliveryForm extends React.Component {
                     <h4>Retiro en sucursal</h4>
 
                     {!this.state.isSelectedSucursal ? (
-                      <Map handleSucursal={this.handleSucursal}/>
+                      <Map handleSucursal={this.handleSucursal} device={this.props.device}/>
                       ) : (
                       <RetiroAddressResume
                             {...this.props.sucursalData.address}

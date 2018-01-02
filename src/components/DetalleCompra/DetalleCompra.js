@@ -8,12 +8,12 @@ function Plan(props) {
   let planInfo = null;
   if (props.plan.name !== null && props.device.name !== null) {
     planInfo = (
-      <DetalleCompraDevicePlan device={props.device} plan={props.plan}/>
+      <DetalleCompraDevicePlan device={props.device} plan={props.plan} efectivo={props.efectivo}/>
     );
   } else {
   if (props.plan.name === null && props.device.name !== null) {
     planInfo = (
-      <DetalleCompraDevice device={props.device}/>
+      <DetalleCompraDevice device={props.device} efectivo={props.efectivo}/>
     );
   } 
   if (props.plan.name !== null && props.device.name === null) {
@@ -35,7 +35,7 @@ class DetalleCompra extends React.Component {
         <Col sm={12}>
   			  <div className="detalle-compra">
             <h5>Detalle de la compra</h5>
-            <Plan {...this.props.cart}/>
+            <Plan {...this.props.cart} efectivo={this.props.efectivo}/>
             <Entrega {...this.props.cart}/>
           </div>
         </Col>

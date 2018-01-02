@@ -1,7 +1,47 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import {Col, Row, FormGroup, FormControl} from 'react-bootstrap';
-
+import SelectBancos from '../FormTarjetasPromos/SelectBancos';
+const listbancos = {
+  cuotas12 : [{
+      id: 1,
+      name: 'Banco Supervielle',
+      value: 'Banco Supervielle',
+    },
+    { 
+      id: 2,
+      name: 'Banco Patagonia',
+      value: 'Banco Patagonia',
+    },
+    { 
+      id: 3,
+      name: 'Banco Columbia',
+      value: 'Banco Columbia',
+    }
+  ],
+  cuotas6 : [{
+      id: 4,
+      name: 'Nativa Mastercard',
+      value: 'Nativa Mastercard',
+    },
+    { 
+      id: 5,
+      name: 'Banco Columbia',
+      value: 'Banco Columbia',
+    }
+  ],
+    cuotas1 : [{
+      id: 4,
+      name: 'Nativa Mastercard',
+      value: 'Nativa Mastercard',
+    },
+    { 
+      id: 5,
+      name: 'Banco Columbia',
+      value: 'Banco Columbia',
+    }
+  ]
+};
 class CardSelectFormRow extends React.Component {
   constructor(props) {
     super(props);
@@ -11,6 +51,7 @@ class CardSelectFormRow extends React.Component {
         cardBank: {val: '', validationState: null, complete: null},
         instalments: {val: 1, validationState: null, complete: null},
       },
+      bancos: listbancos,
       validForm: false
     };
   }
@@ -40,22 +81,7 @@ class CardSelectFormRow extends React.Component {
         </Col>
 
         <Col sm={4}>
-          <FormGroup className={this.props.cardBank.complete ? 'active' : '' } validationState={this.props.cardBank.validationState}>
-            <FormControl
-              componentClass="select"
-              placeholder="Seleccioná un banco"
-              name="cardBank"
-              onChange={this.props.handleChange}
-              
-            >
-            <option disabled selected>Seleccioná un Banco</option>
-              <option value="Banco 1">Banco 1</option>
-              <option value="Banco 2">Banco 2</option>
-            </FormControl>
-            <i
-              className="fa fa-angle-down"
-            />
-          </FormGroup>
+          <SelectBancos bancos={this.state.bancos}/>
         </Col>
         {
           this.props.instalments ? (

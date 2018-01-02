@@ -62,8 +62,8 @@ class ProductResume extends React.Component {
                       <span className="price">{this.props.cart.device.price}</span>
                     </div>
                     )
-                }
-                    {this.props.cart.plan.name==null ? (
+                  }
+                    {this.props.cart.plan.name==null || this.props.prepago ? (
                       '' ):(
                       <div>
                         <span className="title">Plan</span>
@@ -71,6 +71,7 @@ class ProductResume extends React.Component {
                       </div>
                       )
                     }
+
                     
                     {this.props.cart.plan.onetimecharge ? (
                       <div>

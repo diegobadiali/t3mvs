@@ -158,16 +158,20 @@ class BillingAddressForm extends React.Component {
           <Col sm={12} md={6}>
             <FormGroup validationState={this.state.fields.locality.validationState} className={this.state.fields.locality.complete ? 'active' : '' }>
               <FormControl
-                type="text"
+                componentClass="select"
                 placeholder="*Ciudad/Localidad"
                 name="locality"
                 onBlur={this.handleChange}
-                required
-               />
-              <HelpBlock className="help-block-error">Ingresá la ciudad/localidad</HelpBlock>
+              >
+                <option value="" disabled selected>Seleccioná tu ciudad/localidad</option>
+                <option value="Ciudad 1">Ciudad 1</option>
+                <option value="Ciudad 2">Ciudad 2</option>
+                <option value="Ciudad 3">Ciudad 3</option>
+                <option value="Ciudad 4">Ciudad 4</option>
+              </FormControl>
+              <i className="fa fa-angle-down"></i> 
             </FormGroup>
           </Col>
-          
         </Row>
         <Row>
           <Col sm={12} md={3}>
@@ -202,39 +206,7 @@ class BillingAddressForm extends React.Component {
             </FormGroup>
           </Col>
         </Row> 
-        <Row className={this.props.isOtherAddress ? 'visible' : 'hidden'}>
-          <Col sm={12}><h4>Datos del autorizado</h4></Col>
-          <Col sm={12} md={6}>
-            <FormGroup className={this.state.fields.nombreautorizado.complete ? 'active' : '' }>
-              <FormControl
-                type="text"
-                placeholder="Nombre del autorizado"
-                name="nombreautorizado"
-                onBlur={this.handleChange}
-              />
-            </FormGroup>
-          </Col>
-          <Col sm={12} md={6}>
-            <FormGroup className={this.state.fields.apellidoautorizado.complete ? 'active' : '' }>
-              <FormControl
-                type="text"
-                placeholder="Apellido del autorizado"
-                name="apellidoautorizado"
-                onBlur={this.handleChange}
-              />
-            </FormGroup>
-          </Col>
-          <Col sm={12} md={6}>
-            <FormGroup className={this.state.fields.dniautorizado.complete ? 'active' : '' }>
-              <FormControl
-                type="text"
-                placeholder="DNI del autorizado"
-                name="dniautorizado"
-                onBlur={this.handleChange}
-              />
-            </FormGroup>
-          </Col>
-        </Row>  
+        
       </div>
     );
   }

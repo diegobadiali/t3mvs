@@ -8,7 +8,8 @@ let DataStoreSupport = {
         lastname: 'Pérez',
         dni: '45432123',
         birthday: '1984-01-01',
-        phone: '1155667788',
+        codarea: '11',
+        phone: '55667788',
         email: 'juan@example.com',
         gender: 'Masculino',
         address: {
@@ -32,8 +33,7 @@ let DataStoreSupport = {
   getCart: () => {
     return ({
       device: {
-        name: 'Samsung Galaxy A3 4G LTE',
-        desc: 'Negro 32GB',
+        name: 'Samsung Galaxy A3 4G LTE Negro 32GB',
         description: 'Con un chasis totalmente de metal, el Galaxy A cuenta entre sus características una pantalla Super AMOLED qHD de 4.5 pulgadas, procesador quad-core a 1.2GHz, 1GB de RAM, 16GB de almacenamiento, ranura microSD, cámara principal de 8MP y frontal de 5MP y corre Android 4.4 KitKat. Con un chasis totalmente de metal, el Galaxy A cuenta entre sus características una pantalla Super AMOLED qHD de 4.5 pulgadas, procesador quad-core a 1.2GHz, 1GB de RAM, 16GB de almacenamiento, ranura microSD, cámara principal de 8MP y frontal de 5MP y corre Android 4.4 KitKat',
         price: '$22.000,00',
         cuotas: '$250,00/mes',

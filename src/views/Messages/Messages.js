@@ -12,6 +12,13 @@ import VerazUnverified5 from '../../components/VerazSteps/VerazUnverified5';
 import VerazUnverified6 from '../../components/VerazSteps/VerazUnverified6';
 import VerazUnverified7 from '../../components/VerazSteps/VerazUnverified7';
 import VerazUnverified8 from '../../components/VerazSteps/VerazUnverified8';
+import VerazUnverified9 from '../../components/VerazSteps/VerazUnverified9';
+import VerazUnverified10 from '../../components/VerazSteps/VerazUnverified10';
+import VerazUnverified11 from '../../components/VerazSteps/VerazUnverified11';
+import VerazUnverified12 from '../../components/VerazSteps/VerazUnverified12';
+import VerazUnverified13 from '../../components/VerazSteps/VerazUnverified13';
+import VerazUnverified14 from '../../components/VerazSteps/VerazUnverified14';
+import VerazUnverified15 from '../../components/VerazSteps/VerazUnverified15';
 const customStyles = {
   content : {
     top                   : '50%',
@@ -53,6 +60,13 @@ class Home extends Component {
       modalIsOpen6: false,
       modalIsOpen7: false,
       modalIsOpen8: false,
+      modalIsOpen9: false,
+      modalIsOpen10: false,
+      modalIsOpen11: false,
+      modalIsOpen12: false,
+      modalIsOpen13: false,
+      modalIsOpen14: false,
+      modalIsOpen15: false,
     };
     this.openModal = this.openModal.bind(this);
     this.closeModal = this.closeModal.bind(this);
@@ -70,6 +84,20 @@ class Home extends Component {
     this.closeModal7 = this.closeModal7.bind(this);
     this.openModal8 = this.openModal8.bind(this);
     this.closeModal8 = this.closeModal8.bind(this);
+    this.openModal9 = this.openModal9.bind(this);
+    this.closeModal9 = this.closeModal9.bind(this);
+    this.openModal10 = this.openModal10.bind(this);
+    this.closeModal10 = this.closeModal10.bind(this);
+    this.openModal11 = this.openModal11.bind(this);
+    this.closeModal11 = this.closeModal11.bind(this);
+    this.openModal12 = this.openModal12.bind(this);
+    this.closeModal12 = this.closeModal12.bind(this);
+    this.openModal13 = this.openModal13.bind(this);
+    this.closeModal13 = this.closeModal13.bind(this);
+    this.openModal14 = this.openModal14.bind(this);
+    this.closeModal14 = this.closeModal14.bind(this);
+    this.openModal15 = this.openModal15.bind(this);
+    this.closeModal15 = this.closeModal15.bind(this);
   }
   openModal() {
     this.setState({modalIsOpen: true});
@@ -119,6 +147,49 @@ class Home extends Component {
   closeModal8() {
     this.setState({modalIsOpen8: false});
   }
+  openModal9() {
+    this.setState({modalIsOpen9: true});
+  }
+  closeModal9() {
+    this.setState({modalIsOpen9: false});
+  }
+  openModal10() {
+    this.setState({modalIsOpen10: true});
+  }
+  closeModal10() {
+    this.setState({modalIsOpen10: false});
+  }
+  openModal11() {
+    this.setState({modalIsOpen11: true});
+  }
+  closeModal11() {
+    this.setState({modalIsOpen11: false});
+  }
+  openModal12() {
+    this.setState({modalIsOpen12: true});
+  }
+  closeModal12() {
+    this.setState({modalIsOpen12: false});
+  }
+  openModal13() {
+    this.setState({modalIsOpen13: true});
+  }
+  closeModal13() {
+    this.setState({modalIsOpen13: false});
+  }
+  openModal14() {
+    this.setState({modalIsOpen14: true});
+  }
+  closeModal14() {
+    this.setState({modalIsOpen14: false});
+  }
+  openModal15() {
+    this.setState({modalIsOpen15: true});
+  }
+  closeModal15() {
+    this.setState({modalIsOpen15: false});
+  }
+
   render() {
     return (
       <Grid>
@@ -132,7 +203,13 @@ class Home extends Component {
              <button className="btn-modal" onClick={this.openModal5}>Ver modal 5 <i className="fa fa-angle-right"></i> </button>
              <button className="btn-modal" onClick={this.openModal6}>Ver modal 6 <i className="fa fa-angle-right"></i> </button>
              <button className="btn-modal" onClick={this.openModal7}>Ver modal 7 <i className="fa fa-angle-right"></i> </button>
-             <button className="btn-modal" onClick={this.openModal8}>Ver modal 8 <i className="fa fa-angle-right"></i> </button>
+             <button className="btn-modal" onClick={this.openModal9}>Ver modal 9 <i className="fa fa-angle-right"></i> </button>
+             <button className="btn-modal" onClick={this.openModal10}>Ver modal 10 <i className="fa fa-angle-right"></i> </button>
+             <button className="btn-modal" onClick={this.openModal11}>Ver modal 11 <i className="fa fa-angle-right"></i> </button>
+             <button className="btn-modal" onClick={this.openModal12}>Ver modal 12 <i className="fa fa-angle-right"></i> </button>
+             <button className="btn-modal" onClick={this.openModal13}>Ver modal 13 <i className="fa fa-angle-right"></i> </button>
+             <button className="btn-modal" onClick={this.openModal14}>Ver modal 14 <i className="fa fa-angle-right"></i> </button>
+             <button className="btn-modal" onClick={this.openModal15}>Ver modal 15 <i className="fa fa-angle-right"></i> </button>
             <Modal
               isOpen={this.state.modalIsOpen}
               onRequestClose={this.closeModal}
@@ -224,7 +301,91 @@ class Home extends Component {
             >
               <button className="btn-cerrar" onClick={this.closeModal8}><i className="fa fa-close"></i> </button>
               <div className="preguntas">
-                <VerazUnverified8 infotabla={infotabla}/>
+                <VerazUnverified8 />
+              </div>
+            </Modal>
+
+            <Modal
+              isOpen={this.state.modalIsOpen9}
+              onRequestClose={this.closeModal9}
+              style={customStyles}
+              overlayClassName="Overlay"
+            >
+              <button className="btn-cerrar" onClick={this.closeModal9}><i className="fa fa-close"></i> </button>
+              <div className="preguntas">
+                <VerazUnverified9 />
+              </div>
+            </Modal>
+
+            <Modal
+              isOpen={this.state.modalIsOpen10}
+              onRequestClose={this.closeModal10}
+              style={customStyles}
+              overlayClassName="Overlay"
+            >
+              <button className="btn-cerrar" onClick={this.closeModal10}><i className="fa fa-close"></i> </button>
+              <div className="preguntas">
+                <VerazUnverified10 />
+              </div>
+            </Modal>
+
+            <Modal
+              isOpen={this.state.modalIsOpen11}
+              onRequestClose={this.closeModal11}
+              style={customStyles}
+              overlayClassName="Overlay"
+            >
+              <button className="btn-cerrar" onClick={this.closeModal11}><i className="fa fa-close"></i> </button>
+              <div className="preguntas">
+                <VerazUnverified11 />
+              </div>
+            </Modal>
+
+            <Modal
+              isOpen={this.state.modalIsOpen12}
+              onRequestClose={this.closeModal12}
+              style={customStyles}
+              overlayClassName="Overlay"
+            >
+              <button className="btn-cerrar" onClick={this.closeModal12}><i className="fa fa-close"></i> </button>
+              <div className="preguntas">
+                <VerazUnverified12 />
+              </div>
+            </Modal>
+
+            <Modal
+              isOpen={this.state.modalIsOpen13}
+              onRequestClose={this.closeModal13}
+              style={customStyles}
+              overlayClassName="Overlay"
+            >
+              <button className="btn-cerrar" onClick={this.closeModal13}><i className="fa fa-close"></i> </button>
+              <div className="preguntas">
+                <VerazUnverified13 />
+              </div>
+            </Modal>
+
+            <Modal
+              isOpen={this.state.modalIsOpen14}
+              onRequestClose={this.closeModal14}
+              style={customStyles}
+              overlayClassName="Overlay"
+            >
+              <button className="btn-cerrar" onClick={this.closeModal14}><i className="fa fa-close"></i> </button>
+              <div className="preguntas">
+                <VerazUnverified14 />
+              </div>
+            </Modal>
+
+            <Modal
+              isOpen={this.state.modalIsOpen15}
+              onRequestClose={this.closeModal15}
+              style={customStyles}
+              overlayClassName="Overlay"
+            >
+              <button className="btn-cerrar" onClick={this.closeModal15}><i className="fa fa-close"></i> </button>
+              <div className="preguntas">
+                <VerazUnverified15 />
               </div>
             </Modal>
 

@@ -27,6 +27,7 @@ class Indice extends Component {
                 <li><a href="/resumen-de-compra-linea" target="_blank">Resumen de compra (Línea)</a></li>
                 <li><a href="/datos-personales/guest" target="_blank">Datos personales y de facturacion (Guest)</a></li>
                 <li><a href="/datos-personales/logged" target="_blank">Datos personales y de facturacion (Logged - Cambiar DataStoreSupport.js isGuest[false] )</a></li>
+                <li><a href="/datos-personales/prepago" target="_blank">Datos personales y de facturacion (Prepago)</a></li>
                 <li><a href="/datos-personales-solo-linea/guest" target="_blank">Datos personales y de facturacion (Guest y sólo línea)</a></li>
                 <li><a href="/datos-personales-solo-linea/logged" target="_blank">Datos personales y de facturacion (Logged y sólo línea)</a></li>
                 <li><a href="/entrega-y-pago/guest" target="_blank">Entrega y pago (Guest)</a></li>
@@ -41,7 +42,7 @@ class Indice extends Component {
           		</ul>
               <br />
               <ul>
-                <li><a href="/messages" target="_blank">Modals (Mensajes de Datos personales)</a></li>
+                <li><a href="/messages" target="_blank">Modals (Mensajes)</a></li>
               </ul>
           	</div>
           </Col>
