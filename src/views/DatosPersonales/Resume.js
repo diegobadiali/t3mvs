@@ -29,9 +29,6 @@ class Resume extends React.Component {
       <Row>
         <Col sm={12}>
           <div className="datos-cargardos">
-            <a className="btn btn-link pull-right" onClick={this.props.handleData}>
-                <i className="fa fa-pencil"></i>
-            </a>
             <ul>
               <li>{this.props.firstname + ' ' + this.props.lastname}</li>
               <li>DNI: {this.props.dni}</li>

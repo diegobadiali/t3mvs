@@ -12,25 +12,17 @@ const infotabla = {
       imgURL: 'http://www.movistar.com.ar/documents/10192/14678471/s8.png',
     },
     { 
-      id: 2,
-      name: 'Chip Generico (apto para todos los equipos)',
-      price: '$0,00',
-      pricemensual: '',
-      imgURL: require('../../assets/img/icon-prepago.png'),
-    },
-    { 
       id: 3,
       name: 'Plan One 10GB',
       price: '',
       pricemensual: '$899,00',
-      imgURL: require('../../assets/img/img-chip2.png'),
+      imgURL: require('../../assets/img/icon-prepago.png'),
       
     }
   ],
-  onetimecharge: '$55,00',  
   totals: {
       pricetotal : '$22.000,00',
-      pricemensualtotal : '$954,00'  
+      pricemensualtotal : '$899,00'  
   }
 };
 class ResumenCompra extends Component {  

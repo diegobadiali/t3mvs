@@ -6,6 +6,7 @@ import Message from '../../components/Message/Message';
 const prod = {
     product: {
       name: 'Línea Movistar',
+      desc: '4g nano SIM',
       price: '$0,00',
       imgURL: require('../../assets/img/img-chip2.png'),
     }

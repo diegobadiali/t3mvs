@@ -10,6 +10,7 @@ import {simpleValidation} from '../../utils/validators';
 const prod = {
     product: {
       name: 'Chip Movistar',
+      desc: '4g nano SIM',
       price: '$0,00',
       imgURL: require('../../assets/img/img-chip2.png'),
     }
@@ -76,10 +77,10 @@ class FichaPlan extends Component {
           <Row>
             <Col sm={12} md={9}>
               <ProductDesc prod={this.state.prod} type="línea"/>
-                <div className={this.state.noselect ? 'cont-options-address hide' : 'cont-options-address' }>
-                  <div className={this.state.optionSelected ? 'options hide' : 'options' }>
-                    <h4>¿Dónde vas a usar la nueva línea?</h4>
-                    <h5>Vas a ver los mejores planes de tu localidad</h5>
+              <div className={this.state.noselect ? 'cont-options-address hide' : 'cont-options-address' }>
+                <div className={this.state.optionSelected ? 'options hide' : 'options' }>
+                  <h4>¿Dónde vas a usar la nueva línea?</h4>
+                  <h5>Vas a ver los mejores planes de tu localidad</h5>
                     <FormGroup>
                     <Radio name="willBeUsedIn"
                     value="Capital Federal" onChange={this.handleChange}

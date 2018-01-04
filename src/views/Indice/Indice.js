@@ -21,6 +21,7 @@ class Indice extends Component {
                 <li><a href="/elegi-plan-para-tu-equipo-sin-planes" target="_blank">Elegí Plan para tu equipo (sin planes)</a></li>
                 <li><a href="/elegi-plan-para-tu-linea" target="_blank">Elegí Plan para tu línea</a></li>
                 <li><a href="/elegi-plan-para-tu-linea/select-location" target="_blank">Elegí Plan para tu línea (select location)</a></li>
+                <li><a href="/elegi-plan-para-tu-linea-tipo/tipo-de-plan" target="_blank">Elegí Plan para tu línea (tipo de plan)</a></li>
                 <li><a href="/elegi-plan-para-tu-linea-sin-planes" target="_blank">Elegí Plan para tu línea (sin planes)</a></li>
                 <li><a href="/resumen-de-compra" target="_blank">Resumen de compra</a></li>
                 <li><a href="/resumen-de-compra-equipo" target="_blank">Resumen de compra (Equipo)</a></li>

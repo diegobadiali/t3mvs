@@ -8,6 +8,7 @@ import ElegiPlanEquipoSinPlanes from './views/ElegiPlanLineaNueva/ElegiPlanEquip
 import ElegiPlanLineaSinPlanes from './views/ElegiPlanLineaNueva/ElegiPlanLineaSinPlanes';
 import ElegiPlanEquipoNoPic from './views/ElegiPlanLineaNueva/ElegiPlanEquipoNoPic';
 import ElegiPlanLinea from './views/ElegiPlanLineaNueva/ElegiPlanLinea';
+import ElegiPlanLineaTipo from './views/ElegiPlanLineaNueva/ElegiPlanLineaTipo';
 import ResumenCompra from './views/ResumenCompra/ResumenCompra';
 import ResumenCompraEquipo from './views/ResumenCompra/ResumenCompraEquipo';
 import ResumenCompraLinea from './views/ResumenCompra/ResumenCompraLinea';
@@ -37,6 +38,8 @@ class Router extends SimpleReactRouter {
     map('/elegi-plan-para-tu-equipo-no-pic/:mode',   ElegiPlanEquipoNoPic)
     map('/elegi-plan-para-tu-linea/:mode',     ElegiPlanLinea)
     map('/elegi-plan-para-tu-linea',     ElegiPlanLinea)
+    map('/elegi-plan-para-tu-linea-tipo/:mode',     ElegiPlanLineaTipo)
+    map('/elegi-plan-para-tu-linea-tipo',     ElegiPlanLineaTipo)
     map('/resumen-de-compra',            ResumenCompra)
     map('/resumen-de-compra-equipo',     ResumenCompraEquipo)
     map('/resumen-de-compra-linea',      ResumenCompraLinea)

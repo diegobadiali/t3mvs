@@ -14,7 +14,7 @@ const infotabla = {
   ],
   totals: {
       pricetotal : '$22.000,00',
-      pricemensualtotal : '$899,00'  
+      pricemensualtotal : '$0'  
   }
 };
 class ResumenCompra extends Component {  
