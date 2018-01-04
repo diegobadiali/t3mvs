@@ -79,7 +79,7 @@ class FichaPlan extends Component {
               <ProductDesc prod={this.state.prod} type="línea"/>
               <div className={this.state.noselect ? 'cont-options-address hide' : 'cont-options-address' }>
                 <div className={this.state.optionSelected ? 'options hide' : 'options' }>
-                  <h4>¿Que tipo de plan necesitas?</h4>
+                  <h4>¿Qué tipo de plan necesitás?</h4>
                     <FormGroup>
                     <Radio name="willBeUsedIn"
                     value="celular" onChange={this.handleChange}
