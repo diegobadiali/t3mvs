@@ -1144,7 +1144,6 @@
 
 	.cont-search{
 		margin-top: 0;
-		
 		.form-group{
 			position: relative;
 			.fa-search{
@@ -1158,7 +1157,7 @@
 			.fa-angle-down{
 				position: absolute;
 				right: 15px;
-				top: 16px;
+				top: 18px;
 				font-size: 20px;
 				pointer-events: none;
 				color: $color8;
@@ -1171,7 +1170,7 @@
 				font-size: 16px;
 				line-height: 31px !important;
 				font-family: $font3;
-				padding-right: 50px;
+				padding-right: 0;
 				padding-top: 6px !important;
 				&::placeholder{
 					font-style: italic;
@@ -1185,7 +1184,7 @@
 				font-size: 16px;
 				line-height: 31px !important;
 				font-family: $font3;
-				padding-right: 50px;
+				padding-right: 0;
 				padding-top: 6px !important;
 				&::placeholder{
 					font-style: italic;
@@ -3926,9 +3925,15 @@
 						.form-control{
 							background-color: $color4;
 							border: 1px solid $color9;
+
 							&+i{
 								color: $color2;
 							}
+						}
+						select.form-control{
+							padding-top: 9px;
+							padding-bottom: 13px;
+							padding-left: 11px;
 						}	
 					}
 					&.codarea{
@@ -5686,7 +5691,7 @@ footer{
 			text-indent: 1px;
 			text-overflow: '';
 			&::-ms-expand {
-				display: none;
+				display: none !important;
 			}
 			&:focus{
 				border-color: $color2;

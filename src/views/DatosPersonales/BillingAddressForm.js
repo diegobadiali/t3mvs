@@ -134,7 +134,7 @@ class BillingAddressForm extends React.Component {
                 name="city"
                 onBlur={this.handleChange}
               >
-                <option value="" disabled selected>Seleccioná tu provincia</option>
+                <option value="" disabled selected>*Seleccioná tu provincia</option>
                         <option value="Capital Federal">Capital Federal</option>
                         <option value="Buenos Aires">Buenos Aires</option>
                         <option value="Catamarca">Catamarca</option>
@@ -173,10 +173,11 @@ class BillingAddressForm extends React.Component {
                 onBlur={this.handleChange}
                 required
               >
-                <option value="">*Localidad</option>
-                <option value="1">Localidad 1</option>
-                <option value="2">Localidad 2</option>
-                <option value="3">Localidad 3</option>
+                <option value="">*Seleccioná tu ciudad/localidad</option>
+                <option value="Ciudad 1">Ciudad 1</option>
+                <option value="Ciudad 2">Ciudad 2</option>
+                <option value="Ciudad 3">Ciudad 3</option>
+                <option value="Ciudad 4">Ciudad 4</option>
               </FormControl>
               <i className="fa fa-angle-down"></i>
             </FormGroup>

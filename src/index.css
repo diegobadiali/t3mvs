@@ -1075,7 +1075,7 @@ body {
     .cont-search .form-group .fa-angle-down {
       position: absolute;
       right: 15px;
-      top: 16px;
+      top: 18px;
       font-size: 20px;
       pointer-events: none;
       color: #50535a; }
@@ -1087,7 +1087,7 @@ body {
       font-size: 16px;
       line-height: 31px !important;
       font-family: "TelefonicaLight";
-      padding-right: 50px;
+      padding-right: 0;
       padding-top: 6px !important; }
       .cont-search .form-group .form-control.select-prov::placeholder {
         font-style: italic; }
@@ -1099,7 +1099,7 @@ body {
       font-size: 16px;
       line-height: 31px !important;
       font-family: "TelefonicaLight";
-      padding-right: 50px;
+      padding-right: 0;
       padding-top: 6px !important; }
       .cont-search .form-group .form-control.select-autocomplete::placeholder {
         font-style: italic; }
@@ -3308,6 +3308,10 @@ input[type="radio"]:checked:before {
           border: 1px solid #B4B4B4; }
           .datos-personales-facturacion .panel-default .panel-body .form-group.active .form-control + i {
             color: #00a9e0; }
+        .datos-personales-facturacion .panel-default .panel-body .form-group.active select.form-control {
+          padding-top: 9px;
+          padding-bottom: 13px;
+          padding-left: 11px; }
         .datos-personales-facturacion .panel-default .panel-body .form-group.codarea {
           padding-left: 18px;
           padding-right: 0; }
@@ -4713,7 +4717,7 @@ footer {
       text-indent: 1px;
       text-overflow: ''; }
       .tarjetas-promos .form-group .form-control::-ms-expand {
-        display: none; }
+        display: none !important; }
       .tarjetas-promos .form-group .form-control:focus {
         border-color: #00a9e0; }
       .tarjetas-promos .form-group .form-control::placeholder {
