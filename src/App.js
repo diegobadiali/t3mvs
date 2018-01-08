@@ -5,6 +5,7 @@ import Footer from './components/Footer/Footer';
 import SimpleReactRouter from 'simple-react-router'
 import ElegiPlanEquipo from './views/ElegiPlanLineaNueva/ElegiPlanEquipo';
 import ElegiPlanEquipoSinPlanes from './views/ElegiPlanLineaNueva/ElegiPlanEquipoSinPlanes';
+import ElegiPlanEquipoSinStock from './views/ElegiPlanLineaNueva/ElegiPlanEquipoSinStock';
 import ElegiPlanLineaSinPlanes from './views/ElegiPlanLineaNueva/ElegiPlanLineaSinPlanes';
 import ElegiPlanEquipoNoPic from './views/ElegiPlanLineaNueva/ElegiPlanEquipoNoPic';
 import ElegiPlanLinea from './views/ElegiPlanLineaNueva/ElegiPlanLinea';
@@ -12,6 +13,7 @@ import ElegiPlanLineaTipo from './views/ElegiPlanLineaNueva/ElegiPlanLineaTipo';
 import ResumenCompra from './views/ResumenCompra/ResumenCompra';
 import ResumenCompraEquipo from './views/ResumenCompra/ResumenCompraEquipo';
 import ResumenCompraLinea from './views/ResumenCompra/ResumenCompraLinea';
+import ResumenCompraSinStock from './views/ResumenCompra/ResumenCompraSinStock';
 import Indice from './views/Indice/Indice';
 import Home from './views/Home/Home';
 import DatosPersonales from './views/DatosPersonales/DatosPersonales';
@@ -33,6 +35,7 @@ class Router extends SimpleReactRouter {
     map('/elegi-plan-para-tu-equipo',   ElegiPlanEquipo)
     map('/elegi-plan-para-tu-equipo/:mode',   ElegiPlanEquipo)
     map('/elegi-plan-para-tu-equipo-sin-planes',   ElegiPlanEquipoSinPlanes)
+    map('/elegi-plan-para-tu-equipo-sin-stock',   ElegiPlanEquipoSinStock)
     map('/elegi-plan-para-tu-linea-sin-planes',   ElegiPlanLineaSinPlanes)
     map('/elegi-plan-para-tu-equipo-no-pic',   ElegiPlanEquipoNoPic)
     map('/elegi-plan-para-tu-equipo-no-pic/:mode',   ElegiPlanEquipoNoPic)
@@ -43,6 +46,7 @@ class Router extends SimpleReactRouter {
     map('/resumen-de-compra',            ResumenCompra)
     map('/resumen-de-compra-equipo',     ResumenCompraEquipo)
     map('/resumen-de-compra-linea',      ResumenCompraLinea)
+    map('/resumen-de-compra-sin-stock',      ResumenCompraSinStock)
     map('/home',                         Home)
     map('/datos-personales/:mode',       DatosPersonales)
     map('/datos-personales-solo-linea/:mode',       DatosPersonalesSoloLinea)

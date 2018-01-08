@@ -3159,12 +3159,11 @@ input[type="radio"]:checked:before {
     margin-top: 0; }
   .datos-personales-facturacion .open h3 {
     margin-top: 0;
-    border-top: 1px solid #e1e1e1;
-    /*button{
-    	display: none;
-    }*/ }
+    border-top: 1px solid #e1e1e1; }
     .datos-personales-facturacion .open h3 span {
       color: #5bc500; }
+    .datos-personales-facturacion .open h3 button.btn-link {
+      display: none; }
   .datos-personales-facturacion .collapsed {
     /*.panel-collapse{
     	opacity: .6;
@@ -3529,6 +3528,15 @@ input[type="radio"]:checked:before {
     color: #5bc500;
     font-family: "TelefonicaLight";
     display: inline; }
+  .detalle-compra a {
+    color: #00a9e0;
+    margin-bottom: 5px;
+    display: block; }
+    .detalle-compra a i {
+      font-size: 15px;
+      margin: 4px 0 0 5px; }
+    .detalle-compra a:hover {
+      opacity: .7; }
   .detalle-compra .bg-entrega {
     background-color: #EBEBEB;
     padding: 20px;
@@ -4334,7 +4342,7 @@ footer {
     bottom: 0;
     left: 0; }
   footer .container {
-    padding: 25px 65px; }
+    padding: 25px 20px; }
     @media (max-width: 767px) {
       footer .container {
         padding-left: 20px;
@@ -4801,7 +4809,7 @@ footer {
         padding-right: 0; } }
   .tarjetas-promos .verpromos {
     color: #00a9e0;
-    margin-top: 46px;
+    margin-top: 15px;
     display: block; }
     .tarjetas-promos .verpromos:hover {
       opacity: .8;

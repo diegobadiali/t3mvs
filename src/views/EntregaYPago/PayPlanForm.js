@@ -191,7 +191,7 @@ class PayPlanForm extends React.Component {
                       
                     {cardData(this.state.fields.cardOption.val)}
                     
-                    <div className={this.props.formComplete ? 'hide' : 'cont-btns'}>
+                    <div className="cont-btns">
                       <Button bsStyle="success" onClick={this.props.handleNext} disabled={this.state.cardSelected ? '' : 'disabled'}>
                         Continuar
                       </Button>
@@ -210,7 +210,7 @@ class PayPlanForm extends React.Component {
                         </ul>
                       </div>
                     </div>
-                  <div className={this.props.efectivoComplete ? 'hide' : 'cont-btns'}>
+                  <div className="cont-btns">
                     <Button bsStyle="success" onClick={this.props.handleNextCash}>
                     Continuar
                     </Button>

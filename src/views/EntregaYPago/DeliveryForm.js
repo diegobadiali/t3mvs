@@ -97,6 +97,14 @@ class DeliveryForm extends React.Component {
                 this.state.fields.deliverTo.val == 'home' ? (
                     <div className="cont-entrega-pago">
                     <h4>Envío a domicilio</h4>
+
+                    {this.props.sinstock ? (
+                      <div className="alert alert-info-plan"><p><i className="fa fa-info-circle"></i> El equipo seleccionado no se encuentra disponible para envío a domicilio</p></div>
+                      ):(
+
+
+                      <div>
+
                     {!this.props.deliveryComplete & !this.state.isEditingAddress ? (
                       <p>Si elegís envío a este domicilio, podrá recibir cualquier persona mayor de edad con DNI. Si elegís otro domicilio de entrega, podrá recibir el titular o autorizado.</p>
                       ):('')
@@ -108,7 +116,7 @@ class DeliveryForm extends React.Component {
                         {...this.props.userData.address}
                         handleEditAddress={this.handleEditAddress}
                         />
-                        <div className={this.props.deliveryComplete ? 'hide' : 'cont-btns'}>
+                        <div className="cont-btns">
                           <Button bsStyle="success" onClick={this.props.handleNextComplete}>
                           Continuar
                           </Button>
@@ -129,7 +137,8 @@ class DeliveryForm extends React.Component {
                       </div>
                       )
                     }
-                      
+                    </div>
+                      )}
                     </div>
                   ) : (
                     <div className="cont-entrega-pago">

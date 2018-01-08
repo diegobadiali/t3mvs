@@ -32,6 +32,7 @@ class DetalleCompraDevice extends React.Component {
           }  
             <span className="title">TOTAL</span>
             <span className="price">{this.props.device.price}</span>
+            {this.props.efectivo ? (<a href="#" target="_blank">Descargar cupón de pago <i className="fa fa-angle-right"></i></a>) : ('')}
           </Col>
         </Row>
 		);

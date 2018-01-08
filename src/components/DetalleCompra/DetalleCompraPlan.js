@@ -24,6 +24,7 @@ class DetalleCompraPlan extends React.Component {
             <span className="title">Plan</span>
             <span className="name">{this.props.plan.name}</span>
             <span className="price">{this.props.plan.price}</span>
+            {this.props.efectivo ? (<a href="#" target="_blank">Descargar cupón de pago <i className="fa fa-angle-right"></i></a>) : ('')}
             <p><strong>Tu primera factura vencerá el {this.props.plan.vencimiento}</strong></p>
             {this.props.plan.onetimecharge ? (
                   <p>Cargo adicional a pagar por única vez en la primer factura: <span className="price1">{this.props.plan.onetimecharge}</span></p>

@@ -129,7 +129,7 @@ class BillingAddressForm extends React.Component {
             <FormGroup validationState={this.state.fields.city.validationState} className={this.state.fields.city.complete ? 'active' : '' }>
               <FormControl
                 componentClass="select"
-                placeholder="*Provincia/Ciudad"
+                placeholder="*Provincia"
                 value={this.state.fields.city.val}
                 name="city"
                 onBlur={this.handleChange}
@@ -166,14 +166,19 @@ class BillingAddressForm extends React.Component {
           <Col sm={12} md={6}>
             <FormGroup validationState={this.state.fields.locality.validationState} className={this.state.fields.locality.complete ? 'active' : '' }>
               <FormControl
-                type="text"
+                componentClass="select"
                 placeholder="*Ciudad/Localidad"
                 value={this.state.fields.locality.val}
                 name="locality"
                 onBlur={this.handleChange}
                 required
-              />
-                <HelpBlock className="help-block-error">Ingresá la ciudad/localidad</HelpBlock>
+              >
+                <option value="">*Localidad</option>
+                <option value="1">Localidad 1</option>
+                <option value="2">Localidad 2</option>
+                <option value="3">Localidad 3</option>
+              </FormControl>
+              <i className="fa fa-angle-down"></i>
             </FormGroup>
           </Col>
         </Row>

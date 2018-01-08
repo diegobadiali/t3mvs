@@ -9,7 +9,8 @@ class Map extends Component {
     super(props);
     this.state = {
       visible: false,
-      fakeError: false
+      fakeError: false,
+      disabled: true
     }
   }
 
@@ -40,6 +41,12 @@ class Map extends Component {
     this.props.handleSucursal();
   }
 
+  handleSelectSucursal = () => {
+    this.setState({
+      disabled: false
+    })
+  }
+
   render() {
     return (
       <Row>
@@ -60,7 +67,7 @@ class Map extends Component {
 
           {this.state.fakeError ? ( 
             <div className="no-disponible">
-                <h3>El <strong>{this.props.device}</strong> no está disponible para retiro en ningun local de la provincia seleccionada</h3>
+                <div className="alert alert-info-plan"><p><i className="fa fa-info-circle"></i> El equipo seleccionado no está disponible para retiro en ningun local de la provincia seleccionada</p></div>
             </div>    
             ):(
               <div>
@@ -74,12 +81,12 @@ class Map extends Component {
                 smoothScrolling={true}
                 >
                 <div>
-                  <SucList />
+                  <SucList handleSelectSucursal={this.handleSelectSucursal}/>
                 </div>
               </ScrollArea>
               <div className="clearfix"></div>
               <div className="cont-btns">
-                <Button bsStyle="success" onClick={this.handleSucursalParent}>
+                <Button bsStyle="success" onClick={this.handleSucursalParent} disabled={this.state.disabled}>
                   Continuar
                 </Button>
               </div>

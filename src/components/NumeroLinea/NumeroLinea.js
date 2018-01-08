@@ -8,7 +8,7 @@ class NumeroLinea extends Component {
     return (
       <div className="numero-linea">
         <span>Número de línea</span>
-        <h4>{this.props.data.phone}</h4>
+        <h4>{this.props.data.codarea}{this.props.data.phone}</h4>
       </div>
       );
   }

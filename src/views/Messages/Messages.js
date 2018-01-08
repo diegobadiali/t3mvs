@@ -366,18 +366,6 @@ class Home extends Component {
             </Modal>
 
             <Modal
-              isOpen={this.state.modalIsOpen14}
-              onRequestClose={this.closeModal14}
-              style={customStyles}
-              overlayClassName="Overlay"
-            >
-              <button className="btn-cerrar" onClick={this.closeModal14}><i className="fa fa-close"></i> </button>
-              <div className="preguntas">
-                <VerazUnverified14 />
-              </div>
-            </Modal>
-
-            <Modal
               isOpen={this.state.modalIsOpen15}
               onRequestClose={this.closeModal15}
               style={customStyles}

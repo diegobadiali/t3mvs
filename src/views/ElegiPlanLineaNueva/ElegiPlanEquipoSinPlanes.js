@@ -27,7 +27,7 @@ class FichaPlan extends Component {
           <Row>
             <Col sm={12} md={9}>
               <ProductDesc prod={this.state.prod} type="equipo"/>
-              <Message text={["No encontramos planes para ofrecerte. ",<a href="#">Comprar el equipo sin plan.</a>]} class={"info-plan"}/>
+              <Message text={["No encontramos planes para ofrecerte. "]} class={"info-plan"}/>
               <div className="cont-btn"><Button bsStyle="success">Comprar el equipo sin plan</Button></div>
              </Col>
            </Row> 

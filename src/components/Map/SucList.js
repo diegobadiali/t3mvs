@@ -50,6 +50,7 @@ class SucList extends Component {
   }
 
   handleChange = (e) => {
+    this.props.handleSelectSucursal(),
     this.setState({
       activeSucursal: e.target.value,
     });
@@ -57,7 +58,7 @@ class SucList extends Component {
 
   render() {
     return (
-      <Sucursales list={list} activeItem={this.state.activeSucursal} handleChange={this.handleChange}/>
+      <Sucursales list={list} activeItem={this.state.activeSucursal} handleChange={this.handleChange} />
       );
   }
 }

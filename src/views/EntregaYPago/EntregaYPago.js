@@ -145,6 +145,12 @@ class EntregaYPago extends React.Component {
       newDatosPersonales.userData = DataStoreSupport.getUserData().data;
       loggedIn = true;
     }
+    /* sin stock envio */
+    if (this.props.location.params.mode == 'sin-stock') {
+      this.setState({
+        sinstock: true
+      })
+    }
 
     this.setState({
       cart: DataStoreSupport.getCart(),
@@ -152,8 +158,36 @@ class EntregaYPago extends React.Component {
       isLoggedIn: loggedIn,
       isEditingAddress: !loggedIn,
     });
+
+
   }
 
+toggleActivePanel = (e) => {
+    switch (e.target.id) {
+      case 'delivery-btn':
+        this.setState({
+          deliveryPanelOpen: !this.state.deliveryPanelOpen,
+          devicePanelOpen: false,
+          planPanelOpen: false,
+        });
+        break;
+      case 'device-btn':
+        this.setState({
+          deliveryPanelOpen: false,
+          devicePanelOpen: !this.state.devicePanelOpen,
+          planPanelOpen: false,
+        });
+        break;
+      case 'plan-btn':
+        this.setState({
+          deliveryPanelOpen: false,
+          devicePanelOpen: false,
+          planPanelOpen: !this.state.planPanelOpen,
+        });
+        break;
+
+    }
+  };
 
   render() {
     return (
@@ -164,8 +198,22 @@ class EntregaYPago extends React.Component {
           <Row>
             <Col md={8}>
               <div className={ !this.state.deliveryPanelOpen ? 'collapsed' : 'open' }>
-                <h3>Entrega</h3>
-                <Panel collapsible expanded={true}>
+                <h3>Entrega
+                {this.state.deliveryComplete && this.state.deliveryPanelOpen===false ? (
+                  <button
+                    className="btn btn-link pull-right"
+                    id="delivery-btn"
+                    onClick={this.toggleActivePanel}
+                  >
+                    <i className={this.state.deliveryPanelOpen ? 'fa fa-angle-up' : 'fa fa-angle-down'}/>
+                  </button>
+                  ):(
+                    ''
+                  )
+                }
+                
+                </h3>
+                <Panel collapsible expanded={this.state.deliveryPanelOpen}>
                   <DeliveryForm
                     userData={this.state.datosPersonales.userData}
                     sucursalData={this.state.datosPersonales.sucursalData}
@@ -176,12 +224,26 @@ class EntregaYPago extends React.Component {
                     deliveryPanelOpen={this.state.deliveryPanelOpen}
                     deliveryPanelFunction={this.deliveryPanelFunction}
                     device={this.state.cart.device.name}
+                    sinstock={this.state.sinstock}
                   />
                 </Panel>
               </div>         
               <div className={ !this.state.planPanelOpen ? 'collapsed' : 'open' }>
-                <h3>Pago del plan (Mensual) <span>{this.state.cart.plan.price}/mes</span></h3>
-                <Panel collapsible expanded={this.state.planInnerPanelOpen}>
+                <h3>Pago del plan (Mensual) <span>{this.state.cart.plan.price}/mes</span>
+                {this.state.formComplete || this.state.efectivoComplete && this.state.planPanelOpen===false? (
+                <button
+                    id="plan-btn"
+                    className="btn btn-link pull-right"
+                    onClick={this.toggleActivePanel}
+                  >
+                    <i className={this.state.planPanelOpen ? 'fa fa-angle-up' : 'fa fa-angle-down'}/>
+                  </button>
+                  ):(
+                    ''
+                  )
+                }
+                </h3>
+                <Panel collapsible expanded={this.state.planPanelOpen}>
                   <PayPlanForm
                     isLoggedIn={this.state.isLoggedIn}
                     userData={this.state.datosPersonales.userData}
@@ -197,7 +259,9 @@ class EntregaYPago extends React.Component {
                 </Panel>
               </div>
               <div className={ !this.state.devicePanelOpen ? 'collapsed' : 'open' }>
-                <h3>Pago del equipo (Ahora) <span>{this.state.cart.total}</span></h3>
+                <h3>Pago del equipo (Ahora) <span>{this.state.cart.total}</span>
+                
+                  </h3>
                 <Panel collapsible expanded={this.state.devicePanelOpen}>
                   <PayNowForm
                     isLoggedIn={this.state.isLoggedIn}

@@ -88,9 +88,6 @@ class FormTarjetasPromos extends React.Component {
         <form>
           <Row>
             <Col sm={6}>
-              <Radio name="radioGroup" title="Tarjeta de crédito" id="opt-tarjeta" onClick={this.handleChange} checked={this.state.pagotarjeta} inline>
-                <p>Tarjeta de crédito</p>
-              </Radio>
               <SelectTarjetas pagotarjeta={this.state.pagotarjeta} tarjetas={this.state.tarjetas} tarjetaActive={this.tarjetaActive} />
             </Col>
             <Col sm={6}>
@@ -102,17 +99,6 @@ class FormTarjetasPromos extends React.Component {
               <SelectBancos pagotarjeta={this.state.pagotarjeta} bancos={this.state.bancos} tarjetaActive={this.tarjetaActive}/>
             </Col>
           </Row>
-          <hr />
-          <Row>
-            <Col sm={6}>
-              <Radio name="radioGroup" title="Efectivo" id="opt-efectivo" onClick={this.handleChange} inline>
-                <p>Efectivo
-                <img src={pagofacil} className="logo-efectivo" alt="Pagofacil" />
-                <img src={rapipago} className="logo-efectivo" alt="Rapipago" />
-                </p>
-              </Radio>
-            </Col>
-            </Row>
           <hr />
           <Totales />
         </form>

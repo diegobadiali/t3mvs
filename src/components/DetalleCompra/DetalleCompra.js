@@ -18,7 +18,7 @@ function Plan(props) {
   } 
   if (props.plan.name !== null && props.device.name === null) {
     planInfo = (
-      <DetalleCompraPlan plan={props.plan} linea={props.linea}/>
+      <DetalleCompraPlan plan={props.plan} linea={props.linea} efectivo={props.efectivo}/>
     );
   }
 }
@@ -41,7 +41,7 @@ class DetalleCompra extends React.Component {
         </Col>
         <Col sm={12}>
           <div className="cont-orden">
-            <p><strong>Tu número de orden es {this.props.cart.orden}</strong> <br />Te servirá para realizar consultas de tu pedido.<br /> {this.props.efectivo ? (<a href="#" target="_blank">Descargar cupón de pago</a>) : ('')}</p>
+            <p><strong>Tu número de orden es {this.props.cart.orden}</strong> <br />Te servirá para realizar consultas de tu pedido.</p>
 
             <Button bsStyle="success">Seguir comprando</Button>
           </div>
