@@ -37,7 +37,7 @@ class Indice extends Component {
                 <li><a href="/entrega-y-pago/logged" target="_blank">Entrega y pago (Logged)</a></li>
                 <li><a href="/entrega-y-pago-solo-linea/guest" target="_blank">Entrega y pago (Guest y sólo línea)</a></li>
                 <li><a href="/entrega-y-pago-solo-linea/logged" target="_blank">Entrega y pago (Logged y sólo línea)</a></li>
-                <li><a href="/entrega-y-pago-solo-linea/sin-stock" target="_blank">Entrega y pago (Sin stock en envío)</a></li>
+                <li><a href="/entrega-y-pago/sin-stock" target="_blank">Entrega y pago (Sin stock en envío)</a></li>
                 <li><a href="/mercadopago" target="_blank">MercadoPago</a></li>
                 <li><a href="/thank-you-page" target="_blank">Thank you page</a></li>
                 <li><a href="/thank-you-page-plan" target="_blank">Thank you page (Plan)</a></li>
